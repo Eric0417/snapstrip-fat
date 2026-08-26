@@ -62,9 +62,11 @@ docs/memory/            long-term handoff memory
 
 - `layoutId`
 - `shots`
+- `photoTransforms`
 - `stickers`
 - `past` / `future`
-- actions: setLayout, setShots, addSticker, updateSticker, removeStickers, clearStickers, snapshotStickers, undoStickers, redoStickers
+- actions: setLayout, setShots, setPhotoTransform, resetPhotoTransform, addSticker,
+  updateSticker, removeStickers, clearStickers, snapshotStickers, undoStickers, redoStickers
 
 拖曳動作開始前應呼叫 `snapshotStickers()`；持續更新只呼叫 `updateSticker()`；高層動作如 add/remove 會自行記錄 history。
 

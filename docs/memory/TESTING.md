@@ -16,7 +16,7 @@ pnpm dev
 ## 目前結果
 
 - `pnpm typecheck`：通過。
-- `pnpm test`：5 files / 19 tests 通過。
+- `pnpm test`：5 files / 20 tests 通過。
 - `pnpm test:e2e`：6 tests 通過，包含桌面/手機 upload flow、fake camera flow 與直式 stage fit。
 - `pnpm build`：通過，本機 dist 包含 core + fan-ip。
 - `pnpm build:public`：通過，public dist 排除 fan-ip。

@@ -42,6 +42,10 @@
 - 編輯器 stage 現在會依可視高度縮放，直式長版型不再撐滿整頁高度。
 - 新增貼圖時會把目前可視區域中心換算成畫布座標，而不是固定使用
   `x=0.5,y=0.5` 的絕對中心。
+- 貼圖拖曳改為 `transform` 定位並用 `requestAnimationFrame` 節流，
+  縮放/旋轉更新最多每幀一次。
+- 新增照片選取與調整：每格照片可縮放 0.8x–2.5x，並做水平/垂直平移，
+  預覽與匯出共用 `photoTransforms`。
 - 建立 13 個 fan-ip packs：Hello Kitty、Cinnamoroll、My Melody、Kuromi、
   Pompompurin、Little Twin Stars、Miffy、Rilakkuma、Sumikko Gurashi、
   Pusheen、Kirby、Snoopy、Mickey Mouse。
@@ -56,7 +60,7 @@
 - 依使用者後續要求，`snapstrip-fat` Render 公開站已改為包含 fan-ip，
   build command 使用 `pnpm build`；此設定會公開第三方 IP 素材。
 - 完成單元測試與 Playwright：
-  - 19 個 Vitest tests。
+  - 20 個 Vitest tests。
   - 6 個 E2E tests，包含桌面/手機上傳流程、fake camera 四連拍與直式 stage fit。
 - 已建立：
   - `src/app/types.ts`
