@@ -12,34 +12,11 @@ import { STICKERS, stickerName, type StickerAsset } from '../../data/stickers';
 import { useLanguage } from '../../i18n/LanguageContext';
 import { assetUrl } from '../../lib/assetUrl';
 import { paintStripBaseToCanvas, slotRects, stripSize } from '../../lib/strip';
-
-type GestureMode = 'move' | 'scale' | 'rotate' | 'pinch';
-
-interface GestureState {
-  mode: GestureMode;
-  pointerId: number;
-  startX: number;
-  startY: number;
-  originX: number;
-  originY: number;
-  startScale: number;
-  startRotation: number;
-  startDistance: number;
-  startAngle: number;
-  centerX: number;
-  centerY: number;
-  pinchStartDistance: number;
-  pinchStartAngle: number;
-  pinchStartMidX: number;
-  pinchStartMidY: number;
-  pinchOriginX: number;
-  pinchOriginY: number;
-  pinchStartScale: number;
-  pinchStartRotation: number;
-  lastAngle: number;
-  lastX: number;
-  lastY: number;
-}
+import {
+  calculateGesturePatch,
+  type GestureMode,
+  type GestureState,
+} from './gestureMath';
 
 function clamp(value: number, min: number, max: number) {
   return Math.min(max, Math.max(min, value));
@@ -162,9 +139,6 @@ export function EditorStage({
       pinchOriginY: placement.y,
       pinchStartScale: placement.scale,
       pinchStartRotation: placement.rotation,
-      lastAngle: angle,
-      lastX: event.clientX,
-      lastY: event.clientY,
     };
   }
 
@@ -204,9 +178,6 @@ export function EditorStage({
         pinchOriginY: placement.y,
         pinchStartScale: placement.scale,
         pinchStartRotation: placement.rotation,
-        lastAngle: angle,
-        lastX: event.clientX,
-        lastY: event.clientY,
       };
       return;
     }
@@ -237,9 +208,6 @@ export function EditorStage({
         pinchOriginY: placement.y,
         pinchStartScale: placement.scale,
         pinchStartRotation: placement.rotation,
-        lastAngle: Math.atan2(second.y - first.y, second.x - first.x),
-        lastX: first.x,
-        lastY: first.y,
       };
     }
   }
@@ -271,67 +239,14 @@ export function EditorStage({
     const sticker = useSession.getState().stickers.find((item) => item.id === selectedId);
     if (!gesture || !sticker || !event || stageSize.width === 0) return;
 
-    if (gesture.mode === 'pinch') {
-      const points = [...activePointersRef.current.values()];
-      if (points.length < 2) return;
-      const [first, second] = points;
-      const midX = (first.x + second.x) / 2;
-      const midY = (first.y + second.y) / 2;
-      const distance = Math.max(1, Math.hypot(second.x - first.x, second.y - first.y));
-      const angle = Math.atan2(second.y - first.y, second.x - first.x);
-      updateSticker(sticker.id, {
-        x: clamp(
-          gesture.pinchOriginX + (midX - gesture.pinchStartMidX) / stageSize.width,
-          0,
-          1,
-        ),
-        y: clamp(
-          gesture.pinchOriginY + (midY - gesture.pinchStartMidY) / stageSize.height,
-          0,
-          1,
-        ),
-        scale: clamp(
-          gesture.pinchStartScale * (distance / gesture.pinchStartDistance),
-          0.06,
-          0.9,
-        ),
-        rotation:
-          (gesture.pinchStartRotation +
-            ((angle - gesture.pinchStartAngle) * 180) / Math.PI +
-            360) %
-          360,
-      });
-      return;
-    }
-
-    if (gesture.mode === 'move') {
-      updateSticker(sticker.id, {
-        x: clamp(gesture.originX + (event.clientX - gesture.startX) / stageSize.width, 0, 1),
-        y: clamp(gesture.originY + (event.clientY - gesture.startY) / stageSize.height, 0, 1),
-      });
-      return;
-    }
-
-    const centerX = gesture.centerX;
-    const centerY = gesture.centerY;
-
-    if (gesture.mode === 'scale') {
-      const distance = Math.hypot(event.clientX - centerX, event.clientY - centerY);
-      updateSticker(sticker.id, {
-        scale: clamp(gesture.startScale * (distance / gesture.startDistance), 0.06, 0.9),
-      });
-      return;
-    }
-
-    const angle = Math.atan2(event.clientY - centerY, event.clientX - centerX);
-
-    updateSticker(sticker.id, {
-      rotation:
-        (gesture.startRotation +
-          ((angle - gesture.startAngle) * 180) / Math.PI +
-          360) %
-        360,
-    });
+    const patch = calculateGesturePatch(
+      gesture,
+      event,
+      [...activePointersRef.current.values()],
+      stageSize.width,
+      stageSize.height,
+    );
+    if (patch) updateSticker(sticker.id, patch);
   }
 
   function endGesture(event: React.PointerEvent<HTMLDivElement>) {
@@ -368,9 +283,6 @@ export function EditorStage({
             pinchOriginY: sticker.y,
             pinchStartScale: sticker.scale,
             pinchStartRotation: sticker.rotation,
-            lastAngle: 0,
-            lastX: point.x,
-            lastY: point.y,
           };
         }
       } else if (remaining.length === 0) {

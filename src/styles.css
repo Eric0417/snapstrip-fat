@@ -780,6 +780,7 @@ img {
   background: #fff;
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(43, 36, 42, 0.18);
+  touch-action: none;
 }
 
 .sticker-handle::before {
