@@ -1,0 +1,562 @@
+[
+  {
+    "id": "little-twin-stars-sticker-01",
+    "name": {
+      "zh-Hant": "雙星仙子 貼圖 01",
+      "zh-Hans": "双子星 贴图 01",
+      "en": "Little Twin Stars Sticker 01",
+      "ja": "リトルツインスターズ スタンプ 01"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/little-twin-stars/stickers/sticker-01.png",
+    "thumb": "packs/fan-ip/little-twin-stars/stickers/sticker-01.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "little-twin-stars",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "little-twin-stars",
+      "colorway": "original",
+      "pose": "sticker-01",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/dbbd80e2084d19099d38bcd5e72d1d56.webp",
+    "license": "private-personal-use",
+    "sha256": "bc7b30d55c0e48f7101eb06be599d948615485d1e8136d9b924e392f89d84614"
+  },
+  {
+    "id": "little-twin-stars-sticker-02",
+    "name": {
+      "zh-Hant": "雙星仙子 貼圖 02",
+      "zh-Hans": "双子星 贴图 02",
+      "en": "Little Twin Stars Sticker 02",
+      "ja": "リトルツインスターズ スタンプ 02"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/little-twin-stars/stickers/sticker-02.png",
+    "thumb": "packs/fan-ip/little-twin-stars/stickers/sticker-02.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "little-twin-stars",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "little-twin-stars",
+      "colorway": "original",
+      "pose": "sticker-02",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/12f09908a229702bc1a8866a063f79fb.webp",
+    "license": "private-personal-use",
+    "sha256": "5665683f1650d26a78fc3be82039aac08f74cc487916208cc328e09c81b5ecb7"
+  },
+  {
+    "id": "little-twin-stars-sticker-03",
+    "name": {
+      "zh-Hant": "雙星仙子 貼圖 03",
+      "zh-Hans": "双子星 贴图 03",
+      "en": "Little Twin Stars Sticker 03",
+      "ja": "リトルツインスターズ スタンプ 03"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/little-twin-stars/stickers/sticker-03.png",
+    "thumb": "packs/fan-ip/little-twin-stars/stickers/sticker-03.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "little-twin-stars",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "little-twin-stars",
+      "colorway": "original",
+      "pose": "sticker-03",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/dcea045a4ee47d6f9ae2335036c8e529.webp",
+    "license": "private-personal-use",
+    "sha256": "3e1354b0a1bf363fc714d040e432d1dbd8346454fa5075aa6530ea401d4d8940"
+  },
+  {
+    "id": "little-twin-stars-sticker-04",
+    "name": {
+      "zh-Hant": "雙星仙子 貼圖 04",
+      "zh-Hans": "双子星 贴图 04",
+      "en": "Little Twin Stars Sticker 04",
+      "ja": "リトルツインスターズ スタンプ 04"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/little-twin-stars/stickers/sticker-04.png",
+    "thumb": "packs/fan-ip/little-twin-stars/stickers/sticker-04.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "little-twin-stars",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "little-twin-stars",
+      "colorway": "original",
+      "pose": "sticker-04",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/0ed87417b7d5acca2e490e146faa44e6.webp",
+    "license": "private-personal-use",
+    "sha256": "8feb8b8695c47dab4282170b71dc3463b8d32734612b7a18f94feaadf609abe7"
+  },
+  {
+    "id": "little-twin-stars-sticker-05",
+    "name": {
+      "zh-Hant": "雙星仙子 貼圖 05",
+      "zh-Hans": "双子星 贴图 05",
+      "en": "Little Twin Stars Sticker 05",
+      "ja": "リトルツインスターズ スタンプ 05"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/little-twin-stars/stickers/sticker-05.png",
+    "thumb": "packs/fan-ip/little-twin-stars/stickers/sticker-05.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "little-twin-stars",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "little-twin-stars",
+      "colorway": "original",
+      "pose": "sticker-05",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/f8e7087fb502ce5c5c60d46e4f3f33cf.webp",
+    "license": "private-personal-use",
+    "sha256": "b4f69280ac4a4d38f4ad1be79c593bace881b1a9f26a344401783d05e4810bba"
+  },
+  {
+    "id": "little-twin-stars-sticker-06",
+    "name": {
+      "zh-Hant": "雙星仙子 貼圖 06",
+      "zh-Hans": "双子星 贴图 06",
+      "en": "Little Twin Stars Sticker 06",
+      "ja": "リトルツインスターズ スタンプ 06"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/little-twin-stars/stickers/sticker-06.png",
+    "thumb": "packs/fan-ip/little-twin-stars/stickers/sticker-06.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "little-twin-stars",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "little-twin-stars",
+      "colorway": "original",
+      "pose": "sticker-06",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/66d6bb7cb304db10ea17116440bfa7a9.webp",
+    "license": "private-personal-use",
+    "sha256": "a871eec8e8a50b996dbee624b574eb428c52d995ece3686faae9df112aaef78e"
+  },
+  {
+    "id": "little-twin-stars-sticker-07",
+    "name": {
+      "zh-Hant": "雙星仙子 貼圖 07",
+      "zh-Hans": "双子星 贴图 07",
+      "en": "Little Twin Stars Sticker 07",
+      "ja": "リトルツインスターズ スタンプ 07"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/little-twin-stars/stickers/sticker-07.png",
+    "thumb": "packs/fan-ip/little-twin-stars/stickers/sticker-07.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "little-twin-stars",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "little-twin-stars",
+      "colorway": "original",
+      "pose": "sticker-07",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/338e80241c3866b71fad41867dcac499.webp",
+    "license": "private-personal-use",
+    "sha256": "e73c8ff35f8b22007477d5a559210468a6e7c9cea57e2c780e61b65e6b1640cd"
+  },
+  {
+    "id": "little-twin-stars-sticker-08",
+    "name": {
+      "zh-Hant": "雙星仙子 貼圖 08",
+      "zh-Hans": "双子星 贴图 08",
+      "en": "Little Twin Stars Sticker 08",
+      "ja": "リトルツインスターズ スタンプ 08"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/little-twin-stars/stickers/sticker-08.png",
+    "thumb": "packs/fan-ip/little-twin-stars/stickers/sticker-08.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "little-twin-stars",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "little-twin-stars",
+      "colorway": "original",
+      "pose": "sticker-08",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/2a0cb73a9d4e02ff5ea0592d344e8ba7.webp",
+    "license": "private-personal-use",
+    "sha256": "ad6006c9c38a984012dedf8130997120736de5e1c7a6368894b20880f3c28ab8"
+  },
+  {
+    "id": "little-twin-stars-sticker-09",
+    "name": {
+      "zh-Hant": "雙星仙子 貼圖 09",
+      "zh-Hans": "双子星 贴图 09",
+      "en": "Little Twin Stars Sticker 09",
+      "ja": "リトルツインスターズ スタンプ 09"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/little-twin-stars/stickers/sticker-09.png",
+    "thumb": "packs/fan-ip/little-twin-stars/stickers/sticker-09.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "little-twin-stars",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "little-twin-stars",
+      "colorway": "original",
+      "pose": "sticker-09",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/0db2bdf7a9ca7ae1c37a9d7c8a27f473.webp",
+    "license": "private-personal-use",
+    "sha256": "0ff11e201eeed76e05922cdb4eadef3b7c1a35aeaca9454e5c6e50f06fec1550"
+  },
+  {
+    "id": "little-twin-stars-sticker-10",
+    "name": {
+      "zh-Hant": "雙星仙子 貼圖 10",
+      "zh-Hans": "双子星 贴图 10",
+      "en": "Little Twin Stars Sticker 10",
+      "ja": "リトルツインスターズ スタンプ 10"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/little-twin-stars/stickers/sticker-10.png",
+    "thumb": "packs/fan-ip/little-twin-stars/stickers/sticker-10.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "little-twin-stars",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "little-twin-stars",
+      "colorway": "original",
+      "pose": "sticker-10",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/03ee2e5881f40a3522447938c653104f.webp",
+    "license": "private-personal-use",
+    "sha256": "5e7d4dd196b70d7b2b26fe0a56fdf5fd0d57cbf2f6629d358c0a1d36ece09a1d"
+  },
+  {
+    "id": "little-twin-stars-sticker-11",
+    "name": {
+      "zh-Hant": "雙星仙子 貼圖 11",
+      "zh-Hans": "双子星 贴图 11",
+      "en": "Little Twin Stars Sticker 11",
+      "ja": "リトルツインスターズ スタンプ 11"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/little-twin-stars/stickers/sticker-11.png",
+    "thumb": "packs/fan-ip/little-twin-stars/stickers/sticker-11.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "little-twin-stars",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "little-twin-stars",
+      "colorway": "original",
+      "pose": "sticker-11",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/7c6587c6b0687ab482e9c7eb06eff77e.webp",
+    "license": "private-personal-use",
+    "sha256": "b77c4d01ea0ef25c66967dbadd7362ef26cd53e61237936223893af26d8d91c5"
+  },
+  {
+    "id": "little-twin-stars-sticker-12",
+    "name": {
+      "zh-Hant": "雙星仙子 貼圖 12",
+      "zh-Hans": "双子星 贴图 12",
+      "en": "Little Twin Stars Sticker 12",
+      "ja": "リトルツインスターズ スタンプ 12"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/little-twin-stars/stickers/sticker-12.png",
+    "thumb": "packs/fan-ip/little-twin-stars/stickers/sticker-12.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "little-twin-stars",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "little-twin-stars",
+      "colorway": "original",
+      "pose": "sticker-12",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/a44cbd1c23aa1e5ec09b13edf3fad9e3.webp",
+    "license": "private-personal-use",
+    "sha256": "a7cf2336fcbfb17f01b12f7930b02e24d22415dcee28a31135ede240eaf58a66"
+  },
+  {
+    "id": "little-twin-stars-sticker-13",
+    "name": {
+      "zh-Hant": "雙星仙子 貼圖 13",
+      "zh-Hans": "双子星 贴图 13",
+      "en": "Little Twin Stars Sticker 13",
+      "ja": "リトルツインスターズ スタンプ 13"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/little-twin-stars/stickers/sticker-13.png",
+    "thumb": "packs/fan-ip/little-twin-stars/stickers/sticker-13.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "little-twin-stars",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "little-twin-stars",
+      "colorway": "original",
+      "pose": "sticker-13",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/faa1ce48b41864e5889a36ac762a169e.webp",
+    "license": "private-personal-use",
+    "sha256": "a2597c7ea57e25651ab6e71345a597e75c6137d7cabffadd557d63ad1712f887"
+  },
+  {
+    "id": "little-twin-stars-sticker-14",
+    "name": {
+      "zh-Hant": "雙星仙子 貼圖 14",
+      "zh-Hans": "双子星 贴图 14",
+      "en": "Little Twin Stars Sticker 14",
+      "ja": "リトルツインスターズ スタンプ 14"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/little-twin-stars/stickers/sticker-14.png",
+    "thumb": "packs/fan-ip/little-twin-stars/stickers/sticker-14.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "little-twin-stars",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "little-twin-stars",
+      "colorway": "original",
+      "pose": "sticker-14",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/426e07fdeb35c77e1bbc9ea28bb8faf0.webp",
+    "license": "private-personal-use",
+    "sha256": "9731cd38f18063cd98f28662d96b0d4640dcb76b09f5c207e5006bdc971c1c5e"
+  },
+  {
+    "id": "little-twin-stars-sticker-15",
+    "name": {
+      "zh-Hant": "雙星仙子 貼圖 15",
+      "zh-Hans": "双子星 贴图 15",
+      "en": "Little Twin Stars Sticker 15",
+      "ja": "リトルツインスターズ スタンプ 15"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/little-twin-stars/stickers/sticker-15.png",
+    "thumb": "packs/fan-ip/little-twin-stars/stickers/sticker-15.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "little-twin-stars",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "little-twin-stars",
+      "colorway": "original",
+      "pose": "sticker-15",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/04533a1815df981ba130daa05474f4b4.webp",
+    "license": "private-personal-use",
+    "sha256": "488f9e79fd917c23a0a0a84b9e97d466d08dff1d14342118b4c064ef8c44941b"
+  },
+  {
+    "id": "little-twin-stars-sticker-16",
+    "name": {
+      "zh-Hant": "雙星仙子 貼圖 16",
+      "zh-Hans": "双子星 贴图 16",
+      "en": "Little Twin Stars Sticker 16",
+      "ja": "リトルツインスターズ スタンプ 16"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/little-twin-stars/stickers/sticker-16.png",
+    "thumb": "packs/fan-ip/little-twin-stars/stickers/sticker-16.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "little-twin-stars",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "little-twin-stars",
+      "colorway": "original",
+      "pose": "sticker-16",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/49aae96e4137ca7ccc802445261eeb43.webp",
+    "license": "private-personal-use",
+    "sha256": "1dfb5388d5cd31fd2031cb9c3613c231069346a7983b642f8fb124912bf7a7d8"
+  }
+]

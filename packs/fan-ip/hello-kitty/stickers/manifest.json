@@ -1,0 +1,562 @@
+[
+  {
+    "id": "hello-kitty-sticker-01",
+    "name": {
+      "zh-Hant": "Hello Kitty 貼圖 01",
+      "zh-Hans": "Hello Kitty 贴图 01",
+      "en": "Hello Kitty Sticker 01",
+      "ja": "ハローキティ スタンプ 01"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/hello-kitty/stickers/sticker-01.png",
+    "thumb": "packs/fan-ip/hello-kitty/stickers/sticker-01.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "hello-kitty",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "hello-kitty",
+      "colorway": "original",
+      "pose": "sticker-01",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/98072ad3ddb0ee4a57e60fc3230a1e87.webp",
+    "license": "private-personal-use",
+    "sha256": "46cf196cc7a5b093b2454f5b64095c5a3b41598a330c1074f1377b70c7198230"
+  },
+  {
+    "id": "hello-kitty-sticker-02",
+    "name": {
+      "zh-Hant": "Hello Kitty 貼圖 02",
+      "zh-Hans": "Hello Kitty 贴图 02",
+      "en": "Hello Kitty Sticker 02",
+      "ja": "ハローキティ スタンプ 02"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/hello-kitty/stickers/sticker-02.png",
+    "thumb": "packs/fan-ip/hello-kitty/stickers/sticker-02.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "hello-kitty",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "hello-kitty",
+      "colorway": "original",
+      "pose": "sticker-02",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/d2f743724e43f2192bbb8f004b76738b.webp",
+    "license": "private-personal-use",
+    "sha256": "0faa3cce8aeabf60f1a48c6ba5c0696aad69f07a10ca9a23d8ae81726960aba7"
+  },
+  {
+    "id": "hello-kitty-sticker-03",
+    "name": {
+      "zh-Hant": "Hello Kitty 貼圖 03",
+      "zh-Hans": "Hello Kitty 贴图 03",
+      "en": "Hello Kitty Sticker 03",
+      "ja": "ハローキティ スタンプ 03"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/hello-kitty/stickers/sticker-03.png",
+    "thumb": "packs/fan-ip/hello-kitty/stickers/sticker-03.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "hello-kitty",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "hello-kitty",
+      "colorway": "original",
+      "pose": "sticker-03",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/daf9e74e2fe14c926b0c6c6346e0d302.webp",
+    "license": "private-personal-use",
+    "sha256": "e7ba0d2743477a58944bcb716ad4dccbf15f79c428a24eaa444b2c2b4143d2be"
+  },
+  {
+    "id": "hello-kitty-sticker-04",
+    "name": {
+      "zh-Hant": "Hello Kitty 貼圖 04",
+      "zh-Hans": "Hello Kitty 贴图 04",
+      "en": "Hello Kitty Sticker 04",
+      "ja": "ハローキティ スタンプ 04"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/hello-kitty/stickers/sticker-04.png",
+    "thumb": "packs/fan-ip/hello-kitty/stickers/sticker-04.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "hello-kitty",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "hello-kitty",
+      "colorway": "original",
+      "pose": "sticker-04",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/9ce0fb006dc5406e1237fb72655a7717.webp",
+    "license": "private-personal-use",
+    "sha256": "a87a4f35d639dddc95f0dbeb468c2402ec7179b0498cf7237ff9928c10930e59"
+  },
+  {
+    "id": "hello-kitty-sticker-05",
+    "name": {
+      "zh-Hant": "Hello Kitty 貼圖 05",
+      "zh-Hans": "Hello Kitty 贴图 05",
+      "en": "Hello Kitty Sticker 05",
+      "ja": "ハローキティ スタンプ 05"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/hello-kitty/stickers/sticker-05.png",
+    "thumb": "packs/fan-ip/hello-kitty/stickers/sticker-05.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "hello-kitty",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "hello-kitty",
+      "colorway": "original",
+      "pose": "sticker-05",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/71a503e9878170e453648dabfab500b3.webp",
+    "license": "private-personal-use",
+    "sha256": "c3b4a1f99dcafd07182e8a5401871bcdc7863bfe00e65ffe949e9417c1b8b594"
+  },
+  {
+    "id": "hello-kitty-sticker-06",
+    "name": {
+      "zh-Hant": "Hello Kitty 貼圖 06",
+      "zh-Hans": "Hello Kitty 贴图 06",
+      "en": "Hello Kitty Sticker 06",
+      "ja": "ハローキティ スタンプ 06"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/hello-kitty/stickers/sticker-06.png",
+    "thumb": "packs/fan-ip/hello-kitty/stickers/sticker-06.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "hello-kitty",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "hello-kitty",
+      "colorway": "original",
+      "pose": "sticker-06",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/c800dd2d0be3cb3c199cdfd43945bd0a.webp",
+    "license": "private-personal-use",
+    "sha256": "77370443225b095cc6f87c8b350a216192034635b4425cde24514edb3a7c1874"
+  },
+  {
+    "id": "hello-kitty-sticker-07",
+    "name": {
+      "zh-Hant": "Hello Kitty 貼圖 07",
+      "zh-Hans": "Hello Kitty 贴图 07",
+      "en": "Hello Kitty Sticker 07",
+      "ja": "ハローキティ スタンプ 07"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/hello-kitty/stickers/sticker-07.png",
+    "thumb": "packs/fan-ip/hello-kitty/stickers/sticker-07.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "hello-kitty",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "hello-kitty",
+      "colorway": "original",
+      "pose": "sticker-07",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/f25090f404fa53e16504803638e85a98.webp",
+    "license": "private-personal-use",
+    "sha256": "129874b06352d6a71143cc64655ba501d2cf7cba3d2581f6e6ece23831bb8b24"
+  },
+  {
+    "id": "hello-kitty-sticker-08",
+    "name": {
+      "zh-Hant": "Hello Kitty 貼圖 08",
+      "zh-Hans": "Hello Kitty 贴图 08",
+      "en": "Hello Kitty Sticker 08",
+      "ja": "ハローキティ スタンプ 08"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/hello-kitty/stickers/sticker-08.png",
+    "thumb": "packs/fan-ip/hello-kitty/stickers/sticker-08.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "hello-kitty",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "hello-kitty",
+      "colorway": "original",
+      "pose": "sticker-08",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/091ac84fcefb8675e250f4111e1aa13b.webp",
+    "license": "private-personal-use",
+    "sha256": "465df479c853b1e95ad8177d9a6231ce64ee2ca4a4750ab28bb36475b2a79877"
+  },
+  {
+    "id": "hello-kitty-sticker-09",
+    "name": {
+      "zh-Hant": "Hello Kitty 貼圖 09",
+      "zh-Hans": "Hello Kitty 贴图 09",
+      "en": "Hello Kitty Sticker 09",
+      "ja": "ハローキティ スタンプ 09"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/hello-kitty/stickers/sticker-09.png",
+    "thumb": "packs/fan-ip/hello-kitty/stickers/sticker-09.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "hello-kitty",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "hello-kitty",
+      "colorway": "original",
+      "pose": "sticker-09",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/2231d5c52dd9b1129c20ffb59780f284.webp",
+    "license": "private-personal-use",
+    "sha256": "f0339b7a25d926e070a9210400bbf96c980af15972768f4b3e57391d6b9095b8"
+  },
+  {
+    "id": "hello-kitty-sticker-10",
+    "name": {
+      "zh-Hant": "Hello Kitty 貼圖 10",
+      "zh-Hans": "Hello Kitty 贴图 10",
+      "en": "Hello Kitty Sticker 10",
+      "ja": "ハローキティ スタンプ 10"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/hello-kitty/stickers/sticker-10.png",
+    "thumb": "packs/fan-ip/hello-kitty/stickers/sticker-10.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "hello-kitty",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "hello-kitty",
+      "colorway": "original",
+      "pose": "sticker-10",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/a21068e69d912088a3ccb8a594b27a13.webp",
+    "license": "private-personal-use",
+    "sha256": "33f64ed2ac0c03a1716997ef5ba1de0548823bead3d52c4fef9c1a90f84b4af9"
+  },
+  {
+    "id": "hello-kitty-sticker-11",
+    "name": {
+      "zh-Hant": "Hello Kitty 貼圖 11",
+      "zh-Hans": "Hello Kitty 贴图 11",
+      "en": "Hello Kitty Sticker 11",
+      "ja": "ハローキティ スタンプ 11"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/hello-kitty/stickers/sticker-11.png",
+    "thumb": "packs/fan-ip/hello-kitty/stickers/sticker-11.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "hello-kitty",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "hello-kitty",
+      "colorway": "original",
+      "pose": "sticker-11",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/406b304350930393eae64c4cc0aae4a6.webp",
+    "license": "private-personal-use",
+    "sha256": "4857ed633777c8246db315d67133c1577e7b6393e1c5a5ec2cfc0d56bea1a78f"
+  },
+  {
+    "id": "hello-kitty-sticker-12",
+    "name": {
+      "zh-Hant": "Hello Kitty 貼圖 12",
+      "zh-Hans": "Hello Kitty 贴图 12",
+      "en": "Hello Kitty Sticker 12",
+      "ja": "ハローキティ スタンプ 12"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/hello-kitty/stickers/sticker-12.png",
+    "thumb": "packs/fan-ip/hello-kitty/stickers/sticker-12.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "hello-kitty",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "hello-kitty",
+      "colorway": "original",
+      "pose": "sticker-12",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/8580da5159fa4f82ec6f31c18748b5be.webp",
+    "license": "private-personal-use",
+    "sha256": "1a18cfb80398a780e860ce9ade539d4c3920fa348c1407885c8a8436fb51bd18"
+  },
+  {
+    "id": "hello-kitty-sticker-13",
+    "name": {
+      "zh-Hant": "Hello Kitty 貼圖 13",
+      "zh-Hans": "Hello Kitty 贴图 13",
+      "en": "Hello Kitty Sticker 13",
+      "ja": "ハローキティ スタンプ 13"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/hello-kitty/stickers/sticker-13.png",
+    "thumb": "packs/fan-ip/hello-kitty/stickers/sticker-13.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "hello-kitty",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "hello-kitty",
+      "colorway": "original",
+      "pose": "sticker-13",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/45804f5f3903ac0f65ce499f5eb5ad74.webp",
+    "license": "private-personal-use",
+    "sha256": "197646d16ac88ccde8234ee7c4b1d811c6718ba68d43c2965af50b3628d664a6"
+  },
+  {
+    "id": "hello-kitty-sticker-14",
+    "name": {
+      "zh-Hant": "Hello Kitty 貼圖 14",
+      "zh-Hans": "Hello Kitty 贴图 14",
+      "en": "Hello Kitty Sticker 14",
+      "ja": "ハローキティ スタンプ 14"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/hello-kitty/stickers/sticker-14.png",
+    "thumb": "packs/fan-ip/hello-kitty/stickers/sticker-14.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "hello-kitty",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "hello-kitty",
+      "colorway": "original",
+      "pose": "sticker-14",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/394d115d9b01a059f47346a48ad0cddd.webp",
+    "license": "private-personal-use",
+    "sha256": "dc3f3c9096dbc4062c30955e0ee8faa33f2ae66e79087b277deb5593c06ac5b9"
+  },
+  {
+    "id": "hello-kitty-sticker-15",
+    "name": {
+      "zh-Hant": "Hello Kitty 貼圖 15",
+      "zh-Hans": "Hello Kitty 贴图 15",
+      "en": "Hello Kitty Sticker 15",
+      "ja": "ハローキティ スタンプ 15"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/hello-kitty/stickers/sticker-15.png",
+    "thumb": "packs/fan-ip/hello-kitty/stickers/sticker-15.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "hello-kitty",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "hello-kitty",
+      "colorway": "original",
+      "pose": "sticker-15",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/6c9b0aeeebcaaa2a3116fba56b812b18.webp",
+    "license": "private-personal-use",
+    "sha256": "50f6219c49e0e46f4c8817ff803be0b0ae3b88d5c8433e80d9e95cd3fed1fdfe"
+  },
+  {
+    "id": "hello-kitty-sticker-16",
+    "name": {
+      "zh-Hant": "Hello Kitty 貼圖 16",
+      "zh-Hans": "Hello Kitty 贴图 16",
+      "en": "Hello Kitty Sticker 16",
+      "ja": "ハローキティ スタンプ 16"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/hello-kitty/stickers/sticker-16.png",
+    "thumb": "packs/fan-ip/hello-kitty/stickers/sticker-16.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "hello-kitty",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "hello-kitty",
+      "colorway": "original",
+      "pose": "sticker-16",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/01050f4ffecc2cf3311025e894db809a.webp",
+    "license": "private-personal-use",
+    "sha256": "778e1dc44936c7bf003238e18765f8af11346893be89097c24977022a981d9fd"
+  }
+]

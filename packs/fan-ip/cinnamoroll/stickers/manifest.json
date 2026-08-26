@@ -1,0 +1,562 @@
+[
+  {
+    "id": "cinnamoroll-sticker-01",
+    "name": {
+      "zh-Hant": "玉桂狗 貼圖 01",
+      "zh-Hans": "大耳狗 贴图 01",
+      "en": "Cinnamoroll Sticker 01",
+      "ja": "シナモロール スタンプ 01"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/cinnamoroll/stickers/sticker-01.png",
+    "thumb": "packs/fan-ip/cinnamoroll/stickers/sticker-01.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "cinnamoroll",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "cinnamoroll",
+      "colorway": "original",
+      "pose": "sticker-01",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/17b67565c5c5cfc08927216c610b3bd3.webp",
+    "license": "private-personal-use",
+    "sha256": "52512848fbb896378aaeb5bca795a26a67ce30f81f8a6c36d9c7905c0128f525"
+  },
+  {
+    "id": "cinnamoroll-sticker-02",
+    "name": {
+      "zh-Hant": "玉桂狗 貼圖 02",
+      "zh-Hans": "大耳狗 贴图 02",
+      "en": "Cinnamoroll Sticker 02",
+      "ja": "シナモロール スタンプ 02"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/cinnamoroll/stickers/sticker-02.png",
+    "thumb": "packs/fan-ip/cinnamoroll/stickers/sticker-02.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "cinnamoroll",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "cinnamoroll",
+      "colorway": "original",
+      "pose": "sticker-02",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/f6325b651e122969a3d1d07b65743b71.webp",
+    "license": "private-personal-use",
+    "sha256": "b5bdb72cee029f33c137378aa11b0d294b5b7a39458f4f24bf3c8a7e51077599"
+  },
+  {
+    "id": "cinnamoroll-sticker-03",
+    "name": {
+      "zh-Hant": "玉桂狗 貼圖 03",
+      "zh-Hans": "大耳狗 贴图 03",
+      "en": "Cinnamoroll Sticker 03",
+      "ja": "シナモロール スタンプ 03"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/cinnamoroll/stickers/sticker-03.png",
+    "thumb": "packs/fan-ip/cinnamoroll/stickers/sticker-03.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "cinnamoroll",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "cinnamoroll",
+      "colorway": "original",
+      "pose": "sticker-03",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/77dc6be6900c79b5cab0420b35e68f4d.webp",
+    "license": "private-personal-use",
+    "sha256": "6d11b030225fd99ba2e1a5e54429201197b58f6fb2ed43b4ddad4a8c138b8d8e"
+  },
+  {
+    "id": "cinnamoroll-sticker-04",
+    "name": {
+      "zh-Hant": "玉桂狗 貼圖 04",
+      "zh-Hans": "大耳狗 贴图 04",
+      "en": "Cinnamoroll Sticker 04",
+      "ja": "シナモロール スタンプ 04"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/cinnamoroll/stickers/sticker-04.png",
+    "thumb": "packs/fan-ip/cinnamoroll/stickers/sticker-04.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "cinnamoroll",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "cinnamoroll",
+      "colorway": "original",
+      "pose": "sticker-04",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/c971137fed00888e5a1bd0febb07bfa1.webp",
+    "license": "private-personal-use",
+    "sha256": "2cb347d97e6c4fb8780e9fb990167bfaab5a0dcf0baff5eb8ed897e7d6133df4"
+  },
+  {
+    "id": "cinnamoroll-sticker-05",
+    "name": {
+      "zh-Hant": "玉桂狗 貼圖 05",
+      "zh-Hans": "大耳狗 贴图 05",
+      "en": "Cinnamoroll Sticker 05",
+      "ja": "シナモロール スタンプ 05"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/cinnamoroll/stickers/sticker-05.png",
+    "thumb": "packs/fan-ip/cinnamoroll/stickers/sticker-05.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "cinnamoroll",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "cinnamoroll",
+      "colorway": "original",
+      "pose": "sticker-05",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/2982111e99ff3f797c953ebcefd946ef.webp",
+    "license": "private-personal-use",
+    "sha256": "9bafc4330fb536461994090931e0faccb21b9f0bd270382f75eeb2e10578de7b"
+  },
+  {
+    "id": "cinnamoroll-sticker-06",
+    "name": {
+      "zh-Hant": "玉桂狗 貼圖 06",
+      "zh-Hans": "大耳狗 贴图 06",
+      "en": "Cinnamoroll Sticker 06",
+      "ja": "シナモロール スタンプ 06"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/cinnamoroll/stickers/sticker-06.png",
+    "thumb": "packs/fan-ip/cinnamoroll/stickers/sticker-06.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "cinnamoroll",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "cinnamoroll",
+      "colorway": "original",
+      "pose": "sticker-06",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/4aea7aa9321c420ec33d0daabe8a6aed.webp",
+    "license": "private-personal-use",
+    "sha256": "e8898c4419a14195e0d32dd1b553a30003556f76d3516cbb38c1554b9bcba85c"
+  },
+  {
+    "id": "cinnamoroll-sticker-07",
+    "name": {
+      "zh-Hant": "玉桂狗 貼圖 07",
+      "zh-Hans": "大耳狗 贴图 07",
+      "en": "Cinnamoroll Sticker 07",
+      "ja": "シナモロール スタンプ 07"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/cinnamoroll/stickers/sticker-07.png",
+    "thumb": "packs/fan-ip/cinnamoroll/stickers/sticker-07.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "cinnamoroll",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "cinnamoroll",
+      "colorway": "original",
+      "pose": "sticker-07",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/f1057fab317b893c423de2693e1e9a38.webp",
+    "license": "private-personal-use",
+    "sha256": "8bb23f1ec730cdaa129e23ee5038641fc9c01ac8399243cb2d01b3ba27431a4b"
+  },
+  {
+    "id": "cinnamoroll-sticker-08",
+    "name": {
+      "zh-Hant": "玉桂狗 貼圖 08",
+      "zh-Hans": "大耳狗 贴图 08",
+      "en": "Cinnamoroll Sticker 08",
+      "ja": "シナモロール スタンプ 08"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/cinnamoroll/stickers/sticker-08.png",
+    "thumb": "packs/fan-ip/cinnamoroll/stickers/sticker-08.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "cinnamoroll",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "cinnamoroll",
+      "colorway": "original",
+      "pose": "sticker-08",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/c61a1c4bea869b35b56fe1fbd718dae0.webp",
+    "license": "private-personal-use",
+    "sha256": "270d661750bd86857d39ce6f65f24749d8066038d35d63a73e448f302e1788bf"
+  },
+  {
+    "id": "cinnamoroll-sticker-09",
+    "name": {
+      "zh-Hant": "玉桂狗 貼圖 09",
+      "zh-Hans": "大耳狗 贴图 09",
+      "en": "Cinnamoroll Sticker 09",
+      "ja": "シナモロール スタンプ 09"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/cinnamoroll/stickers/sticker-09.png",
+    "thumb": "packs/fan-ip/cinnamoroll/stickers/sticker-09.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "cinnamoroll",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "cinnamoroll",
+      "colorway": "original",
+      "pose": "sticker-09",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/92bfde23a009ae5adc12c5374b35e31b.webp",
+    "license": "private-personal-use",
+    "sha256": "e96ee433998b42cfc26ccdf63d88c61379ba6ff7b307c52cfc9be98e039bf49f"
+  },
+  {
+    "id": "cinnamoroll-sticker-10",
+    "name": {
+      "zh-Hant": "玉桂狗 貼圖 10",
+      "zh-Hans": "大耳狗 贴图 10",
+      "en": "Cinnamoroll Sticker 10",
+      "ja": "シナモロール スタンプ 10"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/cinnamoroll/stickers/sticker-10.png",
+    "thumb": "packs/fan-ip/cinnamoroll/stickers/sticker-10.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "cinnamoroll",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "cinnamoroll",
+      "colorway": "original",
+      "pose": "sticker-10",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/49f73ed286ca746d88a0ae7551d53531.webp",
+    "license": "private-personal-use",
+    "sha256": "59873defa44fcc81f89883e8466a353d2af84c61b4157bad4356ae862c36901f"
+  },
+  {
+    "id": "cinnamoroll-sticker-11",
+    "name": {
+      "zh-Hant": "玉桂狗 貼圖 11",
+      "zh-Hans": "大耳狗 贴图 11",
+      "en": "Cinnamoroll Sticker 11",
+      "ja": "シナモロール スタンプ 11"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/cinnamoroll/stickers/sticker-11.png",
+    "thumb": "packs/fan-ip/cinnamoroll/stickers/sticker-11.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "cinnamoroll",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "cinnamoroll",
+      "colorway": "original",
+      "pose": "sticker-11",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/e6fa50fcc1023db7d598fd638390588e.webp",
+    "license": "private-personal-use",
+    "sha256": "1e3325bd0bbc6bd46c8a6eb7c027504ca8bf6ef018a8f2f0ef39804f9ecaeacf"
+  },
+  {
+    "id": "cinnamoroll-sticker-12",
+    "name": {
+      "zh-Hant": "玉桂狗 貼圖 12",
+      "zh-Hans": "大耳狗 贴图 12",
+      "en": "Cinnamoroll Sticker 12",
+      "ja": "シナモロール スタンプ 12"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/cinnamoroll/stickers/sticker-12.png",
+    "thumb": "packs/fan-ip/cinnamoroll/stickers/sticker-12.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "cinnamoroll",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "cinnamoroll",
+      "colorway": "original",
+      "pose": "sticker-12",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/bf193368dae6c3b00f93cba0f43e0fd6.webp",
+    "license": "private-personal-use",
+    "sha256": "a3a54e0115ca3b59c0b396dcc517add0bb070887f16006700dc259b0582d35ec"
+  },
+  {
+    "id": "cinnamoroll-sticker-13",
+    "name": {
+      "zh-Hant": "玉桂狗 貼圖 13",
+      "zh-Hans": "大耳狗 贴图 13",
+      "en": "Cinnamoroll Sticker 13",
+      "ja": "シナモロール スタンプ 13"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/cinnamoroll/stickers/sticker-13.png",
+    "thumb": "packs/fan-ip/cinnamoroll/stickers/sticker-13.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "cinnamoroll",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "cinnamoroll",
+      "colorway": "original",
+      "pose": "sticker-13",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/9613b2a1dbcfe14bef298f21e4efe8a8.webp",
+    "license": "private-personal-use",
+    "sha256": "14f2098546387b126cfa44a3160fb107d89cf21bc434bc989342eaf32cd8f52e"
+  },
+  {
+    "id": "cinnamoroll-sticker-14",
+    "name": {
+      "zh-Hant": "玉桂狗 貼圖 14",
+      "zh-Hans": "大耳狗 贴图 14",
+      "en": "Cinnamoroll Sticker 14",
+      "ja": "シナモロール スタンプ 14"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/cinnamoroll/stickers/sticker-14.png",
+    "thumb": "packs/fan-ip/cinnamoroll/stickers/sticker-14.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "cinnamoroll",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "cinnamoroll",
+      "colorway": "original",
+      "pose": "sticker-14",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/b231935cf4b6d9219eb207e5bb966787.webp",
+    "license": "private-personal-use",
+    "sha256": "8ec573660356fee45804ee9ff2b2418f7a2dcfbb861fce0cc0c73cd27fd5c107"
+  },
+  {
+    "id": "cinnamoroll-sticker-15",
+    "name": {
+      "zh-Hant": "玉桂狗 貼圖 15",
+      "zh-Hans": "大耳狗 贴图 15",
+      "en": "Cinnamoroll Sticker 15",
+      "ja": "シナモロール スタンプ 15"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/cinnamoroll/stickers/sticker-15.png",
+    "thumb": "packs/fan-ip/cinnamoroll/stickers/sticker-15.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "cinnamoroll",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "cinnamoroll",
+      "colorway": "original",
+      "pose": "sticker-15",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/5cfd2337898f9f603986af552e45720d.webp",
+    "license": "private-personal-use",
+    "sha256": "08f659db27cb4bc2111eda8ebb347884845a24d29b792f485d4b00cb34b0c695"
+  },
+  {
+    "id": "cinnamoroll-sticker-16",
+    "name": {
+      "zh-Hant": "玉桂狗 貼圖 16",
+      "zh-Hans": "大耳狗 贴图 16",
+      "en": "Cinnamoroll Sticker 16",
+      "ja": "シナモロール スタンプ 16"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/cinnamoroll/stickers/sticker-16.png",
+    "thumb": "packs/fan-ip/cinnamoroll/stickers/sticker-16.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "cinnamoroll",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "cinnamoroll",
+      "colorway": "original",
+      "pose": "sticker-16",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/00a23aafef4d28c85897737c847bf399.webp",
+    "license": "private-personal-use",
+    "sha256": "1dd26b041dd48a0d7bcef0053bbec6c67b7d8f23475c0950e95d72ced293f539"
+  }
+]

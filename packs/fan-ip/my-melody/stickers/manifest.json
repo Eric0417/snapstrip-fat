@@ -1,0 +1,562 @@
+[
+  {
+    "id": "my-melody-sticker-01",
+    "name": {
+      "zh-Hant": "美樂蒂 貼圖 01",
+      "zh-Hans": "美乐蒂 贴图 01",
+      "en": "My Melody Sticker 01",
+      "ja": "マイメロディ スタンプ 01"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/my-melody/stickers/sticker-01.png",
+    "thumb": "packs/fan-ip/my-melody/stickers/sticker-01.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "my-melody",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "my-melody",
+      "colorway": "original",
+      "pose": "sticker-01",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/219c122055b8712d7ea29385f6dc5b20.webp",
+    "license": "private-personal-use",
+    "sha256": "ecd24c2b197391c7490afeb277f40f3c76cf6d00c90bef0f164b83b65733e75b"
+  },
+  {
+    "id": "my-melody-sticker-02",
+    "name": {
+      "zh-Hant": "美樂蒂 貼圖 02",
+      "zh-Hans": "美乐蒂 贴图 02",
+      "en": "My Melody Sticker 02",
+      "ja": "マイメロディ スタンプ 02"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/my-melody/stickers/sticker-02.png",
+    "thumb": "packs/fan-ip/my-melody/stickers/sticker-02.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "my-melody",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "my-melody",
+      "colorway": "original",
+      "pose": "sticker-02",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/4aff2149a22c52f352db68d9d91e40a1.webp",
+    "license": "private-personal-use",
+    "sha256": "983edb687d9f7055c738514c0582a3f328629dfeb7092bc23479a238b55955d7"
+  },
+  {
+    "id": "my-melody-sticker-03",
+    "name": {
+      "zh-Hant": "美樂蒂 貼圖 03",
+      "zh-Hans": "美乐蒂 贴图 03",
+      "en": "My Melody Sticker 03",
+      "ja": "マイメロディ スタンプ 03"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/my-melody/stickers/sticker-03.png",
+    "thumb": "packs/fan-ip/my-melody/stickers/sticker-03.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "my-melody",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "my-melody",
+      "colorway": "original",
+      "pose": "sticker-03",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/80b9a4de4bc4cb959137ea382da6c7a1.webp",
+    "license": "private-personal-use",
+    "sha256": "144aa7183c6177a34e9b6a8b682e1534f1c8df6269e0fd86342d03c536dff4ca"
+  },
+  {
+    "id": "my-melody-sticker-04",
+    "name": {
+      "zh-Hant": "美樂蒂 貼圖 04",
+      "zh-Hans": "美乐蒂 贴图 04",
+      "en": "My Melody Sticker 04",
+      "ja": "マイメロディ スタンプ 04"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/my-melody/stickers/sticker-04.png",
+    "thumb": "packs/fan-ip/my-melody/stickers/sticker-04.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "my-melody",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "my-melody",
+      "colorway": "original",
+      "pose": "sticker-04",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/201b58ac441cb79c9cfbe1d9d0925949.webp",
+    "license": "private-personal-use",
+    "sha256": "36baec193f399962ea4faf44f67030854a9486164c47d83106adc011e08a3aef"
+  },
+  {
+    "id": "my-melody-sticker-05",
+    "name": {
+      "zh-Hant": "美樂蒂 貼圖 05",
+      "zh-Hans": "美乐蒂 贴图 05",
+      "en": "My Melody Sticker 05",
+      "ja": "マイメロディ スタンプ 05"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/my-melody/stickers/sticker-05.png",
+    "thumb": "packs/fan-ip/my-melody/stickers/sticker-05.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "my-melody",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "my-melody",
+      "colorway": "original",
+      "pose": "sticker-05",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/4b0c9e3e8b49897a98407579a4e0173c.webp",
+    "license": "private-personal-use",
+    "sha256": "d1550671035ea029e431bde18656db9dc1ff8852eb68b9098bbeac15bcecbb42"
+  },
+  {
+    "id": "my-melody-sticker-06",
+    "name": {
+      "zh-Hant": "美樂蒂 貼圖 06",
+      "zh-Hans": "美乐蒂 贴图 06",
+      "en": "My Melody Sticker 06",
+      "ja": "マイメロディ スタンプ 06"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/my-melody/stickers/sticker-06.png",
+    "thumb": "packs/fan-ip/my-melody/stickers/sticker-06.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "my-melody",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "my-melody",
+      "colorway": "original",
+      "pose": "sticker-06",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/9596dfa5d1050458f94d55351bf7af01.webp",
+    "license": "private-personal-use",
+    "sha256": "c59c96a81feb080bbd8de8814a2565f2fd400b4976921d84e7fa5f1b6c4d36e1"
+  },
+  {
+    "id": "my-melody-sticker-07",
+    "name": {
+      "zh-Hant": "美樂蒂 貼圖 07",
+      "zh-Hans": "美乐蒂 贴图 07",
+      "en": "My Melody Sticker 07",
+      "ja": "マイメロディ スタンプ 07"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/my-melody/stickers/sticker-07.png",
+    "thumb": "packs/fan-ip/my-melody/stickers/sticker-07.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "my-melody",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "my-melody",
+      "colorway": "original",
+      "pose": "sticker-07",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/1b410cbd81897d97e464d9fe6394712f.webp",
+    "license": "private-personal-use",
+    "sha256": "a31471a859a19388f08e81484fc3eb222ab5e0edbfaa233f5a18624a3ec42853"
+  },
+  {
+    "id": "my-melody-sticker-08",
+    "name": {
+      "zh-Hant": "美樂蒂 貼圖 08",
+      "zh-Hans": "美乐蒂 贴图 08",
+      "en": "My Melody Sticker 08",
+      "ja": "マイメロディ スタンプ 08"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/my-melody/stickers/sticker-08.png",
+    "thumb": "packs/fan-ip/my-melody/stickers/sticker-08.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "my-melody",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "my-melody",
+      "colorway": "original",
+      "pose": "sticker-08",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/a6fda64e036c582bc0d4f56018476b85.webp",
+    "license": "private-personal-use",
+    "sha256": "4db33dcfe8214b194f1f2f6aeb6d2cad8858ba3eda517d9130ddc6aae8c7c096"
+  },
+  {
+    "id": "my-melody-sticker-09",
+    "name": {
+      "zh-Hant": "美樂蒂 貼圖 09",
+      "zh-Hans": "美乐蒂 贴图 09",
+      "en": "My Melody Sticker 09",
+      "ja": "マイメロディ スタンプ 09"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/my-melody/stickers/sticker-09.png",
+    "thumb": "packs/fan-ip/my-melody/stickers/sticker-09.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "my-melody",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "my-melody",
+      "colorway": "original",
+      "pose": "sticker-09",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/af9eff67f0827c9b88c7c0a6c633bc2d.webp",
+    "license": "private-personal-use",
+    "sha256": "752d1db299544fa7da11f9f227dd19950fd51a312c180f75a0d77269124b4f0a"
+  },
+  {
+    "id": "my-melody-sticker-10",
+    "name": {
+      "zh-Hant": "美樂蒂 貼圖 10",
+      "zh-Hans": "美乐蒂 贴图 10",
+      "en": "My Melody Sticker 10",
+      "ja": "マイメロディ スタンプ 10"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/my-melody/stickers/sticker-10.png",
+    "thumb": "packs/fan-ip/my-melody/stickers/sticker-10.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "my-melody",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "my-melody",
+      "colorway": "original",
+      "pose": "sticker-10",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/4146d206540b5ca207b0f2e12d36f269.webp",
+    "license": "private-personal-use",
+    "sha256": "b6abc9f0701bb4b75c970a9128ca92db35e8239c4f77af4d3526675b17db22c8"
+  },
+  {
+    "id": "my-melody-sticker-11",
+    "name": {
+      "zh-Hant": "美樂蒂 貼圖 11",
+      "zh-Hans": "美乐蒂 贴图 11",
+      "en": "My Melody Sticker 11",
+      "ja": "マイメロディ スタンプ 11"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/my-melody/stickers/sticker-11.png",
+    "thumb": "packs/fan-ip/my-melody/stickers/sticker-11.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "my-melody",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "my-melody",
+      "colorway": "original",
+      "pose": "sticker-11",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/3678b3051014e327c1363530cf7a7067.webp",
+    "license": "private-personal-use",
+    "sha256": "af83ef04315fd058d9e653ba4f5b5f2191e1da37506b81b3293a4eeeab92afb8"
+  },
+  {
+    "id": "my-melody-sticker-12",
+    "name": {
+      "zh-Hant": "美樂蒂 貼圖 12",
+      "zh-Hans": "美乐蒂 贴图 12",
+      "en": "My Melody Sticker 12",
+      "ja": "マイメロディ スタンプ 12"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/my-melody/stickers/sticker-12.png",
+    "thumb": "packs/fan-ip/my-melody/stickers/sticker-12.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "my-melody",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "my-melody",
+      "colorway": "original",
+      "pose": "sticker-12",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/2d01686028687e25b0b2415ade1ac14e.webp",
+    "license": "private-personal-use",
+    "sha256": "7fb04c297609b1f93066b4ec1eacbe42650f90f555021eafd3319d31769e71d0"
+  },
+  {
+    "id": "my-melody-sticker-13",
+    "name": {
+      "zh-Hant": "美樂蒂 貼圖 13",
+      "zh-Hans": "美乐蒂 贴图 13",
+      "en": "My Melody Sticker 13",
+      "ja": "マイメロディ スタンプ 13"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/my-melody/stickers/sticker-13.png",
+    "thumb": "packs/fan-ip/my-melody/stickers/sticker-13.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "my-melody",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "my-melody",
+      "colorway": "original",
+      "pose": "sticker-13",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/486288ae974a75f6d45f5bb847771f8c.webp",
+    "license": "private-personal-use",
+    "sha256": "78e79798256b920e90c07c3761970c44ee66181af93fc60cdbe6f500499880f6"
+  },
+  {
+    "id": "my-melody-sticker-14",
+    "name": {
+      "zh-Hant": "美樂蒂 貼圖 14",
+      "zh-Hans": "美乐蒂 贴图 14",
+      "en": "My Melody Sticker 14",
+      "ja": "マイメロディ スタンプ 14"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/my-melody/stickers/sticker-14.png",
+    "thumb": "packs/fan-ip/my-melody/stickers/sticker-14.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "my-melody",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "my-melody",
+      "colorway": "original",
+      "pose": "sticker-14",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/13d51390d81fedc5d90d97032c487a99.webp",
+    "license": "private-personal-use",
+    "sha256": "cd8a79c2cf8e57c403cdafd342d09a72ca323c0f58de33583ae4e2c5a6e0e672"
+  },
+  {
+    "id": "my-melody-sticker-15",
+    "name": {
+      "zh-Hant": "美樂蒂 貼圖 15",
+      "zh-Hans": "美乐蒂 贴图 15",
+      "en": "My Melody Sticker 15",
+      "ja": "マイメロディ スタンプ 15"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/my-melody/stickers/sticker-15.png",
+    "thumb": "packs/fan-ip/my-melody/stickers/sticker-15.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "my-melody",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "my-melody",
+      "colorway": "original",
+      "pose": "sticker-15",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/4b1f0403a58712cb7daf7fe778de4f27.webp",
+    "license": "private-personal-use",
+    "sha256": "c0747f0055172c494b9e8be69c44a4294c1b3757a53e8d8c285b35f1be18c776"
+  },
+  {
+    "id": "my-melody-sticker-16",
+    "name": {
+      "zh-Hant": "美樂蒂 貼圖 16",
+      "zh-Hans": "美乐蒂 贴图 16",
+      "en": "My Melody Sticker 16",
+      "ja": "マイメロディ スタンプ 16"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/my-melody/stickers/sticker-16.png",
+    "thumb": "packs/fan-ip/my-melody/stickers/sticker-16.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "my-melody",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "my-melody",
+      "colorway": "original",
+      "pose": "sticker-16",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/5958b2bbc0cdc053ffbe68f9be06b7cd.webp",
+    "license": "private-personal-use",
+    "sha256": "761f84d54d1ce543440e42683828e350c4a803f6f5f7d5e4ebde2b7ad781aac1"
+  }
+]

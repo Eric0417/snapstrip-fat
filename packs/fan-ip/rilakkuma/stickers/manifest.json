@@ -1,0 +1,562 @@
+[
+  {
+    "id": "rilakkuma-sticker-01",
+    "name": {
+      "zh-Hant": "拉拉熊 貼圖 01",
+      "zh-Hans": "轻松熊 贴图 01",
+      "en": "Rilakkuma Sticker 01",
+      "ja": "リラックマ スタンプ 01"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/rilakkuma/stickers/sticker-01.png",
+    "thumb": "packs/fan-ip/rilakkuma/stickers/sticker-01.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "rilakkuma",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "rilakkuma",
+      "colorway": "original",
+      "pose": "sticker-01",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/1a042a2fd4a9e99e79b2436e3748cdeb.webp",
+    "license": "private-personal-use",
+    "sha256": "90b293401909162ed6574ebecd4edae9042f4b962b2082b84fa356e514d66257"
+  },
+  {
+    "id": "rilakkuma-sticker-02",
+    "name": {
+      "zh-Hant": "拉拉熊 貼圖 02",
+      "zh-Hans": "轻松熊 贴图 02",
+      "en": "Rilakkuma Sticker 02",
+      "ja": "リラックマ スタンプ 02"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/rilakkuma/stickers/sticker-02.png",
+    "thumb": "packs/fan-ip/rilakkuma/stickers/sticker-02.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "rilakkuma",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "rilakkuma",
+      "colorway": "original",
+      "pose": "sticker-02",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/b41d54e2791e32d94afb558030378846.webp",
+    "license": "private-personal-use",
+    "sha256": "dc764188dd9bb87848ce47b57268e6a0abd4de9cc6e7bc9dd87464a49e5bb5bc"
+  },
+  {
+    "id": "rilakkuma-sticker-03",
+    "name": {
+      "zh-Hant": "拉拉熊 貼圖 03",
+      "zh-Hans": "轻松熊 贴图 03",
+      "en": "Rilakkuma Sticker 03",
+      "ja": "リラックマ スタンプ 03"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/rilakkuma/stickers/sticker-03.png",
+    "thumb": "packs/fan-ip/rilakkuma/stickers/sticker-03.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "rilakkuma",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "rilakkuma",
+      "colorway": "original",
+      "pose": "sticker-03",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/24a4e68b43520a02798071ea79da7da9.webp",
+    "license": "private-personal-use",
+    "sha256": "29f01557d21dc4aaf801ba4b55c90cb0a957b5f255aeca7a3603d81a15fe0e0a"
+  },
+  {
+    "id": "rilakkuma-sticker-04",
+    "name": {
+      "zh-Hant": "拉拉熊 貼圖 04",
+      "zh-Hans": "轻松熊 贴图 04",
+      "en": "Rilakkuma Sticker 04",
+      "ja": "リラックマ スタンプ 04"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/rilakkuma/stickers/sticker-04.png",
+    "thumb": "packs/fan-ip/rilakkuma/stickers/sticker-04.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "rilakkuma",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "rilakkuma",
+      "colorway": "original",
+      "pose": "sticker-04",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/07caae5d1a49d84243eb1ee4448bdea3.webp",
+    "license": "private-personal-use",
+    "sha256": "e03b4750c402b75f292b9ba230471d41d0d9d1635d1cd8a0c4e8f932928e4f5e"
+  },
+  {
+    "id": "rilakkuma-sticker-05",
+    "name": {
+      "zh-Hant": "拉拉熊 貼圖 05",
+      "zh-Hans": "轻松熊 贴图 05",
+      "en": "Rilakkuma Sticker 05",
+      "ja": "リラックマ スタンプ 05"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/rilakkuma/stickers/sticker-05.png",
+    "thumb": "packs/fan-ip/rilakkuma/stickers/sticker-05.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "rilakkuma",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "rilakkuma",
+      "colorway": "original",
+      "pose": "sticker-05",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/f007dcdc30ae2d57f6d0a7094cdc0561.webp",
+    "license": "private-personal-use",
+    "sha256": "a2322921dbe797327e87d29bdfc6baa8eeed768f574144ac1fa2cd3d5daca642"
+  },
+  {
+    "id": "rilakkuma-sticker-06",
+    "name": {
+      "zh-Hant": "拉拉熊 貼圖 06",
+      "zh-Hans": "轻松熊 贴图 06",
+      "en": "Rilakkuma Sticker 06",
+      "ja": "リラックマ スタンプ 06"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/rilakkuma/stickers/sticker-06.png",
+    "thumb": "packs/fan-ip/rilakkuma/stickers/sticker-06.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "rilakkuma",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "rilakkuma",
+      "colorway": "original",
+      "pose": "sticker-06",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/b6172f9ce2c483d92e88bf0547bcb294.webp",
+    "license": "private-personal-use",
+    "sha256": "ace2d8c0706956fecbc1f0d67ec202f85ad896f994b8add7eb9da2691312533d"
+  },
+  {
+    "id": "rilakkuma-sticker-07",
+    "name": {
+      "zh-Hant": "拉拉熊 貼圖 07",
+      "zh-Hans": "轻松熊 贴图 07",
+      "en": "Rilakkuma Sticker 07",
+      "ja": "リラックマ スタンプ 07"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/rilakkuma/stickers/sticker-07.png",
+    "thumb": "packs/fan-ip/rilakkuma/stickers/sticker-07.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "rilakkuma",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "rilakkuma",
+      "colorway": "original",
+      "pose": "sticker-07",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/f591f2168ac3efb8b20d95111afdff68.webp",
+    "license": "private-personal-use",
+    "sha256": "d5aeb45a59a824ad7aa8e62d8cbdbe96b47d1b8f263fadcae34a7fbc79c9d7f0"
+  },
+  {
+    "id": "rilakkuma-sticker-08",
+    "name": {
+      "zh-Hant": "拉拉熊 貼圖 08",
+      "zh-Hans": "轻松熊 贴图 08",
+      "en": "Rilakkuma Sticker 08",
+      "ja": "リラックマ スタンプ 08"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/rilakkuma/stickers/sticker-08.png",
+    "thumb": "packs/fan-ip/rilakkuma/stickers/sticker-08.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "rilakkuma",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "rilakkuma",
+      "colorway": "original",
+      "pose": "sticker-08",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/4c885668e5cc701cec73e4a80b66a6ad.webp",
+    "license": "private-personal-use",
+    "sha256": "3e0428dc55be205ae79245813641669b99876e3fac3c3b518696335493f4ae19"
+  },
+  {
+    "id": "rilakkuma-sticker-09",
+    "name": {
+      "zh-Hant": "拉拉熊 貼圖 09",
+      "zh-Hans": "轻松熊 贴图 09",
+      "en": "Rilakkuma Sticker 09",
+      "ja": "リラックマ スタンプ 09"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/rilakkuma/stickers/sticker-09.png",
+    "thumb": "packs/fan-ip/rilakkuma/stickers/sticker-09.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "rilakkuma",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "rilakkuma",
+      "colorway": "original",
+      "pose": "sticker-09",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/35fbcb0d2d4ef6a1d24b83a8ebfe68ca.webp",
+    "license": "private-personal-use",
+    "sha256": "4569580d2dc931a259026623d6dd34786d115089243656abdac3e6bd612a1fa6"
+  },
+  {
+    "id": "rilakkuma-sticker-10",
+    "name": {
+      "zh-Hant": "拉拉熊 貼圖 10",
+      "zh-Hans": "轻松熊 贴图 10",
+      "en": "Rilakkuma Sticker 10",
+      "ja": "リラックマ スタンプ 10"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/rilakkuma/stickers/sticker-10.png",
+    "thumb": "packs/fan-ip/rilakkuma/stickers/sticker-10.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "rilakkuma",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "rilakkuma",
+      "colorway": "original",
+      "pose": "sticker-10",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/3d726c5ed4e74a1c4bac319989869766.webp",
+    "license": "private-personal-use",
+    "sha256": "9e320ea79b301b0a89780af168fc5db35127e969a3dd7ddaa9f8eb79b82d9a82"
+  },
+  {
+    "id": "rilakkuma-sticker-11",
+    "name": {
+      "zh-Hant": "拉拉熊 貼圖 11",
+      "zh-Hans": "轻松熊 贴图 11",
+      "en": "Rilakkuma Sticker 11",
+      "ja": "リラックマ スタンプ 11"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/rilakkuma/stickers/sticker-11.png",
+    "thumb": "packs/fan-ip/rilakkuma/stickers/sticker-11.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "rilakkuma",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "rilakkuma",
+      "colorway": "original",
+      "pose": "sticker-11",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/28b61e56795dd8e53426d54377063b28.webp",
+    "license": "private-personal-use",
+    "sha256": "d33144ec80e960590d3bb411a3ccb24c0c9a3bde024cbcf2d408755ac07431ec"
+  },
+  {
+    "id": "rilakkuma-sticker-12",
+    "name": {
+      "zh-Hant": "拉拉熊 貼圖 12",
+      "zh-Hans": "轻松熊 贴图 12",
+      "en": "Rilakkuma Sticker 12",
+      "ja": "リラックマ スタンプ 12"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/rilakkuma/stickers/sticker-12.png",
+    "thumb": "packs/fan-ip/rilakkuma/stickers/sticker-12.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "rilakkuma",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "rilakkuma",
+      "colorway": "original",
+      "pose": "sticker-12",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/e058d1276fe00871b96029e640edb670.webp",
+    "license": "private-personal-use",
+    "sha256": "717584581b2d3d4bd0de68291b6b5ec3a6262b60cd892d1bfcf6619e143d076d"
+  },
+  {
+    "id": "rilakkuma-sticker-13",
+    "name": {
+      "zh-Hant": "拉拉熊 貼圖 13",
+      "zh-Hans": "轻松熊 贴图 13",
+      "en": "Rilakkuma Sticker 13",
+      "ja": "リラックマ スタンプ 13"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/rilakkuma/stickers/sticker-13.png",
+    "thumb": "packs/fan-ip/rilakkuma/stickers/sticker-13.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "rilakkuma",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "rilakkuma",
+      "colorway": "original",
+      "pose": "sticker-13",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/3ba87b5f6579ec6d47180e408817fa93.webp",
+    "license": "private-personal-use",
+    "sha256": "61d66735a76e8aac08177ba1a95ec10d1c7ac6d2c5c8534b336330fdcfe435f2"
+  },
+  {
+    "id": "rilakkuma-sticker-14",
+    "name": {
+      "zh-Hant": "拉拉熊 貼圖 14",
+      "zh-Hans": "轻松熊 贴图 14",
+      "en": "Rilakkuma Sticker 14",
+      "ja": "リラックマ スタンプ 14"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/rilakkuma/stickers/sticker-14.png",
+    "thumb": "packs/fan-ip/rilakkuma/stickers/sticker-14.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "rilakkuma",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "rilakkuma",
+      "colorway": "original",
+      "pose": "sticker-14",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/6bd2f0dc44e7a981d2597d7998f1d01a.webp",
+    "license": "private-personal-use",
+    "sha256": "76ac1488eec323d2ba33f89491236d70e726739b8cdbfa131f8e4e3ba244ba7e"
+  },
+  {
+    "id": "rilakkuma-sticker-15",
+    "name": {
+      "zh-Hant": "拉拉熊 貼圖 15",
+      "zh-Hans": "轻松熊 贴图 15",
+      "en": "Rilakkuma Sticker 15",
+      "ja": "リラックマ スタンプ 15"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/rilakkuma/stickers/sticker-15.png",
+    "thumb": "packs/fan-ip/rilakkuma/stickers/sticker-15.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "rilakkuma",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "rilakkuma",
+      "colorway": "original",
+      "pose": "sticker-15",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/8b38c380cf9dc7671c3c8dbe1cdccf5b.webp",
+    "license": "private-personal-use",
+    "sha256": "acc4e4c96ecb49b34858bf6d559275d76add6588970f2a16fa3e5c72f5ff9003"
+  },
+  {
+    "id": "rilakkuma-sticker-16",
+    "name": {
+      "zh-Hant": "拉拉熊 貼圖 16",
+      "zh-Hans": "轻松熊 贴图 16",
+      "en": "Rilakkuma Sticker 16",
+      "ja": "リラックマ スタンプ 16"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/rilakkuma/stickers/sticker-16.png",
+    "thumb": "packs/fan-ip/rilakkuma/stickers/sticker-16.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "rilakkuma",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "rilakkuma",
+      "colorway": "original",
+      "pose": "sticker-16",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/7cb5fe951c6316d8e2a2938d6b52bb1f.webp",
+    "license": "private-personal-use",
+    "sha256": "b1cd14cfaf85da69ae6351db9bfda36347adf47e52f883de2a7d9a704040b911"
+  }
+]

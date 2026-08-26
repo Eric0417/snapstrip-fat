@@ -1,0 +1,562 @@
+[
+  {
+    "id": "sumikko-gurashi-sticker-01",
+    "name": {
+      "zh-Hant": "角落生物 貼圖 01",
+      "zh-Hans": "角落生物 贴图 01",
+      "en": "Sumikko Gurashi Sticker 01",
+      "ja": "すみっコぐらし スタンプ 01"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/sumikko-gurashi/stickers/sticker-01.png",
+    "thumb": "packs/fan-ip/sumikko-gurashi/stickers/sticker-01.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "sumikko-gurashi",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "sumikko-gurashi",
+      "colorway": "original",
+      "pose": "sticker-01",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/b4111b25faf25047bc3c923983820339.webp",
+    "license": "private-personal-use",
+    "sha256": "a0eecf2cb793e35837d33bc784cc52b4799ae945c141290c6a3425eb21259b38"
+  },
+  {
+    "id": "sumikko-gurashi-sticker-02",
+    "name": {
+      "zh-Hant": "角落生物 貼圖 02",
+      "zh-Hans": "角落生物 贴图 02",
+      "en": "Sumikko Gurashi Sticker 02",
+      "ja": "すみっコぐらし スタンプ 02"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/sumikko-gurashi/stickers/sticker-02.png",
+    "thumb": "packs/fan-ip/sumikko-gurashi/stickers/sticker-02.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "sumikko-gurashi",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "sumikko-gurashi",
+      "colorway": "original",
+      "pose": "sticker-02",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/6d7bf20c90ab9d854e491a6fdac3b3da.webp",
+    "license": "private-personal-use",
+    "sha256": "87f3037eebdda93c56a18b821764ee7a157ee8284c8272abc02864b3f98693f2"
+  },
+  {
+    "id": "sumikko-gurashi-sticker-03",
+    "name": {
+      "zh-Hant": "角落生物 貼圖 03",
+      "zh-Hans": "角落生物 贴图 03",
+      "en": "Sumikko Gurashi Sticker 03",
+      "ja": "すみっコぐらし スタンプ 03"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/sumikko-gurashi/stickers/sticker-03.png",
+    "thumb": "packs/fan-ip/sumikko-gurashi/stickers/sticker-03.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "sumikko-gurashi",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "sumikko-gurashi",
+      "colorway": "original",
+      "pose": "sticker-03",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/31aee1bee819a2d7a061d606f168ad03.webp",
+    "license": "private-personal-use",
+    "sha256": "f6e5c08dd5f464ed86302ccaa7de2dda27e606ff45d78a6fc74c6b2e90a24f7f"
+  },
+  {
+    "id": "sumikko-gurashi-sticker-04",
+    "name": {
+      "zh-Hant": "角落生物 貼圖 04",
+      "zh-Hans": "角落生物 贴图 04",
+      "en": "Sumikko Gurashi Sticker 04",
+      "ja": "すみっコぐらし スタンプ 04"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/sumikko-gurashi/stickers/sticker-04.png",
+    "thumb": "packs/fan-ip/sumikko-gurashi/stickers/sticker-04.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "sumikko-gurashi",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "sumikko-gurashi",
+      "colorway": "original",
+      "pose": "sticker-04",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/d2d6af4ab63f1c7a251e423fcff254f8.webp",
+    "license": "private-personal-use",
+    "sha256": "259b282a89dafb221097d13d0a6ee84f4df3a3707a0c304e3dc58b9630e34722"
+  },
+  {
+    "id": "sumikko-gurashi-sticker-05",
+    "name": {
+      "zh-Hant": "角落生物 貼圖 05",
+      "zh-Hans": "角落生物 贴图 05",
+      "en": "Sumikko Gurashi Sticker 05",
+      "ja": "すみっコぐらし スタンプ 05"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/sumikko-gurashi/stickers/sticker-05.png",
+    "thumb": "packs/fan-ip/sumikko-gurashi/stickers/sticker-05.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "sumikko-gurashi",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "sumikko-gurashi",
+      "colorway": "original",
+      "pose": "sticker-05",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/27a390db1aa437dc5cd23a4e7db42282.webp",
+    "license": "private-personal-use",
+    "sha256": "13860c63cd024a307ce7b27c608a35d2159ceb0b7c92556f8a4d26c69d6aa9e1"
+  },
+  {
+    "id": "sumikko-gurashi-sticker-06",
+    "name": {
+      "zh-Hant": "角落生物 貼圖 06",
+      "zh-Hans": "角落生物 贴图 06",
+      "en": "Sumikko Gurashi Sticker 06",
+      "ja": "すみっコぐらし スタンプ 06"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/sumikko-gurashi/stickers/sticker-06.png",
+    "thumb": "packs/fan-ip/sumikko-gurashi/stickers/sticker-06.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "sumikko-gurashi",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "sumikko-gurashi",
+      "colorway": "original",
+      "pose": "sticker-06",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/9870ee5bef682843d6525d8b01c03bd0.webp",
+    "license": "private-personal-use",
+    "sha256": "7dd65342d9661b0227c7349f2945d01147bd2d8800c24c691fb2848f50980d20"
+  },
+  {
+    "id": "sumikko-gurashi-sticker-07",
+    "name": {
+      "zh-Hant": "角落生物 貼圖 07",
+      "zh-Hans": "角落生物 贴图 07",
+      "en": "Sumikko Gurashi Sticker 07",
+      "ja": "すみっコぐらし スタンプ 07"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/sumikko-gurashi/stickers/sticker-07.png",
+    "thumb": "packs/fan-ip/sumikko-gurashi/stickers/sticker-07.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "sumikko-gurashi",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "sumikko-gurashi",
+      "colorway": "original",
+      "pose": "sticker-07",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/7432eb72e1f90b77152753a2236548cd.webp",
+    "license": "private-personal-use",
+    "sha256": "cbe424720b6f32250e35a33616f79e872cc2d643cff316dd471ad9261da9adeb"
+  },
+  {
+    "id": "sumikko-gurashi-sticker-08",
+    "name": {
+      "zh-Hant": "角落生物 貼圖 08",
+      "zh-Hans": "角落生物 贴图 08",
+      "en": "Sumikko Gurashi Sticker 08",
+      "ja": "すみっコぐらし スタンプ 08"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/sumikko-gurashi/stickers/sticker-08.png",
+    "thumb": "packs/fan-ip/sumikko-gurashi/stickers/sticker-08.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "sumikko-gurashi",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "sumikko-gurashi",
+      "colorway": "original",
+      "pose": "sticker-08",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/6286657a2c5c9b2b07c82eda1122aec1.webp",
+    "license": "private-personal-use",
+    "sha256": "2969d92c7ac708a447c70243fabcaeb86a027b2224f5fd089ea2584c017b869a"
+  },
+  {
+    "id": "sumikko-gurashi-sticker-09",
+    "name": {
+      "zh-Hant": "角落生物 貼圖 09",
+      "zh-Hans": "角落生物 贴图 09",
+      "en": "Sumikko Gurashi Sticker 09",
+      "ja": "すみっコぐらし スタンプ 09"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/sumikko-gurashi/stickers/sticker-09.png",
+    "thumb": "packs/fan-ip/sumikko-gurashi/stickers/sticker-09.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "sumikko-gurashi",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "sumikko-gurashi",
+      "colorway": "original",
+      "pose": "sticker-09",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/ee5517db8e42d045139f0155c62a6533.webp",
+    "license": "private-personal-use",
+    "sha256": "d9c53c5c129b74fe47d3c4520235b826199c5f9319edfff2d9875528afde247e"
+  },
+  {
+    "id": "sumikko-gurashi-sticker-10",
+    "name": {
+      "zh-Hant": "角落生物 貼圖 10",
+      "zh-Hans": "角落生物 贴图 10",
+      "en": "Sumikko Gurashi Sticker 10",
+      "ja": "すみっコぐらし スタンプ 10"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/sumikko-gurashi/stickers/sticker-10.png",
+    "thumb": "packs/fan-ip/sumikko-gurashi/stickers/sticker-10.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "sumikko-gurashi",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "sumikko-gurashi",
+      "colorway": "original",
+      "pose": "sticker-10",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/79c81448a262d163cae8f3ef76f5fcba.webp",
+    "license": "private-personal-use",
+    "sha256": "1c1d279244c475c1a6301865a9ecc47be3d0ef907493bbb03eb9af169d36f554"
+  },
+  {
+    "id": "sumikko-gurashi-sticker-11",
+    "name": {
+      "zh-Hant": "角落生物 貼圖 11",
+      "zh-Hans": "角落生物 贴图 11",
+      "en": "Sumikko Gurashi Sticker 11",
+      "ja": "すみっコぐらし スタンプ 11"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/sumikko-gurashi/stickers/sticker-11.png",
+    "thumb": "packs/fan-ip/sumikko-gurashi/stickers/sticker-11.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "sumikko-gurashi",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "sumikko-gurashi",
+      "colorway": "original",
+      "pose": "sticker-11",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/34b31f23a9473ca2cc6b51a1ee064c02.webp",
+    "license": "private-personal-use",
+    "sha256": "567237e175af5eb203ebc72aa2ddbbf813dd34a2c8904f99052ec0ffe5c48523"
+  },
+  {
+    "id": "sumikko-gurashi-sticker-12",
+    "name": {
+      "zh-Hant": "角落生物 貼圖 12",
+      "zh-Hans": "角落生物 贴图 12",
+      "en": "Sumikko Gurashi Sticker 12",
+      "ja": "すみっコぐらし スタンプ 12"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/sumikko-gurashi/stickers/sticker-12.png",
+    "thumb": "packs/fan-ip/sumikko-gurashi/stickers/sticker-12.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "sumikko-gurashi",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "sumikko-gurashi",
+      "colorway": "original",
+      "pose": "sticker-12",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/68cd186595c31b98488f5deb291bf332.webp",
+    "license": "private-personal-use",
+    "sha256": "73de88526ed5bbaf40470e9d8c54f60a1566e568f51ba076761db1d3e7967d0c"
+  },
+  {
+    "id": "sumikko-gurashi-sticker-13",
+    "name": {
+      "zh-Hant": "角落生物 貼圖 13",
+      "zh-Hans": "角落生物 贴图 13",
+      "en": "Sumikko Gurashi Sticker 13",
+      "ja": "すみっコぐらし スタンプ 13"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/sumikko-gurashi/stickers/sticker-13.png",
+    "thumb": "packs/fan-ip/sumikko-gurashi/stickers/sticker-13.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "sumikko-gurashi",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "sumikko-gurashi",
+      "colorway": "original",
+      "pose": "sticker-13",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/02e4d6e6188c261309668f40e5c44472.webp",
+    "license": "private-personal-use",
+    "sha256": "0fef0da999b096299d6be859b96a702607122d9ca2b883270a4573872ca2f05d"
+  },
+  {
+    "id": "sumikko-gurashi-sticker-14",
+    "name": {
+      "zh-Hant": "角落生物 貼圖 14",
+      "zh-Hans": "角落生物 贴图 14",
+      "en": "Sumikko Gurashi Sticker 14",
+      "ja": "すみっコぐらし スタンプ 14"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/sumikko-gurashi/stickers/sticker-14.png",
+    "thumb": "packs/fan-ip/sumikko-gurashi/stickers/sticker-14.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "sumikko-gurashi",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "sumikko-gurashi",
+      "colorway": "original",
+      "pose": "sticker-14",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/d7dcc4ff476a8155d13ada33a564e142.webp",
+    "license": "private-personal-use",
+    "sha256": "990edb23c30707a88c4374bbdbdd0f71fb97260bbb2ad97c24d3418ac27f4b19"
+  },
+  {
+    "id": "sumikko-gurashi-sticker-15",
+    "name": {
+      "zh-Hant": "角落生物 貼圖 15",
+      "zh-Hans": "角落生物 贴图 15",
+      "en": "Sumikko Gurashi Sticker 15",
+      "ja": "すみっコぐらし スタンプ 15"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/sumikko-gurashi/stickers/sticker-15.png",
+    "thumb": "packs/fan-ip/sumikko-gurashi/stickers/sticker-15.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "sumikko-gurashi",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "sumikko-gurashi",
+      "colorway": "original",
+      "pose": "sticker-15",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/8c3b3bfc5b8702d31cdf6f9a317ac8d0.webp",
+    "license": "private-personal-use",
+    "sha256": "d1fe13359c5af1e5d54ade6cab7a0a31c50968d7d1542b93224b013ea716128c"
+  },
+  {
+    "id": "sumikko-gurashi-sticker-16",
+    "name": {
+      "zh-Hant": "角落生物 貼圖 16",
+      "zh-Hans": "角落生物 贴图 16",
+      "en": "Sumikko Gurashi Sticker 16",
+      "ja": "すみっコぐらし スタンプ 16"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/sumikko-gurashi/stickers/sticker-16.png",
+    "thumb": "packs/fan-ip/sumikko-gurashi/stickers/sticker-16.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "sumikko-gurashi",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "sumikko-gurashi",
+      "colorway": "original",
+      "pose": "sticker-16",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/69787ac10f422a5082bf1cd7295e380a.webp",
+    "license": "private-personal-use",
+    "sha256": "0a35249a1dbf83b6ae55e10c5f4c36787dff3839de4a320f83fcf3f96c629b58"
+  }
+]

@@ -1,0 +1,562 @@
+[
+  {
+    "id": "kuromi-sticker-01",
+    "name": {
+      "zh-Hant": "酷洛米 貼圖 01",
+      "zh-Hans": "库洛米 贴图 01",
+      "en": "Kuromi Sticker 01",
+      "ja": "クロミ スタンプ 01"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/kuromi/stickers/sticker-01.png",
+    "thumb": "packs/fan-ip/kuromi/stickers/sticker-01.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "kuromi",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "kuromi",
+      "colorway": "original",
+      "pose": "sticker-01",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/80a1f750394a037cc32fcc3e091f321d.webp",
+    "license": "private-personal-use",
+    "sha256": "042397875dd01e63aea0a40d9715729291371d8e3a6b362861216fa0f6f9f443"
+  },
+  {
+    "id": "kuromi-sticker-02",
+    "name": {
+      "zh-Hant": "酷洛米 貼圖 02",
+      "zh-Hans": "库洛米 贴图 02",
+      "en": "Kuromi Sticker 02",
+      "ja": "クロミ スタンプ 02"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/kuromi/stickers/sticker-02.png",
+    "thumb": "packs/fan-ip/kuromi/stickers/sticker-02.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "kuromi",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "kuromi",
+      "colorway": "original",
+      "pose": "sticker-02",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/42e5dcca83e419e9cdebf1ce5a86d412.webp",
+    "license": "private-personal-use",
+    "sha256": "acf48e8d231bcbd6fa1a83e2b0baa6d8f0e904e0ed3abb04fdf6b709a5d5e384"
+  },
+  {
+    "id": "kuromi-sticker-03",
+    "name": {
+      "zh-Hant": "酷洛米 貼圖 03",
+      "zh-Hans": "库洛米 贴图 03",
+      "en": "Kuromi Sticker 03",
+      "ja": "クロミ スタンプ 03"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/kuromi/stickers/sticker-03.png",
+    "thumb": "packs/fan-ip/kuromi/stickers/sticker-03.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "kuromi",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "kuromi",
+      "colorway": "original",
+      "pose": "sticker-03",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/33bb9b13a85aa65c382bc259834dab91.webp",
+    "license": "private-personal-use",
+    "sha256": "aa75fccbb3913d0147344248f31936dc6795cafe82c1d2b5344e429a880c7e7b"
+  },
+  {
+    "id": "kuromi-sticker-04",
+    "name": {
+      "zh-Hant": "酷洛米 貼圖 04",
+      "zh-Hans": "库洛米 贴图 04",
+      "en": "Kuromi Sticker 04",
+      "ja": "クロミ スタンプ 04"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/kuromi/stickers/sticker-04.png",
+    "thumb": "packs/fan-ip/kuromi/stickers/sticker-04.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "kuromi",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "kuromi",
+      "colorway": "original",
+      "pose": "sticker-04",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/9f442ecdd953cdcf71ab49c74d134409.webp",
+    "license": "private-personal-use",
+    "sha256": "db249d064515fae287badce0b0d3127f58da437273db5828f6e1b37bf0a377de"
+  },
+  {
+    "id": "kuromi-sticker-05",
+    "name": {
+      "zh-Hant": "酷洛米 貼圖 05",
+      "zh-Hans": "库洛米 贴图 05",
+      "en": "Kuromi Sticker 05",
+      "ja": "クロミ スタンプ 05"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/kuromi/stickers/sticker-05.png",
+    "thumb": "packs/fan-ip/kuromi/stickers/sticker-05.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "kuromi",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "kuromi",
+      "colorway": "original",
+      "pose": "sticker-05",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/1530e3dbc51dc2a05fb5467e9bb422f5.webp",
+    "license": "private-personal-use",
+    "sha256": "2277b39c44533035722d8b5d76fbadfe56925d1620bfd09d47771b3b5d438bd2"
+  },
+  {
+    "id": "kuromi-sticker-06",
+    "name": {
+      "zh-Hant": "酷洛米 貼圖 06",
+      "zh-Hans": "库洛米 贴图 06",
+      "en": "Kuromi Sticker 06",
+      "ja": "クロミ スタンプ 06"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/kuromi/stickers/sticker-06.png",
+    "thumb": "packs/fan-ip/kuromi/stickers/sticker-06.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "kuromi",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "kuromi",
+      "colorway": "original",
+      "pose": "sticker-06",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/bff4f1fa4301aedb200a9eb27f440620.webp",
+    "license": "private-personal-use",
+    "sha256": "83629a1287c0b483cfd171b2e7022fee0405745973ea6c7784087ff054ab1e4c"
+  },
+  {
+    "id": "kuromi-sticker-07",
+    "name": {
+      "zh-Hant": "酷洛米 貼圖 07",
+      "zh-Hans": "库洛米 贴图 07",
+      "en": "Kuromi Sticker 07",
+      "ja": "クロミ スタンプ 07"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/kuromi/stickers/sticker-07.png",
+    "thumb": "packs/fan-ip/kuromi/stickers/sticker-07.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "kuromi",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "kuromi",
+      "colorway": "original",
+      "pose": "sticker-07",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/06374cb5719b1b161cd5c37b56b207fc.webp",
+    "license": "private-personal-use",
+    "sha256": "e6a9d5e16515c90233e6ecf844ca12b576207e72dc3542f5f2df435f9d20d353"
+  },
+  {
+    "id": "kuromi-sticker-08",
+    "name": {
+      "zh-Hant": "酷洛米 貼圖 08",
+      "zh-Hans": "库洛米 贴图 08",
+      "en": "Kuromi Sticker 08",
+      "ja": "クロミ スタンプ 08"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/kuromi/stickers/sticker-08.png",
+    "thumb": "packs/fan-ip/kuromi/stickers/sticker-08.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "kuromi",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "kuromi",
+      "colorway": "original",
+      "pose": "sticker-08",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/2c1dad335d5edbbda4f2229ab5365228.webp",
+    "license": "private-personal-use",
+    "sha256": "a01fba729207fc9e41697b52683300bf80dfc3099836f08223c4ec39ea298d41"
+  },
+  {
+    "id": "kuromi-sticker-09",
+    "name": {
+      "zh-Hant": "酷洛米 貼圖 09",
+      "zh-Hans": "库洛米 贴图 09",
+      "en": "Kuromi Sticker 09",
+      "ja": "クロミ スタンプ 09"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/kuromi/stickers/sticker-09.png",
+    "thumb": "packs/fan-ip/kuromi/stickers/sticker-09.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "kuromi",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "kuromi",
+      "colorway": "original",
+      "pose": "sticker-09",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/d9a1824bb1dd2aa5ac5dfedb38e140b7.webp",
+    "license": "private-personal-use",
+    "sha256": "b464161e48abfe23720569c8a122b792253d43f50dd9bb61d5af1361965a6578"
+  },
+  {
+    "id": "kuromi-sticker-10",
+    "name": {
+      "zh-Hant": "酷洛米 貼圖 10",
+      "zh-Hans": "库洛米 贴图 10",
+      "en": "Kuromi Sticker 10",
+      "ja": "クロミ スタンプ 10"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/kuromi/stickers/sticker-10.png",
+    "thumb": "packs/fan-ip/kuromi/stickers/sticker-10.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "kuromi",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "kuromi",
+      "colorway": "original",
+      "pose": "sticker-10",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/cafa2a02cf4e03d08a44073ca338654d.webp",
+    "license": "private-personal-use",
+    "sha256": "1bec05a7828ab06b1f6a23b16d037106d3e89a6d623c49a6d95a2964f1d3f680"
+  },
+  {
+    "id": "kuromi-sticker-11",
+    "name": {
+      "zh-Hant": "酷洛米 貼圖 11",
+      "zh-Hans": "库洛米 贴图 11",
+      "en": "Kuromi Sticker 11",
+      "ja": "クロミ スタンプ 11"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/kuromi/stickers/sticker-11.png",
+    "thumb": "packs/fan-ip/kuromi/stickers/sticker-11.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "kuromi",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "kuromi",
+      "colorway": "original",
+      "pose": "sticker-11",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/f3555b4ced331e21c157dfd65b553b61.webp",
+    "license": "private-personal-use",
+    "sha256": "8b30177943ca9262a82e73f5a6651913758d0f1b807d17b7614c402af692497d"
+  },
+  {
+    "id": "kuromi-sticker-12",
+    "name": {
+      "zh-Hant": "酷洛米 貼圖 12",
+      "zh-Hans": "库洛米 贴图 12",
+      "en": "Kuromi Sticker 12",
+      "ja": "クロミ スタンプ 12"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/kuromi/stickers/sticker-12.png",
+    "thumb": "packs/fan-ip/kuromi/stickers/sticker-12.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "kuromi",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "kuromi",
+      "colorway": "original",
+      "pose": "sticker-12",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/31fca32dabe4bc57df435d2846985339.webp",
+    "license": "private-personal-use",
+    "sha256": "8b571eea6b5c276c724d14860bd51c7d356fe6f92de6a026ab5a2e5f67844e33"
+  },
+  {
+    "id": "kuromi-sticker-13",
+    "name": {
+      "zh-Hant": "酷洛米 貼圖 13",
+      "zh-Hans": "库洛米 贴图 13",
+      "en": "Kuromi Sticker 13",
+      "ja": "クロミ スタンプ 13"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/kuromi/stickers/sticker-13.png",
+    "thumb": "packs/fan-ip/kuromi/stickers/sticker-13.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "kuromi",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "kuromi",
+      "colorway": "original",
+      "pose": "sticker-13",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/98805ff6de829fddf87d2d2c167ae1c5.webp",
+    "license": "private-personal-use",
+    "sha256": "5e7771b08e92e025820dd2bbbd9028df091047a7fa4ad139360d55306a020db3"
+  },
+  {
+    "id": "kuromi-sticker-14",
+    "name": {
+      "zh-Hant": "酷洛米 貼圖 14",
+      "zh-Hans": "库洛米 贴图 14",
+      "en": "Kuromi Sticker 14",
+      "ja": "クロミ スタンプ 14"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/kuromi/stickers/sticker-14.png",
+    "thumb": "packs/fan-ip/kuromi/stickers/sticker-14.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "kuromi",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "kuromi",
+      "colorway": "original",
+      "pose": "sticker-14",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/47bd2d47cf2943a1b72fb2e8abea20ee.webp",
+    "license": "private-personal-use",
+    "sha256": "0f83c36bd074e5638660c7e5e017fa8667c17f968f4d78fa89c65532daab3015"
+  },
+  {
+    "id": "kuromi-sticker-15",
+    "name": {
+      "zh-Hant": "酷洛米 貼圖 15",
+      "zh-Hans": "库洛米 贴图 15",
+      "en": "Kuromi Sticker 15",
+      "ja": "クロミ スタンプ 15"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/kuromi/stickers/sticker-15.png",
+    "thumb": "packs/fan-ip/kuromi/stickers/sticker-15.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "kuromi",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "kuromi",
+      "colorway": "original",
+      "pose": "sticker-15",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/a2f3b115de135bfb52a0867591c09588.webp",
+    "license": "private-personal-use",
+    "sha256": "387b8ad0a93963796864e2c1f1f582820036f417c7730027785e16ac6696d591"
+  },
+  {
+    "id": "kuromi-sticker-16",
+    "name": {
+      "zh-Hant": "酷洛米 貼圖 16",
+      "zh-Hans": "库洛米 贴图 16",
+      "en": "Kuromi Sticker 16",
+      "ja": "クロミ スタンプ 16"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/kuromi/stickers/sticker-16.png",
+    "thumb": "packs/fan-ip/kuromi/stickers/sticker-16.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "kuromi",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "kuromi",
+      "colorway": "original",
+      "pose": "sticker-16",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/f7a3ae32c79f264c20cbe4c760a931d7.webp",
+    "license": "private-personal-use",
+    "sha256": "5d81d2bafe79d523c8e5ee284c89135ff29f7c4a2c7b8ad769573a94b2822ffe"
+  }
+]

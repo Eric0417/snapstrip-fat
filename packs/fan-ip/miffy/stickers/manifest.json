@@ -1,0 +1,562 @@
+[
+  {
+    "id": "miffy-sticker-01",
+    "name": {
+      "zh-Hant": "米飛兔 貼圖 01",
+      "zh-Hans": "米菲 贴图 01",
+      "en": "Miffy Sticker 01",
+      "ja": "ミッフィー スタンプ 01"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/miffy/stickers/sticker-01.png",
+    "thumb": "packs/fan-ip/miffy/stickers/sticker-01.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "miffy",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "miffy",
+      "colorway": "original",
+      "pose": "sticker-01",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/19959b61334ce8a881d0ff54e12ec2f1.webp",
+    "license": "private-personal-use",
+    "sha256": "0aaebbad10d0acbf6a6da657833b385e42d5e72651ce245afa3c33fe89956b51"
+  },
+  {
+    "id": "miffy-sticker-02",
+    "name": {
+      "zh-Hant": "米飛兔 貼圖 02",
+      "zh-Hans": "米菲 贴图 02",
+      "en": "Miffy Sticker 02",
+      "ja": "ミッフィー スタンプ 02"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/miffy/stickers/sticker-02.png",
+    "thumb": "packs/fan-ip/miffy/stickers/sticker-02.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "miffy",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "miffy",
+      "colorway": "original",
+      "pose": "sticker-02",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/eac57fe042a1d3e10da6bb8d8f0f132d.webp",
+    "license": "private-personal-use",
+    "sha256": "5f5f5133fb19309852782947e366eee42e5ac69ef71efee2f96f9ac33f5a6bed"
+  },
+  {
+    "id": "miffy-sticker-03",
+    "name": {
+      "zh-Hant": "米飛兔 貼圖 03",
+      "zh-Hans": "米菲 贴图 03",
+      "en": "Miffy Sticker 03",
+      "ja": "ミッフィー スタンプ 03"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/miffy/stickers/sticker-03.png",
+    "thumb": "packs/fan-ip/miffy/stickers/sticker-03.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "miffy",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "miffy",
+      "colorway": "original",
+      "pose": "sticker-03",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/47cecc5a562cf6b9fc924be4c58d91d7.webp",
+    "license": "private-personal-use",
+    "sha256": "54bf7dcaea69d60fce0ffba85e400d4a8132efe01d313386cd3dec055f731599"
+  },
+  {
+    "id": "miffy-sticker-04",
+    "name": {
+      "zh-Hant": "米飛兔 貼圖 04",
+      "zh-Hans": "米菲 贴图 04",
+      "en": "Miffy Sticker 04",
+      "ja": "ミッフィー スタンプ 04"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/miffy/stickers/sticker-04.png",
+    "thumb": "packs/fan-ip/miffy/stickers/sticker-04.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "miffy",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "miffy",
+      "colorway": "original",
+      "pose": "sticker-04",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/51b172e4fe1637b05de4eb8b13c765e7.webp",
+    "license": "private-personal-use",
+    "sha256": "cf1781af15cbc6e388e7363785d84aa6bb8d4f1c07c024f8826b04a1a96caa09"
+  },
+  {
+    "id": "miffy-sticker-05",
+    "name": {
+      "zh-Hant": "米飛兔 貼圖 05",
+      "zh-Hans": "米菲 贴图 05",
+      "en": "Miffy Sticker 05",
+      "ja": "ミッフィー スタンプ 05"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/miffy/stickers/sticker-05.png",
+    "thumb": "packs/fan-ip/miffy/stickers/sticker-05.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "miffy",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "miffy",
+      "colorway": "original",
+      "pose": "sticker-05",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/94d0d89eb65e7be0f32122191c327613.webp",
+    "license": "private-personal-use",
+    "sha256": "91ae65029afab21597f9768c924dee7c4301c29c29fc031ce05d40e9947356c9"
+  },
+  {
+    "id": "miffy-sticker-06",
+    "name": {
+      "zh-Hant": "米飛兔 貼圖 06",
+      "zh-Hans": "米菲 贴图 06",
+      "en": "Miffy Sticker 06",
+      "ja": "ミッフィー スタンプ 06"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/miffy/stickers/sticker-06.png",
+    "thumb": "packs/fan-ip/miffy/stickers/sticker-06.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "miffy",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "miffy",
+      "colorway": "original",
+      "pose": "sticker-06",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/fb52c96744c1b97a6adc27231c512921.webp",
+    "license": "private-personal-use",
+    "sha256": "62e65618678bcb15bf5ed0dd1bd15d0dabae7c1df3adb19bbaee2dd0a6abf376"
+  },
+  {
+    "id": "miffy-sticker-07",
+    "name": {
+      "zh-Hant": "米飛兔 貼圖 07",
+      "zh-Hans": "米菲 贴图 07",
+      "en": "Miffy Sticker 07",
+      "ja": "ミッフィー スタンプ 07"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/miffy/stickers/sticker-07.png",
+    "thumb": "packs/fan-ip/miffy/stickers/sticker-07.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "miffy",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "miffy",
+      "colorway": "original",
+      "pose": "sticker-07",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/2570fad49ad928eede384785fc3d6c9e.webp",
+    "license": "private-personal-use",
+    "sha256": "212ebbd1b3c529bd69bb8605c9103b5b6e1459a3c98460b8be5e0f0aaf2eb089"
+  },
+  {
+    "id": "miffy-sticker-08",
+    "name": {
+      "zh-Hant": "米飛兔 貼圖 08",
+      "zh-Hans": "米菲 贴图 08",
+      "en": "Miffy Sticker 08",
+      "ja": "ミッフィー スタンプ 08"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/miffy/stickers/sticker-08.png",
+    "thumb": "packs/fan-ip/miffy/stickers/sticker-08.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "miffy",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "miffy",
+      "colorway": "original",
+      "pose": "sticker-08",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/9d740a80914328e0cde871a2f89d5e3e.webp",
+    "license": "private-personal-use",
+    "sha256": "a0567299091d7f9b6439589d6caa2f265e1a3cb7b0198b01034e640d0990d0bf"
+  },
+  {
+    "id": "miffy-sticker-09",
+    "name": {
+      "zh-Hant": "米飛兔 貼圖 09",
+      "zh-Hans": "米菲 贴图 09",
+      "en": "Miffy Sticker 09",
+      "ja": "ミッフィー スタンプ 09"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/miffy/stickers/sticker-09.png",
+    "thumb": "packs/fan-ip/miffy/stickers/sticker-09.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "miffy",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "miffy",
+      "colorway": "original",
+      "pose": "sticker-09",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/30ef547a8ba32f3d6ea562b9a070fe0c.webp",
+    "license": "private-personal-use",
+    "sha256": "c131644e9d5dd803a75c61cff0f3a47e32299a2821df6890a475b494745a538d"
+  },
+  {
+    "id": "miffy-sticker-10",
+    "name": {
+      "zh-Hant": "米飛兔 貼圖 10",
+      "zh-Hans": "米菲 贴图 10",
+      "en": "Miffy Sticker 10",
+      "ja": "ミッフィー スタンプ 10"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/miffy/stickers/sticker-10.png",
+    "thumb": "packs/fan-ip/miffy/stickers/sticker-10.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "miffy",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "miffy",
+      "colorway": "original",
+      "pose": "sticker-10",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/8805f3a6d856977e98c368f963a04ee3.webp",
+    "license": "private-personal-use",
+    "sha256": "bfb02d94e2a4c44eafac47e1818d906745e0954929e9f9f871da6a59c77c958c"
+  },
+  {
+    "id": "miffy-sticker-11",
+    "name": {
+      "zh-Hant": "米飛兔 貼圖 11",
+      "zh-Hans": "米菲 贴图 11",
+      "en": "Miffy Sticker 11",
+      "ja": "ミッフィー スタンプ 11"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/miffy/stickers/sticker-11.png",
+    "thumb": "packs/fan-ip/miffy/stickers/sticker-11.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "miffy",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "miffy",
+      "colorway": "original",
+      "pose": "sticker-11",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/6a775667c04a97145cde950511ef3982.webp",
+    "license": "private-personal-use",
+    "sha256": "c78523996051e803249c2d3b94f17612b4c0523c9eea4d57925642c6d2af5a14"
+  },
+  {
+    "id": "miffy-sticker-12",
+    "name": {
+      "zh-Hant": "米飛兔 貼圖 12",
+      "zh-Hans": "米菲 贴图 12",
+      "en": "Miffy Sticker 12",
+      "ja": "ミッフィー スタンプ 12"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/miffy/stickers/sticker-12.png",
+    "thumb": "packs/fan-ip/miffy/stickers/sticker-12.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "miffy",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "miffy",
+      "colorway": "original",
+      "pose": "sticker-12",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/54815d128f7af15816632f59cbcd3d16.webp",
+    "license": "private-personal-use",
+    "sha256": "718f56170d128cff3d8fc01d8ac63ded1682ab1464a4c5aaf0ddf8ba41a276de"
+  },
+  {
+    "id": "miffy-sticker-13",
+    "name": {
+      "zh-Hant": "米飛兔 貼圖 13",
+      "zh-Hans": "米菲 贴图 13",
+      "en": "Miffy Sticker 13",
+      "ja": "ミッフィー スタンプ 13"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/miffy/stickers/sticker-13.png",
+    "thumb": "packs/fan-ip/miffy/stickers/sticker-13.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "miffy",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "miffy",
+      "colorway": "original",
+      "pose": "sticker-13",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/67a367d89532a8bbd8b791706d1b754a.webp",
+    "license": "private-personal-use",
+    "sha256": "edb9967b2f0a468ea8860a546381368ea0c9191a7b8262fc9f83fb3214be22e5"
+  },
+  {
+    "id": "miffy-sticker-14",
+    "name": {
+      "zh-Hant": "米飛兔 貼圖 14",
+      "zh-Hans": "米菲 贴图 14",
+      "en": "Miffy Sticker 14",
+      "ja": "ミッフィー スタンプ 14"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/miffy/stickers/sticker-14.png",
+    "thumb": "packs/fan-ip/miffy/stickers/sticker-14.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "miffy",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "miffy",
+      "colorway": "original",
+      "pose": "sticker-14",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/0bdccbd4cdbec770b2005fa067223b8a.webp",
+    "license": "private-personal-use",
+    "sha256": "5f04b9e157b1236a0b666a978748a739593f987070780bb49155ae42c9a00842"
+  },
+  {
+    "id": "miffy-sticker-15",
+    "name": {
+      "zh-Hant": "米飛兔 貼圖 15",
+      "zh-Hans": "米菲 贴图 15",
+      "en": "Miffy Sticker 15",
+      "ja": "ミッフィー スタンプ 15"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/miffy/stickers/sticker-15.png",
+    "thumb": "packs/fan-ip/miffy/stickers/sticker-15.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "miffy",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "miffy",
+      "colorway": "original",
+      "pose": "sticker-15",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/c5fed55027509f9067f685e473ba272c.webp",
+    "license": "private-personal-use",
+    "sha256": "669b060e84bdab10b82efaf2f3893624064f9fdcfc21b806a0f40cf4dbd67e17"
+  },
+  {
+    "id": "miffy-sticker-16",
+    "name": {
+      "zh-Hant": "米飛兔 貼圖 16",
+      "zh-Hans": "米菲 贴图 16",
+      "en": "Miffy Sticker 16",
+      "ja": "ミッフィー スタンプ 16"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/miffy/stickers/sticker-16.png",
+    "thumb": "packs/fan-ip/miffy/stickers/sticker-16.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "miffy",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "miffy",
+      "colorway": "original",
+      "pose": "sticker-16",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/5e0b4d565f7e215a4c78b2de8fb2b8b3.webp",
+    "license": "private-personal-use",
+    "sha256": "1103c808651c1d27e6740fe6451a527d350ff8ddfb0eebbb445df73ff72996ef"
+  }
+]

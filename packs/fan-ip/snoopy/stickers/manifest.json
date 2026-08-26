@@ -1,0 +1,562 @@
+[
+  {
+    "id": "snoopy-sticker-01",
+    "name": {
+      "zh-Hant": "史努比 貼圖 01",
+      "zh-Hans": "史努比 贴图 01",
+      "en": "Snoopy Sticker 01",
+      "ja": "スヌーピー スタンプ 01"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/snoopy/stickers/sticker-01.png",
+    "thumb": "packs/fan-ip/snoopy/stickers/sticker-01.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "snoopy",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "snoopy",
+      "colorway": "original",
+      "pose": "sticker-01",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/85a6cb37a433785605a2bb71f6ce1487.webp",
+    "license": "private-personal-use",
+    "sha256": "b055fcbe8e20f2b745852b1133d5d3ae020521c74165c4754363824afd97a9ab"
+  },
+  {
+    "id": "snoopy-sticker-02",
+    "name": {
+      "zh-Hant": "史努比 貼圖 02",
+      "zh-Hans": "史努比 贴图 02",
+      "en": "Snoopy Sticker 02",
+      "ja": "スヌーピー スタンプ 02"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/snoopy/stickers/sticker-02.png",
+    "thumb": "packs/fan-ip/snoopy/stickers/sticker-02.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "snoopy",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "snoopy",
+      "colorway": "original",
+      "pose": "sticker-02",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/250d1f16b9106d9fdd334ed2778137e1.webp",
+    "license": "private-personal-use",
+    "sha256": "31fdb94730f6011f6d5cf6d0ba8b53fe7adbeaa69f20fc603a3bdd7e718ba96d"
+  },
+  {
+    "id": "snoopy-sticker-03",
+    "name": {
+      "zh-Hant": "史努比 貼圖 03",
+      "zh-Hans": "史努比 贴图 03",
+      "en": "Snoopy Sticker 03",
+      "ja": "スヌーピー スタンプ 03"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/snoopy/stickers/sticker-03.png",
+    "thumb": "packs/fan-ip/snoopy/stickers/sticker-03.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "snoopy",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "snoopy",
+      "colorway": "original",
+      "pose": "sticker-03",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/cb81b4ef20c39ac492f420872503626b.webp",
+    "license": "private-personal-use",
+    "sha256": "58cd05304881a62c02e78a86ad0817a26e7237b5dcefd1454ea09a7954554165"
+  },
+  {
+    "id": "snoopy-sticker-04",
+    "name": {
+      "zh-Hant": "史努比 貼圖 04",
+      "zh-Hans": "史努比 贴图 04",
+      "en": "Snoopy Sticker 04",
+      "ja": "スヌーピー スタンプ 04"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/snoopy/stickers/sticker-04.png",
+    "thumb": "packs/fan-ip/snoopy/stickers/sticker-04.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "snoopy",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "snoopy",
+      "colorway": "original",
+      "pose": "sticker-04",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/037d1935411164f5a7caa407781001ea.webp",
+    "license": "private-personal-use",
+    "sha256": "445be65fffb54b630277ff633c3a2fd300b107506d8f3dd93c65e4141cf385dd"
+  },
+  {
+    "id": "snoopy-sticker-05",
+    "name": {
+      "zh-Hant": "史努比 貼圖 05",
+      "zh-Hans": "史努比 贴图 05",
+      "en": "Snoopy Sticker 05",
+      "ja": "スヌーピー スタンプ 05"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/snoopy/stickers/sticker-05.png",
+    "thumb": "packs/fan-ip/snoopy/stickers/sticker-05.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "snoopy",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "snoopy",
+      "colorway": "original",
+      "pose": "sticker-05",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/e8e608981979acdd48473acdd9d040c3.webp",
+    "license": "private-personal-use",
+    "sha256": "fcb29c72b2b77b88a3409fb5fa8a31e83de7df9fbe744d9b8cb653e23ddfd7f5"
+  },
+  {
+    "id": "snoopy-sticker-06",
+    "name": {
+      "zh-Hant": "史努比 貼圖 06",
+      "zh-Hans": "史努比 贴图 06",
+      "en": "Snoopy Sticker 06",
+      "ja": "スヌーピー スタンプ 06"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/snoopy/stickers/sticker-06.png",
+    "thumb": "packs/fan-ip/snoopy/stickers/sticker-06.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "snoopy",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "snoopy",
+      "colorway": "original",
+      "pose": "sticker-06",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/50fae5451ef252c2e00eb68a4599ccba.webp",
+    "license": "private-personal-use",
+    "sha256": "f94c19a62be4714336a8d978628cf070b12031c44f3ece9387d292201afceb84"
+  },
+  {
+    "id": "snoopy-sticker-07",
+    "name": {
+      "zh-Hant": "史努比 貼圖 07",
+      "zh-Hans": "史努比 贴图 07",
+      "en": "Snoopy Sticker 07",
+      "ja": "スヌーピー スタンプ 07"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/snoopy/stickers/sticker-07.png",
+    "thumb": "packs/fan-ip/snoopy/stickers/sticker-07.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "snoopy",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "snoopy",
+      "colorway": "original",
+      "pose": "sticker-07",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/366fa23239bc14ed7d8403cec394a5e7.webp",
+    "license": "private-personal-use",
+    "sha256": "96d47493cbe9c324feb42be1d4da1d454fb753534637e3f7a81500e39c651cb4"
+  },
+  {
+    "id": "snoopy-sticker-08",
+    "name": {
+      "zh-Hant": "史努比 貼圖 08",
+      "zh-Hans": "史努比 贴图 08",
+      "en": "Snoopy Sticker 08",
+      "ja": "スヌーピー スタンプ 08"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/snoopy/stickers/sticker-08.png",
+    "thumb": "packs/fan-ip/snoopy/stickers/sticker-08.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "snoopy",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "snoopy",
+      "colorway": "original",
+      "pose": "sticker-08",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/414d6ff85bcf2f961221657ce54d16a4.webp",
+    "license": "private-personal-use",
+    "sha256": "62d8e2dde54c7326a1ad4aec1aabcc79b847becfc9a51488cb620236f8d482c0"
+  },
+  {
+    "id": "snoopy-sticker-09",
+    "name": {
+      "zh-Hant": "史努比 貼圖 09",
+      "zh-Hans": "史努比 贴图 09",
+      "en": "Snoopy Sticker 09",
+      "ja": "スヌーピー スタンプ 09"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/snoopy/stickers/sticker-09.png",
+    "thumb": "packs/fan-ip/snoopy/stickers/sticker-09.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "snoopy",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "snoopy",
+      "colorway": "original",
+      "pose": "sticker-09",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/f9a126cc57bc1dddb694bf3ee3350fd4.webp",
+    "license": "private-personal-use",
+    "sha256": "522be83159274cec16a9098236d1ca1cffd1e74d15e72f361c6ede00a7fbee0d"
+  },
+  {
+    "id": "snoopy-sticker-10",
+    "name": {
+      "zh-Hant": "史努比 貼圖 10",
+      "zh-Hans": "史努比 贴图 10",
+      "en": "Snoopy Sticker 10",
+      "ja": "スヌーピー スタンプ 10"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/snoopy/stickers/sticker-10.png",
+    "thumb": "packs/fan-ip/snoopy/stickers/sticker-10.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "snoopy",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "snoopy",
+      "colorway": "original",
+      "pose": "sticker-10",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/50d699275db1fc19a939e05efef22e9b.webp",
+    "license": "private-personal-use",
+    "sha256": "e37080b07c19bfbb5c1783f475f1516ac199d50544cb440e398c4f0f6d4af9e8"
+  },
+  {
+    "id": "snoopy-sticker-11",
+    "name": {
+      "zh-Hant": "史努比 貼圖 11",
+      "zh-Hans": "史努比 贴图 11",
+      "en": "Snoopy Sticker 11",
+      "ja": "スヌーピー スタンプ 11"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/snoopy/stickers/sticker-11.png",
+    "thumb": "packs/fan-ip/snoopy/stickers/sticker-11.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "snoopy",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "snoopy",
+      "colorway": "original",
+      "pose": "sticker-11",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/58e1209dd8618a0ae2b2bc4649d46023.webp",
+    "license": "private-personal-use",
+    "sha256": "413de0cfcbfb4a440af0c3a0f4bf90ec51d45ee5942860e749efc327c25710ef"
+  },
+  {
+    "id": "snoopy-sticker-12",
+    "name": {
+      "zh-Hant": "史努比 貼圖 12",
+      "zh-Hans": "史努比 贴图 12",
+      "en": "Snoopy Sticker 12",
+      "ja": "スヌーピー スタンプ 12"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/snoopy/stickers/sticker-12.png",
+    "thumb": "packs/fan-ip/snoopy/stickers/sticker-12.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "snoopy",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "snoopy",
+      "colorway": "original",
+      "pose": "sticker-12",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/51dbfb2f33ae28a6fb6f488a3f18fb04.webp",
+    "license": "private-personal-use",
+    "sha256": "9ee76231dc505092e7bc33caca36363ab6070e8a3aff1041d8f36f9c9d2188f3"
+  },
+  {
+    "id": "snoopy-sticker-13",
+    "name": {
+      "zh-Hant": "史努比 貼圖 13",
+      "zh-Hans": "史努比 贴图 13",
+      "en": "Snoopy Sticker 13",
+      "ja": "スヌーピー スタンプ 13"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/snoopy/stickers/sticker-13.png",
+    "thumb": "packs/fan-ip/snoopy/stickers/sticker-13.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "snoopy",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "snoopy",
+      "colorway": "original",
+      "pose": "sticker-13",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/6def31650051e143ea3b0d0078ac7b0a.webp",
+    "license": "private-personal-use",
+    "sha256": "9fbc6c32e496e225f969cff2ab3e98297e16afad20ac7696f803a95619a6f5f9"
+  },
+  {
+    "id": "snoopy-sticker-14",
+    "name": {
+      "zh-Hant": "史努比 貼圖 14",
+      "zh-Hans": "史努比 贴图 14",
+      "en": "Snoopy Sticker 14",
+      "ja": "スヌーピー スタンプ 14"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/snoopy/stickers/sticker-14.png",
+    "thumb": "packs/fan-ip/snoopy/stickers/sticker-14.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "snoopy",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "snoopy",
+      "colorway": "original",
+      "pose": "sticker-14",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/6f0f8cace054706e1f2c04ba22f5d7cd.webp",
+    "license": "private-personal-use",
+    "sha256": "c9ddf595bfc078630e2e0680c160abe23ca1b692a564eb9353ae6620c38e1e8a"
+  },
+  {
+    "id": "snoopy-sticker-15",
+    "name": {
+      "zh-Hant": "史努比 貼圖 15",
+      "zh-Hans": "史努比 贴图 15",
+      "en": "Snoopy Sticker 15",
+      "ja": "スヌーピー スタンプ 15"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/snoopy/stickers/sticker-15.png",
+    "thumb": "packs/fan-ip/snoopy/stickers/sticker-15.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "snoopy",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "snoopy",
+      "colorway": "original",
+      "pose": "sticker-15",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/9d34ffeea3fd8c7e2394a07aeffd948b.webp",
+    "license": "private-personal-use",
+    "sha256": "182974301c7b7fb04f10884f3ff7dc04dff983f61386d6426f50d327c1d59741"
+  },
+  {
+    "id": "snoopy-sticker-16",
+    "name": {
+      "zh-Hant": "史努比 貼圖 16",
+      "zh-Hans": "史努比 贴图 16",
+      "en": "Snoopy Sticker 16",
+      "ja": "スヌーピー スタンプ 16"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/snoopy/stickers/sticker-16.png",
+    "thumb": "packs/fan-ip/snoopy/stickers/sticker-16.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "snoopy",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "snoopy",
+      "colorway": "original",
+      "pose": "sticker-16",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/083e0d5472c4deed0098ff1cc298222d.webp",
+    "license": "private-personal-use",
+    "sha256": "916be805a078610afc532dacd8915eb2a108f7bd0351953ddc03d8ed6d722bd4"
+  }
+]

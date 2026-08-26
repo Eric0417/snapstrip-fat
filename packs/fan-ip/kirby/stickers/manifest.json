@@ -1,0 +1,492 @@
+[
+  {
+    "id": "kirby-sticker-01",
+    "name": {
+      "zh-Hant": "星之卡比 貼圖 01",
+      "zh-Hans": "星之卡比 贴图 01",
+      "en": "Kirby Sticker 01",
+      "ja": "星のカービィ スタンプ 01"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/kirby/stickers/sticker-01.png",
+    "thumb": "packs/fan-ip/kirby/stickers/sticker-01.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "kirby",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "kirby",
+      "colorway": "original",
+      "pose": "sticker-01",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/187dff86aa59876483d17bb4e980f46e.webp",
+    "license": "private-personal-use",
+    "sha256": "fe86b40cceedcc9deb628cdd4817013a98f7466be894bfa20d123cdd3eb933a7"
+  },
+  {
+    "id": "kirby-sticker-02",
+    "name": {
+      "zh-Hant": "星之卡比 貼圖 02",
+      "zh-Hans": "星之卡比 贴图 02",
+      "en": "Kirby Sticker 02",
+      "ja": "星のカービィ スタンプ 02"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/kirby/stickers/sticker-02.png",
+    "thumb": "packs/fan-ip/kirby/stickers/sticker-02.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "kirby",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "kirby",
+      "colorway": "original",
+      "pose": "sticker-02",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/ff13a87938ec3e9096752a1248bbbefe.webp",
+    "license": "private-personal-use",
+    "sha256": "51aaa4e9319b1d2f4f9f5501a49a088917ca533ad91520cc6b628550786e3aad"
+  },
+  {
+    "id": "kirby-sticker-03",
+    "name": {
+      "zh-Hant": "星之卡比 貼圖 03",
+      "zh-Hans": "星之卡比 贴图 03",
+      "en": "Kirby Sticker 03",
+      "ja": "星のカービィ スタンプ 03"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/kirby/stickers/sticker-03.png",
+    "thumb": "packs/fan-ip/kirby/stickers/sticker-03.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "kirby",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "kirby",
+      "colorway": "original",
+      "pose": "sticker-03",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/2716349a8e950730a59166635a95ca21.webp",
+    "license": "private-personal-use",
+    "sha256": "945b3cc969d2ffbd1d0c9ddccc00043ba52ce35579ddfb697814f21c476a04a4"
+  },
+  {
+    "id": "kirby-sticker-04",
+    "name": {
+      "zh-Hant": "星之卡比 貼圖 04",
+      "zh-Hans": "星之卡比 贴图 04",
+      "en": "Kirby Sticker 04",
+      "ja": "星のカービィ スタンプ 04"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/kirby/stickers/sticker-04.png",
+    "thumb": "packs/fan-ip/kirby/stickers/sticker-04.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "kirby",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "kirby",
+      "colorway": "original",
+      "pose": "sticker-04",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/1555d65907ff1d6b0fdfabc7670c8314.webp",
+    "license": "private-personal-use",
+    "sha256": "8f8341f0bee20b0a53e647e75e314c2023583e72af025f119531216b10097368"
+  },
+  {
+    "id": "kirby-sticker-05",
+    "name": {
+      "zh-Hant": "星之卡比 貼圖 05",
+      "zh-Hans": "星之卡比 贴图 05",
+      "en": "Kirby Sticker 05",
+      "ja": "星のカービィ スタンプ 05"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/kirby/stickers/sticker-05.png",
+    "thumb": "packs/fan-ip/kirby/stickers/sticker-05.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "kirby",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "kirby",
+      "colorway": "original",
+      "pose": "sticker-05",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/e54be78ad49a7774d6606a376e2a9467.webp",
+    "license": "private-personal-use",
+    "sha256": "560b255f6cb0e392e6c5eb13ad54f32828a064c1df5069df87ddc46eba9730b8"
+  },
+  {
+    "id": "kirby-sticker-06",
+    "name": {
+      "zh-Hant": "星之卡比 貼圖 06",
+      "zh-Hans": "星之卡比 贴图 06",
+      "en": "Kirby Sticker 06",
+      "ja": "星のカービィ スタンプ 06"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/kirby/stickers/sticker-06.png",
+    "thumb": "packs/fan-ip/kirby/stickers/sticker-06.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "kirby",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "kirby",
+      "colorway": "original",
+      "pose": "sticker-06",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/190558b88101006caa7a491c43d75198.webp",
+    "license": "private-personal-use",
+    "sha256": "eda85c08d3118e12f78794435edb8abff8b77c118c7eb1077bf1ea7bcb0b3adf"
+  },
+  {
+    "id": "kirby-sticker-07",
+    "name": {
+      "zh-Hant": "星之卡比 貼圖 07",
+      "zh-Hans": "星之卡比 贴图 07",
+      "en": "Kirby Sticker 07",
+      "ja": "星のカービィ スタンプ 07"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/kirby/stickers/sticker-07.png",
+    "thumb": "packs/fan-ip/kirby/stickers/sticker-07.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "kirby",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "kirby",
+      "colorway": "original",
+      "pose": "sticker-07",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/b19d9d6e8a49d2a1a4b32c9cd7caf0dc.webp",
+    "license": "private-personal-use",
+    "sha256": "af524a36af90a43d793970b74e2d49772acaac84092c813e0fb7613b0c4e4137"
+  },
+  {
+    "id": "kirby-sticker-08",
+    "name": {
+      "zh-Hant": "星之卡比 貼圖 08",
+      "zh-Hans": "星之卡比 贴图 08",
+      "en": "Kirby Sticker 08",
+      "ja": "星のカービィ スタンプ 08"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/kirby/stickers/sticker-08.png",
+    "thumb": "packs/fan-ip/kirby/stickers/sticker-08.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "kirby",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "kirby",
+      "colorway": "original",
+      "pose": "sticker-08",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/e9210f73a57df1497c6df39c26c2ce39.webp",
+    "license": "private-personal-use",
+    "sha256": "da66d1cc7609e32167cf748e9615c73444db5e7ec7cdde54260da7ed329a0dca"
+  },
+  {
+    "id": "kirby-sticker-09",
+    "name": {
+      "zh-Hant": "星之卡比 貼圖 09",
+      "zh-Hans": "星之卡比 贴图 09",
+      "en": "Kirby Sticker 09",
+      "ja": "星のカービィ スタンプ 09"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/kirby/stickers/sticker-09.png",
+    "thumb": "packs/fan-ip/kirby/stickers/sticker-09.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "kirby",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "kirby",
+      "colorway": "original",
+      "pose": "sticker-09",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/ad14027a99fc6c5857a3c8c57f8343c4.webp",
+    "license": "private-personal-use",
+    "sha256": "6dd6d164cdf6bb1aea80572eb729f4ed1a24f0f56c2cdd1356eb05c81c5bf7be"
+  },
+  {
+    "id": "kirby-sticker-10",
+    "name": {
+      "zh-Hant": "星之卡比 貼圖 10",
+      "zh-Hans": "星之卡比 贴图 10",
+      "en": "Kirby Sticker 10",
+      "ja": "星のカービィ スタンプ 10"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/kirby/stickers/sticker-10.png",
+    "thumb": "packs/fan-ip/kirby/stickers/sticker-10.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "kirby",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "kirby",
+      "colorway": "original",
+      "pose": "sticker-10",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/64d2c70e4764a5cfbe4c4304309d5301.webp",
+    "license": "private-personal-use",
+    "sha256": "bc49f01f84e66ce9c100d02398d886de1852cd8ed33338d389e61209136d4459"
+  },
+  {
+    "id": "kirby-sticker-11",
+    "name": {
+      "zh-Hant": "星之卡比 貼圖 11",
+      "zh-Hans": "星之卡比 贴图 11",
+      "en": "Kirby Sticker 11",
+      "ja": "星のカービィ スタンプ 11"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/kirby/stickers/sticker-11.png",
+    "thumb": "packs/fan-ip/kirby/stickers/sticker-11.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "kirby",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "kirby",
+      "colorway": "original",
+      "pose": "sticker-11",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/092f11b84db8655b951b3d635e74fa02.webp",
+    "license": "private-personal-use",
+    "sha256": "47303a48f56bb3bda2e479646ccc2c4978839f2e27fa952e034ecc6dd1f40035"
+  },
+  {
+    "id": "kirby-sticker-12",
+    "name": {
+      "zh-Hant": "星之卡比 貼圖 12",
+      "zh-Hans": "星之卡比 贴图 12",
+      "en": "Kirby Sticker 12",
+      "ja": "星のカービィ スタンプ 12"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/kirby/stickers/sticker-12.png",
+    "thumb": "packs/fan-ip/kirby/stickers/sticker-12.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "kirby",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "kirby",
+      "colorway": "original",
+      "pose": "sticker-12",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/5d0585153fe57ad85f1a979763787833.webp",
+    "license": "private-personal-use",
+    "sha256": "7c4a254a73d6fc8c8a906597cfd4b580278e13b1db26d0f8a4b14089121279ab"
+  },
+  {
+    "id": "kirby-sticker-13",
+    "name": {
+      "zh-Hant": "星之卡比 貼圖 13",
+      "zh-Hans": "星之卡比 贴图 13",
+      "en": "Kirby Sticker 13",
+      "ja": "星のカービィ スタンプ 13"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/kirby/stickers/sticker-13.png",
+    "thumb": "packs/fan-ip/kirby/stickers/sticker-13.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "kirby",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "kirby",
+      "colorway": "original",
+      "pose": "sticker-13",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/ec0b7aca7d840a94c3856a8f822ce58a.webp",
+    "license": "private-personal-use",
+    "sha256": "ccf193ba609957ee9c2a8407e75c7fc8109dec70f73ee910ca748049e4f6f256"
+  },
+  {
+    "id": "kirby-sticker-14",
+    "name": {
+      "zh-Hant": "星之卡比 貼圖 14",
+      "zh-Hans": "星之卡比 贴图 14",
+      "en": "Kirby Sticker 14",
+      "ja": "星のカービィ スタンプ 14"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/kirby/stickers/sticker-14.png",
+    "thumb": "packs/fan-ip/kirby/stickers/sticker-14.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "kirby",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "kirby",
+      "colorway": "original",
+      "pose": "sticker-14",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/21b3c1087e82bd6b02334866ca6c9335.webp",
+    "license": "private-personal-use",
+    "sha256": "be277ddd809b8246ace2dfd6bf7d7da7f7a23be079e2208df2adc0e7575c2249"
+  }
+]

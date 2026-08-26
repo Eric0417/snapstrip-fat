@@ -1,0 +1,562 @@
+[
+  {
+    "id": "mickey-mouse-sticker-01",
+    "name": {
+      "zh-Hant": "米奇與米妮 貼圖 01",
+      "zh-Hans": "米奇与米妮 贴图 01",
+      "en": "Mickey & Minnie Sticker 01",
+      "ja": "ミッキー＆ミニー スタンプ 01"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/mickey-mouse/stickers/sticker-01.png",
+    "thumb": "packs/fan-ip/mickey-mouse/stickers/sticker-01.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "mickey-mouse",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "mickey-mouse",
+      "colorway": "original",
+      "pose": "sticker-01",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/da02212e4b212d9b9caf435f27f91288.webp",
+    "license": "private-personal-use",
+    "sha256": "1f1cab2e3db11a05610047cea81d160097ccfeef61a5181034d10d91b1a4ca5d"
+  },
+  {
+    "id": "mickey-mouse-sticker-02",
+    "name": {
+      "zh-Hant": "米奇與米妮 貼圖 02",
+      "zh-Hans": "米奇与米妮 贴图 02",
+      "en": "Mickey & Minnie Sticker 02",
+      "ja": "ミッキー＆ミニー スタンプ 02"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/mickey-mouse/stickers/sticker-02.png",
+    "thumb": "packs/fan-ip/mickey-mouse/stickers/sticker-02.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "mickey-mouse",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "mickey-mouse",
+      "colorway": "original",
+      "pose": "sticker-02",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/b9177305bf6001a4ef0b96a4421808c7.webp",
+    "license": "private-personal-use",
+    "sha256": "55fdca7558f6670d998d29fe3644eef7f7201eb0cd5a8b695e7025d9eaac0371"
+  },
+  {
+    "id": "mickey-mouse-sticker-03",
+    "name": {
+      "zh-Hant": "米奇與米妮 貼圖 03",
+      "zh-Hans": "米奇与米妮 贴图 03",
+      "en": "Mickey & Minnie Sticker 03",
+      "ja": "ミッキー＆ミニー スタンプ 03"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/mickey-mouse/stickers/sticker-03.png",
+    "thumb": "packs/fan-ip/mickey-mouse/stickers/sticker-03.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "mickey-mouse",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "mickey-mouse",
+      "colorway": "original",
+      "pose": "sticker-03",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/347aee1a8a91e01c7c199bf4f336642e.webp",
+    "license": "private-personal-use",
+    "sha256": "6d9aa9b6ff3189b52d404b186611f7e57d4e1f888a81b25e7d2d00c3d2c2f131"
+  },
+  {
+    "id": "mickey-mouse-sticker-04",
+    "name": {
+      "zh-Hant": "米奇與米妮 貼圖 04",
+      "zh-Hans": "米奇与米妮 贴图 04",
+      "en": "Mickey & Minnie Sticker 04",
+      "ja": "ミッキー＆ミニー スタンプ 04"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/mickey-mouse/stickers/sticker-04.png",
+    "thumb": "packs/fan-ip/mickey-mouse/stickers/sticker-04.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "mickey-mouse",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "mickey-mouse",
+      "colorway": "original",
+      "pose": "sticker-04",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/313febc9c076bfbbf9671a7020a999e2.webp",
+    "license": "private-personal-use",
+    "sha256": "e98cd0d5ed6e99814478144a1d9dba5a1b9465079c501bfecd591116ec74f674"
+  },
+  {
+    "id": "mickey-mouse-sticker-05",
+    "name": {
+      "zh-Hant": "米奇與米妮 貼圖 05",
+      "zh-Hans": "米奇与米妮 贴图 05",
+      "en": "Mickey & Minnie Sticker 05",
+      "ja": "ミッキー＆ミニー スタンプ 05"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/mickey-mouse/stickers/sticker-05.png",
+    "thumb": "packs/fan-ip/mickey-mouse/stickers/sticker-05.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "mickey-mouse",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "mickey-mouse",
+      "colorway": "original",
+      "pose": "sticker-05",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/198bde158cdf63b96761f9c35149985a.webp",
+    "license": "private-personal-use",
+    "sha256": "4cb4e080d1102dcc07ad93bff3e678a0ab61e9df40b6bcf2da5d0edfac9edb8d"
+  },
+  {
+    "id": "mickey-mouse-sticker-06",
+    "name": {
+      "zh-Hant": "米奇與米妮 貼圖 06",
+      "zh-Hans": "米奇与米妮 贴图 06",
+      "en": "Mickey & Minnie Sticker 06",
+      "ja": "ミッキー＆ミニー スタンプ 06"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/mickey-mouse/stickers/sticker-06.png",
+    "thumb": "packs/fan-ip/mickey-mouse/stickers/sticker-06.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "mickey-mouse",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "mickey-mouse",
+      "colorway": "original",
+      "pose": "sticker-06",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/c501f10a7c9e88ef88831499e4a35324.webp",
+    "license": "private-personal-use",
+    "sha256": "ab116c975cc860593b3f7da1b207e576fb42d24571fb24c67f18ee2daa310850"
+  },
+  {
+    "id": "mickey-mouse-sticker-07",
+    "name": {
+      "zh-Hant": "米奇與米妮 貼圖 07",
+      "zh-Hans": "米奇与米妮 贴图 07",
+      "en": "Mickey & Minnie Sticker 07",
+      "ja": "ミッキー＆ミニー スタンプ 07"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/mickey-mouse/stickers/sticker-07.png",
+    "thumb": "packs/fan-ip/mickey-mouse/stickers/sticker-07.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "mickey-mouse",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "mickey-mouse",
+      "colorway": "original",
+      "pose": "sticker-07",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/dcafc46f769ba62481b17c643cccea24.webp",
+    "license": "private-personal-use",
+    "sha256": "9fe17f672f57e75fa946857d62dae0330ba5861bbb5b042376f0ee069897029f"
+  },
+  {
+    "id": "mickey-mouse-sticker-08",
+    "name": {
+      "zh-Hant": "米奇與米妮 貼圖 08",
+      "zh-Hans": "米奇与米妮 贴图 08",
+      "en": "Mickey & Minnie Sticker 08",
+      "ja": "ミッキー＆ミニー スタンプ 08"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/mickey-mouse/stickers/sticker-08.png",
+    "thumb": "packs/fan-ip/mickey-mouse/stickers/sticker-08.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "mickey-mouse",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "mickey-mouse",
+      "colorway": "original",
+      "pose": "sticker-08",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/a2540eae639b681d1812ff9b86da8b9d.webp",
+    "license": "private-personal-use",
+    "sha256": "44022b44806df87f3d4d527e45caed665ffceabd18ed8837c37208e8486e6396"
+  },
+  {
+    "id": "mickey-mouse-sticker-09",
+    "name": {
+      "zh-Hant": "米奇與米妮 貼圖 09",
+      "zh-Hans": "米奇与米妮 贴图 09",
+      "en": "Mickey & Minnie Sticker 09",
+      "ja": "ミッキー＆ミニー スタンプ 09"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/mickey-mouse/stickers/sticker-09.png",
+    "thumb": "packs/fan-ip/mickey-mouse/stickers/sticker-09.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "mickey-mouse",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "mickey-mouse",
+      "colorway": "original",
+      "pose": "sticker-09",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/54d2aa2b8e1e3b7accc55c491e8f5865.webp",
+    "license": "private-personal-use",
+    "sha256": "9d71d8e0df1afe7c43bea54889e856b463336ad7fafa580159869923ae09b959"
+  },
+  {
+    "id": "mickey-mouse-sticker-10",
+    "name": {
+      "zh-Hant": "米奇與米妮 貼圖 10",
+      "zh-Hans": "米奇与米妮 贴图 10",
+      "en": "Mickey & Minnie Sticker 10",
+      "ja": "ミッキー＆ミニー スタンプ 10"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/mickey-mouse/stickers/sticker-10.png",
+    "thumb": "packs/fan-ip/mickey-mouse/stickers/sticker-10.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "mickey-mouse",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "mickey-mouse",
+      "colorway": "original",
+      "pose": "sticker-10",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/5bceb2117d8b6bc9ecce701e2642ed0d.webp",
+    "license": "private-personal-use",
+    "sha256": "199437c65a8fad91e9cad67b27f6bd1d9496270dca3e4c0ee3fed518f555f854"
+  },
+  {
+    "id": "mickey-mouse-sticker-11",
+    "name": {
+      "zh-Hant": "米奇與米妮 貼圖 11",
+      "zh-Hans": "米奇与米妮 贴图 11",
+      "en": "Mickey & Minnie Sticker 11",
+      "ja": "ミッキー＆ミニー スタンプ 11"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/mickey-mouse/stickers/sticker-11.png",
+    "thumb": "packs/fan-ip/mickey-mouse/stickers/sticker-11.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "mickey-mouse",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "mickey-mouse",
+      "colorway": "original",
+      "pose": "sticker-11",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/650701d1791d113bc0648fe19c797715.webp",
+    "license": "private-personal-use",
+    "sha256": "b8a48f146a076c47d1ddfd475518a7d0b853eb2b4da72096c2d2b36165dcb740"
+  },
+  {
+    "id": "mickey-mouse-sticker-12",
+    "name": {
+      "zh-Hant": "米奇與米妮 貼圖 12",
+      "zh-Hans": "米奇与米妮 贴图 12",
+      "en": "Mickey & Minnie Sticker 12",
+      "ja": "ミッキー＆ミニー スタンプ 12"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/mickey-mouse/stickers/sticker-12.png",
+    "thumb": "packs/fan-ip/mickey-mouse/stickers/sticker-12.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "mickey-mouse",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "mickey-mouse",
+      "colorway": "original",
+      "pose": "sticker-12",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/eab40d2a25b2ca63b4b9af3aa757f929.webp",
+    "license": "private-personal-use",
+    "sha256": "9a77de176c58d25585a52afaa729eec0ab1251c819c0fb686dc7c8588197c6af"
+  },
+  {
+    "id": "mickey-mouse-sticker-13",
+    "name": {
+      "zh-Hant": "米奇與米妮 貼圖 13",
+      "zh-Hans": "米奇与米妮 贴图 13",
+      "en": "Mickey & Minnie Sticker 13",
+      "ja": "ミッキー＆ミニー スタンプ 13"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/mickey-mouse/stickers/sticker-13.png",
+    "thumb": "packs/fan-ip/mickey-mouse/stickers/sticker-13.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "mickey-mouse",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "mickey-mouse",
+      "colorway": "original",
+      "pose": "sticker-13",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/99327b08d9e363e4b66d818c5a8795bc.webp",
+    "license": "private-personal-use",
+    "sha256": "abbab5e13d2ce62ff59096e6eb66cb4f571b05324edebc2f84d3c2c68bd3ba9d"
+  },
+  {
+    "id": "mickey-mouse-sticker-14",
+    "name": {
+      "zh-Hant": "米奇與米妮 貼圖 14",
+      "zh-Hans": "米奇与米妮 贴图 14",
+      "en": "Mickey & Minnie Sticker 14",
+      "ja": "ミッキー＆ミニー スタンプ 14"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/mickey-mouse/stickers/sticker-14.png",
+    "thumb": "packs/fan-ip/mickey-mouse/stickers/sticker-14.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "mickey-mouse",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "mickey-mouse",
+      "colorway": "original",
+      "pose": "sticker-14",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/40eee18d78db7df9f9eb44389a3be0ae.webp",
+    "license": "private-personal-use",
+    "sha256": "108562c7fa6e0313c9bc1167ac81b5c4a4cbfa997a587537914ea255936a74b2"
+  },
+  {
+    "id": "mickey-mouse-sticker-15",
+    "name": {
+      "zh-Hant": "米奇與米妮 貼圖 15",
+      "zh-Hans": "米奇与米妮 贴图 15",
+      "en": "Mickey & Minnie Sticker 15",
+      "ja": "ミッキー＆ミニー スタンプ 15"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/mickey-mouse/stickers/sticker-15.png",
+    "thumb": "packs/fan-ip/mickey-mouse/stickers/sticker-15.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "mickey-mouse",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "mickey-mouse",
+      "colorway": "original",
+      "pose": "sticker-15",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/289663bca1783ed75aa302db5f84b6c8.webp",
+    "license": "private-personal-use",
+    "sha256": "34ccbed9a73c310b54ddb95fcefed655ef51f7119368d26f160a9ba9d2623b83"
+  },
+  {
+    "id": "mickey-mouse-sticker-16",
+    "name": {
+      "zh-Hant": "米奇與米妮 貼圖 16",
+      "zh-Hans": "米奇与米妮 贴图 16",
+      "en": "Mickey & Minnie Sticker 16",
+      "ja": "ミッキー＆ミニー スタンプ 16"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/mickey-mouse/stickers/sticker-16.png",
+    "thumb": "packs/fan-ip/mickey-mouse/stickers/sticker-16.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "mickey-mouse",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "mickey-mouse",
+      "colorway": "original",
+      "pose": "sticker-16",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/8630d19efcfde5e7ee41d7159a8377d1.webp",
+    "license": "private-personal-use",
+    "sha256": "53abe63bf59fb4b9560ecadb464b7cd0c63aa96aac68a9da462542764a2b6aea"
+  }
+]

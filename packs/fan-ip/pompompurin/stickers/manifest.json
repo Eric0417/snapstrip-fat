@@ -1,0 +1,562 @@
+[
+  {
+    "id": "pompompurin-sticker-01",
+    "name": {
+      "zh-Hant": "布丁狗 貼圖 01",
+      "zh-Hans": "布丁狗 贴图 01",
+      "en": "Pompompurin Sticker 01",
+      "ja": "ポムポムプリン スタンプ 01"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/pompompurin/stickers/sticker-01.png",
+    "thumb": "packs/fan-ip/pompompurin/stickers/sticker-01.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "pompompurin",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "pompompurin",
+      "colorway": "original",
+      "pose": "sticker-01",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/f8e0c346443a2c8ef667cc8f9cd6e714.webp",
+    "license": "private-personal-use",
+    "sha256": "486f615d83d9fabccac509b1857074b5489210110977732fc18caf85a3d49f48"
+  },
+  {
+    "id": "pompompurin-sticker-02",
+    "name": {
+      "zh-Hant": "布丁狗 貼圖 02",
+      "zh-Hans": "布丁狗 贴图 02",
+      "en": "Pompompurin Sticker 02",
+      "ja": "ポムポムプリン スタンプ 02"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/pompompurin/stickers/sticker-02.png",
+    "thumb": "packs/fan-ip/pompompurin/stickers/sticker-02.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "pompompurin",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "pompompurin",
+      "colorway": "original",
+      "pose": "sticker-02",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/1a79a2662cb2c5e9bae3cd4ee046a04f.webp",
+    "license": "private-personal-use",
+    "sha256": "122dc4deac7b71c702bf151caa0494bd9d4f3344af131f5ef699dffa75c3abe8"
+  },
+  {
+    "id": "pompompurin-sticker-03",
+    "name": {
+      "zh-Hant": "布丁狗 貼圖 03",
+      "zh-Hans": "布丁狗 贴图 03",
+      "en": "Pompompurin Sticker 03",
+      "ja": "ポムポムプリン スタンプ 03"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/pompompurin/stickers/sticker-03.png",
+    "thumb": "packs/fan-ip/pompompurin/stickers/sticker-03.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "pompompurin",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "pompompurin",
+      "colorway": "original",
+      "pose": "sticker-03",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/172a7e980594bfeea4c6040e8510c578.webp",
+    "license": "private-personal-use",
+    "sha256": "d317058825f9a1634a6af215d01e9b9d75fdcdde35f2f37f3b6256d2cd457f02"
+  },
+  {
+    "id": "pompompurin-sticker-04",
+    "name": {
+      "zh-Hant": "布丁狗 貼圖 04",
+      "zh-Hans": "布丁狗 贴图 04",
+      "en": "Pompompurin Sticker 04",
+      "ja": "ポムポムプリン スタンプ 04"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/pompompurin/stickers/sticker-04.png",
+    "thumb": "packs/fan-ip/pompompurin/stickers/sticker-04.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "pompompurin",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "pompompurin",
+      "colorway": "original",
+      "pose": "sticker-04",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/bdd562a76a2ad4f271fc5588f1664390.webp",
+    "license": "private-personal-use",
+    "sha256": "33237051149359e35f8484522ed9320a6af6119826ec8567e9d566b413c45707"
+  },
+  {
+    "id": "pompompurin-sticker-05",
+    "name": {
+      "zh-Hant": "布丁狗 貼圖 05",
+      "zh-Hans": "布丁狗 贴图 05",
+      "en": "Pompompurin Sticker 05",
+      "ja": "ポムポムプリン スタンプ 05"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/pompompurin/stickers/sticker-05.png",
+    "thumb": "packs/fan-ip/pompompurin/stickers/sticker-05.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "pompompurin",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "pompompurin",
+      "colorway": "original",
+      "pose": "sticker-05",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/cbfa48121ff0bc3fe4b42c467fff0fd5.webp",
+    "license": "private-personal-use",
+    "sha256": "d6b5af9819adb0374b071fbaed03bee50b11762270ae533c2e872f2b6b1dfe8d"
+  },
+  {
+    "id": "pompompurin-sticker-06",
+    "name": {
+      "zh-Hant": "布丁狗 貼圖 06",
+      "zh-Hans": "布丁狗 贴图 06",
+      "en": "Pompompurin Sticker 06",
+      "ja": "ポムポムプリン スタンプ 06"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/pompompurin/stickers/sticker-06.png",
+    "thumb": "packs/fan-ip/pompompurin/stickers/sticker-06.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "pompompurin",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "pompompurin",
+      "colorway": "original",
+      "pose": "sticker-06",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/8871dc24a1e2cc95257a1b2f1c7ec882.webp",
+    "license": "private-personal-use",
+    "sha256": "faafc188e486738e7270b68c95743c0263d2e76254d0a18a8005ea19229b492c"
+  },
+  {
+    "id": "pompompurin-sticker-07",
+    "name": {
+      "zh-Hant": "布丁狗 貼圖 07",
+      "zh-Hans": "布丁狗 贴图 07",
+      "en": "Pompompurin Sticker 07",
+      "ja": "ポムポムプリン スタンプ 07"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/pompompurin/stickers/sticker-07.png",
+    "thumb": "packs/fan-ip/pompompurin/stickers/sticker-07.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "pompompurin",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "pompompurin",
+      "colorway": "original",
+      "pose": "sticker-07",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/2f900b36cd2f7b58c5617844fdb21424.webp",
+    "license": "private-personal-use",
+    "sha256": "b3da9b3d4b25e071a3ec6d8c10c63ac69dc4f82667d548c9681da66c2435c6e2"
+  },
+  {
+    "id": "pompompurin-sticker-08",
+    "name": {
+      "zh-Hant": "布丁狗 貼圖 08",
+      "zh-Hans": "布丁狗 贴图 08",
+      "en": "Pompompurin Sticker 08",
+      "ja": "ポムポムプリン スタンプ 08"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/pompompurin/stickers/sticker-08.png",
+    "thumb": "packs/fan-ip/pompompurin/stickers/sticker-08.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "pompompurin",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "pompompurin",
+      "colorway": "original",
+      "pose": "sticker-08",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/5eeb7b73c0116942d13bb1849db823ca.webp",
+    "license": "private-personal-use",
+    "sha256": "0f1b91e0f08402a6501d5f2089af30876175aa87b0d537431b559a850f7c456f"
+  },
+  {
+    "id": "pompompurin-sticker-09",
+    "name": {
+      "zh-Hant": "布丁狗 貼圖 09",
+      "zh-Hans": "布丁狗 贴图 09",
+      "en": "Pompompurin Sticker 09",
+      "ja": "ポムポムプリン スタンプ 09"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/pompompurin/stickers/sticker-09.png",
+    "thumb": "packs/fan-ip/pompompurin/stickers/sticker-09.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "pompompurin",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "pompompurin",
+      "colorway": "original",
+      "pose": "sticker-09",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/c292540b7fff406dd5ddd77ee525cf31.webp",
+    "license": "private-personal-use",
+    "sha256": "c157e8d3c58289e580e66e9d9788f08ab362f89a3ac5dfe84aca03c29d22a113"
+  },
+  {
+    "id": "pompompurin-sticker-10",
+    "name": {
+      "zh-Hant": "布丁狗 貼圖 10",
+      "zh-Hans": "布丁狗 贴图 10",
+      "en": "Pompompurin Sticker 10",
+      "ja": "ポムポムプリン スタンプ 10"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/pompompurin/stickers/sticker-10.png",
+    "thumb": "packs/fan-ip/pompompurin/stickers/sticker-10.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "pompompurin",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "pompompurin",
+      "colorway": "original",
+      "pose": "sticker-10",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/21ea6abccd364f243cf1267b8411ae1c.webp",
+    "license": "private-personal-use",
+    "sha256": "6c1e87ba6c28a0195c64e623cf0511d656d68c52ba00abc8f9006b5efe4d19e8"
+  },
+  {
+    "id": "pompompurin-sticker-11",
+    "name": {
+      "zh-Hant": "布丁狗 貼圖 11",
+      "zh-Hans": "布丁狗 贴图 11",
+      "en": "Pompompurin Sticker 11",
+      "ja": "ポムポムプリン スタンプ 11"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/pompompurin/stickers/sticker-11.png",
+    "thumb": "packs/fan-ip/pompompurin/stickers/sticker-11.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "pompompurin",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "pompompurin",
+      "colorway": "original",
+      "pose": "sticker-11",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/86101a3b7ac88bfab69b59dd9b93843b.webp",
+    "license": "private-personal-use",
+    "sha256": "a7e981f69ed66409c1cb803a746bfdf6a029d489daeafba5fcd3a32999faefd7"
+  },
+  {
+    "id": "pompompurin-sticker-12",
+    "name": {
+      "zh-Hant": "布丁狗 貼圖 12",
+      "zh-Hans": "布丁狗 贴图 12",
+      "en": "Pompompurin Sticker 12",
+      "ja": "ポムポムプリン スタンプ 12"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/pompompurin/stickers/sticker-12.png",
+    "thumb": "packs/fan-ip/pompompurin/stickers/sticker-12.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "pompompurin",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "pompompurin",
+      "colorway": "original",
+      "pose": "sticker-12",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/53df87bc813d6b597f03bb8925d9ae7f.webp",
+    "license": "private-personal-use",
+    "sha256": "88d3e4de065f43741c25892aae50e69e544340e1cd96b3e86f41aa7e53291d44"
+  },
+  {
+    "id": "pompompurin-sticker-13",
+    "name": {
+      "zh-Hant": "布丁狗 貼圖 13",
+      "zh-Hans": "布丁狗 贴图 13",
+      "en": "Pompompurin Sticker 13",
+      "ja": "ポムポムプリン スタンプ 13"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/pompompurin/stickers/sticker-13.png",
+    "thumb": "packs/fan-ip/pompompurin/stickers/sticker-13.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "pompompurin",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "pompompurin",
+      "colorway": "original",
+      "pose": "sticker-13",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/7ff249790e5b8162400a2dd1c7aebec5.webp",
+    "license": "private-personal-use",
+    "sha256": "a325fba72644e5c50c39b9f34f6926477a6f2a4e3e896a771ca5f9751c406403"
+  },
+  {
+    "id": "pompompurin-sticker-14",
+    "name": {
+      "zh-Hant": "布丁狗 貼圖 14",
+      "zh-Hans": "布丁狗 贴图 14",
+      "en": "Pompompurin Sticker 14",
+      "ja": "ポムポムプリン スタンプ 14"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/pompompurin/stickers/sticker-14.png",
+    "thumb": "packs/fan-ip/pompompurin/stickers/sticker-14.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "pompompurin",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "pompompurin",
+      "colorway": "original",
+      "pose": "sticker-14",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/d85059c343cf785eb65189a0f4aed50f.webp",
+    "license": "private-personal-use",
+    "sha256": "80fbf2edf35effd640545ebe4c3582822ff2c7313f504a47cd8205e4fdde0c7a"
+  },
+  {
+    "id": "pompompurin-sticker-15",
+    "name": {
+      "zh-Hant": "布丁狗 貼圖 15",
+      "zh-Hans": "布丁狗 贴图 15",
+      "en": "Pompompurin Sticker 15",
+      "ja": "ポムポムプリン スタンプ 15"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/pompompurin/stickers/sticker-15.png",
+    "thumb": "packs/fan-ip/pompompurin/stickers/sticker-15.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "pompompurin",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "pompompurin",
+      "colorway": "original",
+      "pose": "sticker-15",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/a5d52bd1c1772924bbe202111b04c21d.webp",
+    "license": "private-personal-use",
+    "sha256": "3e7b0320688f171105209daf9f956516bf446eaf03d7a58c51877419bd3929c3"
+  },
+  {
+    "id": "pompompurin-sticker-16",
+    "name": {
+      "zh-Hant": "布丁狗 貼圖 16",
+      "zh-Hans": "布丁狗 贴图 16",
+      "en": "Pompompurin Sticker 16",
+      "ja": "ポムポムプリン スタンプ 16"
+    },
+    "category": "popular-ip",
+    "src": "packs/fan-ip/pompompurin/stickers/sticker-16.png",
+    "thumb": "packs/fan-ip/pompompurin/stickers/sticker-16.thumb.webp",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "pompompurin",
+      "popular-ip",
+      "cute"
+    ],
+    "design": {
+      "element": "pompompurin",
+      "colorway": "original",
+      "pose": "sticker-16",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "local:fan-ip:https://assets.stickers.wiki/img/3f29e125662d0211c3dde0b342e6cbb0.webp",
+    "license": "private-personal-use",
+    "sha256": "c370a2016a1c32d03cba149337a16ed4c3f2d48a4b3a2efd74990f09657df436"
+  }
+]
