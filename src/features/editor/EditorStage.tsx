@@ -24,12 +24,11 @@ function clamp(value: number, min: number, max: number) {
 
 function rotateHandlePosition(
   placement: StickerPlacement,
-  stageWidth: number,
-  stageHeight: number,
+  stageRect: Pick<DOMRect, 'left' | 'top' | 'width' | 'height'>,
 ) {
   return {
-    centerX: placement.x * stageWidth,
-    centerY: placement.y * stageHeight,
+    centerX: stageRect.left + placement.x * stageRect.width,
+    centerY: stageRect.top + placement.y * stageRect.height,
   };
 }
 
@@ -115,7 +114,14 @@ export function EditorStage({
     onSelect(placement.id);
     onSelectPhoto(null);
     snapshotStickers();
-    const center = rotateHandlePosition(placement, stageSize.width, stageSize.height);
+    const stageRect =
+      stageRef.current?.getBoundingClientRect() ?? {
+        left: 0,
+        top: 0,
+        width: stageSize.width,
+        height: stageSize.height,
+      };
+    const center = rotateHandlePosition(placement, stageRect);
     const distance = Math.hypot(event.clientX - center.centerX, event.clientY - center.centerY);
     const angle = Math.atan2(event.clientY - center.centerY, event.clientX - center.centerX);
     gestureRef.current = {
@@ -154,7 +160,14 @@ export function EditorStage({
 
     if (activePointersRef.current.size === 1) {
       snapshotStickers();
-      const center = rotateHandlePosition(placement, stageSize.width, stageSize.height);
+      const stageRect =
+        stageRef.current?.getBoundingClientRect() ?? {
+          left: 0,
+          top: 0,
+          width: stageSize.width,
+          height: stageSize.height,
+        };
+      const center = rotateHandlePosition(placement, stageRect);
       const distance = Math.hypot(event.clientX - center.centerX, event.clientY - center.centerY);
       const angle = Math.atan2(event.clientY - center.centerY, event.clientX - center.centerX);
       gestureRef.current = {
