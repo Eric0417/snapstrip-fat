@@ -52,6 +52,9 @@
   預覽與匯出共用 `photoTransforms`。
 - 照片底圖改用 image cache 與不重設 canvas 的 paint 流程，調整照片參數時
   不會重新載入圖片，減少畫面閃爍。
+- 貼圖縮放/旋轉/平移計算已抽離到 `src/features/editor/gestureMath.ts`，
+ 以 pointerdown 鎖定的基準值計算 delta；EditorStage 只負責 Pointer Capture
+  與 requestAnimationFrame 排程。
 - 建立 13 個 fan-ip packs：Hello Kitty、Cinnamoroll、My Melody、Kuromi、
   Pompompurin、Little Twin Stars、Miffy、Rilakkuma、Sumikko Gurashi、
   Pusheen、Kirby、Snoopy、Mickey Mouse。
@@ -66,7 +69,7 @@
 - 依使用者後續要求，`snapstrip-fat` Render 公開站已改為包含 fan-ip，
   build command 使用 `pnpm build`；此設定會公開第三方 IP 素材。
 - 完成單元測試與 Playwright：
-  - 20 個 Vitest tests。
+  - 24 個 Vitest tests。
   - 6 個 E2E tests，包含桌面/手機上傳流程、fake camera 四連拍與直式 stage fit。
 - 已建立：
   - `src/app/types.ts`
