@@ -6,5 +6,7 @@ test-results
 .vite
 .DS_Store
 dummy-non-existing-folder
-packs/
+packs/*
+!packs/core-kawaii/
+!packs/core-effects/
 src/data/stickers.generated.ts

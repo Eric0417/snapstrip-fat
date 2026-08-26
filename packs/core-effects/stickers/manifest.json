@@ -1,0 +1,720 @@
+[
+  {
+    "id": "cat-ears",
+    "version": 1,
+    "name": {
+      "zh-Hant": "貓耳",
+      "zh-Hans": "猫耳",
+      "en": "Cat ears",
+      "ja": "猫耳"
+    },
+    "category": "effect",
+    "src": "packs/core-effects/stickers/cat-ears.svg",
+    "thumb": "packs/core-effects/stickers/cat-ears.svg",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "cat",
+      "ear",
+      "cute"
+    ],
+    "design": {
+      "element": "cat-ears",
+      "colorway": "pastel",
+      "pose": "front",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "snapstrip:A-line-original",
+    "license": "original",
+    "sha256": "8f7974bcce7fb5323fe3c8690f3afa731110bf1763f422fd107f9315fa8d2891"
+  },
+  {
+    "id": "bunny-ears",
+    "version": 1,
+    "name": {
+      "zh-Hant": "兔耳",
+      "zh-Hans": "兔耳",
+      "en": "Bunny ears",
+      "ja": "うさぎの耳"
+    },
+    "category": "effect",
+    "src": "packs/core-effects/stickers/bunny-ears.svg",
+    "thumb": "packs/core-effects/stickers/bunny-ears.svg",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "rabbit",
+      "ear",
+      "cute"
+    ],
+    "design": {
+      "element": "bunny-ears",
+      "colorway": "pastel",
+      "pose": "front",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "snapstrip:A-line-original",
+    "license": "original",
+    "sha256": "82d3b63383672ee4935ed2103bdd359ad519f0715e977931fb11a12b7fa7c2f6"
+  },
+  {
+    "id": "bear-ears",
+    "version": 1,
+    "name": {
+      "zh-Hant": "熊耳",
+      "zh-Hans": "熊耳",
+      "en": "Bear ears",
+      "ja": "くま耳"
+    },
+    "category": "effect",
+    "src": "packs/core-effects/stickers/bear-ears.svg",
+    "thumb": "packs/core-effects/stickers/bear-ears.svg",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "bear",
+      "ear",
+      "cute"
+    ],
+    "design": {
+      "element": "bear-ears",
+      "colorway": "pastel",
+      "pose": "front",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "snapstrip:A-line-original",
+    "license": "original",
+    "sha256": "d52e82ba48e9c5f445abf0d6561e348cf2cfd4f4a675a6e2630d7c1ea08591ed"
+  },
+  {
+    "id": "fox-ears",
+    "version": 1,
+    "name": {
+      "zh-Hant": "狐狸耳",
+      "zh-Hans": "狐狸耳",
+      "en": "Fox ears",
+      "ja": "狐耳"
+    },
+    "category": "effect",
+    "src": "packs/core-effects/stickers/fox-ears.svg",
+    "thumb": "packs/core-effects/stickers/fox-ears.svg",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "fox",
+      "ear",
+      "cute"
+    ],
+    "design": {
+      "element": "fox-ears",
+      "colorway": "pastel",
+      "pose": "front",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "snapstrip:A-line-original",
+    "license": "original",
+    "sha256": "884228f0846d095658629e9dac690c383e2c783770e4abfb087121182fae8852"
+  },
+  {
+    "id": "flower-crown",
+    "version": 1,
+    "name": {
+      "zh-Hant": "花環",
+      "zh-Hans": "花环",
+      "en": "Flower crown",
+      "ja": "花冠"
+    },
+    "category": "effect",
+    "src": "packs/core-effects/stickers/flower-crown.svg",
+    "thumb": "packs/core-effects/stickers/flower-crown.svg",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "flower",
+      "crown",
+      "cute"
+    ],
+    "design": {
+      "element": "flower-crown",
+      "colorway": "pastel",
+      "pose": "front",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "snapstrip:A-line-original",
+    "license": "original",
+    "sha256": "0095b685d3ea7de2637b602904ac7311f92c29f33a842ea69749c2cf8a5d3063"
+  },
+  {
+    "id": "crown",
+    "version": 1,
+    "name": {
+      "zh-Hant": "皇冠",
+      "zh-Hans": "皇冠",
+      "en": "Crown",
+      "ja": "王冠"
+    },
+    "category": "effect",
+    "src": "packs/core-effects/stickers/crown.svg",
+    "thumb": "packs/core-effects/stickers/crown.svg",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "crown",
+      "royal",
+      "cute"
+    ],
+    "design": {
+      "element": "crown",
+      "colorway": "pastel",
+      "pose": "front",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "snapstrip:A-line-original",
+    "license": "original",
+    "sha256": "38c1cbb7f7ecdd5417ea4f9f4236c55425de5bea2262b3913ff46dbb6365e2a3"
+  },
+  {
+    "id": "halo",
+    "version": 1,
+    "name": {
+      "zh-Hant": "天使光環",
+      "zh-Hans": "天使光环",
+      "en": "Halo",
+      "ja": "天使の輪"
+    },
+    "category": "effect",
+    "src": "packs/core-effects/stickers/halo.svg",
+    "thumb": "packs/core-effects/stickers/halo.svg",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "angel",
+      "halo",
+      "cute"
+    ],
+    "design": {
+      "element": "halo",
+      "colorway": "pastel",
+      "pose": "front",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "snapstrip:A-line-original",
+    "license": "original",
+    "sha256": "c6f63209024935045aca1ef24ff964d3b421191f4a66240d8a62fcd9a14affaa"
+  },
+  {
+    "id": "angel-wings",
+    "version": 1,
+    "name": {
+      "zh-Hant": "小翅膀",
+      "zh-Hans": "小翅膀",
+      "en": "Angel wings",
+      "ja": "小さな翼"
+    },
+    "category": "effect",
+    "src": "packs/core-effects/stickers/angel-wings.svg",
+    "thumb": "packs/core-effects/stickers/angel-wings.svg",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "angel",
+      "wing",
+      "cute"
+    ],
+    "design": {
+      "element": "angel-wings",
+      "colorway": "pastel",
+      "pose": "front",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "snapstrip:A-line-original",
+    "license": "original",
+    "sha256": "3d7f144953ede1b0cee31899a04917a8c2947b0c3a3aa4d6112d2ce707a0dd3f"
+  },
+  {
+    "id": "devil-horns",
+    "version": 1,
+    "name": {
+      "zh-Hant": "惡魔角",
+      "zh-Hans": "恶魔角",
+      "en": "Devil horns",
+      "ja": "悪魔の角"
+    },
+    "category": "effect",
+    "src": "packs/core-effects/stickers/devil-horns.svg",
+    "thumb": "packs/core-effects/stickers/devil-horns.svg",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "devil",
+      "horn",
+      "cute"
+    ],
+    "design": {
+      "element": "devil-horns",
+      "colorway": "pastel",
+      "pose": "front",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "snapstrip:A-line-original",
+    "license": "original",
+    "sha256": "2cda08d9c93e670050306c13640691a5000bacb873c374f0ecbf76bc5e6f17cb"
+  },
+  {
+    "id": "witch-hat",
+    "version": 1,
+    "name": {
+      "zh-Hant": "巫師帽",
+      "zh-Hans": "巫师帽",
+      "en": "Witch hat",
+      "ja": "魔女の帽子"
+    },
+    "category": "effect",
+    "src": "packs/core-effects/stickers/witch-hat.svg",
+    "thumb": "packs/core-effects/stickers/witch-hat.svg",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "witch",
+      "hat",
+      "cute"
+    ],
+    "design": {
+      "element": "witch-hat",
+      "colorway": "pastel",
+      "pose": "front",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "snapstrip:A-line-original",
+    "license": "original",
+    "sha256": "8be0b4ef1b34f57ca4261eb3675081a68cbb26f3f59038848d26a161fcc31e21"
+  },
+  {
+    "id": "party-hat",
+    "version": 1,
+    "name": {
+      "zh-Hant": "派對帽",
+      "zh-Hans": "派对帽",
+      "en": "Party hat",
+      "ja": "パーティーハット"
+    },
+    "category": "effect",
+    "src": "packs/core-effects/stickers/party-hat.svg",
+    "thumb": "packs/core-effects/stickers/party-hat.svg",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "party",
+      "hat",
+      "cute"
+    ],
+    "design": {
+      "element": "party-hat",
+      "colorway": "pastel",
+      "pose": "front",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "snapstrip:A-line-original",
+    "license": "original",
+    "sha256": "e58128f5ee6af2cab8e3814c2b143e5cd9c0248fd95403f12ba98c3a8e33b0ce"
+  },
+  {
+    "id": "tiara",
+    "version": 1,
+    "name": {
+      "zh-Hant": "公主頭冠",
+      "zh-Hans": "公主头冠",
+      "en": "Tiara",
+      "ja": "ティアラ"
+    },
+    "category": "effect",
+    "src": "packs/core-effects/stickers/tiara.svg",
+    "thumb": "packs/core-effects/stickers/tiara.svg",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "princess",
+      "tiara",
+      "cute"
+    ],
+    "design": {
+      "element": "tiara",
+      "colorway": "pastel",
+      "pose": "front",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "snapstrip:A-line-original",
+    "license": "original",
+    "sha256": "003afb5e29fd66ffe19e6165d37371d73246b83a6ebce46488839661eba89b2a"
+  },
+  {
+    "id": "heart-glasses",
+    "version": 1,
+    "name": {
+      "zh-Hant": "愛心眼鏡",
+      "zh-Hans": "爱心眼镜",
+      "en": "Heart glasses",
+      "ja": "ハート眼鏡"
+    },
+    "category": "effect",
+    "src": "packs/core-effects/stickers/heart-glasses.svg",
+    "thumb": "packs/core-effects/stickers/heart-glasses.svg",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "glasses",
+      "heart",
+      "cute"
+    ],
+    "design": {
+      "element": "heart-glasses",
+      "colorway": "pastel",
+      "pose": "front",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "snapstrip:A-line-original",
+    "license": "original",
+    "sha256": "18f29bd6566b01351cfe3d3668e9d057439aa76459c4e32382c2e3d874ecf9f6"
+  },
+  {
+    "id": "round-glasses",
+    "version": 1,
+    "name": {
+      "zh-Hant": "圓框眼鏡",
+      "zh-Hans": "圆框眼镜",
+      "en": "Round glasses",
+      "ja": "丸眼鏡"
+    },
+    "category": "effect",
+    "src": "packs/core-effects/stickers/round-glasses.svg",
+    "thumb": "packs/core-effects/stickers/round-glasses.svg",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "glasses",
+      "cute"
+    ],
+    "design": {
+      "element": "round-glasses",
+      "colorway": "pastel",
+      "pose": "front",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "snapstrip:A-line-original",
+    "license": "original",
+    "sha256": "9538c4449d1152b8d8e8aa6a8120c3c84e7fb3818030b2a7929b9e74f7b8770c"
+  },
+  {
+    "id": "star-glasses",
+    "version": 1,
+    "name": {
+      "zh-Hant": "星星眼鏡",
+      "zh-Hans": "星星眼镜",
+      "en": "Star glasses",
+      "ja": "星眼鏡"
+    },
+    "category": "effect",
+    "src": "packs/core-effects/stickers/star-glasses.svg",
+    "thumb": "packs/core-effects/stickers/star-glasses.svg",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "glasses",
+      "star",
+      "cute"
+    ],
+    "design": {
+      "element": "star-glasses",
+      "colorway": "pastel",
+      "pose": "front",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "snapstrip:A-line-original",
+    "license": "original",
+    "sha256": "78ecd0c0242ee833e70fbddd1186a55c881cf4cc6fb19596cd7c51b555e23082"
+  },
+  {
+    "id": "mustache",
+    "version": 1,
+    "name": {
+      "zh-Hant": "鬍子",
+      "zh-Hans": "胡子",
+      "en": "Mustache",
+      "ja": "口ひげ"
+    },
+    "category": "effect",
+    "src": "packs/core-effects/stickers/mustache.svg",
+    "thumb": "packs/core-effects/stickers/mustache.svg",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "mustache",
+      "funny",
+      "cute"
+    ],
+    "design": {
+      "element": "mustache",
+      "colorway": "pastel",
+      "pose": "front",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "snapstrip:A-line-original",
+    "license": "original",
+    "sha256": "9581bbf3be23d7806adf91cc41abe5845b54c38c2d5fc2de055b506bebd4e78a"
+  },
+  {
+    "id": "blush",
+    "version": 1,
+    "name": {
+      "zh-Hant": "腮紅",
+      "zh-Hans": "腮红",
+      "en": "Blush",
+      "ja": "チーク"
+    },
+    "category": "effect",
+    "src": "packs/core-effects/stickers/blush.svg",
+    "thumb": "packs/core-effects/stickers/blush.svg",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "blush",
+      "cute"
+    ],
+    "design": {
+      "element": "blush",
+      "colorway": "pastel",
+      "pose": "front",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "snapstrip:A-line-original",
+    "license": "original",
+    "sha256": "f11125c865998fa6db1a8ac0a92e110ecfcdf575873e41aa9df1c68680b96149"
+  },
+  {
+    "id": "sparkle-aura",
+    "version": 1,
+    "name": {
+      "zh-Hant": "閃亮光暈",
+      "zh-Hans": "闪亮光晕",
+      "en": "Sparkle aura",
+      "ja": "キラキラ"
+    },
+    "category": "effect",
+    "src": "packs/core-effects/stickers/sparkle-aura.svg",
+    "thumb": "packs/core-effects/stickers/sparkle-aura.svg",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "sparkle",
+      "aura",
+      "cute"
+    ],
+    "design": {
+      "element": "sparkle-aura",
+      "colorway": "pastel",
+      "pose": "front",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "snapstrip:A-line-original",
+    "license": "original",
+    "sha256": "df35b6253b59f766aa29f0fc4d0c48f707341e549e911204d53a82c8ef3c11af"
+  },
+  {
+    "id": "fairy-dust",
+    "version": 1,
+    "name": {
+      "zh-Hant": "仙子星塵",
+      "zh-Hans": "仙子星尘",
+      "en": "Fairy dust",
+      "ja": "妖精の星屑"
+    },
+    "category": "effect",
+    "src": "packs/core-effects/stickers/fairy-dust.svg",
+    "thumb": "packs/core-effects/stickers/fairy-dust.svg",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "fairy",
+      "sparkle",
+      "cute"
+    ],
+    "design": {
+      "element": "fairy-dust",
+      "colorway": "pastel",
+      "pose": "front",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "snapstrip:A-line-original",
+    "license": "original",
+    "sha256": "8d8b645aff51dd6efd7c8f647597ad3066c4f04494acdc90dd0758f53efc91f1"
+  },
+  {
+    "id": "birthday-hat",
+    "version": 1,
+    "name": {
+      "zh-Hant": "生日帽",
+      "zh-Hans": "生日帽",
+      "en": "Birthday hat",
+      "ja": "バースデーハット"
+    },
+    "category": "effect",
+    "src": "packs/core-effects/stickers/birthday-hat.svg",
+    "thumb": "packs/core-effects/stickers/birthday-hat.svg",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "displaySize": {
+      "w": 256,
+      "h": 256
+    },
+    "tags": [
+      "birthday",
+      "hat",
+      "cute"
+    ],
+    "design": {
+      "element": "birthday-hat",
+      "colorway": "pastel",
+      "pose": "front",
+      "outline": "#FFFFFF",
+      "outlineWidth": 3
+    },
+    "source": "snapstrip:A-line-original",
+    "license": "original",
+    "sha256": "7c931a33da486ad8f46ccba9e0cbdc2a2c64f06792905198904fb91c9645c3f0"
+  }
+]

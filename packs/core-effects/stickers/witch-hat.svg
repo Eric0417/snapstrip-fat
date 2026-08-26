@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feOffset dy="12" in="blur" result="offset" />
+      <feFlood flood-color="#5D4650" flood-opacity="0.12" />
+      <feComposite in2="offset" operator="in" />
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <g stroke="#FFFFFF" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" filter="url(#soft)">
+    
+      <path d="M265 585 L470 175 L754 585 Z" fill="#6A4B73"/>
+      <ellipse cx="512" cy="595" rx="305" ry="75" fill="#6A4B73"/>
+      <path d="M470 175 L512 240 L552 190 Z" fill="#FFE0B2"/>
+      <path d="M330 590 L270 640 L370 640 Z" fill="#FFC7D9"/>
+  </g>
+</svg>
