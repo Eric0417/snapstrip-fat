@@ -81,7 +81,8 @@
 ## 下一步優先順序
 
 1. 在真實手機與桌面上手動走一次相機流程。
-2. 若要部署 Render，決定網域並加入 SPA rewrite。
+2. 若要部署 Render，依 `docs/DEPLOYMENT.md` 建立只含原創素材的 deploy branch。
+   熱門 IP/Sanrio pack 不得放進公開 deploy。
 3. 若首包效能重要，可把 Editor/Capture 改成 lazy route 或拆 manifest chunk。
 
 ## 已知風險
