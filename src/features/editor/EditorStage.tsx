@@ -36,6 +36,9 @@ interface GestureState {
   pinchOriginY: number;
   pinchStartScale: number;
   pinchStartRotation: number;
+  lastAngle: number;
+  lastX: number;
+  lastY: number;
 }
 
 function clamp(value: number, min: number, max: number) {
@@ -159,6 +162,9 @@ export function EditorStage({
       pinchOriginY: placement.y,
       pinchStartScale: placement.scale,
       pinchStartRotation: placement.rotation,
+      lastAngle: angle,
+      lastX: event.clientX,
+      lastY: event.clientY,
     };
   }
 
@@ -198,6 +204,9 @@ export function EditorStage({
         pinchOriginY: placement.y,
         pinchStartScale: placement.scale,
         pinchStartRotation: placement.rotation,
+        lastAngle: angle,
+        lastX: event.clientX,
+        lastY: event.clientY,
       };
       return;
     }
@@ -228,6 +237,9 @@ export function EditorStage({
         pinchOriginY: placement.y,
         pinchStartScale: placement.scale,
         pinchStartRotation: placement.rotation,
+        lastAngle: Math.atan2(second.y - first.y, second.x - first.x),
+        lastX: first.x,
+        lastY: first.y,
       };
     }
   }
@@ -302,20 +314,36 @@ export function EditorStage({
 
     const centerX = gesture.centerX;
     const centerY = gesture.centerY;
-    const distance = Math.hypot(event.clientX - centerX, event.clientY - centerY);
-    const angle = Math.atan2(event.clientY - centerY, event.clientX - centerX);
 
     if (gesture.mode === 'scale') {
+      const distance = Math.hypot(event.clientX - centerX, event.clientY - centerY);
       updateSticker(sticker.id, {
         scale: clamp(gesture.startScale * (distance / gesture.startDistance), 0.06, 0.9),
       });
       return;
     }
 
+    const previousX = gesture.lastX - centerX;
+    const previousY = gesture.lastY - centerY;
+    const currentX = event.clientX - centerX;
+    const currentY = event.clientY - centerY;
+    const previousRadius = Math.max(28, Math.hypot(previousX, previousY));
+    const currentRadius = Math.max(28, Math.hypot(currentX, currentY));
+    const cross =
+      (previousX / previousRadius) * (currentY / currentRadius) -
+      (previousY / previousRadius) * (currentX / currentRadius);
+    const dot =
+      (previousX / previousRadius) * (currentX / currentRadius) +
+      (previousY / previousRadius) * (currentY / currentRadius);
+    const deltaAngle = Math.atan2(cross, dot);
+    gesture.lastAngle += deltaAngle;
+    gesture.lastX = event.clientX;
+    gesture.lastY = event.clientY;
+
     updateSticker(sticker.id, {
       rotation:
         (gesture.startRotation +
-          ((angle - gesture.startAngle) * 180) / Math.PI +
+          ((gesture.lastAngle - gesture.startAngle) * 180) / Math.PI +
           360) %
         360,
     });
@@ -355,6 +383,9 @@ export function EditorStage({
             pinchOriginY: sticker.y,
             pinchStartScale: sticker.scale,
             pinchStartRotation: sticker.rotation,
+            lastAngle: 0,
+            lastX: point.x,
+            lastY: point.y,
           };
         }
       } else if (remaining.length === 0) {
