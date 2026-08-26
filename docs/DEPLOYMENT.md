@@ -12,8 +12,9 @@
 
 ## Render 公開部署
 
-Render Static Site 會從 Git branch build，所以公開需要的原創貼圖必須放進一個
-deploy branch。
+Render Static Site 會從 Git branch build。目前 `snapstrip-fat` 依使用者要求，
+公開站包含 fan-ip；因此 build command 是 `pnpm build`，不是 `pnpm build:public`。
+此設定會讓第三方 IP 素材在公開網域可見。
 
 ### 1. 建立 deploy branch
 
@@ -63,10 +64,10 @@ git push origin deploy
 
 - Repository：`Eric0417/snapstrip-v2`
 - Branch：`deploy`
-- Build command：
+- 目前 `snapstrip-fat` build command：
 
 ```bash
-pnpm install --frozen-lockfile && pnpm build:public
+pnpm install --frozen-lockfile && pnpm build
 ```
 
 - Publish directory：`dist`

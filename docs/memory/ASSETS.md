@@ -24,6 +24,10 @@
 - 不得讓 Render 公開版複製到 `dist/packs/fan-ip`。
 - 已在 `.gitignore` 排除，避免將第三方 IP 資產提交到版本控制。
 
+2026-08-26 例外：使用者明確要求 `snapstrip-fat.onrender.com` 包含 Sanrio 素材。
+`snapstrip-fat` 的 `deploy` branch 已追蹤 fan-ip，Render build 改為 `pnpm build`。
+`snapstrip-v2` 的 `main` 仍保持 code-only，公開 build 指令仍可排除 fan-ip。
+
 ### Author avatar
 
 - 路徑：`public/author/eric.jpg`

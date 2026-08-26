@@ -53,6 +53,8 @@
 - 完成 local/public build 分離並驗證：
   - 本機 build 包含 `packs/fan-ip`，206 張主圖。
   - `pnpm build:public` 不包含 fan-ip 檔案，也不包含 fan-ip 字串。
+- 依使用者後續要求，`snapstrip-fat` Render 公開站已改為包含 fan-ip，
+  build command 使用 `pnpm build`；此設定會公開第三方 IP 素材。
 - 完成單元測試與 Playwright：
   - 19 個 Vitest tests。
   - 6 個 E2E tests，包含桌面/手機上傳流程、fake camera 四連拍與直式 stage fit。
