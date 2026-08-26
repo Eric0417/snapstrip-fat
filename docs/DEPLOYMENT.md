@@ -71,6 +71,20 @@ pnpm install --frozen-lockfile && pnpm build:public
 
 - Publish directory：`dist`
 
+### 5. 設定 SPA fallback
+
+Render 的 redirect/rewrite 規則目前在 Dashboard 設定，無法只靠 repo 檔案完成。
+在 Static Site 的 Settings → Redirects/Rewrites 新增：
+
+- Action：`Rewrite`
+- Source：`/*`
+- Destination：`/index.html`
+
+這樣直接開啟 `/layout`、`/editor` 或重新整理時，Render 會回傳 SPA 首頁，
+而實際存在的貼圖、JS、CSS 檔案仍會優先直接提供。
+
+`snapstrip-fat.onrender.com` 已透過 Render API 完成此規則設定。
+
 ## 私人 Sanrio 版本
 
 Sanrio/fan-ip 只能放在本機或受密碼保護的私人環境，不要放進 Render 公開 deploy。
