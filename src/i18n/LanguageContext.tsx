@@ -1,0 +1,141 @@
+import { createContext, useContext, useMemo, useState, type ReactNode } from 'react';
+import type { Locale } from '../app/types';
+
+const messages = {
+  'zh-Hant': {
+    brand: 'snapstrip',
+    tagline: '粉彩系四格拍貼，全程在本機完成',
+    home: '首頁',
+    photoBooth: '拍貼機',
+    madeBy: 'Made by Eric',
+    privacyNote: '照片只在本機處理，不會上傳或儲存。',
+    start: '開始',
+    welcomeTitle: '拍下這一刻',
+    welcomeBody: '每一次快門只有 3 秒，不能重來。擺好姿勢，開心就好。',
+    layoutTitle: '選擇你的版型',
+    layoutBody: '挑一個喜歡的四格版型，接下來開始連拍。',
+    continue: '繼續',
+    grid: '四格方格',
+    square: '正方形四格',
+    bento: '大小混搭',
+    portraitGrid: '直式四格',
+    vertical: '直式拍立得',
+    classic: '經典長條',
+    horizontal: '橫式四連拍',
+    wide: '寬版電影條',
+    captureTitle: '準備好了嗎？',
+    captureHint: '相機與麥克風只會在本地使用。',
+    startSession: '開始拍照',
+    nextShot: '下一張',
+    retake: '重新開始',
+    permissionError: '無法開啟相機，請允許相機權限，或改用上傳照片。',
+    uploadPhotos: '上傳四張照片',
+    uploadHint: '若無法使用相機，可上傳四張照片繼續編輯。',
+    uploadCountError: '請選擇四張照片。',
+    uploadReadError: '有照片無法讀取，請重試。',
+    editorTitle: '裝飾你的拍貼',
+    editorHint: '拖曳移動、選取後調整大小或旋轉。',
+    searchStickers: '搜尋貼圖',
+    allStickers: '全部',
+    export: '下載 PNG',
+    loadMore: '載入更多',
+    noShots: '請先完成連拍，再進入編輯器。',
+    undo: '復原',
+    redo: '重做',
+    delete: '刪除',
+    bringForward: '上移一層',
+    sendBackward: '下移一層',
+    flipHorizontal: '水平翻轉',
+    flipVertical: '垂直翻轉',
+    deselect: '取消選取',
+    aboutTitle: '關於作者',
+    aboutName: 'Eric',
+    aboutRole: '中學生 / SnapStrip 創作者',
+    aboutBio: '我是 Eric，一名中學生，也是 SnapStrip 的創作者。我喜歡用程式把有趣的想法變成作品。',
+    github: 'GitHub',
+    backHome: '回到首頁',
+    notFound: '找不到這個頁面',
+    language: '語言',
+  },
+  en: {
+    brand: 'snapstrip',
+    tagline: 'A pastel four-shot photo booth that stays on your device',
+    home: 'Home',
+    photoBooth: 'Photo Booth',
+    madeBy: 'Made by Eric',
+    privacyNote: 'Photos are processed on this device only and are never uploaded or stored.',
+    start: 'Start',
+    welcomeTitle: 'Capture the moment',
+    welcomeBody: 'Every shot lasts 3 seconds and there are no retakes. Strike a pose and have fun.',
+    layoutTitle: 'Choose your layout',
+    layoutBody: 'Pick a four-shot layout, then start capturing.',
+    continue: 'Continue',
+    grid: 'Four-square grid',
+    square: 'Square grid',
+    bento: 'Bento mix',
+    portraitGrid: 'Portrait grid',
+    vertical: 'Vertical strip',
+    classic: 'Classic strip',
+    horizontal: 'Horizontal strip',
+    wide: 'Wide strip',
+    captureTitle: 'Ready?',
+    captureHint: 'Your camera is used only on this device.',
+    startSession: 'Start shooting',
+    nextShot: 'Next shot',
+    retake: 'Start over',
+    permissionError: 'Camera access is unavailable. Allow camera permission or upload photos instead.',
+    uploadPhotos: 'Upload four photos',
+    uploadHint: 'If the camera is unavailable, upload four photos to continue editing.',
+    uploadCountError: 'Please select four photos.',
+    uploadReadError: 'One photo could not be read.',
+    editorTitle: 'Decorate your strip',
+    editorHint: 'Drag to move. Select a sticker to resize or rotate it.',
+    searchStickers: 'Search stickers',
+    allStickers: 'All',
+    export: 'Download PNG',
+    loadMore: 'Load more',
+    noShots: 'Complete a photo session before opening the editor.',
+    undo: 'Undo',
+    redo: 'Redo',
+    delete: 'Delete',
+    bringForward: 'Bring forward',
+    sendBackward: 'Send backward',
+    flipHorizontal: 'Flip horizontal',
+    flipVertical: 'Flip vertical',
+    deselect: 'Deselect',
+    aboutTitle: 'About the creator',
+    aboutName: 'Eric',
+    aboutRole: 'Middle school student / SnapStrip creator',
+    aboutBio:
+      "I'm Eric, a middle school student and the creator of SnapStrip. I love turning fun ideas into things I can build.",
+    github: 'GitHub',
+    backHome: 'Back home',
+    notFound: 'Page not found',
+    language: 'Language',
+  },
+} as const;
+
+type MessageKey = keyof (typeof messages)['zh-Hant'];
+
+interface LanguageContextValue {
+  locale: Locale;
+  setLocale: (locale: Locale) => void;
+  t: (key: MessageKey) => string;
+}
+
+const LanguageContext = createContext<LanguageContextValue | null>(null);
+
+export function LanguageProvider({ children }: { children: ReactNode }) {
+  const [locale, setLocale] = useState<Locale>('zh-Hant');
+  const value = useMemo<LanguageContextValue>(
+    () => ({ locale, setLocale, t: (key) => messages[locale][key] }),
+    [locale],
+  );
+  return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;
+}
+
+export function useLanguage() {
+  const context = useContext(LanguageContext);
+  if (!context) throw new Error('useLanguage must be used inside LanguageProvider');
+  return context;
+}

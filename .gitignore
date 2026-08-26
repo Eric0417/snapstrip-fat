@@ -1,0 +1,9 @@
+node_modules
+dist
+coverage
+playwright-report
+test-results
+.vite
+.DS_Store
+dummy-non-existing-folder
+src/data/stickers.generated.ts

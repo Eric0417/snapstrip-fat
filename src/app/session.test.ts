@@ -1,0 +1,72 @@
+import { beforeEach, describe, expect, it } from 'vitest';
+import { useSession } from './session';
+import type { StickerPlacement } from './types';
+
+function placement(overrides: Partial<StickerPlacement> = {}): StickerPlacement {
+  return {
+    id: 's1',
+    itemId: 'rabbit-rose-front',
+    x: 0.5,
+    y: 0.5,
+    scale: 0.24,
+    rotation: 0,
+    flipX: false,
+    flipY: false,
+    z: 0,
+    opacity: 1,
+    visible: true,
+    ...overrides,
+  };
+}
+
+describe('session store', () => {
+  beforeEach(() => {
+    useSession.setState({
+      layoutId: 'grid',
+      shots: [],
+      stickers: [],
+      past: [],
+      future: [],
+    });
+  });
+
+  it('adds a sticker with a monotonically increasing z', () => {
+    const first = useSession.getState().addSticker('rabbit-rose-front');
+    const second = useSession.getState().addSticker('rabbit-rose-front');
+    const stickers = useSession.getState().stickers;
+    expect(first).not.toBe(second);
+    expect(stickers[0].z).toBe(0);
+    expect(stickers[1].z).toBe(1);
+  });
+
+  it('uses the requested relative position when adding a sticker', () => {
+    useSession.getState().addSticker('rabbit-rose-front', { x: 0.25, y: 0.75 });
+    expect(useSession.getState().stickers[0]).toMatchObject({ x: 0.25, y: 0.75 });
+  });
+
+  it('undoes the previous high-level sticker change', () => {
+    useSession.setState({ stickers: [placement()] });
+    useSession.getState().removeStickers(['s1']);
+    expect(useSession.getState().stickers).toHaveLength(0);
+    useSession.getState().undoStickers();
+    expect(useSession.getState().stickers).toHaveLength(1);
+  });
+
+  it('swaps z values when moving a sticker between layers', () => {
+    useSession.setState({
+      stickers: [placement({ id: 'bottom', z: 0 }), placement({ id: 'top', z: 1 })],
+    });
+    useSession.getState().moveStickerLayer('bottom', 'forward');
+    expect(useSession.getState().stickers.find((s) => s.id === 'bottom')?.z).toBe(1);
+    expect(useSession.getState().stickers.find((s) => s.id === 'top')?.z).toBe(0);
+  });
+
+  it('creates a duplicate above all current stickers', () => {
+    useSession.setState({ stickers: [placement()] });
+    useSession.getState().duplicateSticker('s1');
+    const stickers = useSession.getState().stickers;
+    expect(stickers).toHaveLength(2);
+    expect(stickers[1].z).toBe(1);
+    expect(stickers[1].id).not.toBe('s1');
+  });
+});
