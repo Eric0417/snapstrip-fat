@@ -44,8 +44,12 @@
   `x=0.5,y=0.5` 的絕對中心。
 - 貼圖拖曳改為 `transform` 定位並用 `requestAnimationFrame` 節流，
   縮放/旋轉更新最多每幀一次。
+- 已移除編輯器側邊欄的貼圖 Size/Rotate 滑桿；改為單指拖移、雙指捏合縮放與
+  旋轉，並保留角落 handle。滑鼠/觸控操作仍以每幀一次更新。
 - 新增照片選取與調整：每格照片可縮放 0.8x–2.5x，並做水平/垂直平移，
   預覽與匯出共用 `photoTransforms`。
+- 照片底圖改用 image cache 與不重設 canvas 的 paint 流程，調整照片參數時
+  不會重新載入圖片，減少畫面閃爍。
 - 建立 13 個 fan-ip packs：Hello Kitty、Cinnamoroll、My Melody、Kuromi、
   Pompompurin、Little Twin Stars、Miffy、Rilakkuma、Sumikko Gurashi、
   Pusheen、Kirby、Snoopy、Mickey Mouse。

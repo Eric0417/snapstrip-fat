@@ -73,6 +73,9 @@ docs/memory/            long-term handoff memory
 新增貼圖時，`src/features/editor/spawn.ts` 會由 stage 與 viewport 的可見交集中心
 換算成正規化座標，再交給 `addSticker(itemId, position)`。
 
+照片底圖使用 `loadImageCached()` 快取解碼後的 `HTMLImageElement`；
+`paintStripBaseToCanvas()` 只重繪內容，不重設 canvas 尺寸，避免縮放/平移照片時閃爍。
+
 ## 貼圖載入
 
 `src/data/stickers.ts`：
