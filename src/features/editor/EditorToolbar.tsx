@@ -130,38 +130,6 @@ export function EditorToolbar({ selectedId }: EditorToolbarProps) {
         </button>
       </div>
 
-      <div className="range-controls">
-        <label>
-          <span>Size</span>
-          <input
-            type="range"
-            min="0.06"
-            max="0.9"
-            step="0.01"
-            value={selected?.scale ?? 0.24}
-            disabled={!selectedId}
-            onPointerDown={snapshotStickers}
-            onChange={(event) =>
-              selectedId && updateSticker(selectedId, { scale: Number(event.target.value) })
-            }
-          />
-        </label>
-        <label>
-          <span>Rotate</span>
-          <input
-            type="range"
-            min="0"
-            max="359"
-            step="1"
-            value={Math.round(selected?.rotation ?? 0)}
-            disabled={!selectedId}
-            onPointerDown={snapshotStickers}
-            onChange={(event) =>
-              selectedId && updateSticker(selectedId, { rotation: Number(event.target.value) })
-            }
-          />
-        </label>
-      </div>
     </section>
   );
 }

@@ -62,17 +62,31 @@ export function createStripCanvas(layoutId: string, targetWidth = 1200) {
   return { canvas, size };
 }
 
-export async function loadImage(src: string): Promise<HTMLImageElement> {
-  const image = new Image();
-  image.decoding = 'async';
-  image.src = src;
-  if (image.decode) await image.decode();
-  else await new Promise<void>((resolve, reject) => {
-    image.onload = () => resolve();
-    image.onerror = () => reject(new Error(`Failed to load image: ${src}`));
+const imageCache = new Map<string, Promise<HTMLImageElement>>();
+
+export function loadImageCached(src: string): Promise<HTMLImageElement> {
+  const cached = imageCache.get(src);
+  if (cached) return cached;
+
+  const loading = new Promise<HTMLImageElement>((resolve, reject) => {
+    const image = new Image();
+    image.decoding = 'async';
+    image.src = src;
+    if (image.decode) {
+      image
+        .decode()
+        .then(() => resolve(image))
+        .catch(() => reject(new Error(`Failed to load image: ${src}`)));
+    } else {
+      image.onload = () => resolve(image);
+      image.onerror = () => reject(new Error(`Failed to load image: ${src}`));
+    }
   });
-  return image;
+  imageCache.set(src, loading);
+  return loading;
 }
+
+export const loadImage = loadImageCached;
 
 export function drawStripBase(
   context: CanvasRenderingContext2D,
@@ -130,6 +144,19 @@ export async function drawStripBaseToCanvas(
   drawStripBase(context, layoutId, size, shots, shotImages, photoTransforms);
 }
 
+export async function paintStripBaseToCanvas(
+  canvas: HTMLCanvasElement,
+  layoutId: string,
+  shots: readonly PhotoShot[],
+  photoTransforms: readonly PhotoTransform[],
+) {
+  const size = stripSize(layoutId, 1440);
+  const context = canvas.getContext('2d');
+  if (!context) throw new Error('Canvas 2D context is unavailable');
+  const shotImages = await Promise.all(shots.map((shot) => loadImageCached(shot.dataUrl)));
+  drawStripBase(context, layoutId, size, shots, shotImages, photoTransforms);
+}
+
 export function stickerWidth(size: StripSize, placement: StickerPlacement) {
   return Math.max(12, placement.scale * size.innerWidth);
 }
@@ -168,7 +195,7 @@ export async function renderStrip(options: {
   const context = canvas.getContext('2d');
   if (!context) throw new Error('Canvas 2D context is unavailable');
 
-  const shotImages = await Promise.all(options.shots.map((shot) => loadImage(shot.dataUrl)));
+  const shotImages = await Promise.all(options.shots.map((shot) => loadImageCached(shot.dataUrl)));
   drawStripBase(
     context,
     options.layoutId,

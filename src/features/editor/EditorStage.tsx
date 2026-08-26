@@ -11,9 +11,9 @@ import type { StickerPlacement } from '../../app/types';
 import { STICKERS, stickerName, type StickerAsset } from '../../data/stickers';
 import { useLanguage } from '../../i18n/LanguageContext';
 import { assetUrl } from '../../lib/assetUrl';
-import { drawStripBaseToCanvas, slotRects, stripSize } from '../../lib/strip';
+import { paintStripBaseToCanvas, slotRects, stripSize } from '../../lib/strip';
 
-type GestureMode = 'move' | 'scale' | 'rotate';
+type GestureMode = 'move' | 'scale' | 'rotate' | 'pinch';
 
 interface GestureState {
   mode: GestureMode;
@@ -28,6 +28,14 @@ interface GestureState {
   startAngle: number;
   centerX: number;
   centerY: number;
+  pinchStartDistance: number;
+  pinchStartAngle: number;
+  pinchStartMidX: number;
+  pinchStartMidY: number;
+  pinchOriginX: number;
+  pinchOriginY: number;
+  pinchStartScale: number;
+  pinchStartRotation: number;
 }
 
 function clamp(value: number, min: number, max: number) {
@@ -70,6 +78,7 @@ export function EditorStage({
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const gestureRef = useRef<GestureState | null>(null);
   const pendingGestureRef = useRef<React.PointerEvent<HTMLDivElement> | null>(null);
+  const activePointersRef = useRef(new Map<number, { x: number; y: number }>());
   const animationFrameRef = useRef<number | null>(null);
   const [stageSize, setStageSize] = useState({ width: 0, height: 0 });
 
@@ -89,7 +98,15 @@ export function EditorStage({
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    void drawStripBaseToCanvas(canvas, layoutId, shots, photoTransforms).catch(() => undefined);
+    const size = stripSize(layoutId, 1440);
+    canvas.width = size.width;
+    canvas.height = size.height;
+  }, [layoutId]);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    void paintStripBaseToCanvas(canvas, layoutId, shots, photoTransforms).catch(() => undefined);
   }, [layoutId, photoTransforms, shots]);
 
   useEffect(() => () => {
@@ -134,12 +151,97 @@ export function EditorStage({
       startAngle: angle,
       centerX: center.centerX,
       centerY: center.centerY,
+      pinchStartDistance: distance,
+      pinchStartAngle: angle,
+      pinchStartMidX: center.centerX,
+      pinchStartMidY: center.centerY,
+      pinchOriginX: placement.x,
+      pinchOriginY: placement.y,
+      pinchStartScale: placement.scale,
+      pinchStartRotation: placement.rotation,
     };
+  }
+
+  function beginStickerGesture(
+    event: React.PointerEvent<HTMLButtonElement>,
+    placement: StickerPlacement,
+  ) {
+    event.stopPropagation();
+    event.currentTarget.setPointerCapture(event.pointerId);
+    onSelect(placement.id);
+    onSelectPhoto(null);
+    activePointersRef.current.set(event.pointerId, { x: event.clientX, y: event.clientY });
+
+    if (activePointersRef.current.size === 1) {
+      snapshotStickers();
+      const center = rotateHandlePosition(placement, stageSize.width, stageSize.height);
+      const distance = Math.hypot(event.clientX - center.centerX, event.clientY - center.centerY);
+      const angle = Math.atan2(event.clientY - center.centerY, event.clientX - center.centerX);
+      gestureRef.current = {
+        mode: 'move',
+        pointerId: event.pointerId,
+        startX: event.clientX,
+        startY: event.clientY,
+        originX: placement.x,
+        originY: placement.y,
+        startScale: placement.scale,
+        startRotation: placement.rotation,
+        startDistance: Math.max(1, distance),
+        startAngle: angle,
+        centerX: center.centerX,
+        centerY: center.centerY,
+        pinchStartDistance: distance,
+        pinchStartAngle: angle,
+        pinchStartMidX: center.centerX,
+        pinchStartMidY: center.centerY,
+        pinchOriginX: placement.x,
+        pinchOriginY: placement.y,
+        pinchStartScale: placement.scale,
+        pinchStartRotation: placement.rotation,
+      };
+      return;
+    }
+
+    const points = [...activePointersRef.current.values()];
+    if (points.length === 2) {
+      const [first, second] = points;
+      const midX = (first.x + second.x) / 2;
+      const midY = (first.y + second.y) / 2;
+      gestureRef.current = {
+        mode: 'pinch',
+        pointerId: -1,
+        startX: first.x,
+        startY: first.y,
+        originX: placement.x,
+        originY: placement.y,
+        startScale: placement.scale,
+        startRotation: placement.rotation,
+        startDistance: Math.max(1, Math.hypot(second.x - first.x, second.y - first.y)),
+        startAngle: Math.atan2(second.y - first.y, second.x - first.x),
+        centerX: placement.x * stageSize.width,
+        centerY: placement.y * stageSize.height,
+        pinchStartDistance: Math.max(1, Math.hypot(second.x - first.x, second.y - first.y)),
+        pinchStartAngle: Math.atan2(second.y - first.y, second.x - first.x),
+        pinchStartMidX: midX,
+        pinchStartMidY: midY,
+        pinchOriginX: placement.x,
+        pinchOriginY: placement.y,
+        pinchStartScale: placement.scale,
+        pinchStartRotation: placement.rotation,
+      };
+    }
   }
 
   function handlePointerMove(event: React.PointerEvent<HTMLDivElement>) {
     const gesture = gestureRef.current;
-    if (!gesture || gesture.pointerId !== event.pointerId || stageSize.width === 0) {
+    if (!gesture || stageSize.width === 0) {
+      return;
+    }
+    if (gesture.mode === 'pinch') {
+      if (activePointersRef.current.has(event.pointerId)) {
+        activePointersRef.current.set(event.pointerId, { x: event.clientX, y: event.clientY });
+      }
+    } else if (gesture.pointerId !== event.pointerId) {
       return;
     }
     pendingGestureRef.current = event;
@@ -156,6 +258,39 @@ export function EditorStage({
     const event = pendingGestureRef.current;
     const sticker = useSession.getState().stickers.find((item) => item.id === selectedId);
     if (!gesture || !sticker || !event || stageSize.width === 0) return;
+
+    if (gesture.mode === 'pinch') {
+      const points = [...activePointersRef.current.values()];
+      if (points.length < 2) return;
+      const [first, second] = points;
+      const midX = (first.x + second.x) / 2;
+      const midY = (first.y + second.y) / 2;
+      const distance = Math.max(1, Math.hypot(second.x - first.x, second.y - first.y));
+      const angle = Math.atan2(second.y - first.y, second.x - first.x);
+      updateSticker(sticker.id, {
+        x: clamp(
+          gesture.pinchOriginX + (midX - gesture.pinchStartMidX) / stageSize.width,
+          0,
+          1,
+        ),
+        y: clamp(
+          gesture.pinchOriginY + (midY - gesture.pinchStartMidY) / stageSize.height,
+          0,
+          1,
+        ),
+        scale: clamp(
+          gesture.pinchStartScale * (distance / gesture.pinchStartDistance),
+          0.06,
+          0.9,
+        ),
+        rotation:
+          (gesture.pinchStartRotation +
+            ((angle - gesture.pinchStartAngle) * 180) / Math.PI +
+            360) %
+          360,
+      });
+      return;
+    }
 
     if (gesture.mode === 'move') {
       updateSticker(sticker.id, {
@@ -187,13 +322,57 @@ export function EditorStage({
   }
 
   function endGesture(event: React.PointerEvent<HTMLDivElement>) {
-    if (gestureRef.current?.pointerId === event.pointerId) {
+    activePointersRef.current.delete(event.pointerId);
+    const gesture = gestureRef.current;
+    if (!gesture || (gesture.mode !== 'pinch' && gesture.pointerId !== event.pointerId)) return;
+
+    if (gesture.mode === 'pinch') {
       flushGesture();
-      gestureRef.current = null;
       pendingGestureRef.current = null;
+      const remaining = [...activePointersRef.current.entries()];
+      if (remaining.length === 1) {
+        const [pointerId, point] = remaining[0];
+        const sticker = useSession.getState().stickers.find((item) => item.id === selectedId);
+        if (sticker) {
+          gestureRef.current = {
+            mode: 'move',
+            pointerId,
+            startX: point.x,
+            startY: point.y,
+            originX: sticker.x,
+            originY: sticker.y,
+            startScale: sticker.scale,
+            startRotation: sticker.rotation,
+            startDistance: 1,
+            startAngle: 0,
+            centerX: sticker.x * stageSize.width,
+            centerY: sticker.y * stageSize.height,
+            pinchStartDistance: 1,
+            pinchStartAngle: 0,
+            pinchStartMidX: point.x,
+            pinchStartMidY: point.y,
+            pinchOriginX: sticker.x,
+            pinchOriginY: sticker.y,
+            pinchStartScale: sticker.scale,
+            pinchStartRotation: sticker.rotation,
+          };
+        }
+      } else if (remaining.length === 0) {
+        gestureRef.current = null;
+        activePointersRef.current.clear();
+      }
       if (event.currentTarget.hasPointerCapture(event.pointerId)) {
         event.currentTarget.releasePointerCapture(event.pointerId);
       }
+      return;
+    }
+
+    flushGesture();
+    gestureRef.current = null;
+    pendingGestureRef.current = null;
+    activePointersRef.current.clear();
+    if (event.currentTarget.hasPointerCapture(event.pointerId)) {
+      event.currentTarget.releasePointerCapture(event.pointerId);
     }
   }
 
@@ -271,7 +450,7 @@ export function EditorStage({
                   <button
                     className="sticker-layer"
                     type="button"
-                    onPointerDown={(event) => beginGesture(event, placement, 'move')}
+                    onPointerDown={(event) => beginStickerGesture(event, placement)}
                     aria-label={stickerName(asset, locale)}
                   >
                     <img
