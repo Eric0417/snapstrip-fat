@@ -1,5 +1,5 @@
 import { getLayout, layoutBounds } from '../app/layouts';
-import type { PhotoShot, StickerPlacement } from '../app/types';
+import type { PhotoShot, PhotoTransform, StickerPlacement } from '../app/types';
 import type { StickerAsset } from '../data/stickers';
 import { drawCoverImage } from './crop';
 
@@ -80,6 +80,7 @@ export function drawStripBase(
   size: StripSize,
   shots: readonly PhotoShot[],
   shotImages: readonly HTMLImageElement[],
+  photoTransforms: readonly PhotoTransform[] = [],
 ) {
   context.fillStyle = '#ffffff';
   context.fillRect(0, 0, size.width, size.height);
@@ -90,16 +91,25 @@ export function drawStripBase(
     context.fillStyle = index % 2 === 0 ? '#fff2f6' : '#fff8f0';
     context.fillRect(rect.x, rect.y, rect.width, rect.height);
     if (shots[index] && shotImages[index]) {
+      const transform = photoTransforms[index] ?? { scale: 1, offsetX: 0, offsetY: 0 };
+      context.save();
+      context.beginPath();
+      context.rect(rect.x, rect.y, rect.width, rect.height);
+      context.clip();
+      context.translate(rect.x + rect.width / 2, rect.y + rect.height / 2);
+      context.scale(transform.scale, transform.scale);
+      context.translate(transform.offsetX * rect.width, transform.offsetY * rect.height);
       drawCoverImage(
         context,
         shotImages[index],
         shotImages[index].naturalWidth,
         shotImages[index].naturalHeight,
-        rect.x,
-        rect.y,
+        -rect.width / 2,
+        -rect.height / 2,
         rect.width,
         rect.height,
       );
+      context.restore();
     }
   }
 }
@@ -108,6 +118,7 @@ export async function drawStripBaseToCanvas(
   canvas: HTMLCanvasElement,
   layoutId: string,
   shots: readonly PhotoShot[],
+  photoTransforms: readonly PhotoTransform[],
   targetWidth = 1440,
 ) {
   const size = stripSize(layoutId, targetWidth);
@@ -116,7 +127,7 @@ export async function drawStripBaseToCanvas(
   const context = canvas.getContext('2d');
   if (!context) throw new Error('Canvas 2D context is unavailable');
   const shotImages = await Promise.all(shots.map((shot) => loadImage(shot.dataUrl)));
-  drawStripBase(context, layoutId, size, shots, shotImages);
+  drawStripBase(context, layoutId, size, shots, shotImages, photoTransforms);
 }
 
 export function stickerWidth(size: StripSize, placement: StickerPlacement) {
@@ -150,6 +161,7 @@ export async function renderStrip(options: {
   layoutId: string;
   shots: readonly PhotoShot[];
   stickerData: readonly StickerRenderData[];
+  photoTransforms: readonly PhotoTransform[];
   targetWidth?: number;
 }) {
   const { canvas, size } = createStripCanvas(options.layoutId, options.targetWidth);
@@ -157,7 +169,14 @@ export async function renderStrip(options: {
   if (!context) throw new Error('Canvas 2D context is unavailable');
 
   const shotImages = await Promise.all(options.shots.map((shot) => loadImage(shot.dataUrl)));
-  drawStripBase(context, options.layoutId, size, options.shots, shotImages);
+  drawStripBase(
+    context,
+    options.layoutId,
+    size,
+    options.shots,
+    shotImages,
+    options.photoTransforms,
+  );
 
   const ordered = [...options.stickerData].sort((a, b) => a.placement.z - b.placement.z);
   for (const data of ordered) {

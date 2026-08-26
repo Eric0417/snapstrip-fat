@@ -11,7 +11,7 @@ import type { StickerPlacement } from '../../app/types';
 import { STICKERS, stickerName, type StickerAsset } from '../../data/stickers';
 import { useLanguage } from '../../i18n/LanguageContext';
 import { assetUrl } from '../../lib/assetUrl';
-import { drawStripBaseToCanvas, stripSize } from '../../lib/strip';
+import { drawStripBaseToCanvas, slotRects, stripSize } from '../../lib/strip';
 
 type GestureMode = 'move' | 'scale' | 'rotate';
 
@@ -49,17 +49,28 @@ interface EditorStageProps {
   selectedId: string | null;
   onSelect: (id: string | null) => void;
   stageRef: RefObject<HTMLDivElement | null>;
+  selectedPhotoIndex: number | null;
+  onSelectPhoto: (index: number | null) => void;
 }
 
-export function EditorStage({ selectedId, onSelect, stageRef }: EditorStageProps) {
+export function EditorStage({
+  selectedId,
+  onSelect,
+  stageRef,
+  selectedPhotoIndex,
+  onSelectPhoto,
+}: EditorStageProps) {
   const { locale } = useLanguage();
   const layoutId = useSession((state) => state.layoutId);
   const shots = useSession((state) => state.shots);
+  const photoTransforms = useSession((state) => state.photoTransforms);
   const stickers = useSession((state) => state.stickers);
   const updateSticker = useSession((state) => state.updateSticker);
   const snapshotStickers = useSession((state) => state.snapshotStickers);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const gestureRef = useRef<GestureState | null>(null);
+  const pendingGestureRef = useRef<React.PointerEvent<HTMLDivElement> | null>(null);
+  const animationFrameRef = useRef<number | null>(null);
   const [stageSize, setStageSize] = useState({ width: 0, height: 0 });
 
   useLayoutEffect(() => {
@@ -78,8 +89,14 @@ export function EditorStage({ selectedId, onSelect, stageRef }: EditorStageProps
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    void drawStripBaseToCanvas(canvas, layoutId, shots).catch(() => undefined);
-  }, [layoutId, shots]);
+    void drawStripBaseToCanvas(canvas, layoutId, shots, photoTransforms).catch(() => undefined);
+  }, [layoutId, photoTransforms, shots]);
+
+  useEffect(() => () => {
+    if (animationFrameRef.current !== null) {
+      cancelAnimationFrame(animationFrameRef.current);
+    }
+  }, []);
 
   const assetMap = useMemo(() => {
     const map = new Map<string, StickerAsset>();
@@ -99,6 +116,7 @@ export function EditorStage({ selectedId, onSelect, stageRef }: EditorStageProps
     event.stopPropagation();
     event.currentTarget.setPointerCapture(event.pointerId);
     onSelect(placement.id);
+    onSelectPhoto(null);
     snapshotStickers();
     const center = rotateHandlePosition(placement, stageSize.width, stageSize.height);
     const distance = Math.hypot(event.clientX - center.centerX, event.clientY - center.centerY);
@@ -121,10 +139,23 @@ export function EditorStage({ selectedId, onSelect, stageRef }: EditorStageProps
 
   function handlePointerMove(event: React.PointerEvent<HTMLDivElement>) {
     const gesture = gestureRef.current;
-    const sticker = stickers.find((item) => item.id === selectedId);
-    if (!gesture || !sticker || gesture.pointerId !== event.pointerId || stageSize.width === 0) {
+    if (!gesture || gesture.pointerId !== event.pointerId || stageSize.width === 0) {
       return;
     }
+    pendingGestureRef.current = event;
+    if (animationFrameRef.current === null) {
+      animationFrameRef.current = window.requestAnimationFrame(() => {
+        animationFrameRef.current = null;
+        flushGesture();
+      });
+    }
+  }
+
+  function flushGesture() {
+    const gesture = gestureRef.current;
+    const event = pendingGestureRef.current;
+    const sticker = useSession.getState().stickers.find((item) => item.id === selectedId);
+    if (!gesture || !sticker || !event || stageSize.width === 0) return;
 
     if (gesture.mode === 'move') {
       updateSticker(sticker.id, {
@@ -157,7 +188,9 @@ export function EditorStage({ selectedId, onSelect, stageRef }: EditorStageProps
 
   function endGesture(event: React.PointerEvent<HTMLDivElement>) {
     if (gestureRef.current?.pointerId === event.pointerId) {
+      flushGesture();
       gestureRef.current = null;
+      pendingGestureRef.current = null;
       if (event.currentTarget.hasPointerCapture(event.pointerId)) {
         event.currentTarget.releasePointerCapture(event.pointerId);
       }
@@ -185,6 +218,31 @@ export function EditorStage({ selectedId, onSelect, stageRef }: EditorStageProps
       />
 
       {stageSize.width > 0
+        ? slotRects(layoutId, stripSizeData).map((rect, index) => {
+            const selected = index === selectedPhotoIndex;
+            return (
+              <button
+                className={`photo-slot-hitbox${selected ? ' is-selected' : ''}`}
+                type="button"
+                key={index}
+                style={{
+                  left: (rect.x / stripSizeData.width) * stageSize.width,
+                  top: (rect.y / stripSizeData.height) * stageSize.height,
+                  width: (rect.width / stripSizeData.width) * stageSize.width,
+                  height: (rect.height / stripSizeData.height) * stageSize.height,
+                }}
+                onPointerDown={(event) => {
+                  event.stopPropagation();
+                  onSelect(null);
+                  onSelectPhoto(index);
+                }}
+                aria-label={`Photo ${index + 1}`}
+              />
+            );
+          })
+        : null}
+
+      {stageSize.width > 0
         ? ordered.map((placement) => {
             const asset = assetMap.get(placement.itemId);
             if (!asset) return null;
@@ -196,10 +254,11 @@ export function EditorStage({ selectedId, onSelect, stageRef }: EditorStageProps
                 className={`sticker-selection${selected ? ' is-selected' : ''}`}
                 key={placement.id}
                 style={{
-                  left: placement.x * stageSize.width,
-                  top: placement.y * stageSize.height,
+                  left: 0,
+                  top: 0,
                   width,
                   height: width,
+                  transform: `translate(${placement.x * stageSize.width}px, ${placement.y * stageSize.height}px) translate(-50%, -50%)`,
                   zIndex: placement.z + 10,
                 }}
               >

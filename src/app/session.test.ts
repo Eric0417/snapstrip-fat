@@ -24,6 +24,7 @@ describe('session store', () => {
     useSession.setState({
       layoutId: 'grid',
       shots: [],
+      photoTransforms: [],
       stickers: [],
       past: [],
       future: [],
@@ -68,5 +69,26 @@ describe('session store', () => {
     expect(stickers).toHaveLength(2);
     expect(stickers[1].z).toBe(1);
     expect(stickers[1].id).not.toBe('s1');
+  });
+
+  it('initializes and updates photo transforms', () => {
+    useSession.getState().setShots([
+      { id: '1', dataUrl: '', width: 1, height: 1, source: 'upload' },
+      { id: '2', dataUrl: '', width: 1, height: 1, source: 'upload' },
+    ]);
+    expect(useSession.getState().photoTransforms).toHaveLength(2);
+
+    useSession.getState().setPhotoTransform(1, { scale: 1.4, offsetX: 0.2 });
+    expect(useSession.getState().photoTransforms[1]).toMatchObject({
+      scale: 1.4,
+      offsetX: 0.2,
+    });
+
+    useSession.getState().resetPhotoTransform(1);
+    expect(useSession.getState().photoTransforms[1]).toMatchObject({
+      scale: 1,
+      offsetX: 0,
+      offsetY: 0,
+    });
   });
 });

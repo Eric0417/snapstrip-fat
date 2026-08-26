@@ -6,6 +6,7 @@ import { STICKERS, type StickerAsset } from '../data/stickers';
 import { EditorStage } from '../features/editor/EditorStage';
 import { EditorToolbar } from '../features/editor/EditorToolbar';
 import { exportStripPng } from '../features/editor/editorExport';
+import { PhotoAdjustPanel } from '../features/editor/PhotoAdjustPanel';
 import { viewportSpawnPosition } from '../features/editor/spawn';
 import { StickerPickerPanel } from '../features/editor/StickerPickerPanel';
 import { useLanguage } from '../i18n/LanguageContext';
@@ -14,6 +15,7 @@ export function EditorPage() {
   const { t } = useLanguage();
   const layoutId = useSession((state) => state.layoutId);
   const shots = useSession((state) => state.shots);
+  const photoTransforms = useSession((state) => state.photoTransforms);
   const stickers = useSession((state) => state.stickers);
   const addSticker = useSession((state) => state.addSticker);
   const removeStickers = useSession((state) => state.removeStickers);
@@ -21,6 +23,7 @@ export function EditorPage() {
   const undoStickers = useSession((state) => state.undoStickers);
   const redoStickers = useSession((state) => state.redoStickers);
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
   const [exporting, setExporting] = useState(false);
   const [exportError, setExportError] = useState<string | null>(null);
   const editorStageRef = useRef<HTMLDivElement>(null);
@@ -39,6 +42,7 @@ export function EditorPage() {
 
   const handleAdd = useCallback(
     (asset: StickerAsset) => {
+      setSelectedPhotoIndex(null);
       const stage = editorStageRef.current;
       const position = stage
         ? viewportSpawnPosition(
@@ -130,6 +134,7 @@ export function EditorPage() {
               shots,
               stickers,
               stickerAssets,
+              photoTransforms,
             })
               .catch((error: unknown) => {
                 setExportError(error instanceof Error ? error.message : 'Export failed');
@@ -159,9 +164,15 @@ export function EditorPage() {
             selectedId={selectedId}
             onSelect={setSelectedId}
             stageRef={editorStageRef}
+            selectedPhotoIndex={selectedPhotoIndex}
+            onSelectPhoto={setSelectedPhotoIndex}
           />
         </section>
         <aside className="editor-sidebar">
+          <PhotoAdjustPanel
+            selectedPhotoIndex={selectedPhotoIndex}
+            onSelectPhoto={setSelectedPhotoIndex}
+          />
           <EditorToolbar selectedId={selectedId} />
           <StickerPickerPanel onAdd={handleAdd} />
         </aside>

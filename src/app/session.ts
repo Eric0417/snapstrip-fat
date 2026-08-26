@@ -1,14 +1,23 @@
 import { create } from 'zustand';
-import type { LayoutId, PhotoShot, StickerPlacement } from './types';
+import type { LayoutId, PhotoShot, PhotoTransform, StickerPlacement } from './types';
+
+const DEFAULT_PHOTO_TRANSFORM: PhotoTransform = {
+  scale: 1,
+  offsetX: 0,
+  offsetY: 0,
+};
 
 interface SessionState {
   layoutId: LayoutId;
   shots: PhotoShot[];
+  photoTransforms: PhotoTransform[];
   stickers: StickerPlacement[];
   past: StickerPlacement[][];
   future: StickerPlacement[][];
   setLayout: (layoutId: LayoutId) => void;
   setShots: (shots: PhotoShot[]) => void;
+  setPhotoTransform: (index: number, patch: Partial<PhotoTransform>) => void;
+  resetPhotoTransform: (index: number) => void;
   addSticker: (itemId: string, position?: { x: number; y: number }) => string;
   updateSticker: (id: string, patch: Partial<StickerPlacement>) => void;
   duplicateSticker: (id: string) => void;
@@ -27,13 +36,40 @@ function makeId(prefix: string) {
 export const useSession = create<SessionState>((set, get) => ({
   layoutId: 'grid',
   shots: [],
+  photoTransforms: [],
   stickers: [],
   past: [],
   future: [],
 
-  setLayout: (layoutId) => set({ layoutId, shots: [], stickers: [], past: [], future: [] }),
+  setLayout: (layoutId) =>
+    set({
+      layoutId,
+      shots: [],
+      photoTransforms: [],
+      stickers: [],
+      past: [],
+      future: [],
+    }),
 
-  setShots: (shots) => set({ shots }),
+  setShots: (shots) =>
+    set({
+      shots,
+      photoTransforms: shots.map(() => ({ ...DEFAULT_PHOTO_TRANSFORM })),
+    }),
+
+  setPhotoTransform: (index, patch) =>
+    set((state) => ({
+      photoTransforms: state.photoTransforms.map((transform, currentIndex) =>
+        currentIndex === index ? { ...transform, ...patch } : transform,
+      ),
+    })),
+
+  resetPhotoTransform: (index) =>
+    set((state) => ({
+      photoTransforms: state.photoTransforms.map((transform, currentIndex) =>
+        currentIndex === index ? { ...DEFAULT_PHOTO_TRANSFORM } : transform,
+      ),
+    })),
 
   addSticker: (itemId, position) => {
     const id = makeId('sticker');

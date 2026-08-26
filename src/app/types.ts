@@ -31,6 +31,12 @@ export interface PhotoShot {
   source: 'camera' | 'upload';
 }
 
+export interface PhotoTransform {
+  scale: number;
+  offsetX: number;
+  offsetY: number;
+}
+
 export interface StickerPlacement {
   id: string;
   itemId: string;
