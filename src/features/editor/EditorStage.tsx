@@ -323,27 +323,12 @@ export function EditorStage({
       return;
     }
 
-    const previousX = gesture.lastX - centerX;
-    const previousY = gesture.lastY - centerY;
-    const currentX = event.clientX - centerX;
-    const currentY = event.clientY - centerY;
-    const previousRadius = Math.max(28, Math.hypot(previousX, previousY));
-    const currentRadius = Math.max(28, Math.hypot(currentX, currentY));
-    const cross =
-      (previousX / previousRadius) * (currentY / currentRadius) -
-      (previousY / previousRadius) * (currentX / currentRadius);
-    const dot =
-      (previousX / previousRadius) * (currentX / currentRadius) +
-      (previousY / previousRadius) * (currentY / currentRadius);
-    const deltaAngle = Math.atan2(cross, dot);
-    gesture.lastAngle += deltaAngle;
-    gesture.lastX = event.clientX;
-    gesture.lastY = event.clientY;
+    const angle = Math.atan2(event.clientY - centerY, event.clientX - centerX);
 
     updateSticker(sticker.id, {
       rotation:
         (gesture.startRotation +
-          ((gesture.lastAngle - gesture.startAngle) * 180) / Math.PI +
+          ((angle - gesture.startAngle) * 180) / Math.PI +
           360) %
         360,
     });
