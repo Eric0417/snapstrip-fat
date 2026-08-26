@@ -62,6 +62,10 @@ const messages = {
     backHome: '回到首頁',
     notFound: '找不到這個頁面',
     language: '語言',
+    passwordTitle: '密碼',
+    passwordPlaceholder: '輸入密碼',
+    wrongPassword: '密碼不正確',
+    enter: '進入',
   },
   en: {
     brand: 'snapstrip',
@@ -124,6 +128,10 @@ const messages = {
     backHome: 'Back home',
     notFound: 'Page not found',
     language: 'Language',
+    passwordTitle: 'Password',
+    passwordPlaceholder: 'Enter password',
+    wrongPassword: 'Incorrect password',
+    enter: 'Enter',
   },
 } as const;
 

@@ -497,6 +497,80 @@ img {
   border: 0;
 }
 
+.password-gate {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 2rem;
+}
+
+.password-gate-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(100%, 22rem);
+  text-align: center;
+}
+
+.password-gate-icon {
+  display: grid;
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: 1rem;
+  place-items: center;
+  border: 1.5px solid var(--line);
+  border-radius: 50%;
+  background: var(--rose);
+  color: var(--ink);
+}
+
+.password-gate-form h1 {
+  margin: 0;
+  font-size: 2.4rem;
+  letter-spacing: 0;
+}
+
+.password-field {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.45rem;
+  width: 100%;
+  margin-top: 1.75rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.password-field input {
+  width: 100%;
+  min-height: 3rem;
+  padding: 0.65rem 0.9rem;
+  border: 1.5px solid rgba(43, 36, 42, 0.22);
+  border-radius: 999px;
+  outline: 0;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--ink);
+  font: inherit;
+  text-align: center;
+}
+
+.password-field input:focus {
+  border-color: var(--ink);
+  box-shadow: 0 0 0 3px rgba(255, 199, 217, 0.32);
+}
+
+.password-gate-form .pill-button {
+  width: 100%;
+  margin-top: 0.85rem;
+}
+
+.password-error {
+  margin: 0.65rem 0 0;
+  color: #b83b50;
+  font-size: 0.8rem;
+}
+
 .capture-page {
   display: flex;
   flex-direction: column;

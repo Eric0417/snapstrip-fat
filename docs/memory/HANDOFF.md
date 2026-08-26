@@ -1,6 +1,6 @@
 # SnapStrip v2 交接記憶
 
-更新時間：2026-08-26 02:20 CST
+更新時間：2026-08-27 02:16 CST
 
 ## 專案目標
 
@@ -50,6 +50,8 @@
   移動到哪個角度，貼圖就朝向哪個角度。
 - 旋轉中心已改為加上 stage 的 viewport `left/top`，修復原先 stage 相對座標與
   滑鼠絕對座標混用造成的角度偏差。
+- 全站已加入 client-side password gate；未通過密碼前不會渲染任何 route。
+  預設密碼由 Render env `VITE_ACCESS_PASSWORD` 控制，目前為 `snapstrip2026`。
 - 新增照片選取與調整：每格照片可縮放 0.8x–2.5x，並做水平/垂直平移，
   預覽與匯出共用 `photoTransforms`。
 - 照片底圖改用 image cache 與不重設 canvas 的 paint 流程，調整照片參數時
@@ -88,12 +90,20 @@
 - 將使用者提供的頭像複製到 `public/author/eric.jpg`。
 - 將 v1 的 `public/icons/icon.svg` 複製到 `public/icons/icon.svg`。
 - 建立 fan-ip 本地 pack 目錄 `packs/fan-ip/`。
+- 盤點全部第三方 IP：Sanrio 6 個角色、Kirby、Miffy、Rilakkuma、Sumikko Gurashi、
+  Pusheen、Snoopy、Mickey/Minnie，合計 206 張 fan-ip 素材。
+- 建立 `doc/copyright-applications/`：
+  - IP 盤點與寄出前檢查表。
+  - 7 份逐公司版權及品牌授權申請書。
+  - 每份文件均匯出 DOCX 與 A4 PDF。
 
 ### 目前狀態
 
 - 核心功能已完成，尚未發現已知 bug。
 - 尚未在真實手機上測試相機權限；fake camera 已通過。
 - 尚未加入 Render 部署設定。
+- `snapstrip-fat.onrender.com` 仍可公開存取，且 fan-ip 檔案可直接下載。
+- 版權申請文件已備妥，但尚未對任何權利人送出，也尚未獲得任何書面授權。
 
 ## 下一步優先順序
 
@@ -101,6 +111,8 @@
 2. 若要部署 Render，依 `docs/DEPLOYMENT.md` 建立只含原創素材的 deploy branch。
    熱門 IP/Sanrio pack 不得放進公開 deploy。
 3. 若首包效能重要，可把 Editor/Capture 改成 lazy route 或拆 manifest chunk。
+4. 寄出版權申請前，先把 `snapstrip-fat` 下線或改為密碼保護。
+5. 依各權利人回覆，取得正式素材與使用規範後再重新整理 fan-ip。
 
 ## 已知風險
 
@@ -108,6 +120,10 @@
 - Vite build 對 1.1–1.3MB 的單一 JS chunk 發出 warning；目前功能正常，非 bug。
 - fan-ip 貼圖已完成格式與 alpha 自動驗證，但未做逐張人工視覺放大審核。
 - Render 是公開 static site；公開 build 必須確定熱門 IP 被排除。
+- fan-ip 素材來源為 `assets.stickers.wiki`，不是官方授權檔案；manifest 內的
+  `private-personal-use` 只是內部分類，不具法律授權效力。
+- 申請人若未成年，正式授權合約與簽署需由法定監護人處理。
+- 申請文件中的聯絡窗口與官方頁面會變動，寄出前應再次核對。
 - 相機權限只能由使用者實機測試，headless 測試只證明非相機流程。
 
 ## 交接指令
