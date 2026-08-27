@@ -1,6 +1,6 @@
 # SnapStrip v2 Asset Policy
 
-更新時間：2026-08-26 01:54 CST
+更新時間：2026-08-28
 
 ## 資產來源
 
@@ -28,11 +28,25 @@
 `snapstrip-fat` 的 `deploy` branch 已追蹤 fan-ip，Render build 改為 `pnpm build`。
 `snapstrip-v2` 的 `main` 仍保持 code-only，公開 build 指令仍可排除 fan-ip。
 
+### Frame template pack
+
+- 路徑：`packs/templates/fan-ip`
+- 80 個 style background/frame SVG 是本專案原創的主題背景與風格邊框，
+  分別對應 5 styles × 8 layouts 的 background/frame。
+- 8 個 `frame-<layout>.svg` 供 blank 可選色模板使用。
+- `decorations.itemId` 只引用既有 `packs/fan-ip` 貼圖，不複製角色 asset。
+- 每個 `layoutId` 提供 5 個 style template 與 1 個 blank 可選色 template，
+  合計 48 筆 manifest entries。
+- 每個 style template 使用 5 張較大貼圖；五種風格合起來在每個 layout
+  覆蓋全部 13 個 fan-ip collection。
+- normal/Render fat build 包含；`build:public` 排除整個 template pack。
+- 生成參考工具：`tools/generate-frame-templates.mjs`。
+
 ### Author avatar
 
 - 路徑：`public/author/eric.jpg`
-- 原始來源：使用者提供的剪貼簿圖片。
-- 解析度：696×747 JPEG。
+- 原始來源：使用者提供的上傳圖片。
+- 解析度：1024×1024 JPEG。
 - 僅在 `/about` 使用。
 - 不得用於首頁 demo strip 或產品示範。
 

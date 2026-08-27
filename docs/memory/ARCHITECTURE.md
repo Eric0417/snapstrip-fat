@@ -1,6 +1,6 @@
 # SnapStrip v2 Architecture
 
-更新時間：2026-08-26 01:54 CST
+更新時間：2026-08-28
 
 ## 目錄
 
@@ -8,11 +8,12 @@
 src/
   app/                  domain types, layout geometry, Zustand session
   components/           app shell and shared components
-  data/                 runtime sticker manifest loading
+  data/                 runtime sticker and frame-template manifest loading
   features/
     showcase/           welcome demo strip
     capture/            capture logic (to be added)
     editor/             sticker editor, spawn-position helper, and compositor export
+    templates/          real-photo frame-template preview
   i18n/                 lightweight zh-Hant/en provider
   lib/                  small pure helpers
   pages/                route pages
@@ -21,6 +22,7 @@ packs/
   core-kawaii/          copied from v1, included in every build
   core-effects/         generated original SVG effects, included in every build
   fan-ip/               local-only popular IP packs, excluded from public build
+  templates/fan-ip/     first-party frame SVG assets and frame-template manifest
 public/
   author/eric.jpg       author avatar
   icons/icon.svg        favicon
@@ -39,6 +41,11 @@ docs/memory/            long-term handoff memory
   - `scale`：以 `displaySize` 為基準
   - `rotation`：度數
   - `z`：越大越上層
+- `FrameTemplate`：相框模板定義，綁定 `layoutId`，包含 `kind`、`collection`、
+  `styleId`、`order`、`collections`、可選 `backgroundColor`/`accentColor`、
+  `frame` 與 `decorations`
+- `TemplateDecoration`：與 `StickerPlacement` 相同座標/變換語意，但只作
+  template layer 使用
 
 ## 版型
 
@@ -61,12 +68,15 @@ docs/memory/            long-term handoff memory
 `src/app/session.ts` 使用 Zustand：
 
 - `layoutId`
+- `templateId`
 - `shots`
 - `photoTransforms`
 - `stickers`
 - `past` / `future`
 - actions: setLayout, setShots, setPhotoTransform, resetPhotoTransform, addSticker,
   updateSticker, removeStickers, clearStickers, snapshotStickers, undoStickers, redoStickers
+- actions 另有 `setFrameTemplate()`；`setLayout()` 會一併清除 `templateId`、
+  shots、photoTransforms 與 stickers
 
 拖曳動作開始前應呼叫 `snapshotStickers()`；持續更新只呼叫 `updateSticker()`；高層動作如 add/remove 會自行記錄 history。
 
@@ -118,6 +128,42 @@ fan-ip manifest 要求：
 ]
 ```
 
+## 相框模板載入
+
+`src/data/templates.ts`：
+
+- `import.meta.glob('../../packs/templates/**/templates/manifest.json')` 自動載入。
+- `__VITE_PUBLIC_BUILD__` 為 true 時模板 manifest 完全不進入 bundle。
+- `FRAME_TEMPLATES` 是排序後的 `FrameTemplate[]`。
+- `getFrameTemplatesForLayout()` / `getFrameTemplate()` 供流程與 renderer 查詢。
+
+模板 manifest：
+
+- `id` 全域唯一，`layoutId` 必須對應現有 8 個版型。
+- 每個 layout 有一個 `kind: blank` 與 5 個 `kind: style` 模板。
+- `background` / `frame` 是 full-canvas SVG；每個 style/layout 組合有獨立主題背景
+  與風格邊框，8 個 blank layout 共用細白框。
+- `decorations.itemId` 引用既有貼圖，不複製角色 asset。
+- `x/y` 使用完整 export canvas 的 0–1 座標；`scale` 相對 `innerWidth`。
+- blank 模板的實際底色由 session `templateColor` 覆寫，可即時切換。
+
+Canvas render order：
+
+```text
+template background
+  → photo slot placeholders
+  → photos
+  → template frame
+  → template decorations
+  → user stickers
+```
+
+`loadFrameTemplate()` 會把 template 的預設 `backgroundColor` 或使用者選擇的
+blank color 寫入 `LoadedFrameTemplate`，再交給同一 `drawStripBase()` pipeline。
+
+完整的新增模板格式、每個 layout 的 SVG viewBox、decorations 座標與 scale
+建議見 `docs/memory/TEMPLATE_FORMAT.md`。
+
 特效原始素材由 `tools/generate-effects.mjs` 產生到
 `packs/core-effects/stickers`。目前 20 個 SVG，都是原創 A-line assets，
 可進入公開 build。
@@ -131,6 +177,7 @@ fan-ip manifest 要求：
 `vite.config.ts` 的 `copyPackAssets`：
 
 - 一般 build 會複製 `packs/core-kawaii`、`packs/core-effects` 和 `packs/fan-ip`。
+- 一般 build 另外複製 `packs/templates`；fat/Render `pnpm build` 可完整使用首批模板。
 - `VITE_PUBLIC_BUILD=true` 只複製 core packs，不複製 fan-ip。
 - `build:public` script 就是公開版建置。
 
@@ -142,5 +189,6 @@ fan-ip manifest 要求：
 - `/about`：作者簡介
 - `/layout`：版型選擇
 - `/capture`：相機連拍
+- `/frame`：拍照後的相框模板選擇
 - `/editor`：貼圖編輯與匯出
 - `*`：NotFound

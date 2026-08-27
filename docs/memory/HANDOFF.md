@@ -1,6 +1,6 @@
 # SnapStrip v2 交接記憶
 
-更新時間：2026-08-27 02:16 CST
+更新時間：2026-08-28
 
 ## 專案目標
 
@@ -67,27 +67,49 @@
   鬍子、腮紅、閃亮光暈、仙子星塵與生日帽。
 - 特效只作為編輯器「特效」分類中的普通貼圖，使用者可新增、拖曳、縮放、
   旋轉、翻轉或刪除，不參與相機即時預覽或自動套用。
+- 完成 manifest-driven 相框模板系統：
+  - 每個版型提供 5 個風格模板（甜點蕾絲、手繪日記、膠卷回憶、復古格紋、
+    黑白韓系），另加 1 個可自訂顏色的空白模板，合計 48 個 template entries。
+  - 拍照/上傳完成後進入 `/frame`，使用剛拍好的四張照片即時合成預覽。
+  - 模板版型改為每版型 5 種主流人生四格風格，每個風格使用 5 張較大的
+    既有 fan-ip 貼圖；五種風格合起來覆蓋全部 13 個 collection。
+  - SVG 背景、風格邊框與角色構圖參考 `template_refrence/` 的主流甜點、
+    手繪、膠卷、格紋與黑白塗鴉手法，角色放在照片四角/接縫，不再一個
+    layout 只綁一個角色。
+  - `/frame` 預覽 render 解析度由 320px 提高到 640px，並保持各版型長寬比。
+  - 全部 40 個 style/layout 模板在 8 個版型下逐一通過非空白 canvas、overflow 與
+    console error 檢查。
+  - 空白模板提供 8 個預設色與自訂 color picker，顏色會進入 Editor 與 export。
+  - 模板固定渲染在照片與使用者貼圖之間，不寫入可編輯貼圖狀態。
+  - 預覽、編輯器與 PNG export 共用同一 canvas pipeline。
+  - 標準模板格式與每個版型的 SVG 尺寸見 `docs/memory/TEMPLATE_FORMAT.md`。
+  - 模板 pack 放在 `packs/templates/fan-ip`，本機/Render fat build 包含；
+    `build:public` 排除並回退到原有素色版型。
+  - 提供 `tools/generate-frame-templates.mjs` 作為首批資產生成參考。
 - 完成 local/public build 分離並驗證：
   - 本機 build 包含 `packs/fan-ip`，206 張主圖。
   - `pnpm build:public` 不包含 fan-ip 檔案，也不包含 fan-ip 字串。
 - 依使用者後續要求，`snapstrip-fat` Render 公開站已改為包含 fan-ip，
   build command 使用 `pnpm build`；此設定會公開第三方 IP 素材。
 - 完成單元測試與 Playwright：
-  - 24 個 Vitest tests。
+  - 30 個 Vitest tests。
   - 6 個 E2E tests，包含桌面/手機上傳流程、fake camera 四連拍與直式 stage fit。
 - 已建立：
   - `src/app/types.ts`
   - `src/app/layouts.ts`
   - `src/app/session.ts`（Zustand 狀態）
   - `src/data/stickers.ts`（貼圖 manifest 動態載入）
+  - `src/data/templates.ts`（相框模板 manifest 動態載入）
   - `src/i18n/LanguageContext.tsx`（繁中/英文）
   - `src/components/AppShell.tsx`
   - `src/pages/{HomePage,LayoutPage,AboutPage,NotFoundPage}.tsx`
-  - `src/pages/{CapturePage,EditorPage}.tsx`（目前是佔位）
+  - `src/pages/{CapturePage,FrameTemplatePage,EditorPage}.tsx`
+  - `src/features/templates/FrameTemplatePreview.tsx`
   - `src/features/showcase/DemoStrip.tsx`
   - `src/styles.css`
 - 從 v1 複製 `packs/core-kawaii/stickers`：約 122MB、2081 個檔案、1024 筆 manifest。
 - 將使用者提供的頭像複製到 `public/author/eric.jpg`。
+- 2026-08-27 依使用者要求更換作者頭像為新的 1024×1024 JPEG。
 - 將 v1 的 `public/icons/icon.svg` 複製到 `public/icons/icon.svg`。
 - 建立 fan-ip 本地 pack 目錄 `packs/fan-ip/`。
 - 盤點全部第三方 IP：Sanrio 6 個角色、Kirby、Miffy、Rilakkuma、Sumikko Gurashi、
@@ -95,35 +117,52 @@
 - 建立 `doc/copyright-applications/`：
   - IP 盤點與寄出前檢查表。
   - 7 份逐公司版權及品牌授權申請書。
-  - 每份文件均匯出 DOCX 與 A4 PDF。
+  - 每份文件保留可編輯 DOCX；PDF 僅保留 Master 總冊與 Email 模板。
+  - 彙整為 `SnapStrip_IP_License_Application_Master.pdf`。
+  - 申請書已加入審查密碼 `snapstrip2026` 與合作意願段落。
+  - 建立 7 家公司的 Email 中英文模板並匯出 PDF。
+  - 非 Sanrio 的 6 份申請書已改為英文 PDF；Sanrio 保持中文 PDF。
+  - 所有申請書已加入審查網址與密碼。
 
 ### 目前狀態
 
 - 核心功能已完成，尚未發現已知 bug。
+- 相框模板系統已完成；48 個 template entries（8 blank + 40 style）與新選擇頁在
+  桌面/手機均已做非空白畫布、顏色切換與 overflow 檢查。
 - 尚未在真實手機上測試相機權限；fake camera 已通過。
-- 尚未加入 Render 部署設定。
+- `snapstrip-fat` Render deploy branch 已推送最新 frame-template 版本，並確認
+  live JS、template SVG 與 fan-ip sticker assets 皆可正常存取。
 - `snapstrip-fat.onrender.com` 仍可公開存取，且 fan-ip 檔案可直接下載。
+- 網站前端已加入審查密碼，但靜態 fan-ip 檔案仍可直接下載，不是完整的存取控制。
 - 版權申請文件已備妥，但尚未對任何權利人送出，也尚未獲得任何書面授權。
+- 作者頭像已更換並推送至 `fat/deploy`；Render live asset 已確認變為 1024×1024，
+  本機 build、單元測試與 `/about` 桌面渲染檢查均通過。
 
 ## 下一步優先順序
 
 1. 在真實手機與桌面上手動走一次相機流程。
-2. 若要部署 Render，依 `docs/DEPLOYMENT.md` 建立只含原創素材的 deploy branch。
-   熱門 IP/Sanrio pack 不得放進公開 deploy。
-3. 若首包效能重要，可把 Editor/Capture 改成 lazy route 或拆 manifest chunk。
-4. 寄出版權申請前，先把 `snapstrip-fat` 下線或改為密碼保護。
-5. 依各權利人回覆，取得正式素材與使用規範後再重新整理 fan-ip。
+2. 在真機上人工審核 5 種風格模板在各版型中的貼圖位置、角色比例與留白。
+3. Render deploy 已更新；下一步若需要純原創公開版，再依 `docs/DEPLOYMENT.md`
+   建立不含 fan-ip 的 branch。
+4. 若首包效能重要，可把 Editor/Capture 改成 lazy route 或拆 manifest chunk。
+5. 寄出版權申請前，先把 `snapstrip-fat` 下線或改為密碼保護。
+6. 依各權利人回覆，取得正式素材與使用規範後再重新整理 fan-ip。
 
 ## 已知風險
 
 - `packs/core-kawaii` 很大，`vite build` 會複製整個 pack 到 dist；不要改成在 public 內重複放置。
 - Vite build 對 1.1–1.3MB 的單一 JS chunk 發出 warning；目前功能正常，非 bug。
 - fan-ip 貼圖已完成格式與 alpha 自動驗證，但未做逐張人工視覺放大審核。
+- `packs/templates/fan-ip` 只包含原創風格 SVG 背景/相框與動態底色規則，角色是透過
+  manifest 引用 fan-ip sticker；normal/fat build 可完整渲染，
+  `build:public` 已確認不包含。
 - Render 是公開 static site；公開 build 必須確定熱門 IP 被排除。
 - fan-ip 素材來源為 `assets.stickers.wiki`，不是官方授權檔案；manifest 內的
   `private-personal-use` 只是內部分類，不具法律授權效力。
 - 申請人若未成年，正式授權合約與簽署需由法定監護人處理。
 - 申請文件中的聯絡窗口與官方頁面會變動，寄出前應再次核對。
+- `snapstrip2026` 是前端審查密碼，不等於伺服器端保護；若直接 URL 仍可取得
+  fan-ip，就不應在申請書宣稱素材已完整鎖住。
 - 相機權限只能由使用者實機測試，headless 測試只證明非相機流程。
 
 ## 交接指令

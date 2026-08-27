@@ -1,6 +1,6 @@
 # SnapStrip v2 Tasks
 
-更新時間：2026-08-26 02:20 CST
+更新時間：2026-08-28
 
 ## 完成
 
@@ -19,13 +19,14 @@
 - [x] EditorPage 完整流程
 - [x] 頁尾 Privacy 簡短說明
 - [x] fan-ip 貼圖搜集
+- [x] manifest-driven 相框模板系統，每版型 5 種風格模板 + 1 空白可選色模板
 - [x] 桌面/手機 E2E
 - [x] local build 與 public build 分離驗證
+- [x] Render `snapstrip-fat` deploy branch 更新與 live asset 驗證
 
 ## 尚未開始
 
 - [ ] 真實手機相機測試
-- [ ] Render SPA rewrite / 部署設定
 - [ ] 若需要，Editor/Capture lazy route 與 manifest 拆 chunk
 
 ## Capture Acceptance
@@ -33,7 +34,7 @@
 1. 進入 `/capture` 後要求相機。
 2. 顯示 live preview 與 3 秒倒數。
 3. 每次倒數結束自動拍一張。
-4. 拍滿 4 張自動進 `/editor`。
+4. 拍滿 4 張自動進 `/frame` 選擇相框模板。
 5. 拒絕相機權限時提供四張上傳 fallback。
 6. 離開頁面時停止所有 media tracks。
 7. 照片按所選版型 slot 比例裁切。
@@ -49,12 +50,24 @@
 7. 匯出 PNG 與預覽一致。
 8. 貼圖面板在 1024+ 筆資產下不能一次全載入。
 
+## Frame Template Acceptance
+
+1. 每個現有版型有 1 個 blank template 與 5 個 style templates。
+2. 拍照/上傳完成後進入 `/frame`。
+3. 模板卡使用實際四張照片合成 preview。
+4. 選擇模板後進入 Editor，模板不寫入 user sticker history。
+5. 編輯、undo/redo、照片調整與 PNG export 共用 template-aware pipeline。
+6. style templates 有主題背景、風格邊框與每張 5 個較大角色貼圖；decorations 位於 user stickers 之下。
+7. blank template 可從 8 個色票或自訂 color picker 換色，並同步 export。
+8. 五種風格合起來在每個版型覆蓋全部 13 個 IP collection。
+9. `build:public` 排除 templates/fan-ip，並回退到素色輸出。
+
 ## 完成定義
 
 - `pnpm typecheck` 通過。
 - `pnpm test` 通過。
 - `pnpm build` 通過。
 - `pnpm build:public` 通過，且 `dist/packs/fan-ip` 不存在。
-- 桌面 1440px 與手機 390px 可走完 Welcome → Layout → Capture/Upload → Editor → Export。
+- 桌面 1440px 與手機 390px 可走完 Welcome → Layout → Capture/Upload → Frame → Editor → Export。
 - 無已知 console error 或 pageerror。
 - dev server 正在本機執行，並提供 URL。

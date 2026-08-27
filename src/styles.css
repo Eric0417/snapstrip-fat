@@ -376,7 +376,7 @@ img {
 
 .frame-studio-preview {
   display: flex;
-  min-height: 24rem;
+  min-height: max(24rem, 62vh);
   align-items: center;
   justify-content: center;
   overflow: hidden;
@@ -393,7 +393,7 @@ img {
   max-width: min(100%, 640px);
   width: auto;
   height: auto;
-  max-height: min(62vh, 640px);
+  max-height: min(80vh, 980px);
   object-fit: contain;
 }
 
@@ -420,7 +420,7 @@ img {
 }
 
 .frame-blank-button,
-.frame-ip-button {
+.frame-style-button {
   display: inline-flex;
   min-width: 0;
   align-items: center;
@@ -440,7 +440,7 @@ img {
 }
 
 .frame-blank-button.is-selected,
-.frame-ip-button.is-selected {
+.frame-style-button.is-selected {
   border: 2px solid var(--ink);
   background: var(--rose);
 }
@@ -491,7 +491,7 @@ img {
   cursor: pointer;
 }
 
-.frame-ip-strip {
+.frame-style-strip {
   display: grid;
   min-width: 0;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -499,7 +499,7 @@ img {
 }
 
 @media (max-width: 819px) {
-  .frame-ip-strip {
+  .frame-style-strip {
     display: flex;
     overflow-x: auto;
     padding: 0.25rem 0 0.6rem;
@@ -507,7 +507,7 @@ img {
   }
 }
 
-.frame-ip-button {
+.frame-style-button {
   min-width: 0;
   min-height: 2.6rem;
   flex: 0 0 auto;
@@ -515,7 +515,7 @@ img {
   font-size: 0.82rem;
 }
 
-.frame-ip-dot {
+.frame-style-dot {
   width: 0.6rem;
   height: 0.6rem;
   flex: 0 0 0.6rem;

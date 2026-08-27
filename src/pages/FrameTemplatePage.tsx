@@ -35,8 +35,8 @@ export function FrameTemplatePage() {
     [layoutId],
   );
   const blankTemplate = templates.find((template) => template.kind === 'blank');
-  const ipTemplates = useMemo(
-    () => templates.filter((template) => template.kind === 'ip'),
+  const styleTemplates = useMemo(
+    () => templates.filter((template) => template.kind === 'style'),
     [templates],
   );
   const [selected, setSelected] = useState<string | null>(null);
@@ -46,9 +46,9 @@ export function FrameTemplatePage() {
     setSelected(
       templateId && templates.some((template) => template.id === templateId)
         ? templateId
-        : (blankTemplate?.id ?? ipTemplates[0]?.id ?? null),
+        : (styleTemplates[0]?.id ?? blankTemplate?.id ?? null),
     );
-  }, [blankTemplate, ipTemplates, templateId, templates]);
+  }, [blankTemplate, styleTemplates, templateId, templates]);
 
   useEffect(() => {
     if (templateColor) setColor(templateColor);
@@ -57,7 +57,7 @@ export function FrameTemplatePage() {
   if (shots.length !== 4) {
     return <Navigate to="/capture" replace />;
   }
-  if (!blankTemplate || ipTemplates.length === 0) {
+  if (!blankTemplate || styleTemplates.length === 0) {
     return <Navigate to="/editor" replace />;
   }
 
@@ -134,20 +134,20 @@ export function FrameTemplatePage() {
           </div>
 
           <div className="frame-control-group">
-            <span className="frame-control-title">{t('ipFrames')}</span>
-            <div className="frame-ip-strip">
-              {ipTemplates.map((template) => {
+            <span className="frame-control-title">{t('frameStyles')}</span>
+            <div className="frame-style-strip">
+              {styleTemplates.map((template) => {
                 const active = selectedTemplate.id === template.id;
                 return (
                   <button
-                    className={`frame-ip-button${active ? ' is-selected' : ''}`}
+                    className={`frame-style-button${active ? ' is-selected' : ''}`}
                     type="button"
                     key={template.id}
                     onClick={() => setSelected(template.id)}
                     aria-pressed={active}
                   >
                     <span
-                      className="frame-ip-dot"
+                      className="frame-style-dot"
                       style={{ backgroundColor: template.accentColor }}
                     />
                     <span>{frameTemplateName(template, locale)}</span>

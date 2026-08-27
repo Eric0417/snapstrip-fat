@@ -23,19 +23,37 @@ const IP_COLLECTIONS = [
   'mickey-mouse',
 ];
 
+const STYLE_TEMPLATES = [
+  'sweet',
+  'diary',
+  'film',
+  'plaid',
+  'mono',
+];
+
 describe('frame template loader', () => {
-  it('loads a blank template and every IP for every layout', () => {
+  it('loads a blank template and five styles for every layout', () => {
     expect(FRAME_TEMPLATES).toHaveLength(
-      LAYOUTS.length + LAYOUTS.length * IP_COLLECTIONS.length,
+      LAYOUTS.length + LAYOUTS.length * STYLE_TEMPLATES.length,
     );
 
     for (const layout of LAYOUTS) {
       const templates = getFrameTemplatesForLayout(layout.id);
-      expect(templates).toHaveLength(1 + IP_COLLECTIONS.length);
+      expect(templates).toHaveLength(1 + STYLE_TEMPLATES.length);
       expect(templates.filter((template) => template.kind === 'blank')).toHaveLength(1);
-      expect(
-        templates.filter((template) => template.kind === 'ip'),
-      ).toHaveLength(IP_COLLECTIONS.length);
+      expect(templates.filter((template) => template.kind === 'style')).toHaveLength(
+        STYLE_TEMPLATES.length,
+      );
+      expect(templates.map((template) => template.styleId).filter(Boolean)).toEqual(
+        STYLE_TEMPLATES,
+      );
+
+      const collections = new Set(
+        templates
+          .flatMap((template) => template.collections ?? [])
+          .sort(),
+      );
+      expect([...collections].sort()).toEqual([...IP_COLLECTIONS].sort());
     }
   });
 
@@ -54,7 +72,9 @@ describe('frame template loader', () => {
       } else {
         expect(template.background).toBeTruthy();
         expect(template.accentColor).toBeTruthy();
-        expect(template.decorations).toHaveLength(3);
+        expect(template.decorations).toHaveLength(5);
+        expect(template.styleId).toBeTruthy();
+        expect(template.collections).toHaveLength(5);
       }
     }
   });
@@ -71,7 +91,8 @@ describe('frame template loader', () => {
 
   it('returns the requested template or undefined', () => {
     expect(getFrameTemplate('blank-grid')?.kind).toBe('blank');
-    expect(getFrameTemplate('ip-hello-kitty-grid')?.collection).toBe('hello-kitty');
+    expect(getFrameTemplate('style-sweet-grid')?.kind).toBe('style');
+    expect(getFrameTemplate('style-sweet-grid')?.collection).toBe('sweet');
     expect(getFrameTemplate('missing')).toBeUndefined();
     expect(getFrameTemplate(null)).toBeUndefined();
   });

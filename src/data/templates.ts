@@ -14,6 +14,9 @@ interface FrameTemplateManifestEntry {
   decorations?: unknown;
   kind?: unknown;
   collection?: unknown;
+  styleId?: unknown;
+  order?: unknown;
+  collections?: unknown;
   backgroundColor?: unknown;
   accentColor?: unknown;
 }
@@ -104,11 +107,22 @@ function toTemplates(manifests: Record<string, unknown>): FrameTemplate[] {
               .filter((decoration): decoration is TemplateDecoration => Boolean(decoration))
           : [],
         pack: path.includes('/fan-ip/') ? 'fan' : 'core',
-        kind: value.kind === 'blank' ? 'blank' : 'ip',
+        kind: value.kind === 'blank' ? 'blank' : 'style',
         collection:
           typeof value.collection === 'string' && value.collection
             ? value.collection
             : undefined,
+        styleId:
+          typeof value.styleId === 'string' && value.styleId
+            ? value.styleId
+            : undefined,
+        order: toNumber(value.order, 0),
+        collections: Array.isArray(value.collections)
+          ? value.collections.filter(
+              (collection): collection is string =>
+                typeof collection === 'string' && Boolean(collection),
+            )
+          : undefined,
         backgroundColor:
           typeof value.backgroundColor === 'string' && value.backgroundColor
             ? value.backgroundColor
@@ -121,7 +135,10 @@ function toTemplates(manifests: Record<string, unknown>): FrameTemplate[] {
     }
   }
 
-  return output.sort((a, b) => a.id.localeCompare(b.id));
+  return output.sort(
+    (a, b) =>
+      (a.order ?? 0) - (b.order ?? 0) || a.id.localeCompare(b.id),
+  );
 }
 
 export const FRAME_TEMPLATES: readonly FrameTemplate[] = toTemplates(

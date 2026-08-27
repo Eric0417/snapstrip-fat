@@ -34,7 +34,7 @@ export interface TemplateDecoration {
   opacity: number;
 }
 
-export type FrameTemplateKind = 'ip' | 'blank';
+export type FrameTemplateKind = 'style' | 'blank';
 
 export interface FrameTemplate {
   id: string;
@@ -46,6 +46,9 @@ export interface FrameTemplate {
   pack: 'core' | 'fan';
   kind: FrameTemplateKind;
   collection?: string;
+  styleId?: string;
+  order?: number;
+  collections?: readonly string[];
   backgroundColor?: string;
   accentColor?: string;
 }

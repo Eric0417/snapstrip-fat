@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 4237">
+  <defs><pattern id="pattern" width="50" height="50" patternUnits="userSpaceOnUse">
+    <rect width="50" height="50" fill="none"/>
+    <circle cx="25" cy="25" r="4.5" fill="#e7e7ed" opacity="0.28"/>
+  </pattern></defs>
+  <rect width="1440" height="4237" fill="#1a1a1f"/>
+  <rect width="1440" height="4237" fill="url(#pattern)"/>
+  <g fill="#f4f4f7" opacity="0.1"><polygon points="215.8,296.59 243.4,383.99 330.8,411.59 243.4,439.19 215.8,526.59 188.2,439.19 100.8,411.59 188.2,383.99" /></g><g fill="#f4f4f7" opacity="0.08"><polygon points="1206,423.7 1225.87,486.63 1288.8,506.5 1225.87,526.37 1206,589.3 1186.13,526.37 1123.2,506.5 1186.13,486.63" /></g><g fill="#f4f4f7" opacity="0.08"><polygon points="1212.9,2965.9 1234.43,3034.07 1302.6,3055.6 1234.43,3077.13 1212.9,3145.3 1191.37,3077.13 1123.2,3055.6 1191.37,3034.07" /></g><g fill="#f4f4f7" opacity="0.08"><polygon points="212.4,3135.38 232.27,3198.31 295.2,3218.18 232.27,3238.05 212.4,3300.98 192.53,3238.05 129.6,3218.18 192.53,3198.31" /></g>
+</svg>

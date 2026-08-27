@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 4237">
+  <defs><pattern id="pattern" width="50" height="50" patternUnits="userSpaceOnUse">
+      <rect width="50" height="50" fill="#d8d2c6" opacity="0.16"/>
+      <rect x="15" y="15" width="8" height="21" rx="4" fill="#2e292c" opacity="0.24"/>
+    </pattern></defs>
+  <rect width="1440" height="4237" fill="#f5f2eb"/>
+  <rect width="1440" height="4237" fill="url(#pattern)"/>
+  <g fill="#2e292c" opacity="0.1"><circle cx="215.8" cy="411.59" r="96.6" /></g><g fill="#2e292c" opacity="0.08"><circle cx="1206" cy="506.5" r="69.55" /></g><g fill="#2e292c" opacity="0.08"><circle cx="1212.9" cy="3055.6" r="75.35" /></g><g fill="#2e292c" opacity="0.08"><circle cx="212.4" cy="3218.18" r="69.55" /></g>
+</svg>
