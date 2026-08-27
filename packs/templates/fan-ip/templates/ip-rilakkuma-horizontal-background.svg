@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 508">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#efdcbd" stop-opacity="0.42"/>
+    </linearGradient>
+    <pattern id="motif-pattern" width="110" height="110" patternUnits="userSpaceOnUse" patternTransform="rotate(-8)">
+      <rect width="110" height="110" fill="#efdcbd" opacity="0.24"/>
+      <g fill="#a06d4e" opacity="0.32"><ellipse cx="52.8" cy="52.007999999999996" rx="18.392" ry="13.552000000000001" /><circle cx="37.312" cy="33.616" r="4.84" /><circle cx="46.992000000000004" cy="28.292" r="5.808" /><circle cx="58.608000000000004" cy="28.292" r="5.808" /><circle cx="68.288" cy="33.616" r="4.84" /></g>
+    </pattern>
+  </defs>
+  <rect width="1440" height="508" fill="#fcf5e9"/>
+  <rect width="1440" height="508" fill="url(#bg)"/>
+  <rect width="1440" height="508" fill="url(#motif-pattern)" opacity="0.72"/>
+  <rect x="72" y="18" width="1296" height="472" rx="58" fill="#ffffff" opacity="0.12"/>
+  <g fill="#a06d4e" opacity="0.09"><ellipse cx="160.92000000000002" cy="97.33279999999999" rx="34.7472" ry="25.6032" /><circle cx="131.6592" cy="62.5856" r="9.144" /><circle cx="149.9472" cy="52.5272" r="10.9728" /><circle cx="171.8928" cy="52.5272" r="10.9728" /><circle cx="190.18079999999998" cy="62.5856" r="9.144" /></g>
+  <g fill="#a06d4e" opacity="0.08"><ellipse cx="1069.82" cy="406.7048" rx="25.095200000000002" ry="18.491200000000003" /><circle cx="1048.6871999999998" cy="381.6096" r="6.604000000000001" /><circle cx="1061.8952" cy="374.3452" r="7.9248" /><circle cx="1077.7448" cy="374.3452" r="7.9248" /><circle cx="1090.9528" cy="381.6096" r="6.604000000000001" /></g>
+  <g fill="#a06d4e" opacity="0.1"><ellipse cx="1148.6000000000001" cy="72.136" rx="19.304000000000002" ry="14.224000000000002" /><circle cx="1132.344" cy="52.832" r="5.080000000000001" /><circle cx="1142.5040000000001" cy="47.244" r="6.096" /><circle cx="1154.6960000000001" cy="47.244" r="6.096" /><circle cx="1164.856" cy="52.832" r="5.080000000000001" /></g>
+  <g fill="#a06d4e" opacity="0.1"><ellipse cx="140.6" cy="417.57599999999996" rx="19.304000000000002" ry="14.224000000000002" /><circle cx="124.34400000000001" cy="398.272" r="5.080000000000001" /><circle cx="134.50400000000002" cy="392.68399999999997" r="6.096" /><circle cx="146.696" cy="392.68399999999997" r="6.096" /><circle cx="156.856" cy="398.272" r="5.080000000000001" /></g>
+</svg>

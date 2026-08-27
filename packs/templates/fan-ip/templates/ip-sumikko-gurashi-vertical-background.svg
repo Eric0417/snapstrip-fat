@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 4237">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#d7ebd9" stop-opacity="0.42"/>
+    </linearGradient>
+    <pattern id="motif-pattern" width="160" height="160" patternUnits="userSpaceOnUse" patternTransform="rotate(-8)">
+      <rect width="160" height="160" fill="#d7ebd9" opacity="0.24"/>
+      <g fill="#5d8c68" opacity="0.32"><path d="M 76.80000000000001 32 C 112 44.672, 112 82.688, 76.80000000000001 102.4 C 41.6 82.688, 41.6 44.672, 76.80000000000001 32 Z" /><path d="M 76.80000000000001 39.04 L 76.80000000000001 95.36000000000001" stroke="#fff" stroke-width="2.8160000000000003" fill="none" opacity=".7" /></g>
+    </pattern>
+  </defs>
+  <rect width="1440" height="4237" fill="#f5fbf5"/>
+  <rect width="1440" height="4237" fill="url(#bg)"/>
+  <rect width="1440" height="4237" fill="url(#motif-pattern)" opacity="0.72"/>
+  <rect x="72" y="148" width="1296" height="3940" rx="58" fill="#ffffff" opacity="0.12"/>
+  <g fill="#5d8c68" opacity="0.09"><path d="M 244.8 338.96 C 374.4 385.616, 374.4 525.584, 244.8 598.16 C 115.2 525.584, 115.2 385.616, 244.8 338.96 Z" /><path d="M 244.8 364.88 L 244.8 572.24" stroke="#fff" stroke-width="10.368" fill="none" opacity=".7" /></g>
+  <g fill="#5d8c68" opacity="0.08"><path d="M 1130.3999999999999 3050.64 C 1224 3084.336, 1224 3185.424, 1130.3999999999999 3237.8399999999997 C 1036.8 3185.424, 1036.8 3084.336, 1130.3999999999999 3050.64 Z" /><path d="M 1130.3999999999999 3069.3599999999997 L 1130.3999999999999 3219.12" stroke="#fff" stroke-width="7.488" fill="none" opacity=".7" /></g>
+  <g fill="#5d8c68" opacity="0.1"><path d="M 1195.2 338.96 C 1267.2 364.88, 1267.2 442.64, 1195.2 482.96 C 1123.2 442.64, 1123.2 364.88, 1195.2 338.96 Z" /><path d="M 1195.2 353.35999999999996 L 1195.2 468.55999999999995" stroke="#fff" stroke-width="5.76" fill="none" opacity=".7" /></g>
+  <g fill="#5d8c68" opacity="0.1"><path d="M 187.2 3220.12 C 259.2 3246.04, 259.2 3323.7999999999997, 187.2 3364.12 C 115.2 3323.7999999999997, 115.2 3246.04, 187.2 3220.12 Z" /><path d="M 187.2 3234.52 L 187.2 3349.72" stroke="#fff" stroke-width="5.76" fill="none" opacity=".7" /></g>
+</svg>

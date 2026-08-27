@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1440">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#d5e9f8" stop-opacity="0.42"/>
+    </linearGradient>
+    <pattern id="motif-pattern" width="160" height="160" patternUnits="userSpaceOnUse" patternTransform="rotate(-8)">
+      <rect width="160" height="160" fill="#d5e9f8" opacity="0.24"/>
+      <g fill="#2d6f9c" opacity="0.32"><path d="M 41.6 70.72 Q 59.2 46.08 76.80000000000001 70.72 T 112 70.72 V 102.4 H 41.6 Z" /></g>
+    </pattern>
+  </defs>
+  <rect width="1440" height="1440" fill="#f3faff"/>
+  <rect width="1440" height="1440" fill="url(#bg)"/>
+  <rect width="1440" height="1440" fill="url(#motif-pattern)" opacity="0.72"/>
+  <rect x="72" y="50" width="1296" height="1339" rx="58" fill="#ffffff" opacity="0.12"/>
+  <g fill="#2d6f9c" opacity="0.09"><path d="M 115.2 257.76 Q 180 167.04000000000002 244.8 257.76 T 374.4 257.76 V 374.4 H 115.2 Z" /></g>
+  <g fill="#2d6f9c" opacity="0.08"><path d="M 1036.8 1139.76 Q 1083.6 1074.24 1130.3999999999999 1139.76 T 1224 1139.76 V 1224 H 1036.8 Z" /></g>
+  <g fill="#2d6f9c" opacity="0.1"><path d="M 1123.2 194.4 Q 1159.2 144 1195.2 194.4 T 1267.2 194.4 V 259.2 H 1123.2 Z" /></g>
+  <g fill="#2d6f9c" opacity="0.1"><path d="M 115.2 1173.6000000000001 Q 151.2 1123.2 187.2 1173.6000000000001 T 259.2 1173.6000000000001 V 1238.4 H 115.2 Z" /></g>
+</svg>

@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { getLayout } from '../app/layouts';
 import { useSession } from '../app/session';
 import type { PhotoShot } from '../app/types';
+import { getFrameTemplatesForLayout } from '../data/templates';
 import { filesToShots } from '../features/capture/upload';
 import { useCameraSession } from '../features/capture/useCameraSession';
 import { useLanguage } from '../i18n/LanguageContext';
@@ -31,6 +32,7 @@ export function CapturePage() {
   const layoutId = useSession((state) => state.layoutId);
   const setShots = useSession((state) => state.setShots);
   const layout = getLayout(layoutId);
+  const hasFrameTemplates = getFrameTemplatesForLayout(layoutId).length > 0;
   const {
     videoRef,
     status: cameraStatus,
@@ -82,12 +84,20 @@ export function CapturePage() {
       setShots(captured);
       setPhase('done');
       await wait(500);
-      void navigate('/editor');
+      void navigate(hasFrameTemplates ? '/frame' : '/editor');
     } catch (cause) {
       setPhase('error');
       setUploadError(cause instanceof Error ? cause.message : 'Capture failed');
     }
-  }, [captureShot, facingMode, layout.captureAspectRatio, navigate, setShots, start]);
+  }, [
+    captureShot,
+    facingMode,
+    hasFrameTemplates,
+    layout.captureAspectRatio,
+    navigate,
+    setShots,
+    start,
+  ]);
 
   const resetSession = useCallback(() => {
     cancelledRef.current = true;
@@ -115,13 +125,13 @@ export function CapturePage() {
         setLocalShots(uploaded);
         setShots(uploaded);
         setPhase('done');
-        void navigate('/editor');
+        void navigate(hasFrameTemplates ? '/frame' : '/editor');
       } catch {
         setUploadError(t('uploadReadError'));
         setPhase('error');
       }
     },
-    [layout.captureAspectRatio, navigate, setShots, t],
+    [hasFrameTemplates, layout.captureAspectRatio, navigate, setShots, t],
   );
 
   useEffect(() => () => {

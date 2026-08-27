@@ -1,0 +1,4890 @@
+[
+  {
+    "id": "blank-grid",
+    "layoutId": "grid",
+    "name": {
+      "zh-Hant": "空白自訂",
+      "en": "Blank custom"
+    },
+    "kind": "blank",
+    "collection": "blank",
+    "frame": "packs/templates/fan-ip/templates/frame-grid.svg",
+    "decorations": [],
+    "license": "original"
+  },
+  {
+    "id": "ip-hello-kitty-grid",
+    "layoutId": "grid",
+    "name": {
+      "zh-Hant": "Hello Kitty 聯名",
+      "en": "Hello Kitty collab"
+    },
+    "kind": "ip",
+    "collection": "hello-kitty",
+    "background": "packs/templates/fan-ip/templates/ip-hello-kitty-grid-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-hello-kitty-grid-frame.svg",
+    "accentColor": "#d84478",
+    "decorations": [
+      {
+        "itemId": "hello-kitty-sticker-01",
+        "x": 0.17,
+        "y": 0.11,
+        "scale": 0.38,
+        "rotation": -7,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "hello-kitty-sticker-05",
+        "x": 0.84,
+        "y": 0.89,
+        "scale": 0.2,
+        "rotation": 7,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "hello-kitty-sticker-09",
+        "x": 0.9,
+        "y": 0.15,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-cinnamoroll-grid",
+    "layoutId": "grid",
+    "name": {
+      "zh-Hant": "玉桂狗 聯名",
+      "en": "Cinnamoroll collab"
+    },
+    "kind": "ip",
+    "collection": "cinnamoroll",
+    "background": "packs/templates/fan-ip/templates/ip-cinnamoroll-grid-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-cinnamoroll-grid-frame.svg",
+    "accentColor": "#5faee0",
+    "decorations": [
+      {
+        "itemId": "cinnamoroll-sticker-01",
+        "x": 0.17,
+        "y": 0.11,
+        "scale": 0.38,
+        "rotation": -7,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "cinnamoroll-sticker-05",
+        "x": 0.84,
+        "y": 0.89,
+        "scale": 0.2,
+        "rotation": 7,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "cinnamoroll-sticker-09",
+        "x": 0.9,
+        "y": 0.15,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-my-melody-grid",
+    "layoutId": "grid",
+    "name": {
+      "zh-Hant": "美樂蒂 聯名",
+      "en": "My Melody collab"
+    },
+    "kind": "ip",
+    "collection": "my-melody",
+    "background": "packs/templates/fan-ip/templates/ip-my-melody-grid-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-my-melody-grid-frame.svg",
+    "accentColor": "#df4e8b",
+    "decorations": [
+      {
+        "itemId": "my-melody-sticker-01",
+        "x": 0.17,
+        "y": 0.11,
+        "scale": 0.38,
+        "rotation": -7,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "my-melody-sticker-05",
+        "x": 0.84,
+        "y": 0.89,
+        "scale": 0.2,
+        "rotation": 7,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "my-melody-sticker-09",
+        "x": 0.9,
+        "y": 0.15,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-kuromi-grid",
+    "layoutId": "grid",
+    "name": {
+      "zh-Hant": "酷洛米 聯名",
+      "en": "Kuromi collab"
+    },
+    "kind": "ip",
+    "collection": "kuromi",
+    "background": "packs/templates/fan-ip/templates/ip-kuromi-grid-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-kuromi-grid-frame.svg",
+    "accentColor": "#6543a5",
+    "decorations": [
+      {
+        "itemId": "kuromi-sticker-01",
+        "x": 0.17,
+        "y": 0.11,
+        "scale": 0.38,
+        "rotation": -7,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "kuromi-sticker-05",
+        "x": 0.84,
+        "y": 0.89,
+        "scale": 0.2,
+        "rotation": 7,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "kuromi-sticker-09",
+        "x": 0.9,
+        "y": 0.15,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-pompompurin-grid",
+    "layoutId": "grid",
+    "name": {
+      "zh-Hant": "布丁狗 聯名",
+      "en": "Pompompurin collab"
+    },
+    "kind": "ip",
+    "collection": "pompompurin",
+    "background": "packs/templates/fan-ip/templates/ip-pompompurin-grid-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-pompompurin-grid-frame.svg",
+    "accentColor": "#b57932",
+    "decorations": [
+      {
+        "itemId": "pompompurin-sticker-01",
+        "x": 0.17,
+        "y": 0.11,
+        "scale": 0.38,
+        "rotation": -7,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "pompompurin-sticker-05",
+        "x": 0.84,
+        "y": 0.89,
+        "scale": 0.2,
+        "rotation": 7,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "pompompurin-sticker-09",
+        "x": 0.9,
+        "y": 0.15,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-little-twin-stars-grid",
+    "layoutId": "grid",
+    "name": {
+      "zh-Hant": "雙星仙子 聯名",
+      "en": "Little Twin Stars collab"
+    },
+    "kind": "ip",
+    "collection": "little-twin-stars",
+    "background": "packs/templates/fan-ip/templates/ip-little-twin-stars-grid-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-little-twin-stars-grid-frame.svg",
+    "accentColor": "#5d75c8",
+    "decorations": [
+      {
+        "itemId": "little-twin-stars-sticker-01",
+        "x": 0.17,
+        "y": 0.11,
+        "scale": 0.38,
+        "rotation": -7,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "little-twin-stars-sticker-05",
+        "x": 0.84,
+        "y": 0.89,
+        "scale": 0.2,
+        "rotation": 7,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "little-twin-stars-sticker-09",
+        "x": 0.9,
+        "y": 0.15,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-miffy-grid",
+    "layoutId": "grid",
+    "name": {
+      "zh-Hant": "米飛兔 聯名",
+      "en": "Miffy collab"
+    },
+    "kind": "ip",
+    "collection": "miffy",
+    "background": "packs/templates/fan-ip/templates/ip-miffy-grid-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-miffy-grid-frame.svg",
+    "accentColor": "#b87832",
+    "decorations": [
+      {
+        "itemId": "miffy-sticker-01",
+        "x": 0.17,
+        "y": 0.11,
+        "scale": 0.38,
+        "rotation": -7,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "miffy-sticker-05",
+        "x": 0.84,
+        "y": 0.89,
+        "scale": 0.2,
+        "rotation": 7,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "miffy-sticker-09",
+        "x": 0.9,
+        "y": 0.15,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-rilakkuma-grid",
+    "layoutId": "grid",
+    "name": {
+      "zh-Hant": "拉拉熊 聯名",
+      "en": "Rilakkuma collab"
+    },
+    "kind": "ip",
+    "collection": "rilakkuma",
+    "background": "packs/templates/fan-ip/templates/ip-rilakkuma-grid-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-rilakkuma-grid-frame.svg",
+    "accentColor": "#a06d4e",
+    "decorations": [
+      {
+        "itemId": "rilakkuma-sticker-01",
+        "x": 0.17,
+        "y": 0.11,
+        "scale": 0.38,
+        "rotation": -7,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "rilakkuma-sticker-05",
+        "x": 0.84,
+        "y": 0.89,
+        "scale": 0.2,
+        "rotation": 7,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "rilakkuma-sticker-09",
+        "x": 0.9,
+        "y": 0.15,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-sumikko-gurashi-grid",
+    "layoutId": "grid",
+    "name": {
+      "zh-Hant": "角落生物 聯名",
+      "en": "Sumikko Gurashi collab"
+    },
+    "kind": "ip",
+    "collection": "sumikko-gurashi",
+    "background": "packs/templates/fan-ip/templates/ip-sumikko-gurashi-grid-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-sumikko-gurashi-grid-frame.svg",
+    "accentColor": "#5d8c68",
+    "decorations": [
+      {
+        "itemId": "sumikko-gurashi-sticker-01",
+        "x": 0.17,
+        "y": 0.11,
+        "scale": 0.38,
+        "rotation": -7,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "sumikko-gurashi-sticker-05",
+        "x": 0.84,
+        "y": 0.89,
+        "scale": 0.2,
+        "rotation": 7,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "sumikko-gurashi-sticker-09",
+        "x": 0.9,
+        "y": 0.15,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-pusheen-grid",
+    "layoutId": "grid",
+    "name": {
+      "zh-Hant": "胖吉貓 聯名",
+      "en": "Pusheen collab"
+    },
+    "kind": "ip",
+    "collection": "pusheen",
+    "background": "packs/templates/fan-ip/templates/ip-pusheen-grid-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-pusheen-grid-frame.svg",
+    "accentColor": "#8e7275",
+    "decorations": [
+      {
+        "itemId": "pusheen-sticker-01",
+        "x": 0.17,
+        "y": 0.11,
+        "scale": 0.38,
+        "rotation": -7,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "pusheen-sticker-05",
+        "x": 0.84,
+        "y": 0.89,
+        "scale": 0.2,
+        "rotation": 7,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "pusheen-sticker-09",
+        "x": 0.9,
+        "y": 0.15,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-kirby-grid",
+    "layoutId": "grid",
+    "name": {
+      "zh-Hant": "星之卡比 聯名",
+      "en": "Kirby collab"
+    },
+    "kind": "ip",
+    "collection": "kirby",
+    "background": "packs/templates/fan-ip/templates/ip-kirby-grid-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-kirby-grid-frame.svg",
+    "accentColor": "#e1599d",
+    "decorations": [
+      {
+        "itemId": "kirby-sticker-01",
+        "x": 0.17,
+        "y": 0.11,
+        "scale": 0.38,
+        "rotation": -7,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "kirby-sticker-05",
+        "x": 0.84,
+        "y": 0.89,
+        "scale": 0.2,
+        "rotation": 7,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "kirby-sticker-09",
+        "x": 0.9,
+        "y": 0.15,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-snoopy-grid",
+    "layoutId": "grid",
+    "name": {
+      "zh-Hant": "史努比 聯名",
+      "en": "Snoopy collab"
+    },
+    "kind": "ip",
+    "collection": "snoopy",
+    "background": "packs/templates/fan-ip/templates/ip-snoopy-grid-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-snoopy-grid-frame.svg",
+    "accentColor": "#2d6f9c",
+    "decorations": [
+      {
+        "itemId": "snoopy-sticker-01",
+        "x": 0.17,
+        "y": 0.11,
+        "scale": 0.38,
+        "rotation": -7,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "snoopy-sticker-05",
+        "x": 0.84,
+        "y": 0.89,
+        "scale": 0.2,
+        "rotation": 7,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "snoopy-sticker-09",
+        "x": 0.9,
+        "y": 0.15,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-mickey-mouse-grid",
+    "layoutId": "grid",
+    "name": {
+      "zh-Hant": "米奇與米妮 聯名",
+      "en": "Mickey & Minnie collab"
+    },
+    "kind": "ip",
+    "collection": "mickey-mouse",
+    "background": "packs/templates/fan-ip/templates/ip-mickey-mouse-grid-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-mickey-mouse-grid-frame.svg",
+    "accentColor": "#b43b31",
+    "decorations": [
+      {
+        "itemId": "mickey-mouse-sticker-01",
+        "x": 0.17,
+        "y": 0.11,
+        "scale": 0.38,
+        "rotation": -7,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "mickey-mouse-sticker-05",
+        "x": 0.84,
+        "y": 0.89,
+        "scale": 0.2,
+        "rotation": 7,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "mickey-mouse-sticker-09",
+        "x": 0.9,
+        "y": 0.15,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "blank-square",
+    "layoutId": "square",
+    "name": {
+      "zh-Hant": "空白自訂",
+      "en": "Blank custom"
+    },
+    "kind": "blank",
+    "collection": "blank",
+    "frame": "packs/templates/fan-ip/templates/frame-square.svg",
+    "decorations": [],
+    "license": "original"
+  },
+  {
+    "id": "ip-hello-kitty-square",
+    "layoutId": "square",
+    "name": {
+      "zh-Hant": "Hello Kitty 聯名",
+      "en": "Hello Kitty collab"
+    },
+    "kind": "ip",
+    "collection": "hello-kitty",
+    "background": "packs/templates/fan-ip/templates/ip-hello-kitty-square-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-hello-kitty-square-frame.svg",
+    "accentColor": "#d84478",
+    "decorations": [
+      {
+        "itemId": "hello-kitty-sticker-01",
+        "x": 0.16,
+        "y": 0.1,
+        "scale": 0.38,
+        "rotation": -7,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "hello-kitty-sticker-05",
+        "x": 0.85,
+        "y": 0.9,
+        "scale": 0.2,
+        "rotation": 7,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "hello-kitty-sticker-09",
+        "x": 0.9,
+        "y": 0.14,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-cinnamoroll-square",
+    "layoutId": "square",
+    "name": {
+      "zh-Hant": "玉桂狗 聯名",
+      "en": "Cinnamoroll collab"
+    },
+    "kind": "ip",
+    "collection": "cinnamoroll",
+    "background": "packs/templates/fan-ip/templates/ip-cinnamoroll-square-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-cinnamoroll-square-frame.svg",
+    "accentColor": "#5faee0",
+    "decorations": [
+      {
+        "itemId": "cinnamoroll-sticker-01",
+        "x": 0.16,
+        "y": 0.1,
+        "scale": 0.38,
+        "rotation": -7,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "cinnamoroll-sticker-05",
+        "x": 0.85,
+        "y": 0.9,
+        "scale": 0.2,
+        "rotation": 7,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "cinnamoroll-sticker-09",
+        "x": 0.9,
+        "y": 0.14,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-my-melody-square",
+    "layoutId": "square",
+    "name": {
+      "zh-Hant": "美樂蒂 聯名",
+      "en": "My Melody collab"
+    },
+    "kind": "ip",
+    "collection": "my-melody",
+    "background": "packs/templates/fan-ip/templates/ip-my-melody-square-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-my-melody-square-frame.svg",
+    "accentColor": "#df4e8b",
+    "decorations": [
+      {
+        "itemId": "my-melody-sticker-01",
+        "x": 0.16,
+        "y": 0.1,
+        "scale": 0.38,
+        "rotation": -7,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "my-melody-sticker-05",
+        "x": 0.85,
+        "y": 0.9,
+        "scale": 0.2,
+        "rotation": 7,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "my-melody-sticker-09",
+        "x": 0.9,
+        "y": 0.14,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-kuromi-square",
+    "layoutId": "square",
+    "name": {
+      "zh-Hant": "酷洛米 聯名",
+      "en": "Kuromi collab"
+    },
+    "kind": "ip",
+    "collection": "kuromi",
+    "background": "packs/templates/fan-ip/templates/ip-kuromi-square-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-kuromi-square-frame.svg",
+    "accentColor": "#6543a5",
+    "decorations": [
+      {
+        "itemId": "kuromi-sticker-01",
+        "x": 0.16,
+        "y": 0.1,
+        "scale": 0.38,
+        "rotation": -7,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "kuromi-sticker-05",
+        "x": 0.85,
+        "y": 0.9,
+        "scale": 0.2,
+        "rotation": 7,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "kuromi-sticker-09",
+        "x": 0.9,
+        "y": 0.14,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-pompompurin-square",
+    "layoutId": "square",
+    "name": {
+      "zh-Hant": "布丁狗 聯名",
+      "en": "Pompompurin collab"
+    },
+    "kind": "ip",
+    "collection": "pompompurin",
+    "background": "packs/templates/fan-ip/templates/ip-pompompurin-square-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-pompompurin-square-frame.svg",
+    "accentColor": "#b57932",
+    "decorations": [
+      {
+        "itemId": "pompompurin-sticker-01",
+        "x": 0.16,
+        "y": 0.1,
+        "scale": 0.38,
+        "rotation": -7,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "pompompurin-sticker-05",
+        "x": 0.85,
+        "y": 0.9,
+        "scale": 0.2,
+        "rotation": 7,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "pompompurin-sticker-09",
+        "x": 0.9,
+        "y": 0.14,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-little-twin-stars-square",
+    "layoutId": "square",
+    "name": {
+      "zh-Hant": "雙星仙子 聯名",
+      "en": "Little Twin Stars collab"
+    },
+    "kind": "ip",
+    "collection": "little-twin-stars",
+    "background": "packs/templates/fan-ip/templates/ip-little-twin-stars-square-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-little-twin-stars-square-frame.svg",
+    "accentColor": "#5d75c8",
+    "decorations": [
+      {
+        "itemId": "little-twin-stars-sticker-01",
+        "x": 0.16,
+        "y": 0.1,
+        "scale": 0.38,
+        "rotation": -7,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "little-twin-stars-sticker-05",
+        "x": 0.85,
+        "y": 0.9,
+        "scale": 0.2,
+        "rotation": 7,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "little-twin-stars-sticker-09",
+        "x": 0.9,
+        "y": 0.14,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-miffy-square",
+    "layoutId": "square",
+    "name": {
+      "zh-Hant": "米飛兔 聯名",
+      "en": "Miffy collab"
+    },
+    "kind": "ip",
+    "collection": "miffy",
+    "background": "packs/templates/fan-ip/templates/ip-miffy-square-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-miffy-square-frame.svg",
+    "accentColor": "#b87832",
+    "decorations": [
+      {
+        "itemId": "miffy-sticker-01",
+        "x": 0.16,
+        "y": 0.1,
+        "scale": 0.38,
+        "rotation": -7,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "miffy-sticker-05",
+        "x": 0.85,
+        "y": 0.9,
+        "scale": 0.2,
+        "rotation": 7,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "miffy-sticker-09",
+        "x": 0.9,
+        "y": 0.14,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-rilakkuma-square",
+    "layoutId": "square",
+    "name": {
+      "zh-Hant": "拉拉熊 聯名",
+      "en": "Rilakkuma collab"
+    },
+    "kind": "ip",
+    "collection": "rilakkuma",
+    "background": "packs/templates/fan-ip/templates/ip-rilakkuma-square-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-rilakkuma-square-frame.svg",
+    "accentColor": "#a06d4e",
+    "decorations": [
+      {
+        "itemId": "rilakkuma-sticker-01",
+        "x": 0.16,
+        "y": 0.1,
+        "scale": 0.38,
+        "rotation": -7,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "rilakkuma-sticker-05",
+        "x": 0.85,
+        "y": 0.9,
+        "scale": 0.2,
+        "rotation": 7,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "rilakkuma-sticker-09",
+        "x": 0.9,
+        "y": 0.14,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-sumikko-gurashi-square",
+    "layoutId": "square",
+    "name": {
+      "zh-Hant": "角落生物 聯名",
+      "en": "Sumikko Gurashi collab"
+    },
+    "kind": "ip",
+    "collection": "sumikko-gurashi",
+    "background": "packs/templates/fan-ip/templates/ip-sumikko-gurashi-square-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-sumikko-gurashi-square-frame.svg",
+    "accentColor": "#5d8c68",
+    "decorations": [
+      {
+        "itemId": "sumikko-gurashi-sticker-01",
+        "x": 0.16,
+        "y": 0.1,
+        "scale": 0.38,
+        "rotation": -7,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "sumikko-gurashi-sticker-05",
+        "x": 0.85,
+        "y": 0.9,
+        "scale": 0.2,
+        "rotation": 7,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "sumikko-gurashi-sticker-09",
+        "x": 0.9,
+        "y": 0.14,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-pusheen-square",
+    "layoutId": "square",
+    "name": {
+      "zh-Hant": "胖吉貓 聯名",
+      "en": "Pusheen collab"
+    },
+    "kind": "ip",
+    "collection": "pusheen",
+    "background": "packs/templates/fan-ip/templates/ip-pusheen-square-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-pusheen-square-frame.svg",
+    "accentColor": "#8e7275",
+    "decorations": [
+      {
+        "itemId": "pusheen-sticker-01",
+        "x": 0.16,
+        "y": 0.1,
+        "scale": 0.38,
+        "rotation": -7,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "pusheen-sticker-05",
+        "x": 0.85,
+        "y": 0.9,
+        "scale": 0.2,
+        "rotation": 7,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "pusheen-sticker-09",
+        "x": 0.9,
+        "y": 0.14,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-kirby-square",
+    "layoutId": "square",
+    "name": {
+      "zh-Hant": "星之卡比 聯名",
+      "en": "Kirby collab"
+    },
+    "kind": "ip",
+    "collection": "kirby",
+    "background": "packs/templates/fan-ip/templates/ip-kirby-square-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-kirby-square-frame.svg",
+    "accentColor": "#e1599d",
+    "decorations": [
+      {
+        "itemId": "kirby-sticker-01",
+        "x": 0.16,
+        "y": 0.1,
+        "scale": 0.38,
+        "rotation": -7,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "kirby-sticker-05",
+        "x": 0.85,
+        "y": 0.9,
+        "scale": 0.2,
+        "rotation": 7,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "kirby-sticker-09",
+        "x": 0.9,
+        "y": 0.14,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-snoopy-square",
+    "layoutId": "square",
+    "name": {
+      "zh-Hant": "史努比 聯名",
+      "en": "Snoopy collab"
+    },
+    "kind": "ip",
+    "collection": "snoopy",
+    "background": "packs/templates/fan-ip/templates/ip-snoopy-square-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-snoopy-square-frame.svg",
+    "accentColor": "#2d6f9c",
+    "decorations": [
+      {
+        "itemId": "snoopy-sticker-01",
+        "x": 0.16,
+        "y": 0.1,
+        "scale": 0.38,
+        "rotation": -7,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "snoopy-sticker-05",
+        "x": 0.85,
+        "y": 0.9,
+        "scale": 0.2,
+        "rotation": 7,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "snoopy-sticker-09",
+        "x": 0.9,
+        "y": 0.14,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-mickey-mouse-square",
+    "layoutId": "square",
+    "name": {
+      "zh-Hant": "米奇與米妮 聯名",
+      "en": "Mickey & Minnie collab"
+    },
+    "kind": "ip",
+    "collection": "mickey-mouse",
+    "background": "packs/templates/fan-ip/templates/ip-mickey-mouse-square-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-mickey-mouse-square-frame.svg",
+    "accentColor": "#b43b31",
+    "decorations": [
+      {
+        "itemId": "mickey-mouse-sticker-01",
+        "x": 0.16,
+        "y": 0.1,
+        "scale": 0.38,
+        "rotation": -7,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "mickey-mouse-sticker-05",
+        "x": 0.85,
+        "y": 0.9,
+        "scale": 0.2,
+        "rotation": 7,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "mickey-mouse-sticker-09",
+        "x": 0.9,
+        "y": 0.14,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "blank-bento",
+    "layoutId": "bento",
+    "name": {
+      "zh-Hant": "空白自訂",
+      "en": "Blank custom"
+    },
+    "kind": "blank",
+    "collection": "blank",
+    "frame": "packs/templates/fan-ip/templates/frame-bento.svg",
+    "decorations": [],
+    "license": "original"
+  },
+  {
+    "id": "ip-hello-kitty-bento",
+    "layoutId": "bento",
+    "name": {
+      "zh-Hant": "Hello Kitty 聯名",
+      "en": "Hello Kitty collab"
+    },
+    "kind": "ip",
+    "collection": "hello-kitty",
+    "background": "packs/templates/fan-ip/templates/ip-hello-kitty-bento-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-hello-kitty-bento-frame.svg",
+    "accentColor": "#d84478",
+    "decorations": [
+      {
+        "itemId": "hello-kitty-sticker-01",
+        "x": 0.18,
+        "y": 0.09,
+        "scale": 0.37,
+        "rotation": -6,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "hello-kitty-sticker-05",
+        "x": 0.86,
+        "y": 0.91,
+        "scale": 0.2,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "hello-kitty-sticker-09",
+        "x": 0.83,
+        "y": 0.18,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-cinnamoroll-bento",
+    "layoutId": "bento",
+    "name": {
+      "zh-Hant": "玉桂狗 聯名",
+      "en": "Cinnamoroll collab"
+    },
+    "kind": "ip",
+    "collection": "cinnamoroll",
+    "background": "packs/templates/fan-ip/templates/ip-cinnamoroll-bento-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-cinnamoroll-bento-frame.svg",
+    "accentColor": "#5faee0",
+    "decorations": [
+      {
+        "itemId": "cinnamoroll-sticker-01",
+        "x": 0.18,
+        "y": 0.09,
+        "scale": 0.37,
+        "rotation": -6,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "cinnamoroll-sticker-05",
+        "x": 0.86,
+        "y": 0.91,
+        "scale": 0.2,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "cinnamoroll-sticker-09",
+        "x": 0.83,
+        "y": 0.18,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-my-melody-bento",
+    "layoutId": "bento",
+    "name": {
+      "zh-Hant": "美樂蒂 聯名",
+      "en": "My Melody collab"
+    },
+    "kind": "ip",
+    "collection": "my-melody",
+    "background": "packs/templates/fan-ip/templates/ip-my-melody-bento-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-my-melody-bento-frame.svg",
+    "accentColor": "#df4e8b",
+    "decorations": [
+      {
+        "itemId": "my-melody-sticker-01",
+        "x": 0.18,
+        "y": 0.09,
+        "scale": 0.37,
+        "rotation": -6,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "my-melody-sticker-05",
+        "x": 0.86,
+        "y": 0.91,
+        "scale": 0.2,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "my-melody-sticker-09",
+        "x": 0.83,
+        "y": 0.18,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-kuromi-bento",
+    "layoutId": "bento",
+    "name": {
+      "zh-Hant": "酷洛米 聯名",
+      "en": "Kuromi collab"
+    },
+    "kind": "ip",
+    "collection": "kuromi",
+    "background": "packs/templates/fan-ip/templates/ip-kuromi-bento-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-kuromi-bento-frame.svg",
+    "accentColor": "#6543a5",
+    "decorations": [
+      {
+        "itemId": "kuromi-sticker-01",
+        "x": 0.18,
+        "y": 0.09,
+        "scale": 0.37,
+        "rotation": -6,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "kuromi-sticker-05",
+        "x": 0.86,
+        "y": 0.91,
+        "scale": 0.2,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "kuromi-sticker-09",
+        "x": 0.83,
+        "y": 0.18,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-pompompurin-bento",
+    "layoutId": "bento",
+    "name": {
+      "zh-Hant": "布丁狗 聯名",
+      "en": "Pompompurin collab"
+    },
+    "kind": "ip",
+    "collection": "pompompurin",
+    "background": "packs/templates/fan-ip/templates/ip-pompompurin-bento-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-pompompurin-bento-frame.svg",
+    "accentColor": "#b57932",
+    "decorations": [
+      {
+        "itemId": "pompompurin-sticker-01",
+        "x": 0.18,
+        "y": 0.09,
+        "scale": 0.37,
+        "rotation": -6,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "pompompurin-sticker-05",
+        "x": 0.86,
+        "y": 0.91,
+        "scale": 0.2,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "pompompurin-sticker-09",
+        "x": 0.83,
+        "y": 0.18,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-little-twin-stars-bento",
+    "layoutId": "bento",
+    "name": {
+      "zh-Hant": "雙星仙子 聯名",
+      "en": "Little Twin Stars collab"
+    },
+    "kind": "ip",
+    "collection": "little-twin-stars",
+    "background": "packs/templates/fan-ip/templates/ip-little-twin-stars-bento-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-little-twin-stars-bento-frame.svg",
+    "accentColor": "#5d75c8",
+    "decorations": [
+      {
+        "itemId": "little-twin-stars-sticker-01",
+        "x": 0.18,
+        "y": 0.09,
+        "scale": 0.37,
+        "rotation": -6,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "little-twin-stars-sticker-05",
+        "x": 0.86,
+        "y": 0.91,
+        "scale": 0.2,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "little-twin-stars-sticker-09",
+        "x": 0.83,
+        "y": 0.18,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-miffy-bento",
+    "layoutId": "bento",
+    "name": {
+      "zh-Hant": "米飛兔 聯名",
+      "en": "Miffy collab"
+    },
+    "kind": "ip",
+    "collection": "miffy",
+    "background": "packs/templates/fan-ip/templates/ip-miffy-bento-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-miffy-bento-frame.svg",
+    "accentColor": "#b87832",
+    "decorations": [
+      {
+        "itemId": "miffy-sticker-01",
+        "x": 0.18,
+        "y": 0.09,
+        "scale": 0.37,
+        "rotation": -6,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "miffy-sticker-05",
+        "x": 0.86,
+        "y": 0.91,
+        "scale": 0.2,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "miffy-sticker-09",
+        "x": 0.83,
+        "y": 0.18,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-rilakkuma-bento",
+    "layoutId": "bento",
+    "name": {
+      "zh-Hant": "拉拉熊 聯名",
+      "en": "Rilakkuma collab"
+    },
+    "kind": "ip",
+    "collection": "rilakkuma",
+    "background": "packs/templates/fan-ip/templates/ip-rilakkuma-bento-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-rilakkuma-bento-frame.svg",
+    "accentColor": "#a06d4e",
+    "decorations": [
+      {
+        "itemId": "rilakkuma-sticker-01",
+        "x": 0.18,
+        "y": 0.09,
+        "scale": 0.37,
+        "rotation": -6,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "rilakkuma-sticker-05",
+        "x": 0.86,
+        "y": 0.91,
+        "scale": 0.2,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "rilakkuma-sticker-09",
+        "x": 0.83,
+        "y": 0.18,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-sumikko-gurashi-bento",
+    "layoutId": "bento",
+    "name": {
+      "zh-Hant": "角落生物 聯名",
+      "en": "Sumikko Gurashi collab"
+    },
+    "kind": "ip",
+    "collection": "sumikko-gurashi",
+    "background": "packs/templates/fan-ip/templates/ip-sumikko-gurashi-bento-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-sumikko-gurashi-bento-frame.svg",
+    "accentColor": "#5d8c68",
+    "decorations": [
+      {
+        "itemId": "sumikko-gurashi-sticker-01",
+        "x": 0.18,
+        "y": 0.09,
+        "scale": 0.37,
+        "rotation": -6,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "sumikko-gurashi-sticker-05",
+        "x": 0.86,
+        "y": 0.91,
+        "scale": 0.2,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "sumikko-gurashi-sticker-09",
+        "x": 0.83,
+        "y": 0.18,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-pusheen-bento",
+    "layoutId": "bento",
+    "name": {
+      "zh-Hant": "胖吉貓 聯名",
+      "en": "Pusheen collab"
+    },
+    "kind": "ip",
+    "collection": "pusheen",
+    "background": "packs/templates/fan-ip/templates/ip-pusheen-bento-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-pusheen-bento-frame.svg",
+    "accentColor": "#8e7275",
+    "decorations": [
+      {
+        "itemId": "pusheen-sticker-01",
+        "x": 0.18,
+        "y": 0.09,
+        "scale": 0.37,
+        "rotation": -6,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "pusheen-sticker-05",
+        "x": 0.86,
+        "y": 0.91,
+        "scale": 0.2,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "pusheen-sticker-09",
+        "x": 0.83,
+        "y": 0.18,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-kirby-bento",
+    "layoutId": "bento",
+    "name": {
+      "zh-Hant": "星之卡比 聯名",
+      "en": "Kirby collab"
+    },
+    "kind": "ip",
+    "collection": "kirby",
+    "background": "packs/templates/fan-ip/templates/ip-kirby-bento-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-kirby-bento-frame.svg",
+    "accentColor": "#e1599d",
+    "decorations": [
+      {
+        "itemId": "kirby-sticker-01",
+        "x": 0.18,
+        "y": 0.09,
+        "scale": 0.37,
+        "rotation": -6,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "kirby-sticker-05",
+        "x": 0.86,
+        "y": 0.91,
+        "scale": 0.2,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "kirby-sticker-09",
+        "x": 0.83,
+        "y": 0.18,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-snoopy-bento",
+    "layoutId": "bento",
+    "name": {
+      "zh-Hant": "史努比 聯名",
+      "en": "Snoopy collab"
+    },
+    "kind": "ip",
+    "collection": "snoopy",
+    "background": "packs/templates/fan-ip/templates/ip-snoopy-bento-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-snoopy-bento-frame.svg",
+    "accentColor": "#2d6f9c",
+    "decorations": [
+      {
+        "itemId": "snoopy-sticker-01",
+        "x": 0.18,
+        "y": 0.09,
+        "scale": 0.37,
+        "rotation": -6,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "snoopy-sticker-05",
+        "x": 0.86,
+        "y": 0.91,
+        "scale": 0.2,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "snoopy-sticker-09",
+        "x": 0.83,
+        "y": 0.18,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-mickey-mouse-bento",
+    "layoutId": "bento",
+    "name": {
+      "zh-Hant": "米奇與米妮 聯名",
+      "en": "Mickey & Minnie collab"
+    },
+    "kind": "ip",
+    "collection": "mickey-mouse",
+    "background": "packs/templates/fan-ip/templates/ip-mickey-mouse-bento-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-mickey-mouse-bento-frame.svg",
+    "accentColor": "#b43b31",
+    "decorations": [
+      {
+        "itemId": "mickey-mouse-sticker-01",
+        "x": 0.18,
+        "y": 0.09,
+        "scale": 0.37,
+        "rotation": -6,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "mickey-mouse-sticker-05",
+        "x": 0.86,
+        "y": 0.91,
+        "scale": 0.2,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "mickey-mouse-sticker-09",
+        "x": 0.83,
+        "y": 0.18,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "blank-portrait-grid",
+    "layoutId": "portrait-grid",
+    "name": {
+      "zh-Hant": "空白自訂",
+      "en": "Blank custom"
+    },
+    "kind": "blank",
+    "collection": "blank",
+    "frame": "packs/templates/fan-ip/templates/frame-portrait-grid.svg",
+    "decorations": [],
+    "license": "original"
+  },
+  {
+    "id": "ip-hello-kitty-portrait-grid",
+    "layoutId": "portrait-grid",
+    "name": {
+      "zh-Hant": "Hello Kitty 聯名",
+      "en": "Hello Kitty collab"
+    },
+    "kind": "ip",
+    "collection": "hello-kitty",
+    "background": "packs/templates/fan-ip/templates/ip-hello-kitty-portrait-grid-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-hello-kitty-portrait-grid-frame.svg",
+    "accentColor": "#d84478",
+    "decorations": [
+      {
+        "itemId": "hello-kitty-sticker-01",
+        "x": 0.16,
+        "y": 0.08,
+        "scale": 0.38,
+        "rotation": -7,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "hello-kitty-sticker-05",
+        "x": 0.85,
+        "y": 0.92,
+        "scale": 0.2,
+        "rotation": 7,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "hello-kitty-sticker-09",
+        "x": 0.9,
+        "y": 0.12,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-cinnamoroll-portrait-grid",
+    "layoutId": "portrait-grid",
+    "name": {
+      "zh-Hant": "玉桂狗 聯名",
+      "en": "Cinnamoroll collab"
+    },
+    "kind": "ip",
+    "collection": "cinnamoroll",
+    "background": "packs/templates/fan-ip/templates/ip-cinnamoroll-portrait-grid-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-cinnamoroll-portrait-grid-frame.svg",
+    "accentColor": "#5faee0",
+    "decorations": [
+      {
+        "itemId": "cinnamoroll-sticker-01",
+        "x": 0.16,
+        "y": 0.08,
+        "scale": 0.38,
+        "rotation": -7,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "cinnamoroll-sticker-05",
+        "x": 0.85,
+        "y": 0.92,
+        "scale": 0.2,
+        "rotation": 7,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "cinnamoroll-sticker-09",
+        "x": 0.9,
+        "y": 0.12,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-my-melody-portrait-grid",
+    "layoutId": "portrait-grid",
+    "name": {
+      "zh-Hant": "美樂蒂 聯名",
+      "en": "My Melody collab"
+    },
+    "kind": "ip",
+    "collection": "my-melody",
+    "background": "packs/templates/fan-ip/templates/ip-my-melody-portrait-grid-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-my-melody-portrait-grid-frame.svg",
+    "accentColor": "#df4e8b",
+    "decorations": [
+      {
+        "itemId": "my-melody-sticker-01",
+        "x": 0.16,
+        "y": 0.08,
+        "scale": 0.38,
+        "rotation": -7,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "my-melody-sticker-05",
+        "x": 0.85,
+        "y": 0.92,
+        "scale": 0.2,
+        "rotation": 7,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "my-melody-sticker-09",
+        "x": 0.9,
+        "y": 0.12,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-kuromi-portrait-grid",
+    "layoutId": "portrait-grid",
+    "name": {
+      "zh-Hant": "酷洛米 聯名",
+      "en": "Kuromi collab"
+    },
+    "kind": "ip",
+    "collection": "kuromi",
+    "background": "packs/templates/fan-ip/templates/ip-kuromi-portrait-grid-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-kuromi-portrait-grid-frame.svg",
+    "accentColor": "#6543a5",
+    "decorations": [
+      {
+        "itemId": "kuromi-sticker-01",
+        "x": 0.16,
+        "y": 0.08,
+        "scale": 0.38,
+        "rotation": -7,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "kuromi-sticker-05",
+        "x": 0.85,
+        "y": 0.92,
+        "scale": 0.2,
+        "rotation": 7,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "kuromi-sticker-09",
+        "x": 0.9,
+        "y": 0.12,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-pompompurin-portrait-grid",
+    "layoutId": "portrait-grid",
+    "name": {
+      "zh-Hant": "布丁狗 聯名",
+      "en": "Pompompurin collab"
+    },
+    "kind": "ip",
+    "collection": "pompompurin",
+    "background": "packs/templates/fan-ip/templates/ip-pompompurin-portrait-grid-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-pompompurin-portrait-grid-frame.svg",
+    "accentColor": "#b57932",
+    "decorations": [
+      {
+        "itemId": "pompompurin-sticker-01",
+        "x": 0.16,
+        "y": 0.08,
+        "scale": 0.38,
+        "rotation": -7,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "pompompurin-sticker-05",
+        "x": 0.85,
+        "y": 0.92,
+        "scale": 0.2,
+        "rotation": 7,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "pompompurin-sticker-09",
+        "x": 0.9,
+        "y": 0.12,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-little-twin-stars-portrait-grid",
+    "layoutId": "portrait-grid",
+    "name": {
+      "zh-Hant": "雙星仙子 聯名",
+      "en": "Little Twin Stars collab"
+    },
+    "kind": "ip",
+    "collection": "little-twin-stars",
+    "background": "packs/templates/fan-ip/templates/ip-little-twin-stars-portrait-grid-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-little-twin-stars-portrait-grid-frame.svg",
+    "accentColor": "#5d75c8",
+    "decorations": [
+      {
+        "itemId": "little-twin-stars-sticker-01",
+        "x": 0.16,
+        "y": 0.08,
+        "scale": 0.38,
+        "rotation": -7,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "little-twin-stars-sticker-05",
+        "x": 0.85,
+        "y": 0.92,
+        "scale": 0.2,
+        "rotation": 7,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "little-twin-stars-sticker-09",
+        "x": 0.9,
+        "y": 0.12,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-miffy-portrait-grid",
+    "layoutId": "portrait-grid",
+    "name": {
+      "zh-Hant": "米飛兔 聯名",
+      "en": "Miffy collab"
+    },
+    "kind": "ip",
+    "collection": "miffy",
+    "background": "packs/templates/fan-ip/templates/ip-miffy-portrait-grid-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-miffy-portrait-grid-frame.svg",
+    "accentColor": "#b87832",
+    "decorations": [
+      {
+        "itemId": "miffy-sticker-01",
+        "x": 0.16,
+        "y": 0.08,
+        "scale": 0.38,
+        "rotation": -7,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "miffy-sticker-05",
+        "x": 0.85,
+        "y": 0.92,
+        "scale": 0.2,
+        "rotation": 7,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "miffy-sticker-09",
+        "x": 0.9,
+        "y": 0.12,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-rilakkuma-portrait-grid",
+    "layoutId": "portrait-grid",
+    "name": {
+      "zh-Hant": "拉拉熊 聯名",
+      "en": "Rilakkuma collab"
+    },
+    "kind": "ip",
+    "collection": "rilakkuma",
+    "background": "packs/templates/fan-ip/templates/ip-rilakkuma-portrait-grid-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-rilakkuma-portrait-grid-frame.svg",
+    "accentColor": "#a06d4e",
+    "decorations": [
+      {
+        "itemId": "rilakkuma-sticker-01",
+        "x": 0.16,
+        "y": 0.08,
+        "scale": 0.38,
+        "rotation": -7,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "rilakkuma-sticker-05",
+        "x": 0.85,
+        "y": 0.92,
+        "scale": 0.2,
+        "rotation": 7,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "rilakkuma-sticker-09",
+        "x": 0.9,
+        "y": 0.12,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-sumikko-gurashi-portrait-grid",
+    "layoutId": "portrait-grid",
+    "name": {
+      "zh-Hant": "角落生物 聯名",
+      "en": "Sumikko Gurashi collab"
+    },
+    "kind": "ip",
+    "collection": "sumikko-gurashi",
+    "background": "packs/templates/fan-ip/templates/ip-sumikko-gurashi-portrait-grid-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-sumikko-gurashi-portrait-grid-frame.svg",
+    "accentColor": "#5d8c68",
+    "decorations": [
+      {
+        "itemId": "sumikko-gurashi-sticker-01",
+        "x": 0.16,
+        "y": 0.08,
+        "scale": 0.38,
+        "rotation": -7,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "sumikko-gurashi-sticker-05",
+        "x": 0.85,
+        "y": 0.92,
+        "scale": 0.2,
+        "rotation": 7,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "sumikko-gurashi-sticker-09",
+        "x": 0.9,
+        "y": 0.12,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-pusheen-portrait-grid",
+    "layoutId": "portrait-grid",
+    "name": {
+      "zh-Hant": "胖吉貓 聯名",
+      "en": "Pusheen collab"
+    },
+    "kind": "ip",
+    "collection": "pusheen",
+    "background": "packs/templates/fan-ip/templates/ip-pusheen-portrait-grid-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-pusheen-portrait-grid-frame.svg",
+    "accentColor": "#8e7275",
+    "decorations": [
+      {
+        "itemId": "pusheen-sticker-01",
+        "x": 0.16,
+        "y": 0.08,
+        "scale": 0.38,
+        "rotation": -7,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "pusheen-sticker-05",
+        "x": 0.85,
+        "y": 0.92,
+        "scale": 0.2,
+        "rotation": 7,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "pusheen-sticker-09",
+        "x": 0.9,
+        "y": 0.12,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-kirby-portrait-grid",
+    "layoutId": "portrait-grid",
+    "name": {
+      "zh-Hant": "星之卡比 聯名",
+      "en": "Kirby collab"
+    },
+    "kind": "ip",
+    "collection": "kirby",
+    "background": "packs/templates/fan-ip/templates/ip-kirby-portrait-grid-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-kirby-portrait-grid-frame.svg",
+    "accentColor": "#e1599d",
+    "decorations": [
+      {
+        "itemId": "kirby-sticker-01",
+        "x": 0.16,
+        "y": 0.08,
+        "scale": 0.38,
+        "rotation": -7,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "kirby-sticker-05",
+        "x": 0.85,
+        "y": 0.92,
+        "scale": 0.2,
+        "rotation": 7,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "kirby-sticker-09",
+        "x": 0.9,
+        "y": 0.12,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-snoopy-portrait-grid",
+    "layoutId": "portrait-grid",
+    "name": {
+      "zh-Hant": "史努比 聯名",
+      "en": "Snoopy collab"
+    },
+    "kind": "ip",
+    "collection": "snoopy",
+    "background": "packs/templates/fan-ip/templates/ip-snoopy-portrait-grid-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-snoopy-portrait-grid-frame.svg",
+    "accentColor": "#2d6f9c",
+    "decorations": [
+      {
+        "itemId": "snoopy-sticker-01",
+        "x": 0.16,
+        "y": 0.08,
+        "scale": 0.38,
+        "rotation": -7,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "snoopy-sticker-05",
+        "x": 0.85,
+        "y": 0.92,
+        "scale": 0.2,
+        "rotation": 7,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "snoopy-sticker-09",
+        "x": 0.9,
+        "y": 0.12,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-mickey-mouse-portrait-grid",
+    "layoutId": "portrait-grid",
+    "name": {
+      "zh-Hant": "米奇與米妮 聯名",
+      "en": "Mickey & Minnie collab"
+    },
+    "kind": "ip",
+    "collection": "mickey-mouse",
+    "background": "packs/templates/fan-ip/templates/ip-mickey-mouse-portrait-grid-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-mickey-mouse-portrait-grid-frame.svg",
+    "accentColor": "#b43b31",
+    "decorations": [
+      {
+        "itemId": "mickey-mouse-sticker-01",
+        "x": 0.16,
+        "y": 0.08,
+        "scale": 0.38,
+        "rotation": -7,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "mickey-mouse-sticker-05",
+        "x": 0.85,
+        "y": 0.92,
+        "scale": 0.2,
+        "rotation": 7,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "mickey-mouse-sticker-09",
+        "x": 0.9,
+        "y": 0.12,
+        "scale": 0.12,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "blank-vertical",
+    "layoutId": "vertical",
+    "name": {
+      "zh-Hant": "空白自訂",
+      "en": "Blank custom"
+    },
+    "kind": "blank",
+    "collection": "blank",
+    "frame": "packs/templates/fan-ip/templates/frame-vertical.svg",
+    "decorations": [],
+    "license": "original"
+  },
+  {
+    "id": "ip-hello-kitty-vertical",
+    "layoutId": "vertical",
+    "name": {
+      "zh-Hant": "Hello Kitty 聯名",
+      "en": "Hello Kitty collab"
+    },
+    "kind": "ip",
+    "collection": "hello-kitty",
+    "background": "packs/templates/fan-ip/templates/ip-hello-kitty-vertical-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-hello-kitty-vertical-frame.svg",
+    "accentColor": "#d84478",
+    "decorations": [
+      {
+        "itemId": "hello-kitty-sticker-01",
+        "x": 0.13,
+        "y": 0.065,
+        "scale": 0.22,
+        "rotation": -5,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "hello-kitty-sticker-05",
+        "x": 0.87,
+        "y": 0.49,
+        "scale": 0.16,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "hello-kitty-sticker-09",
+        "x": 0.13,
+        "y": 0.93,
+        "scale": 0.2,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-cinnamoroll-vertical",
+    "layoutId": "vertical",
+    "name": {
+      "zh-Hant": "玉桂狗 聯名",
+      "en": "Cinnamoroll collab"
+    },
+    "kind": "ip",
+    "collection": "cinnamoroll",
+    "background": "packs/templates/fan-ip/templates/ip-cinnamoroll-vertical-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-cinnamoroll-vertical-frame.svg",
+    "accentColor": "#5faee0",
+    "decorations": [
+      {
+        "itemId": "cinnamoroll-sticker-01",
+        "x": 0.13,
+        "y": 0.065,
+        "scale": 0.22,
+        "rotation": -5,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "cinnamoroll-sticker-05",
+        "x": 0.87,
+        "y": 0.49,
+        "scale": 0.16,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "cinnamoroll-sticker-09",
+        "x": 0.13,
+        "y": 0.93,
+        "scale": 0.2,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-my-melody-vertical",
+    "layoutId": "vertical",
+    "name": {
+      "zh-Hant": "美樂蒂 聯名",
+      "en": "My Melody collab"
+    },
+    "kind": "ip",
+    "collection": "my-melody",
+    "background": "packs/templates/fan-ip/templates/ip-my-melody-vertical-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-my-melody-vertical-frame.svg",
+    "accentColor": "#df4e8b",
+    "decorations": [
+      {
+        "itemId": "my-melody-sticker-01",
+        "x": 0.13,
+        "y": 0.065,
+        "scale": 0.22,
+        "rotation": -5,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "my-melody-sticker-05",
+        "x": 0.87,
+        "y": 0.49,
+        "scale": 0.16,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "my-melody-sticker-09",
+        "x": 0.13,
+        "y": 0.93,
+        "scale": 0.2,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-kuromi-vertical",
+    "layoutId": "vertical",
+    "name": {
+      "zh-Hant": "酷洛米 聯名",
+      "en": "Kuromi collab"
+    },
+    "kind": "ip",
+    "collection": "kuromi",
+    "background": "packs/templates/fan-ip/templates/ip-kuromi-vertical-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-kuromi-vertical-frame.svg",
+    "accentColor": "#6543a5",
+    "decorations": [
+      {
+        "itemId": "kuromi-sticker-01",
+        "x": 0.13,
+        "y": 0.065,
+        "scale": 0.22,
+        "rotation": -5,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "kuromi-sticker-05",
+        "x": 0.87,
+        "y": 0.49,
+        "scale": 0.16,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "kuromi-sticker-09",
+        "x": 0.13,
+        "y": 0.93,
+        "scale": 0.2,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-pompompurin-vertical",
+    "layoutId": "vertical",
+    "name": {
+      "zh-Hant": "布丁狗 聯名",
+      "en": "Pompompurin collab"
+    },
+    "kind": "ip",
+    "collection": "pompompurin",
+    "background": "packs/templates/fan-ip/templates/ip-pompompurin-vertical-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-pompompurin-vertical-frame.svg",
+    "accentColor": "#b57932",
+    "decorations": [
+      {
+        "itemId": "pompompurin-sticker-01",
+        "x": 0.13,
+        "y": 0.065,
+        "scale": 0.22,
+        "rotation": -5,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "pompompurin-sticker-05",
+        "x": 0.87,
+        "y": 0.49,
+        "scale": 0.16,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "pompompurin-sticker-09",
+        "x": 0.13,
+        "y": 0.93,
+        "scale": 0.2,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-little-twin-stars-vertical",
+    "layoutId": "vertical",
+    "name": {
+      "zh-Hant": "雙星仙子 聯名",
+      "en": "Little Twin Stars collab"
+    },
+    "kind": "ip",
+    "collection": "little-twin-stars",
+    "background": "packs/templates/fan-ip/templates/ip-little-twin-stars-vertical-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-little-twin-stars-vertical-frame.svg",
+    "accentColor": "#5d75c8",
+    "decorations": [
+      {
+        "itemId": "little-twin-stars-sticker-01",
+        "x": 0.13,
+        "y": 0.065,
+        "scale": 0.22,
+        "rotation": -5,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "little-twin-stars-sticker-05",
+        "x": 0.87,
+        "y": 0.49,
+        "scale": 0.16,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "little-twin-stars-sticker-09",
+        "x": 0.13,
+        "y": 0.93,
+        "scale": 0.2,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-miffy-vertical",
+    "layoutId": "vertical",
+    "name": {
+      "zh-Hant": "米飛兔 聯名",
+      "en": "Miffy collab"
+    },
+    "kind": "ip",
+    "collection": "miffy",
+    "background": "packs/templates/fan-ip/templates/ip-miffy-vertical-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-miffy-vertical-frame.svg",
+    "accentColor": "#b87832",
+    "decorations": [
+      {
+        "itemId": "miffy-sticker-01",
+        "x": 0.13,
+        "y": 0.065,
+        "scale": 0.22,
+        "rotation": -5,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "miffy-sticker-05",
+        "x": 0.87,
+        "y": 0.49,
+        "scale": 0.16,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "miffy-sticker-09",
+        "x": 0.13,
+        "y": 0.93,
+        "scale": 0.2,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-rilakkuma-vertical",
+    "layoutId": "vertical",
+    "name": {
+      "zh-Hant": "拉拉熊 聯名",
+      "en": "Rilakkuma collab"
+    },
+    "kind": "ip",
+    "collection": "rilakkuma",
+    "background": "packs/templates/fan-ip/templates/ip-rilakkuma-vertical-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-rilakkuma-vertical-frame.svg",
+    "accentColor": "#a06d4e",
+    "decorations": [
+      {
+        "itemId": "rilakkuma-sticker-01",
+        "x": 0.13,
+        "y": 0.065,
+        "scale": 0.22,
+        "rotation": -5,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "rilakkuma-sticker-05",
+        "x": 0.87,
+        "y": 0.49,
+        "scale": 0.16,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "rilakkuma-sticker-09",
+        "x": 0.13,
+        "y": 0.93,
+        "scale": 0.2,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-sumikko-gurashi-vertical",
+    "layoutId": "vertical",
+    "name": {
+      "zh-Hant": "角落生物 聯名",
+      "en": "Sumikko Gurashi collab"
+    },
+    "kind": "ip",
+    "collection": "sumikko-gurashi",
+    "background": "packs/templates/fan-ip/templates/ip-sumikko-gurashi-vertical-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-sumikko-gurashi-vertical-frame.svg",
+    "accentColor": "#5d8c68",
+    "decorations": [
+      {
+        "itemId": "sumikko-gurashi-sticker-01",
+        "x": 0.13,
+        "y": 0.065,
+        "scale": 0.22,
+        "rotation": -5,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "sumikko-gurashi-sticker-05",
+        "x": 0.87,
+        "y": 0.49,
+        "scale": 0.16,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "sumikko-gurashi-sticker-09",
+        "x": 0.13,
+        "y": 0.93,
+        "scale": 0.2,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-pusheen-vertical",
+    "layoutId": "vertical",
+    "name": {
+      "zh-Hant": "胖吉貓 聯名",
+      "en": "Pusheen collab"
+    },
+    "kind": "ip",
+    "collection": "pusheen",
+    "background": "packs/templates/fan-ip/templates/ip-pusheen-vertical-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-pusheen-vertical-frame.svg",
+    "accentColor": "#8e7275",
+    "decorations": [
+      {
+        "itemId": "pusheen-sticker-01",
+        "x": 0.13,
+        "y": 0.065,
+        "scale": 0.22,
+        "rotation": -5,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "pusheen-sticker-05",
+        "x": 0.87,
+        "y": 0.49,
+        "scale": 0.16,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "pusheen-sticker-09",
+        "x": 0.13,
+        "y": 0.93,
+        "scale": 0.2,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-kirby-vertical",
+    "layoutId": "vertical",
+    "name": {
+      "zh-Hant": "星之卡比 聯名",
+      "en": "Kirby collab"
+    },
+    "kind": "ip",
+    "collection": "kirby",
+    "background": "packs/templates/fan-ip/templates/ip-kirby-vertical-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-kirby-vertical-frame.svg",
+    "accentColor": "#e1599d",
+    "decorations": [
+      {
+        "itemId": "kirby-sticker-01",
+        "x": 0.13,
+        "y": 0.065,
+        "scale": 0.22,
+        "rotation": -5,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "kirby-sticker-05",
+        "x": 0.87,
+        "y": 0.49,
+        "scale": 0.16,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "kirby-sticker-09",
+        "x": 0.13,
+        "y": 0.93,
+        "scale": 0.2,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-snoopy-vertical",
+    "layoutId": "vertical",
+    "name": {
+      "zh-Hant": "史努比 聯名",
+      "en": "Snoopy collab"
+    },
+    "kind": "ip",
+    "collection": "snoopy",
+    "background": "packs/templates/fan-ip/templates/ip-snoopy-vertical-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-snoopy-vertical-frame.svg",
+    "accentColor": "#2d6f9c",
+    "decorations": [
+      {
+        "itemId": "snoopy-sticker-01",
+        "x": 0.13,
+        "y": 0.065,
+        "scale": 0.22,
+        "rotation": -5,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "snoopy-sticker-05",
+        "x": 0.87,
+        "y": 0.49,
+        "scale": 0.16,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "snoopy-sticker-09",
+        "x": 0.13,
+        "y": 0.93,
+        "scale": 0.2,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-mickey-mouse-vertical",
+    "layoutId": "vertical",
+    "name": {
+      "zh-Hant": "米奇與米妮 聯名",
+      "en": "Mickey & Minnie collab"
+    },
+    "kind": "ip",
+    "collection": "mickey-mouse",
+    "background": "packs/templates/fan-ip/templates/ip-mickey-mouse-vertical-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-mickey-mouse-vertical-frame.svg",
+    "accentColor": "#b43b31",
+    "decorations": [
+      {
+        "itemId": "mickey-mouse-sticker-01",
+        "x": 0.13,
+        "y": 0.065,
+        "scale": 0.22,
+        "rotation": -5,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "mickey-mouse-sticker-05",
+        "x": 0.87,
+        "y": 0.49,
+        "scale": 0.16,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "mickey-mouse-sticker-09",
+        "x": 0.13,
+        "y": 0.93,
+        "scale": 0.2,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "blank-classic",
+    "layoutId": "classic",
+    "name": {
+      "zh-Hant": "空白自訂",
+      "en": "Blank custom"
+    },
+    "kind": "blank",
+    "collection": "blank",
+    "frame": "packs/templates/fan-ip/templates/frame-classic.svg",
+    "decorations": [],
+    "license": "original"
+  },
+  {
+    "id": "ip-hello-kitty-classic",
+    "layoutId": "classic",
+    "name": {
+      "zh-Hant": "Hello Kitty 聯名",
+      "en": "Hello Kitty collab"
+    },
+    "kind": "ip",
+    "collection": "hello-kitty",
+    "background": "packs/templates/fan-ip/templates/ip-hello-kitty-classic-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-hello-kitty-classic-frame.svg",
+    "accentColor": "#d84478",
+    "decorations": [
+      {
+        "itemId": "hello-kitty-sticker-01",
+        "x": 0.13,
+        "y": 0.07,
+        "scale": 0.16,
+        "rotation": -5,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "hello-kitty-sticker-05",
+        "x": 0.87,
+        "y": 0.49,
+        "scale": 0.13,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "hello-kitty-sticker-09",
+        "x": 0.13,
+        "y": 0.93,
+        "scale": 0.15,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-cinnamoroll-classic",
+    "layoutId": "classic",
+    "name": {
+      "zh-Hant": "玉桂狗 聯名",
+      "en": "Cinnamoroll collab"
+    },
+    "kind": "ip",
+    "collection": "cinnamoroll",
+    "background": "packs/templates/fan-ip/templates/ip-cinnamoroll-classic-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-cinnamoroll-classic-frame.svg",
+    "accentColor": "#5faee0",
+    "decorations": [
+      {
+        "itemId": "cinnamoroll-sticker-01",
+        "x": 0.13,
+        "y": 0.07,
+        "scale": 0.16,
+        "rotation": -5,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "cinnamoroll-sticker-05",
+        "x": 0.87,
+        "y": 0.49,
+        "scale": 0.13,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "cinnamoroll-sticker-09",
+        "x": 0.13,
+        "y": 0.93,
+        "scale": 0.15,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-my-melody-classic",
+    "layoutId": "classic",
+    "name": {
+      "zh-Hant": "美樂蒂 聯名",
+      "en": "My Melody collab"
+    },
+    "kind": "ip",
+    "collection": "my-melody",
+    "background": "packs/templates/fan-ip/templates/ip-my-melody-classic-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-my-melody-classic-frame.svg",
+    "accentColor": "#df4e8b",
+    "decorations": [
+      {
+        "itemId": "my-melody-sticker-01",
+        "x": 0.13,
+        "y": 0.07,
+        "scale": 0.16,
+        "rotation": -5,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "my-melody-sticker-05",
+        "x": 0.87,
+        "y": 0.49,
+        "scale": 0.13,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "my-melody-sticker-09",
+        "x": 0.13,
+        "y": 0.93,
+        "scale": 0.15,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-kuromi-classic",
+    "layoutId": "classic",
+    "name": {
+      "zh-Hant": "酷洛米 聯名",
+      "en": "Kuromi collab"
+    },
+    "kind": "ip",
+    "collection": "kuromi",
+    "background": "packs/templates/fan-ip/templates/ip-kuromi-classic-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-kuromi-classic-frame.svg",
+    "accentColor": "#6543a5",
+    "decorations": [
+      {
+        "itemId": "kuromi-sticker-01",
+        "x": 0.13,
+        "y": 0.07,
+        "scale": 0.16,
+        "rotation": -5,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "kuromi-sticker-05",
+        "x": 0.87,
+        "y": 0.49,
+        "scale": 0.13,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "kuromi-sticker-09",
+        "x": 0.13,
+        "y": 0.93,
+        "scale": 0.15,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-pompompurin-classic",
+    "layoutId": "classic",
+    "name": {
+      "zh-Hant": "布丁狗 聯名",
+      "en": "Pompompurin collab"
+    },
+    "kind": "ip",
+    "collection": "pompompurin",
+    "background": "packs/templates/fan-ip/templates/ip-pompompurin-classic-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-pompompurin-classic-frame.svg",
+    "accentColor": "#b57932",
+    "decorations": [
+      {
+        "itemId": "pompompurin-sticker-01",
+        "x": 0.13,
+        "y": 0.07,
+        "scale": 0.16,
+        "rotation": -5,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "pompompurin-sticker-05",
+        "x": 0.87,
+        "y": 0.49,
+        "scale": 0.13,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "pompompurin-sticker-09",
+        "x": 0.13,
+        "y": 0.93,
+        "scale": 0.15,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-little-twin-stars-classic",
+    "layoutId": "classic",
+    "name": {
+      "zh-Hant": "雙星仙子 聯名",
+      "en": "Little Twin Stars collab"
+    },
+    "kind": "ip",
+    "collection": "little-twin-stars",
+    "background": "packs/templates/fan-ip/templates/ip-little-twin-stars-classic-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-little-twin-stars-classic-frame.svg",
+    "accentColor": "#5d75c8",
+    "decorations": [
+      {
+        "itemId": "little-twin-stars-sticker-01",
+        "x": 0.13,
+        "y": 0.07,
+        "scale": 0.16,
+        "rotation": -5,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "little-twin-stars-sticker-05",
+        "x": 0.87,
+        "y": 0.49,
+        "scale": 0.13,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "little-twin-stars-sticker-09",
+        "x": 0.13,
+        "y": 0.93,
+        "scale": 0.15,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-miffy-classic",
+    "layoutId": "classic",
+    "name": {
+      "zh-Hant": "米飛兔 聯名",
+      "en": "Miffy collab"
+    },
+    "kind": "ip",
+    "collection": "miffy",
+    "background": "packs/templates/fan-ip/templates/ip-miffy-classic-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-miffy-classic-frame.svg",
+    "accentColor": "#b87832",
+    "decorations": [
+      {
+        "itemId": "miffy-sticker-01",
+        "x": 0.13,
+        "y": 0.07,
+        "scale": 0.16,
+        "rotation": -5,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "miffy-sticker-05",
+        "x": 0.87,
+        "y": 0.49,
+        "scale": 0.13,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "miffy-sticker-09",
+        "x": 0.13,
+        "y": 0.93,
+        "scale": 0.15,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-rilakkuma-classic",
+    "layoutId": "classic",
+    "name": {
+      "zh-Hant": "拉拉熊 聯名",
+      "en": "Rilakkuma collab"
+    },
+    "kind": "ip",
+    "collection": "rilakkuma",
+    "background": "packs/templates/fan-ip/templates/ip-rilakkuma-classic-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-rilakkuma-classic-frame.svg",
+    "accentColor": "#a06d4e",
+    "decorations": [
+      {
+        "itemId": "rilakkuma-sticker-01",
+        "x": 0.13,
+        "y": 0.07,
+        "scale": 0.16,
+        "rotation": -5,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "rilakkuma-sticker-05",
+        "x": 0.87,
+        "y": 0.49,
+        "scale": 0.13,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "rilakkuma-sticker-09",
+        "x": 0.13,
+        "y": 0.93,
+        "scale": 0.15,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-sumikko-gurashi-classic",
+    "layoutId": "classic",
+    "name": {
+      "zh-Hant": "角落生物 聯名",
+      "en": "Sumikko Gurashi collab"
+    },
+    "kind": "ip",
+    "collection": "sumikko-gurashi",
+    "background": "packs/templates/fan-ip/templates/ip-sumikko-gurashi-classic-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-sumikko-gurashi-classic-frame.svg",
+    "accentColor": "#5d8c68",
+    "decorations": [
+      {
+        "itemId": "sumikko-gurashi-sticker-01",
+        "x": 0.13,
+        "y": 0.07,
+        "scale": 0.16,
+        "rotation": -5,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "sumikko-gurashi-sticker-05",
+        "x": 0.87,
+        "y": 0.49,
+        "scale": 0.13,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "sumikko-gurashi-sticker-09",
+        "x": 0.13,
+        "y": 0.93,
+        "scale": 0.15,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-pusheen-classic",
+    "layoutId": "classic",
+    "name": {
+      "zh-Hant": "胖吉貓 聯名",
+      "en": "Pusheen collab"
+    },
+    "kind": "ip",
+    "collection": "pusheen",
+    "background": "packs/templates/fan-ip/templates/ip-pusheen-classic-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-pusheen-classic-frame.svg",
+    "accentColor": "#8e7275",
+    "decorations": [
+      {
+        "itemId": "pusheen-sticker-01",
+        "x": 0.13,
+        "y": 0.07,
+        "scale": 0.16,
+        "rotation": -5,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "pusheen-sticker-05",
+        "x": 0.87,
+        "y": 0.49,
+        "scale": 0.13,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "pusheen-sticker-09",
+        "x": 0.13,
+        "y": 0.93,
+        "scale": 0.15,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-kirby-classic",
+    "layoutId": "classic",
+    "name": {
+      "zh-Hant": "星之卡比 聯名",
+      "en": "Kirby collab"
+    },
+    "kind": "ip",
+    "collection": "kirby",
+    "background": "packs/templates/fan-ip/templates/ip-kirby-classic-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-kirby-classic-frame.svg",
+    "accentColor": "#e1599d",
+    "decorations": [
+      {
+        "itemId": "kirby-sticker-01",
+        "x": 0.13,
+        "y": 0.07,
+        "scale": 0.16,
+        "rotation": -5,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "kirby-sticker-05",
+        "x": 0.87,
+        "y": 0.49,
+        "scale": 0.13,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "kirby-sticker-09",
+        "x": 0.13,
+        "y": 0.93,
+        "scale": 0.15,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-snoopy-classic",
+    "layoutId": "classic",
+    "name": {
+      "zh-Hant": "史努比 聯名",
+      "en": "Snoopy collab"
+    },
+    "kind": "ip",
+    "collection": "snoopy",
+    "background": "packs/templates/fan-ip/templates/ip-snoopy-classic-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-snoopy-classic-frame.svg",
+    "accentColor": "#2d6f9c",
+    "decorations": [
+      {
+        "itemId": "snoopy-sticker-01",
+        "x": 0.13,
+        "y": 0.07,
+        "scale": 0.16,
+        "rotation": -5,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "snoopy-sticker-05",
+        "x": 0.87,
+        "y": 0.49,
+        "scale": 0.13,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "snoopy-sticker-09",
+        "x": 0.13,
+        "y": 0.93,
+        "scale": 0.15,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-mickey-mouse-classic",
+    "layoutId": "classic",
+    "name": {
+      "zh-Hant": "米奇與米妮 聯名",
+      "en": "Mickey & Minnie collab"
+    },
+    "kind": "ip",
+    "collection": "mickey-mouse",
+    "background": "packs/templates/fan-ip/templates/ip-mickey-mouse-classic-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-mickey-mouse-classic-frame.svg",
+    "accentColor": "#b43b31",
+    "decorations": [
+      {
+        "itemId": "mickey-mouse-sticker-01",
+        "x": 0.13,
+        "y": 0.07,
+        "scale": 0.16,
+        "rotation": -5,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "mickey-mouse-sticker-05",
+        "x": 0.87,
+        "y": 0.49,
+        "scale": 0.13,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "mickey-mouse-sticker-09",
+        "x": 0.13,
+        "y": 0.93,
+        "scale": 0.15,
+        "rotation": -4,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "blank-horizontal",
+    "layoutId": "horizontal",
+    "name": {
+      "zh-Hant": "空白自訂",
+      "en": "Blank custom"
+    },
+    "kind": "blank",
+    "collection": "blank",
+    "frame": "packs/templates/fan-ip/templates/frame-horizontal.svg",
+    "decorations": [],
+    "license": "original"
+  },
+  {
+    "id": "ip-hello-kitty-horizontal",
+    "layoutId": "horizontal",
+    "name": {
+      "zh-Hant": "Hello Kitty 聯名",
+      "en": "Hello Kitty collab"
+    },
+    "kind": "ip",
+    "collection": "hello-kitty",
+    "background": "packs/templates/fan-ip/templates/ip-hello-kitty-horizontal-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-hello-kitty-horizontal-frame.svg",
+    "accentColor": "#d84478",
+    "decorations": [
+      {
+        "itemId": "hello-kitty-sticker-01",
+        "x": 0.13,
+        "y": 0.16,
+        "scale": 0.22,
+        "rotation": -6,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "hello-kitty-sticker-05",
+        "x": 0.87,
+        "y": 0.16,
+        "scale": 0.19,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "hello-kitty-sticker-09",
+        "x": 0.5,
+        "y": 0.82,
+        "scale": 0.11,
+        "rotation": -3,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-cinnamoroll-horizontal",
+    "layoutId": "horizontal",
+    "name": {
+      "zh-Hant": "玉桂狗 聯名",
+      "en": "Cinnamoroll collab"
+    },
+    "kind": "ip",
+    "collection": "cinnamoroll",
+    "background": "packs/templates/fan-ip/templates/ip-cinnamoroll-horizontal-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-cinnamoroll-horizontal-frame.svg",
+    "accentColor": "#5faee0",
+    "decorations": [
+      {
+        "itemId": "cinnamoroll-sticker-01",
+        "x": 0.13,
+        "y": 0.16,
+        "scale": 0.22,
+        "rotation": -6,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "cinnamoroll-sticker-05",
+        "x": 0.87,
+        "y": 0.16,
+        "scale": 0.19,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "cinnamoroll-sticker-09",
+        "x": 0.5,
+        "y": 0.82,
+        "scale": 0.11,
+        "rotation": -3,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-my-melody-horizontal",
+    "layoutId": "horizontal",
+    "name": {
+      "zh-Hant": "美樂蒂 聯名",
+      "en": "My Melody collab"
+    },
+    "kind": "ip",
+    "collection": "my-melody",
+    "background": "packs/templates/fan-ip/templates/ip-my-melody-horizontal-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-my-melody-horizontal-frame.svg",
+    "accentColor": "#df4e8b",
+    "decorations": [
+      {
+        "itemId": "my-melody-sticker-01",
+        "x": 0.13,
+        "y": 0.16,
+        "scale": 0.22,
+        "rotation": -6,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "my-melody-sticker-05",
+        "x": 0.87,
+        "y": 0.16,
+        "scale": 0.19,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "my-melody-sticker-09",
+        "x": 0.5,
+        "y": 0.82,
+        "scale": 0.11,
+        "rotation": -3,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-kuromi-horizontal",
+    "layoutId": "horizontal",
+    "name": {
+      "zh-Hant": "酷洛米 聯名",
+      "en": "Kuromi collab"
+    },
+    "kind": "ip",
+    "collection": "kuromi",
+    "background": "packs/templates/fan-ip/templates/ip-kuromi-horizontal-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-kuromi-horizontal-frame.svg",
+    "accentColor": "#6543a5",
+    "decorations": [
+      {
+        "itemId": "kuromi-sticker-01",
+        "x": 0.13,
+        "y": 0.16,
+        "scale": 0.22,
+        "rotation": -6,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "kuromi-sticker-05",
+        "x": 0.87,
+        "y": 0.16,
+        "scale": 0.19,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "kuromi-sticker-09",
+        "x": 0.5,
+        "y": 0.82,
+        "scale": 0.11,
+        "rotation": -3,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-pompompurin-horizontal",
+    "layoutId": "horizontal",
+    "name": {
+      "zh-Hant": "布丁狗 聯名",
+      "en": "Pompompurin collab"
+    },
+    "kind": "ip",
+    "collection": "pompompurin",
+    "background": "packs/templates/fan-ip/templates/ip-pompompurin-horizontal-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-pompompurin-horizontal-frame.svg",
+    "accentColor": "#b57932",
+    "decorations": [
+      {
+        "itemId": "pompompurin-sticker-01",
+        "x": 0.13,
+        "y": 0.16,
+        "scale": 0.22,
+        "rotation": -6,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "pompompurin-sticker-05",
+        "x": 0.87,
+        "y": 0.16,
+        "scale": 0.19,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "pompompurin-sticker-09",
+        "x": 0.5,
+        "y": 0.82,
+        "scale": 0.11,
+        "rotation": -3,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-little-twin-stars-horizontal",
+    "layoutId": "horizontal",
+    "name": {
+      "zh-Hant": "雙星仙子 聯名",
+      "en": "Little Twin Stars collab"
+    },
+    "kind": "ip",
+    "collection": "little-twin-stars",
+    "background": "packs/templates/fan-ip/templates/ip-little-twin-stars-horizontal-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-little-twin-stars-horizontal-frame.svg",
+    "accentColor": "#5d75c8",
+    "decorations": [
+      {
+        "itemId": "little-twin-stars-sticker-01",
+        "x": 0.13,
+        "y": 0.16,
+        "scale": 0.22,
+        "rotation": -6,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "little-twin-stars-sticker-05",
+        "x": 0.87,
+        "y": 0.16,
+        "scale": 0.19,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "little-twin-stars-sticker-09",
+        "x": 0.5,
+        "y": 0.82,
+        "scale": 0.11,
+        "rotation": -3,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-miffy-horizontal",
+    "layoutId": "horizontal",
+    "name": {
+      "zh-Hant": "米飛兔 聯名",
+      "en": "Miffy collab"
+    },
+    "kind": "ip",
+    "collection": "miffy",
+    "background": "packs/templates/fan-ip/templates/ip-miffy-horizontal-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-miffy-horizontal-frame.svg",
+    "accentColor": "#b87832",
+    "decorations": [
+      {
+        "itemId": "miffy-sticker-01",
+        "x": 0.13,
+        "y": 0.16,
+        "scale": 0.22,
+        "rotation": -6,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "miffy-sticker-05",
+        "x": 0.87,
+        "y": 0.16,
+        "scale": 0.19,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "miffy-sticker-09",
+        "x": 0.5,
+        "y": 0.82,
+        "scale": 0.11,
+        "rotation": -3,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-rilakkuma-horizontal",
+    "layoutId": "horizontal",
+    "name": {
+      "zh-Hant": "拉拉熊 聯名",
+      "en": "Rilakkuma collab"
+    },
+    "kind": "ip",
+    "collection": "rilakkuma",
+    "background": "packs/templates/fan-ip/templates/ip-rilakkuma-horizontal-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-rilakkuma-horizontal-frame.svg",
+    "accentColor": "#a06d4e",
+    "decorations": [
+      {
+        "itemId": "rilakkuma-sticker-01",
+        "x": 0.13,
+        "y": 0.16,
+        "scale": 0.22,
+        "rotation": -6,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "rilakkuma-sticker-05",
+        "x": 0.87,
+        "y": 0.16,
+        "scale": 0.19,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "rilakkuma-sticker-09",
+        "x": 0.5,
+        "y": 0.82,
+        "scale": 0.11,
+        "rotation": -3,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-sumikko-gurashi-horizontal",
+    "layoutId": "horizontal",
+    "name": {
+      "zh-Hant": "角落生物 聯名",
+      "en": "Sumikko Gurashi collab"
+    },
+    "kind": "ip",
+    "collection": "sumikko-gurashi",
+    "background": "packs/templates/fan-ip/templates/ip-sumikko-gurashi-horizontal-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-sumikko-gurashi-horizontal-frame.svg",
+    "accentColor": "#5d8c68",
+    "decorations": [
+      {
+        "itemId": "sumikko-gurashi-sticker-01",
+        "x": 0.13,
+        "y": 0.16,
+        "scale": 0.22,
+        "rotation": -6,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "sumikko-gurashi-sticker-05",
+        "x": 0.87,
+        "y": 0.16,
+        "scale": 0.19,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "sumikko-gurashi-sticker-09",
+        "x": 0.5,
+        "y": 0.82,
+        "scale": 0.11,
+        "rotation": -3,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-pusheen-horizontal",
+    "layoutId": "horizontal",
+    "name": {
+      "zh-Hant": "胖吉貓 聯名",
+      "en": "Pusheen collab"
+    },
+    "kind": "ip",
+    "collection": "pusheen",
+    "background": "packs/templates/fan-ip/templates/ip-pusheen-horizontal-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-pusheen-horizontal-frame.svg",
+    "accentColor": "#8e7275",
+    "decorations": [
+      {
+        "itemId": "pusheen-sticker-01",
+        "x": 0.13,
+        "y": 0.16,
+        "scale": 0.22,
+        "rotation": -6,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "pusheen-sticker-05",
+        "x": 0.87,
+        "y": 0.16,
+        "scale": 0.19,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "pusheen-sticker-09",
+        "x": 0.5,
+        "y": 0.82,
+        "scale": 0.11,
+        "rotation": -3,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-kirby-horizontal",
+    "layoutId": "horizontal",
+    "name": {
+      "zh-Hant": "星之卡比 聯名",
+      "en": "Kirby collab"
+    },
+    "kind": "ip",
+    "collection": "kirby",
+    "background": "packs/templates/fan-ip/templates/ip-kirby-horizontal-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-kirby-horizontal-frame.svg",
+    "accentColor": "#e1599d",
+    "decorations": [
+      {
+        "itemId": "kirby-sticker-01",
+        "x": 0.13,
+        "y": 0.16,
+        "scale": 0.22,
+        "rotation": -6,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "kirby-sticker-05",
+        "x": 0.87,
+        "y": 0.16,
+        "scale": 0.19,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "kirby-sticker-09",
+        "x": 0.5,
+        "y": 0.82,
+        "scale": 0.11,
+        "rotation": -3,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-snoopy-horizontal",
+    "layoutId": "horizontal",
+    "name": {
+      "zh-Hant": "史努比 聯名",
+      "en": "Snoopy collab"
+    },
+    "kind": "ip",
+    "collection": "snoopy",
+    "background": "packs/templates/fan-ip/templates/ip-snoopy-horizontal-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-snoopy-horizontal-frame.svg",
+    "accentColor": "#2d6f9c",
+    "decorations": [
+      {
+        "itemId": "snoopy-sticker-01",
+        "x": 0.13,
+        "y": 0.16,
+        "scale": 0.22,
+        "rotation": -6,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "snoopy-sticker-05",
+        "x": 0.87,
+        "y": 0.16,
+        "scale": 0.19,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "snoopy-sticker-09",
+        "x": 0.5,
+        "y": 0.82,
+        "scale": 0.11,
+        "rotation": -3,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-mickey-mouse-horizontal",
+    "layoutId": "horizontal",
+    "name": {
+      "zh-Hant": "米奇與米妮 聯名",
+      "en": "Mickey & Minnie collab"
+    },
+    "kind": "ip",
+    "collection": "mickey-mouse",
+    "background": "packs/templates/fan-ip/templates/ip-mickey-mouse-horizontal-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-mickey-mouse-horizontal-frame.svg",
+    "accentColor": "#b43b31",
+    "decorations": [
+      {
+        "itemId": "mickey-mouse-sticker-01",
+        "x": 0.13,
+        "y": 0.16,
+        "scale": 0.22,
+        "rotation": -6,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "mickey-mouse-sticker-05",
+        "x": 0.87,
+        "y": 0.16,
+        "scale": 0.19,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "mickey-mouse-sticker-09",
+        "x": 0.5,
+        "y": 0.82,
+        "scale": 0.11,
+        "rotation": -3,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "blank-wide",
+    "layoutId": "wide",
+    "name": {
+      "zh-Hant": "空白自訂",
+      "en": "Blank custom"
+    },
+    "kind": "blank",
+    "collection": "blank",
+    "frame": "packs/templates/fan-ip/templates/frame-wide.svg",
+    "decorations": [],
+    "license": "original"
+  },
+  {
+    "id": "ip-hello-kitty-wide",
+    "layoutId": "wide",
+    "name": {
+      "zh-Hant": "Hello Kitty 聯名",
+      "en": "Hello Kitty collab"
+    },
+    "kind": "ip",
+    "collection": "hello-kitty",
+    "background": "packs/templates/fan-ip/templates/ip-hello-kitty-wide-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-hello-kitty-wide-frame.svg",
+    "accentColor": "#d84478",
+    "decorations": [
+      {
+        "itemId": "hello-kitty-sticker-01",
+        "x": 0.11,
+        "y": 0.17,
+        "scale": 0.12,
+        "rotation": -6,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "hello-kitty-sticker-05",
+        "x": 0.89,
+        "y": 0.17,
+        "scale": 0.11,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "hello-kitty-sticker-09",
+        "x": 0.5,
+        "y": 0.82,
+        "scale": 0.08,
+        "rotation": -3,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-cinnamoroll-wide",
+    "layoutId": "wide",
+    "name": {
+      "zh-Hant": "玉桂狗 聯名",
+      "en": "Cinnamoroll collab"
+    },
+    "kind": "ip",
+    "collection": "cinnamoroll",
+    "background": "packs/templates/fan-ip/templates/ip-cinnamoroll-wide-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-cinnamoroll-wide-frame.svg",
+    "accentColor": "#5faee0",
+    "decorations": [
+      {
+        "itemId": "cinnamoroll-sticker-01",
+        "x": 0.11,
+        "y": 0.17,
+        "scale": 0.12,
+        "rotation": -6,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "cinnamoroll-sticker-05",
+        "x": 0.89,
+        "y": 0.17,
+        "scale": 0.11,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "cinnamoroll-sticker-09",
+        "x": 0.5,
+        "y": 0.82,
+        "scale": 0.08,
+        "rotation": -3,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-my-melody-wide",
+    "layoutId": "wide",
+    "name": {
+      "zh-Hant": "美樂蒂 聯名",
+      "en": "My Melody collab"
+    },
+    "kind": "ip",
+    "collection": "my-melody",
+    "background": "packs/templates/fan-ip/templates/ip-my-melody-wide-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-my-melody-wide-frame.svg",
+    "accentColor": "#df4e8b",
+    "decorations": [
+      {
+        "itemId": "my-melody-sticker-01",
+        "x": 0.11,
+        "y": 0.17,
+        "scale": 0.12,
+        "rotation": -6,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "my-melody-sticker-05",
+        "x": 0.89,
+        "y": 0.17,
+        "scale": 0.11,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "my-melody-sticker-09",
+        "x": 0.5,
+        "y": 0.82,
+        "scale": 0.08,
+        "rotation": -3,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-kuromi-wide",
+    "layoutId": "wide",
+    "name": {
+      "zh-Hant": "酷洛米 聯名",
+      "en": "Kuromi collab"
+    },
+    "kind": "ip",
+    "collection": "kuromi",
+    "background": "packs/templates/fan-ip/templates/ip-kuromi-wide-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-kuromi-wide-frame.svg",
+    "accentColor": "#6543a5",
+    "decorations": [
+      {
+        "itemId": "kuromi-sticker-01",
+        "x": 0.11,
+        "y": 0.17,
+        "scale": 0.12,
+        "rotation": -6,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "kuromi-sticker-05",
+        "x": 0.89,
+        "y": 0.17,
+        "scale": 0.11,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "kuromi-sticker-09",
+        "x": 0.5,
+        "y": 0.82,
+        "scale": 0.08,
+        "rotation": -3,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-pompompurin-wide",
+    "layoutId": "wide",
+    "name": {
+      "zh-Hant": "布丁狗 聯名",
+      "en": "Pompompurin collab"
+    },
+    "kind": "ip",
+    "collection": "pompompurin",
+    "background": "packs/templates/fan-ip/templates/ip-pompompurin-wide-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-pompompurin-wide-frame.svg",
+    "accentColor": "#b57932",
+    "decorations": [
+      {
+        "itemId": "pompompurin-sticker-01",
+        "x": 0.11,
+        "y": 0.17,
+        "scale": 0.12,
+        "rotation": -6,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "pompompurin-sticker-05",
+        "x": 0.89,
+        "y": 0.17,
+        "scale": 0.11,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "pompompurin-sticker-09",
+        "x": 0.5,
+        "y": 0.82,
+        "scale": 0.08,
+        "rotation": -3,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-little-twin-stars-wide",
+    "layoutId": "wide",
+    "name": {
+      "zh-Hant": "雙星仙子 聯名",
+      "en": "Little Twin Stars collab"
+    },
+    "kind": "ip",
+    "collection": "little-twin-stars",
+    "background": "packs/templates/fan-ip/templates/ip-little-twin-stars-wide-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-little-twin-stars-wide-frame.svg",
+    "accentColor": "#5d75c8",
+    "decorations": [
+      {
+        "itemId": "little-twin-stars-sticker-01",
+        "x": 0.11,
+        "y": 0.17,
+        "scale": 0.12,
+        "rotation": -6,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "little-twin-stars-sticker-05",
+        "x": 0.89,
+        "y": 0.17,
+        "scale": 0.11,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "little-twin-stars-sticker-09",
+        "x": 0.5,
+        "y": 0.82,
+        "scale": 0.08,
+        "rotation": -3,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-miffy-wide",
+    "layoutId": "wide",
+    "name": {
+      "zh-Hant": "米飛兔 聯名",
+      "en": "Miffy collab"
+    },
+    "kind": "ip",
+    "collection": "miffy",
+    "background": "packs/templates/fan-ip/templates/ip-miffy-wide-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-miffy-wide-frame.svg",
+    "accentColor": "#b87832",
+    "decorations": [
+      {
+        "itemId": "miffy-sticker-01",
+        "x": 0.11,
+        "y": 0.17,
+        "scale": 0.12,
+        "rotation": -6,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "miffy-sticker-05",
+        "x": 0.89,
+        "y": 0.17,
+        "scale": 0.11,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "miffy-sticker-09",
+        "x": 0.5,
+        "y": 0.82,
+        "scale": 0.08,
+        "rotation": -3,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-rilakkuma-wide",
+    "layoutId": "wide",
+    "name": {
+      "zh-Hant": "拉拉熊 聯名",
+      "en": "Rilakkuma collab"
+    },
+    "kind": "ip",
+    "collection": "rilakkuma",
+    "background": "packs/templates/fan-ip/templates/ip-rilakkuma-wide-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-rilakkuma-wide-frame.svg",
+    "accentColor": "#a06d4e",
+    "decorations": [
+      {
+        "itemId": "rilakkuma-sticker-01",
+        "x": 0.11,
+        "y": 0.17,
+        "scale": 0.12,
+        "rotation": -6,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "rilakkuma-sticker-05",
+        "x": 0.89,
+        "y": 0.17,
+        "scale": 0.11,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "rilakkuma-sticker-09",
+        "x": 0.5,
+        "y": 0.82,
+        "scale": 0.08,
+        "rotation": -3,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-sumikko-gurashi-wide",
+    "layoutId": "wide",
+    "name": {
+      "zh-Hant": "角落生物 聯名",
+      "en": "Sumikko Gurashi collab"
+    },
+    "kind": "ip",
+    "collection": "sumikko-gurashi",
+    "background": "packs/templates/fan-ip/templates/ip-sumikko-gurashi-wide-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-sumikko-gurashi-wide-frame.svg",
+    "accentColor": "#5d8c68",
+    "decorations": [
+      {
+        "itemId": "sumikko-gurashi-sticker-01",
+        "x": 0.11,
+        "y": 0.17,
+        "scale": 0.12,
+        "rotation": -6,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "sumikko-gurashi-sticker-05",
+        "x": 0.89,
+        "y": 0.17,
+        "scale": 0.11,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "sumikko-gurashi-sticker-09",
+        "x": 0.5,
+        "y": 0.82,
+        "scale": 0.08,
+        "rotation": -3,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-pusheen-wide",
+    "layoutId": "wide",
+    "name": {
+      "zh-Hant": "胖吉貓 聯名",
+      "en": "Pusheen collab"
+    },
+    "kind": "ip",
+    "collection": "pusheen",
+    "background": "packs/templates/fan-ip/templates/ip-pusheen-wide-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-pusheen-wide-frame.svg",
+    "accentColor": "#8e7275",
+    "decorations": [
+      {
+        "itemId": "pusheen-sticker-01",
+        "x": 0.11,
+        "y": 0.17,
+        "scale": 0.12,
+        "rotation": -6,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "pusheen-sticker-05",
+        "x": 0.89,
+        "y": 0.17,
+        "scale": 0.11,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "pusheen-sticker-09",
+        "x": 0.5,
+        "y": 0.82,
+        "scale": 0.08,
+        "rotation": -3,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-kirby-wide",
+    "layoutId": "wide",
+    "name": {
+      "zh-Hant": "星之卡比 聯名",
+      "en": "Kirby collab"
+    },
+    "kind": "ip",
+    "collection": "kirby",
+    "background": "packs/templates/fan-ip/templates/ip-kirby-wide-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-kirby-wide-frame.svg",
+    "accentColor": "#e1599d",
+    "decorations": [
+      {
+        "itemId": "kirby-sticker-01",
+        "x": 0.11,
+        "y": 0.17,
+        "scale": 0.12,
+        "rotation": -6,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "kirby-sticker-05",
+        "x": 0.89,
+        "y": 0.17,
+        "scale": 0.11,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "kirby-sticker-09",
+        "x": 0.5,
+        "y": 0.82,
+        "scale": 0.08,
+        "rotation": -3,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-snoopy-wide",
+    "layoutId": "wide",
+    "name": {
+      "zh-Hant": "史努比 聯名",
+      "en": "Snoopy collab"
+    },
+    "kind": "ip",
+    "collection": "snoopy",
+    "background": "packs/templates/fan-ip/templates/ip-snoopy-wide-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-snoopy-wide-frame.svg",
+    "accentColor": "#2d6f9c",
+    "decorations": [
+      {
+        "itemId": "snoopy-sticker-01",
+        "x": 0.11,
+        "y": 0.17,
+        "scale": 0.12,
+        "rotation": -6,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "snoopy-sticker-05",
+        "x": 0.89,
+        "y": 0.17,
+        "scale": 0.11,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "snoopy-sticker-09",
+        "x": 0.5,
+        "y": 0.82,
+        "scale": 0.08,
+        "rotation": -3,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  },
+  {
+    "id": "ip-mickey-mouse-wide",
+    "layoutId": "wide",
+    "name": {
+      "zh-Hant": "米奇與米妮 聯名",
+      "en": "Mickey & Minnie collab"
+    },
+    "kind": "ip",
+    "collection": "mickey-mouse",
+    "background": "packs/templates/fan-ip/templates/ip-mickey-mouse-wide-background.svg",
+    "frame": "packs/templates/fan-ip/templates/ip-mickey-mouse-wide-frame.svg",
+    "accentColor": "#b43b31",
+    "decorations": [
+      {
+        "itemId": "mickey-mouse-sticker-01",
+        "x": 0.11,
+        "y": 0.17,
+        "scale": 0.12,
+        "rotation": -6,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "mickey-mouse-sticker-05",
+        "x": 0.89,
+        "y": 0.17,
+        "scale": 0.11,
+        "rotation": 6,
+        "flipX": true,
+        "flipY": false,
+        "opacity": 1
+      },
+      {
+        "itemId": "mickey-mouse-sticker-09",
+        "x": 0.5,
+        "y": 0.82,
+        "scale": 0.08,
+        "rotation": -3,
+        "flipX": false,
+        "flipY": false,
+        "opacity": 1
+      }
+    ],
+    "license": "private-personal-use"
+  }
+]

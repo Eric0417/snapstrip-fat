@@ -1,6 +1,11 @@
 import { renderStrip } from '../../lib/strip';
 import type { StickerAsset } from '../../data/stickers';
-import type { PhotoShot, PhotoTransform, StickerPlacement } from '../../app/types';
+import type {
+  FrameTemplate,
+  PhotoShot,
+  PhotoTransform,
+  StickerPlacement,
+} from '../../app/types';
 
 interface ExportStripOptions {
   layoutId: string;
@@ -8,6 +13,8 @@ interface ExportStripOptions {
   stickers: StickerPlacement[];
   stickerAssets: Map<string, StickerAsset>;
   photoTransforms: PhotoTransform[];
+  template?: FrameTemplate;
+  templateColor?: string | null;
 }
 
 export async function exportStripPng(options: ExportStripOptions) {
@@ -27,6 +34,9 @@ export async function exportStripPng(options: ExportStripOptions) {
     shots: options.shots,
     stickerData,
     photoTransforms: options.photoTransforms,
+    template: options.template,
+    templateStickerAssets: options.stickerAssets,
+    templateColor: options.templateColor,
     targetWidth: 1440,
   });
   const blob = await new Promise<Blob>((resolve, reject) => {

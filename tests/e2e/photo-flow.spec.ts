@@ -19,12 +19,31 @@ test('completes the upload, sticker editor, and export flow', async ({ page }) =
   });
   page.on('pageerror', (error) => errors.push(String(error)));
 
+  await page.addInitScript(() => {
+    window.sessionStorage.setItem('snapstrip-authorized', '1');
+  });
   await page.goto('/layout');
   await expect(page.getByRole('heading', { name: '選擇你的版型' })).toBeVisible();
   await page.getByRole('button', { name: '繼續' }).click();
   await expect(page).toHaveURL(/\/capture$/);
 
   await page.setInputFiles('input[type="file"]', files);
+  await expect(page).toHaveURL(/\/frame$/, { timeout: 15_000 });
+  await expect(page.getByRole('heading', { name: '選擇你的相框' })).toBeVisible();
+  await expect
+    .poll(() =>
+      page.locator('.frame-studio-canvas').evaluate((canvas) => {
+        const context = (canvas as HTMLCanvasElement).getContext('2d');
+        if (!context) return 0;
+        const pixels = context.getImageData(0, 0, canvas.width, canvas.height).data;
+        return Array.from(pixels).filter(
+          (value, index) => index % 4 !== 3 && value < 245,
+        ).length;
+      }),
+    )
+    .toBeGreaterThan(0);
+  await page.locator('.frame-ip-button').first().click();
+  await page.getByRole('button', { name: '繼續' }).click();
   await expect(page).toHaveURL(/\/editor$/, { timeout: 15_000 });
   await expect(page.getByRole('heading', { name: '裝飾你的拍貼' })).toBeVisible();
   await expect(page.locator('.sticker-thumb')).toHaveCount(96);

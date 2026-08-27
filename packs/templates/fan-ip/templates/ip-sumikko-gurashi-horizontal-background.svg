@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 508">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#d7ebd9" stop-opacity="0.42"/>
+    </linearGradient>
+    <pattern id="motif-pattern" width="110" height="110" patternUnits="userSpaceOnUse" patternTransform="rotate(-8)">
+      <rect width="110" height="110" fill="#d7ebd9" opacity="0.24"/>
+      <g fill="#5d8c68" opacity="0.32"><path d="M 52.8 22 C 77 30.712, 77 56.848, 52.8 70.4 C 28.6 56.848, 28.6 30.712, 52.8 22 Z" /><path d="M 52.8 26.84 L 52.8 65.56" stroke="#fff" stroke-width="1.936" fill="none" opacity=".7" /></g>
+    </pattern>
+  </defs>
+  <rect width="1440" height="508" fill="#f5fbf5"/>
+  <rect width="1440" height="508" fill="url(#bg)"/>
+  <rect width="1440" height="508" fill="url(#motif-pattern)" opacity="0.72"/>
+  <rect x="72" y="18" width="1296" height="472" rx="58" fill="#ffffff" opacity="0.12"/>
+  <g fill="#5d8c68" opacity="0.09"><path d="M 160.92000000000002 40.64 C 206.64 57.099199999999996, 206.64 106.4768, 160.92000000000002 132.07999999999998 C 115.2 106.4768, 115.2 57.099199999999996, 160.92000000000002 40.64 Z" /><path d="M 160.92000000000002 49.784 L 160.92000000000002 122.936" stroke="#fff" stroke-width="3.6576" fill="none" opacity=".7" /></g>
+  <g fill="#5d8c68" opacity="0.08"><path d="M 1069.82 365.76 C 1102.84 377.6472, 1102.84 413.3088, 1069.82 431.8 C 1036.8 413.3088, 1036.8 377.6472, 1069.82 365.76 Z" /><path d="M 1069.82 372.364 L 1069.82 425.196" stroke="#fff" stroke-width="2.6416000000000004" fill="none" opacity=".7" /></g>
+  <g fill="#5d8c68" opacity="0.1"><path d="M 1148.6000000000001 40.64 C 1174 49.784, 1174 77.21600000000001, 1148.6000000000001 91.44 C 1123.2 77.21600000000001, 1123.2 49.784, 1148.6000000000001 40.64 Z" /><path d="M 1148.6000000000001 45.72 L 1148.6000000000001 86.36000000000001" stroke="#fff" stroke-width="2.032" fill="none" opacity=".7" /></g>
+  <g fill="#5d8c68" opacity="0.1"><path d="M 140.6 386.08 C 166 395.224, 166 422.656, 140.6 436.88 C 115.2 422.656, 115.2 395.224, 140.6 386.08 Z" /><path d="M 140.6 391.15999999999997 L 140.6 431.8" stroke="#fff" stroke-width="2.032" fill="none" opacity=".7" /></g>
+</svg>

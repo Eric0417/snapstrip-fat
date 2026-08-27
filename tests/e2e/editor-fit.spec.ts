@@ -12,10 +12,17 @@ const files = [1, 2, 3, 4].map((index) => ({
 }));
 
 test('fits a vertical strip into the visible editor stage', async ({ page }) => {
+  await page.addInitScript(() => {
+    window.sessionStorage.setItem('snapstrip-authorized', '1');
+  });
   await page.goto('/layout');
   await page.getByRole('button', { name: '直式拍立得' }).click();
   await page.getByRole('button', { name: '繼續' }).click();
   await page.setInputFiles('input[type="file"]', files);
+  await expect(page).toHaveURL(/\/frame$/, { timeout: 15_000 });
+  await expect(page.getByRole('heading', { name: '選擇你的相框' })).toBeVisible();
+  await page.locator('.frame-ip-button').first().click();
+  await page.getByRole('button', { name: '繼續' }).click();
   await expect(page).toHaveURL(/\/editor$/, { timeout: 15_000 });
   await expect(page.getByRole('heading', { name: '裝飾你的拍貼' })).toBeVisible();
 

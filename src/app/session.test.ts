@@ -23,6 +23,8 @@ describe('session store', () => {
   beforeEach(() => {
     useSession.setState({
       layoutId: 'grid',
+      templateId: null,
+      templateColor: null,
       shots: [],
       photoTransforms: [],
       stickers: [],
@@ -90,5 +92,15 @@ describe('session store', () => {
       offsetX: 0,
       offsetY: 0,
     });
+  });
+
+  it('stores and resets the selected frame template with the layout', () => {
+    useSession.getState().setFrameTemplate('blank-grid', '#eaf7ff');
+    expect(useSession.getState().templateId).toBe('blank-grid');
+    expect(useSession.getState().templateColor).toBe('#eaf7ff');
+
+    useSession.getState().setLayout('square');
+    expect(useSession.getState().templateId).toBeNull();
+    expect(useSession.getState().templateColor).toBeNull();
   });
 });

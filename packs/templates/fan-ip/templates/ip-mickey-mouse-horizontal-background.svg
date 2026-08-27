@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 508">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#f2d4c7" stop-opacity="0.42"/>
+    </linearGradient>
+    <pattern id="motif-pattern" width="110" height="110" patternUnits="userSpaceOnUse" patternTransform="rotate(-8)">
+      <rect width="110" height="110" fill="#f2d4c7" opacity="0.24"/>
+      <g fill="#b43b31" opacity="0.32"><circle cx="52.8" cy="46.2" r="20.328" /></g>
+    </pattern>
+  </defs>
+  <rect width="1440" height="508" fill="#fff6f0"/>
+  <rect width="1440" height="508" fill="url(#bg)"/>
+  <rect width="1440" height="508" fill="url(#motif-pattern)" opacity="0.72"/>
+  <rect x="72" y="18" width="1296" height="472" rx="58" fill="#ffffff" opacity="0.12"/>
+  <g fill="#b43b31" opacity="0.09"><circle cx="160.92000000000002" cy="86.36" r="38.404799999999994" /></g>
+  <g fill="#b43b31" opacity="0.08"><circle cx="1069.82" cy="398.78" r="27.736800000000002" /></g>
+  <g fill="#b43b31" opacity="0.1"><circle cx="1148.6000000000001" cy="66.04" r="21.336000000000002" /></g>
+  <g fill="#b43b31" opacity="0.1"><circle cx="140.6" cy="411.47999999999996" r="21.336000000000002" /></g>
+</svg>

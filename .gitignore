@@ -10,4 +10,5 @@ packs/*
 !packs/core-kawaii/
 !packs/core-effects/
 !packs/fan-ip/
+!packs/templates/
 src/data/stickers.generated.ts

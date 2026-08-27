@@ -9,6 +9,7 @@ import {
 import { useSession } from '../../app/session';
 import type { StickerPlacement } from '../../app/types';
 import { STICKERS, stickerName, type StickerAsset } from '../../data/stickers';
+import { getFrameTemplate } from '../../data/templates';
 import { useLanguage } from '../../i18n/LanguageContext';
 import { assetUrl } from '../../lib/assetUrl';
 import { paintStripBaseToCanvas, slotRects, stripSize } from '../../lib/strip';
@@ -49,6 +50,8 @@ export function EditorStage({
 }: EditorStageProps) {
   const { locale } = useLanguage();
   const layoutId = useSession((state) => state.layoutId);
+  const templateId = useSession((state) => state.templateId);
+  const templateColor = useSession((state) => state.templateColor);
   const shots = useSession((state) => state.shots);
   const photoTransforms = useSession((state) => state.photoTransforms);
   const stickers = useSession((state) => state.stickers);
@@ -60,6 +63,12 @@ export function EditorStage({
   const activePointersRef = useRef(new Map<number, { x: number; y: number }>());
   const animationFrameRef = useRef<number | null>(null);
   const [stageSize, setStageSize] = useState({ width: 0, height: 0 });
+  const template = getFrameTemplate(templateId);
+  const assetMap = useMemo(() => {
+    const map = new Map<string, StickerAsset>();
+    for (const sticker of STICKERS) map.set(sticker.id, sticker);
+    return map;
+  }, []);
 
   useLayoutEffect(() => {
     const element = stageRef.current;
@@ -85,19 +94,21 @@ export function EditorStage({
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    void paintStripBaseToCanvas(canvas, layoutId, shots, photoTransforms).catch(() => undefined);
-  }, [layoutId, photoTransforms, shots]);
+    void paintStripBaseToCanvas(
+      canvas,
+      layoutId,
+      shots,
+      photoTransforms,
+      template,
+      assetMap,
+      templateColor,
+    ).catch(() => undefined);
+  }, [assetMap, layoutId, photoTransforms, shots, template, templateColor]);
 
   useEffect(() => () => {
     if (animationFrameRef.current !== null) {
       cancelAnimationFrame(animationFrameRef.current);
     }
-  }, []);
-
-  const assetMap = useMemo(() => {
-    const map = new Map<string, StickerAsset>();
-    for (const sticker of STICKERS) map.set(sticker.id, sticker);
-    return map;
   }, []);
 
   const stripSizeData = stripSize(layoutId, 1440);

@@ -1,5 +1,10 @@
 import { getLayout, layoutBounds } from '../app/layouts';
-import type { PhotoShot, PhotoTransform, StickerPlacement } from '../app/types';
+import type {
+  FrameTemplate,
+  PhotoShot,
+  PhotoTransform,
+  StickerPlacement,
+} from '../app/types';
 import type { StickerAsset } from '../data/stickers';
 import { drawCoverImage } from './crop';
 
@@ -20,6 +25,17 @@ export interface SlotRect {
 export interface StickerRenderData {
   placement: StickerPlacement;
   asset: StickerAsset;
+}
+
+export interface TemplateStickerRenderData extends StickerRenderData {
+  image: HTMLImageElement;
+}
+
+export interface LoadedFrameTemplate {
+  backgroundColor?: string;
+  backgroundImage?: HTMLImageElement;
+  frameImage?: HTMLImageElement;
+  decorations: readonly TemplateStickerRenderData[];
 }
 
 export function stripSize(layoutId: string, targetWidth = 1200): StripSize {
@@ -95,9 +111,20 @@ export function drawStripBase(
   shots: readonly PhotoShot[],
   shotImages: readonly HTMLImageElement[],
   photoTransforms: readonly PhotoTransform[] = [],
+  template?: LoadedFrameTemplate,
 ) {
-  context.fillStyle = '#ffffff';
+  context.fillStyle = template?.backgroundColor ?? '#ffffff';
   context.fillRect(0, 0, size.width, size.height);
+
+  if (template?.backgroundImage) {
+    context.drawImage(
+      template.backgroundImage,
+      0,
+      0,
+      size.width,
+      size.height,
+    );
+  }
 
   const rects = slotRects(layoutId, size);
   for (let index = 0; index < rects.length; index += 1) {
@@ -126,6 +153,73 @@ export function drawStripBase(
       context.restore();
     }
   }
+
+  if (template?.frameImage) {
+    context.drawImage(template.frameImage, 0, 0, size.width, size.height);
+  }
+
+  for (const decoration of template?.decorations ?? []) {
+    drawSticker(context, size, decoration, decoration.image);
+  }
+}
+
+export function resolveTemplateDecorations(
+  template: FrameTemplate,
+  stickerAssets: ReadonlyMap<string, StickerAsset>,
+): readonly StickerRenderData[] {
+  const output: StickerRenderData[] = [];
+
+  for (const decoration of template.decorations) {
+    const asset = stickerAssets.get(decoration.itemId);
+    if (!asset) continue;
+    output.push({
+      placement: {
+        id: `template-${template.id}-${decoration.itemId}`,
+        itemId: decoration.itemId,
+        x: decoration.x,
+        y: decoration.y,
+        scale: decoration.scale,
+        rotation: decoration.rotation,
+        flipX: decoration.flipX,
+        flipY: decoration.flipY,
+        z: 0,
+        opacity: decoration.opacity,
+        visible: true,
+      },
+      asset,
+    });
+  }
+
+  return output;
+}
+
+export async function loadFrameTemplate(
+  template: FrameTemplate | undefined,
+  stickerAssets: ReadonlyMap<string, StickerAsset>,
+  templateColor?: string | null,
+): Promise<LoadedFrameTemplate | undefined> {
+  if (!template) return undefined;
+
+  const [backgroundImage, frameImage] = await Promise.all([
+    template.background ? loadImageCached(template.background) : null,
+    template.frame ? loadImageCached(template.frame) : null,
+  ]);
+  const decorations = await Promise.all(
+    resolveTemplateDecorations(template, stickerAssets).map(async (decoration) => ({
+      ...decoration,
+      image: await loadImageCached(decoration.asset.src),
+    })),
+  );
+
+  return {
+    backgroundColor:
+      templateColor && template.kind === 'blank'
+        ? templateColor
+        : template.backgroundColor,
+    backgroundImage: backgroundImage ?? undefined,
+    frameImage: frameImage ?? undefined,
+    decorations,
+  };
 }
 
 export async function drawStripBaseToCanvas(
@@ -133,6 +227,9 @@ export async function drawStripBaseToCanvas(
   layoutId: string,
   shots: readonly PhotoShot[],
   photoTransforms: readonly PhotoTransform[],
+  template?: FrameTemplate,
+  stickerAssets?: ReadonlyMap<string, StickerAsset>,
+  templateColor?: string | null,
   targetWidth = 1440,
 ) {
   const size = stripSize(layoutId, targetWidth);
@@ -140,8 +237,19 @@ export async function drawStripBaseToCanvas(
   canvas.height = size.height;
   const context = canvas.getContext('2d');
   if (!context) throw new Error('Canvas 2D context is unavailable');
-  const shotImages = await Promise.all(shots.map((shot) => loadImage(shot.dataUrl)));
-  drawStripBase(context, layoutId, size, shots, shotImages, photoTransforms);
+  const [shotImages, loadedTemplate] = await Promise.all([
+    Promise.all(shots.map((shot) => loadImage(shot.dataUrl))),
+    loadFrameTemplate(template, stickerAssets ?? new Map(), templateColor),
+  ]);
+  drawStripBase(
+    context,
+    layoutId,
+    size,
+    shots,
+    shotImages,
+    photoTransforms,
+    loadedTemplate,
+  );
 }
 
 export async function paintStripBaseToCanvas(
@@ -149,12 +257,26 @@ export async function paintStripBaseToCanvas(
   layoutId: string,
   shots: readonly PhotoShot[],
   photoTransforms: readonly PhotoTransform[],
+  template?: FrameTemplate,
+  stickerAssets?: ReadonlyMap<string, StickerAsset>,
+  templateColor?: string | null,
 ) {
   const size = stripSize(layoutId, 1440);
   const context = canvas.getContext('2d');
   if (!context) throw new Error('Canvas 2D context is unavailable');
-  const shotImages = await Promise.all(shots.map((shot) => loadImageCached(shot.dataUrl)));
-  drawStripBase(context, layoutId, size, shots, shotImages, photoTransforms);
+  const [shotImages, loadedTemplate] = await Promise.all([
+    Promise.all(shots.map((shot) => loadImageCached(shot.dataUrl))),
+    loadFrameTemplate(template, stickerAssets ?? new Map(), templateColor),
+  ]);
+  drawStripBase(
+    context,
+    layoutId,
+    size,
+    shots,
+    shotImages,
+    photoTransforms,
+    loadedTemplate,
+  );
 }
 
 export function stickerWidth(size: StripSize, placement: StickerPlacement) {
@@ -189,13 +311,23 @@ export async function renderStrip(options: {
   shots: readonly PhotoShot[];
   stickerData: readonly StickerRenderData[];
   photoTransforms: readonly PhotoTransform[];
+  template?: FrameTemplate;
+  templateStickerAssets?: ReadonlyMap<string, StickerAsset>;
+  templateColor?: string | null;
   targetWidth?: number;
 }) {
   const { canvas, size } = createStripCanvas(options.layoutId, options.targetWidth);
   const context = canvas.getContext('2d');
   if (!context) throw new Error('Canvas 2D context is unavailable');
 
-  const shotImages = await Promise.all(options.shots.map((shot) => loadImageCached(shot.dataUrl)));
+  const [shotImages, loadedTemplate] = await Promise.all([
+    Promise.all(options.shots.map((shot) => loadImageCached(shot.dataUrl))),
+    loadFrameTemplate(
+      options.template,
+      options.templateStickerAssets ?? new Map(),
+      options.templateColor,
+    ),
+  ]);
   drawStripBase(
     context,
     options.layoutId,
@@ -203,6 +335,7 @@ export async function renderStrip(options: {
     options.shots,
     shotImages,
     options.photoTransforms,
+    loadedTemplate,
   );
 
   const ordered = [...options.stickerData].sort((a, b) => a.placement.z - b.placement.z);

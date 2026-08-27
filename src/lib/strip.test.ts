@@ -1,5 +1,44 @@
 import { describe, expect, it } from 'vitest';
-import { slotRects, stripSize } from './strip';
+import type { StickerAsset } from '../data/stickers';
+import {
+  drawStripBase,
+  slotRects,
+  stripSize,
+  type LoadedFrameTemplate,
+} from './strip';
+
+function fakeImage(id: string) {
+  return {
+    id,
+    naturalWidth: 100,
+    naturalHeight: 100,
+  } as unknown as HTMLImageElement;
+}
+
+function fakeContext() {
+  const calls: Array<{ image: HTMLImageElement; args: unknown[] }> = [];
+  const fills: string[] = [];
+  const context = {
+    fillStyle: '',
+    globalAlpha: 1,
+    fillRect: () => {
+      fills.push(context.fillStyle);
+    },
+    save: () => undefined,
+    restore: () => undefined,
+    beginPath: () => undefined,
+    rect: () => undefined,
+    clip: () => undefined,
+    translate: () => undefined,
+    scale: () => undefined,
+    rotate: () => undefined,
+    drawImage: (image: HTMLImageElement, ...args: unknown[]) => {
+      calls.push({ image, args });
+    },
+  };
+
+  return { context: context as unknown as CanvasRenderingContext2D, calls, fills };
+}
 
 describe('strip geometry', () => {
   it('keeps the grid layout landscape because its slots are 4:3', () => {
@@ -34,5 +73,55 @@ describe('strip geometry', () => {
     const rects = slotRects('bento', size);
     expect(rects).toHaveLength(4);
     expect(rects[0].height).toBeGreaterThan(rects[1].height);
+  });
+
+  it('draws template background, frame, and decorations in that order', () => {
+    const background = fakeImage('background');
+    const frame = fakeImage('frame');
+    const sticker = fakeImage('sticker');
+    const asset = {
+      id: 'template-sticker',
+      name: { en: 'Template sticker' },
+      category: 'effect',
+      src: 'packs/template-sticker.png',
+      thumb: 'packs/template-sticker.png',
+      displaySize: { w: 100, h: 100 },
+      tags: [],
+      pack: 'core',
+    } satisfies StickerAsset;
+    const loadedTemplate: LoadedFrameTemplate = {
+      backgroundColor: '#eaf7ff',
+      backgroundImage: background,
+      frameImage: frame,
+      decorations: [
+        {
+          placement: {
+            id: 'decoration',
+            itemId: 'template-sticker',
+            x: 0.2,
+            y: 0.3,
+            scale: 0.1,
+            rotation: 12,
+            flipX: false,
+            flipY: false,
+            z: 0,
+            opacity: 1,
+            visible: true,
+          },
+          asset,
+          image: sticker,
+        },
+      ],
+    };
+    const { context, calls, fills } = fakeContext();
+
+    drawStripBase(context, 'grid', stripSize('grid'), [], [], [], loadedTemplate);
+
+    expect(calls.map((call) => call.image.id)).toEqual([
+      'background',
+      'frame',
+      'sticker',
+    ]);
+    expect(fills[0]).toBe('#eaf7ff');
   });
 });

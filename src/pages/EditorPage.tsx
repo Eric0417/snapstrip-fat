@@ -1,8 +1,12 @@
 import { Download, LoaderCircle, Sparkles } from 'lucide-react';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useSession } from '../app/session';
 import { STICKERS, type StickerAsset } from '../data/stickers';
+import {
+  getFrameTemplate,
+  getFrameTemplatesForLayout,
+} from '../data/templates';
 import { EditorStage } from '../features/editor/EditorStage';
 import { EditorToolbar } from '../features/editor/EditorToolbar';
 import { exportStripPng } from '../features/editor/editorExport';
@@ -13,7 +17,10 @@ import { useLanguage } from '../i18n/LanguageContext';
 
 export function EditorPage() {
   const { t } = useLanguage();
+  const navigate = useNavigate();
   const layoutId = useSession((state) => state.layoutId);
+  const templateId = useSession((state) => state.templateId);
+  const templateColor = useSession((state) => state.templateColor);
   const shots = useSession((state) => state.shots);
   const photoTransforms = useSession((state) => state.photoTransforms);
   const stickers = useSession((state) => state.stickers);
@@ -33,6 +40,17 @@ export function EditorPage() {
     for (const sticker of STICKERS) map.set(sticker.id, sticker);
     return map;
   }, []);
+  const template = getFrameTemplate(templateId);
+
+  useEffect(() => {
+    if (
+      shots.length === 4 &&
+      !template &&
+      getFrameTemplatesForLayout(layoutId).length > 0
+    ) {
+      void navigate('/frame', { replace: true });
+    }
+  }, [layoutId, navigate, shots.length, template]);
 
   useEffect(() => {
     if (selectedId && !stickers.some((sticker) => sticker.id === selectedId)) {
@@ -135,6 +153,8 @@ export function EditorPage() {
               stickers,
               stickerAssets,
               photoTransforms,
+              template,
+              templateColor,
             })
               .catch((error: unknown) => {
                 setExportError(error instanceof Error ? error.message : 'Export failed');

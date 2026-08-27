@@ -23,6 +23,33 @@ export interface LayoutDefinition {
   captureAspectRatio: number;
 }
 
+export interface TemplateDecoration {
+  itemId: string;
+  x: number;
+  y: number;
+  scale: number;
+  rotation: number;
+  flipX: boolean;
+  flipY: boolean;
+  opacity: number;
+}
+
+export type FrameTemplateKind = 'ip' | 'blank';
+
+export interface FrameTemplate {
+  id: string;
+  layoutId: LayoutId;
+  name: Record<string, string>;
+  background?: string;
+  frame?: string;
+  decorations: readonly TemplateDecoration[];
+  pack: 'core' | 'fan';
+  kind: FrameTemplateKind;
+  collection?: string;
+  backgroundColor?: string;
+  accentColor?: string;
+}
+
 export interface PhotoShot {
   id: string;
   dataUrl: string;

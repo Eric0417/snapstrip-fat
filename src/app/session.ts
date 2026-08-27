@@ -9,12 +9,15 @@ const DEFAULT_PHOTO_TRANSFORM: PhotoTransform = {
 
 interface SessionState {
   layoutId: LayoutId;
+  templateId: string | null;
+  templateColor: string | null;
   shots: PhotoShot[];
   photoTransforms: PhotoTransform[];
   stickers: StickerPlacement[];
   past: StickerPlacement[][];
   future: StickerPlacement[][];
   setLayout: (layoutId: LayoutId) => void;
+  setFrameTemplate: (templateId: string | null, templateColor?: string | null) => void;
   setShots: (shots: PhotoShot[]) => void;
   setPhotoTransform: (index: number, patch: Partial<PhotoTransform>) => void;
   resetPhotoTransform: (index: number) => void;
@@ -35,6 +38,8 @@ function makeId(prefix: string) {
 
 export const useSession = create<SessionState>((set, get) => ({
   layoutId: 'grid',
+  templateId: null,
+  templateColor: null,
   shots: [],
   photoTransforms: [],
   stickers: [],
@@ -44,12 +49,17 @@ export const useSession = create<SessionState>((set, get) => ({
   setLayout: (layoutId) =>
     set({
       layoutId,
+      templateId: null,
+      templateColor: null,
       shots: [],
       photoTransforms: [],
       stickers: [],
       past: [],
       future: [],
     }),
+
+  setFrameTemplate: (templateId, templateColor = null) =>
+    set({ templateId, templateColor }),
 
   setShots: (shots) =>
     set({

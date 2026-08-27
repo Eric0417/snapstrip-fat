@@ -1,0 +1,9 @@
+{
+  "id": "fan-ip-frames",
+  "kind": "frame-template",
+  "displayName": {
+    "zh-Hant": "IP 聯名相框",
+    "en": "IP collab frames"
+  },
+  "license": "private-personal-use"
+}
