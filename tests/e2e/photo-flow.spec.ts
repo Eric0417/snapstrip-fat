@@ -42,7 +42,15 @@ test('completes the upload, sticker editor, and export flow', async ({ page }) =
       }),
     )
     .toBeGreaterThan(0);
-  await page.locator('.frame-style-button').first().click();
+
+  await page.getByRole('button', { name: '玉桂狗' }).click();
+  for (const style of await page.locator('.frame-style-button').all()) {
+    await style.click();
+    await expect(page.locator('.frame-ip-button[aria-pressed="true"]')).toContainText(
+      '玉桂狗',
+    );
+  }
+
   await page.getByRole('button', { name: '繼續' }).click();
   await expect(page).toHaveURL(/\/editor$/, { timeout: 15_000 });
   await expect(page.getByRole('heading', { name: '裝飾你的拍貼' })).toBeVisible();

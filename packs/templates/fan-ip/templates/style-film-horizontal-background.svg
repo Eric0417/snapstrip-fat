@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 508">
-  <defs><pattern id="pattern" width="38" height="38" patternUnits="userSpaceOnUse">
-      <rect width="38" height="38" fill="#d8d2c6" opacity="0.16"/>
-      <rect x="11.4" y="11.4" width="6.08" height="15.96" rx="4" fill="#2e292c" opacity="0.24"/>
+  <defs><pattern id="pattern" width="43" height="43" patternUnits="userSpaceOnUse">
+      <rect width="43" height="43" fill="#d8d2c6" opacity="0.12"/>
+      <rect x="12.9" y="12.9" width="6.88" height="18.06" rx="4" fill="#2e292c" opacity="0.12"/>
     </pattern></defs>
   <rect width="1440" height="508" fill="#f5f2eb"/>
   <rect width="1440" height="508" fill="url(#pattern)"/>
-  <g fill="#2e292c" opacity="0.1"><circle cx="141.3" cy="76.06" r="34.02" /></g><g fill="#2e292c" opacity="0.08"><circle cx="1152.36" cy="79.96" r="24.49" /></g><g fill="#2e292c" opacity="0.08"><circle cx="1154.79" cy="387.19" r="26.54" /></g><g fill="#2e292c" opacity="0.08"><circle cx="158.76" cy="405.08" r="24.49" /></g>
+  <rect width="1440" height="508" fill="#ffffff" opacity="0.18"/>
 </svg>

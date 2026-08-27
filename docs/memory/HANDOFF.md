@@ -69,15 +69,17 @@
   旋轉、翻轉或刪除，不參與相機即時預覽或自動套用。
 - 完成 manifest-driven 相框模板系統：
   - 每個版型提供 5 個風格模板（甜點蕾絲、手繪日記、膠卷回憶、復古格紋、
-    黑白韓系），另加 1 個可自訂顏色的空白模板，合計 48 個 template entries。
+    黑白韓系），每個風格再提供全部 13 個 IP，另加 1 個可自訂顏色的空白模板，
+    合計 528 個 template entries。
   - 拍照/上傳完成後進入 `/frame`，使用剛拍好的四張照片即時合成預覽。
-  - 模板版型改為每版型 5 種主流人生四格風格，每個風格使用 5 張較大的
-    既有 fan-ip 貼圖；五種風格合起來覆蓋全部 13 個 collection。
+  - 模板版型改為每版型 5 種主流人生四格風格，每個風格 × IP 使用 3 張較大的
+    同一 IP 貼圖；不同 IP 不混搭，且每個版型都可選到所有 13 個 collection。
   - SVG 背景、風格邊框與角色構圖參考 `template_refrence/` 的主流甜點、
-    手繪、膠卷、格紋與黑白塗鴉手法，角色放在照片四角/接縫，不再一個
-    layout 只綁一個角色。
+    手繪、膠卷、格紋與黑白塗鴉手法，角色放在照片邊角，保持單一主題。
+  - `/frame` 先選風格、再選角色系列；切換風格時保留目前 IP。
+  - `mono` 模板的角色貼圖在 canvas render 時套用 grayscale filter。
   - `/frame` 預覽 render 解析度由 320px 提高到 640px，並保持各版型長寬比。
-  - 全部 40 個 style/layout 模板在 8 個版型下逐一通過非空白 canvas、overflow 與
+  - 5 styles × 13 IP 的模板組合在 8 個版型下逐一通過非空白 canvas、overflow 與
     console error 檢查。
   - 空白模板提供 8 個預設色與自訂 color picker，顏色會進入 Editor 與 export。
   - 模板固定渲染在照片與使用者貼圖之間，不寫入可編輯貼圖狀態。
@@ -127,11 +129,11 @@
 ### 目前狀態
 
 - 核心功能已完成，尚未發現已知 bug。
-- 相框模板系統已完成；48 個 template entries（8 blank + 40 style）與新選擇頁在
+- 相框模板系統已完成；528 個 template entries（8 blank + 520 style）與新選擇頁在
   桌面/手機均已做非空白畫布、顏色切換與 overflow 檢查。
 - 尚未在真實手機上測試相機權限；fake camera 已通過。
-- `snapstrip-fat` Render deploy branch 已推送最新 frame-template 版本，並確認
-  live JS、template SVG 與 fan-ip sticker assets 皆可正常存取。
+- 本次 528 個單一 IP template entries（8 blank + 520 style）已完成本機驗證，
+  準備推送至 `fat/deploy` 觸發 Render 重建。
 - `snapstrip-fat.onrender.com` 仍可公開存取，且 fan-ip 檔案可直接下載。
 - 網站前端已加入審查密碼，但靜態 fan-ip 檔案仍可直接下載，不是完整的存取控制。
 - 版權申請文件已備妥，但尚未對任何權利人送出，也尚未獲得任何書面授權。
@@ -141,9 +143,10 @@
 ## 下一步優先順序
 
 1. 在真實手機與桌面上手動走一次相機流程。
-2. 在真機上人工審核 5 種風格模板在各版型中的貼圖位置、角色比例與留白。
-3. Render deploy 已更新；下一步若需要純原創公開版，再依 `docs/DEPLOYMENT.md`
-   建立不含 fan-ip 的 branch。
+2. 在真機上人工審核 5 種風格 × 13 種 IP 模板在各版型中的貼圖位置、
+   角色比例與留白。
+3. push 後確認 Render live manifest 為 528 筆；若需要純原創公開版，再依
+   `docs/DEPLOYMENT.md` 建立不含 fan-ip 的 branch。
 4. 若首包效能重要，可把 Editor/Capture 改成 lazy route 或拆 manifest chunk。
 5. 寄出版權申請前，先把 `snapstrip-fat` 下線或改為密碼保護。
 6. 依各權利人回覆，取得正式素材與使用規範後再重新整理 fan-ip。

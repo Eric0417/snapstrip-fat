@@ -32,8 +32,8 @@ packs/templates/
   "id": "fan-ip-frames",
   "kind": "frame-template",
   "displayName": {
-    "zh-Hant": "人生四格風格相框",
-    "en": "Life four-cut style frames"
+    "zh-Hant": "IP 主題風格相框",
+    "en": "IP themed style frames"
   },
   "license": "private-personal-use"
 }
@@ -45,32 +45,35 @@ packs/templates/
 
 ```json
 {
-  "id": "style-sweet-grid",
+  "id": "style-sweet-grid-hello-kitty",
   "layoutId": "grid",
   "name": {
+    "zh-Hant": "甜點蕾絲 · Hello Kitty",
+    "en": "Sweet ribbon · Hello Kitty"
+  },
+  "kind": "style",
+  "collection": "hello-kitty",
+  "collectionOrder": 1,
+  "styleId": "sweet",
+  "styleName": {
     "zh-Hant": "甜點蕾絲",
     "en": "Sweet ribbon"
   },
-  "kind": "style",
-  "collection": "sweet",
-  "styleId": "sweet",
   "order": 1,
   "background": "packs/templates/fan-ip/templates/style-sweet-grid-background.svg",
   "frame": "packs/templates/fan-ip/templates/style-sweet-grid-frame.svg",
   "accentColor": "#d76b91",
-  "collections": [
-    "hello-kitty",
-    "cinnamoroll",
-    "my-melody",
-    "pompompurin",
-    "little-twin-stars"
-  ],
+  "collections": ["hello-kitty"],
+  "collectionName": {
+    "zh-Hant": "Hello Kitty",
+    "en": "Hello Kitty"
+  },
   "decorations": [
     {
       "itemId": "hello-kitty-sticker-01",
-      "x": 0.1,
-      "y": 0.08,
-      "scale": 0.46,
+      "x": 0.13,
+      "y": 0.075,
+      "scale": 0.52,
       "rotation": -8,
       "flipX": false,
       "flipY": false,
@@ -102,14 +105,17 @@ Blank 可換色模板範例：
 
 欄位規則：
 
-- `id`：全域唯一 kebab-case，例如 `style-<styleId>-<layoutId>`。
+- `id`：全域唯一 kebab-case，例如 `style-<styleId>-<layoutId>-<collection>`。
 - `layoutId`：必須是 `grid`、`square`、`bento`、`portrait-grid`、
   `vertical`、`classic`、`horizontal`、`wide` 其中之一。
 - `kind`：`style` 或 `blank`。
-- `collection`：blank 使用 `blank`；style 使用風格 id。
+- `collection`：blank 使用 `blank`；style 使用唯一 IP id。
+- `collectionOrder`：IP 在選擇器中的順序，1–13。
 - `styleId`：五種風格之一：`sweet`、`diary`、`film`、`plaid`、`mono`。
+- `styleName`：風格的繁中/英文顯示名稱。
+- `collectionName`：IP 的繁中/英文顯示名稱。
 - `order`：數值越小越先顯示；blank 為 `0`，五種風格為 `1–5`。
-- `collections`：此模板使用的 fan-ip collection 陣列，供載入器與測試追蹤。
+- `collections`：只包含此模板的單一 fan-ip collection。
 - `background`：full-canvas SVG，照片底下的完整背景。
 - `frame`：full-canvas SVG，照片上方、template decorations 下方的邊框層。
 - `accentColor`：選項 UI 的主題色，非強制，但 style 模板建議提供。
@@ -126,9 +132,9 @@ Blank 可換色模板範例：
 | `plaid` | 復古格紋 | Vintage plaid | 格紋底、奶油白框、花與緞帶 |
 | `mono` | 黑白韓系 | Korean monochrome | 黑底、白線星/心/音符塗鴉、極簡對比 |
 
-每個 style/layout 模板使用 5 張既有 fan-ip 貼圖；五種風格合起來在每個
-layout 下覆蓋全部 13 個 fan-ip collection，但不再以「一個 layout =
-一個角色」的方式註冊模板。
+每個 style/layout 模板使用 3 張同一 IP 的既有 fan-ip 貼圖；不得把不同 IP
+混在同一張模板中。每個 style/layout 都有全部 13 個 collection 的 entry，
+所以每個版型可選到所有 IP，同時每張模板都保持單一主題。
 
 ## Decorations 座標
 
@@ -152,8 +158,9 @@ interface TemplateDecoration {
 - `flipX/flipY`：布林。
 - `opacity`：0–1。
 
-例如 grid 的主角色 `scale=0.46`，在 export 1440 中約等於
-`1310 × 0.46 ≈ 603px` 的貼圖顯示寬度。
+例如 grid 的主角色 `scale=0.52`，在 export 1440 中約等於
+`1310 × 0.52 ≈ 681px` 的貼圖顯示寬度。角色貼圖本身常有透明留白，
+因此實際可見角色會比顯示尺寸略小，建議主角色維持在 0.5 以上。
 
 ## 各 Layout 標準 Canvas
 
@@ -181,50 +188,50 @@ interface TemplateDecoration {
 
 - 2×2 橫向方格。
 - Slot aspect ratio：4:3。
-- 適合把主角色放在左上方，另一角色放右下方。
-- 建議主角色 `scale` 約 `0.44–0.48`，輔助角色約 `0.28–0.34`。
+- 適合把主角色放在左上方，另兩個同位角色放右側邊緣。
+- 建議主角色 `scale` 約 `0.50–0.54`，輔助角色約 `0.32–0.38`。
 
 ### `square`
 
 - 2×2 正方形方格。
 - 適合角落對角構圖。
-- 主角色建議 `scale` 約 `0.44–0.48`。
+- 主角色建議 `scale` 約 `0.50–0.54`。
 
 ### `bento`
 
 - 左邊 1 個大照片，右邊 3 個小照片。
 - 主角色適合放在左上方大照片邊緣。
-- 主角色建議 `scale` 約 `0.42–0.46`。
+- 主角色建議 `scale` 約 `0.48–0.52`。
 
 ### `portrait-grid`
 
 - 2×2 直式方格。
 - 適合上下對角放角色，中間保持留白。
-- 主角色建議 `scale` 約 `0.44–0.48`。
+- 主角色建議 `scale` 約 `0.48–0.52`。
 
 ### `vertical`
 
 - 1×4 長條。
 - 長條上下留白區窄，角色貼圖應放在側邊或照片之間的接縫附近。
-- 主角色建議 `scale` 約 `0.36–0.42`，輔助角色約 `0.26–0.32`。
+- 主角色建議 `scale` 約 `0.40–0.44`，輔助角色約 `0.28–0.32`。
 
 ### `classic`
 
 - 1×4 極長拍立得。
 - 與 vertical 相同邏輯，角色放在兩側與照片接縫處。
-- 主角色建議 `scale` 約 `0.32–0.38`，輔助角色約 `0.26–0.32`。
+- 主角色建議 `scale` 約 `0.32–0.36`，輔助角色約 `0.26–0.30`。
 
 ### `horizontal`
 
 - 4×1 橫幅。
 - 可把角色放在左右外側，避免放在照片中心。
-- 主角色建議 `scale` 約 `0.30–0.36`，輔助角色約 `0.24–0.30`。
+- 主角色建議 `scale` 約 `0.30–0.34`，輔助角色約 `0.24–0.28`。
 
 ### `wide`
 
 - 4×1 極寬電影條。
 - 高度最少，角色只能放在上下邊緣或照片間隔。
-- 主角色建議 `scale` 約 `0.20–0.24`，輔助角色約 `0.17–0.21`。
+- 主角色建議 `scale` 約 `0.22–0.26`，輔助角色約 `0.18–0.22`。
 
 ## SVG Asset Rules
 
@@ -259,15 +266,16 @@ pnpm build:public
 
 7. 在 `/layout → /capture → /frame` 手動檢查 preview。
 
-現有 8 個 style/layout 模板可由 generator 重新生成：
+現有 5 styles × 8 layouts × 13 IP 的模板可由 generator 重新生成：
 
 ```bash
 node tools/generate-frame-templates.mjs
 ```
 
 generator 會先清空 `packs/templates/fan-ip/templates/`，再重新寫入
-`manifest.json`、8 個 blank frame SVG、40 個 background SVG 與 40 個
-style frame SVG。
+`manifest.json`（8 blank + 520 style）、8 個 blank frame SVG、40 個
+background SVG 與 40 個 style frame SVG。520 個 style entries 共享
+這 40 組 style/layout 資產，只透過 `decorations` 與 `collectionName` 區分 IP。
 
 ## Build 行為
 

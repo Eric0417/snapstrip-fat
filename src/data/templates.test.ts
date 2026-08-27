@@ -23,41 +23,50 @@ const IP_COLLECTIONS = [
   'mickey-mouse',
 ];
 
-const STYLE_TEMPLATES = [
-  'sweet',
-  'diary',
-  'film',
-  'plaid',
-  'mono',
-];
+const STYLE_TEMPLATES = ['sweet', 'diary', 'film', 'plaid', 'mono'];
 
 describe('frame template loader', () => {
-  it('loads a blank template and five styles for every layout', () => {
+  it('loads a blank template, five styles, and every IP for each layout', () => {
     expect(FRAME_TEMPLATES).toHaveLength(
-      LAYOUTS.length + LAYOUTS.length * STYLE_TEMPLATES.length,
+      LAYOUTS.length +
+        LAYOUTS.length * STYLE_TEMPLATES.length * IP_COLLECTIONS.length,
     );
 
     for (const layout of LAYOUTS) {
       const templates = getFrameTemplatesForLayout(layout.id);
-      expect(templates).toHaveLength(1 + STYLE_TEMPLATES.length);
       expect(templates.filter((template) => template.kind === 'blank')).toHaveLength(1);
-      expect(templates.filter((template) => template.kind === 'style')).toHaveLength(
-        STYLE_TEMPLATES.length,
-      );
-      expect(templates.map((template) => template.styleId).filter(Boolean)).toEqual(
-        STYLE_TEMPLATES,
-      );
+      expect(
+        templates.filter((template) => template.kind === 'style'),
+      ).toHaveLength(STYLE_TEMPLATES.length * IP_COLLECTIONS.length);
+      expect(
+        new Set(
+          templates
+            .filter((template) => template.kind === 'style')
+            .map((template) => template.styleId),
+        ),
+      ).toEqual(new Set(STYLE_TEMPLATES));
 
       const collections = new Set(
         templates
-          .flatMap((template) => template.collections ?? [])
-          .sort(),
+          .filter((template) => template.kind === 'style')
+          .map((template) => template.collection),
       );
       expect([...collections].sort()).toEqual([...IP_COLLECTIONS].sort());
+
+      for (const style of STYLE_TEMPLATES) {
+        const ipTemplates = templates.filter(
+          (template) =>
+            template.kind === 'style' && template.styleId === style,
+        );
+        expect(ipTemplates).toHaveLength(IP_COLLECTIONS.length);
+        expect(
+          new Set(ipTemplates.map((template) => template.collection)),
+        ).toEqual(new Set(IP_COLLECTIONS));
+      }
     }
   });
 
-  it('keeps template ids unique and exposes clean frame metadata', () => {
+  it('keeps template ids unique and exposes clean single-IP metadata', () => {
     const ids = FRAME_TEMPLATES.map((template) => template.id);
     expect(new Set(ids).size).toBe(ids.length);
 
@@ -72,9 +81,17 @@ describe('frame template loader', () => {
       } else {
         expect(template.background).toBeTruthy();
         expect(template.accentColor).toBeTruthy();
-        expect(template.decorations).toHaveLength(5);
+        expect(template.decorations).toHaveLength(3);
         expect(template.styleId).toBeTruthy();
-        expect(template.collections).toHaveLength(5);
+        expect(template.styleName).toBeTruthy();
+        expect(template.collection).toBeTruthy();
+        expect(template.collectionName).toBeTruthy();
+        expect(template.collections).toEqual([template.collection]);
+        expect(
+          template.decorations.every((decoration) =>
+            decoration.itemId.startsWith(`${template.collection}-sticker-`),
+          ),
+        ).toBe(true);
       }
     }
   });
@@ -91,8 +108,11 @@ describe('frame template loader', () => {
 
   it('returns the requested template or undefined', () => {
     expect(getFrameTemplate('blank-grid')?.kind).toBe('blank');
-    expect(getFrameTemplate('style-sweet-grid')?.kind).toBe('style');
-    expect(getFrameTemplate('style-sweet-grid')?.collection).toBe('sweet');
+    expect(getFrameTemplate('style-sweet-grid-hello-kitty')?.kind).toBe('style');
+    expect(getFrameTemplate('style-sweet-grid-hello-kitty')?.collection).toBe(
+      'hello-kitty',
+    );
+    expect(getFrameTemplate('style-sweet-grid')).toBeUndefined();
     expect(getFrameTemplate('missing')).toBeUndefined();
     expect(getFrameTemplate(null)).toBeUndefined();
   });

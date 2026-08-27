@@ -9,11 +9,14 @@ interface FrameTemplateManifestEntry {
   id?: unknown;
   layoutId?: unknown;
   name?: unknown;
+  collectionName?: unknown;
+  styleName?: unknown;
   background?: unknown;
   frame?: unknown;
   decorations?: unknown;
   kind?: unknown;
   collection?: unknown;
+  collectionOrder?: unknown;
   styleId?: unknown;
   order?: unknown;
   collections?: unknown;
@@ -43,6 +46,16 @@ function toNumber(value: unknown, fallback: number) {
 
 function toBoolean(value: unknown, fallback: boolean) {
   return typeof value === 'boolean' ? value : fallback;
+}
+
+function toNameMap(value: unknown): Record<string, string> | undefined {
+  if (!value || typeof value !== 'object') return undefined;
+  const nameMap = Object.fromEntries(
+    Object.entries(value).filter((entry): entry is [string, string] =>
+      typeof entry[1] === 'string',
+    ),
+  );
+  return Object.keys(nameMap).length > 0 ? nameMap : undefined;
 }
 
 function toDecoration(value: unknown): TemplateDecoration | null {
@@ -83,18 +96,16 @@ function toTemplates(manifests: Record<string, unknown>): FrameTemplate[] {
         continue;
       }
 
-      const name = Object.fromEntries(
-        Object.entries(value.name).filter((entry): entry is [string, string] =>
-          typeof entry[1] === 'string',
-        ),
-      );
-      if (Object.keys(name).length === 0) continue;
+      const name = toNameMap(value.name);
+      if (!name) continue;
 
       seen.add(value.id);
       output.push({
         id: value.id,
         layoutId: value.layoutId as LayoutId,
         name,
+        collectionName: toNameMap(value.collectionName),
+        styleName: toNameMap(value.styleName),
         background:
           typeof value.background === 'string' && value.background
             ? value.background
@@ -112,6 +123,7 @@ function toTemplates(manifests: Record<string, unknown>): FrameTemplate[] {
           typeof value.collection === 'string' && value.collection
             ? value.collection
             : undefined,
+        collectionOrder: toNumber(value.collectionOrder, 0),
         styleId:
           typeof value.styleId === 'string' && value.styleId
             ? value.styleId
@@ -137,7 +149,9 @@ function toTemplates(manifests: Record<string, unknown>): FrameTemplate[] {
 
   return output.sort(
     (a, b) =>
-      (a.order ?? 0) - (b.order ?? 0) || a.id.localeCompare(b.id),
+      (a.order ?? 0) - (b.order ?? 0) ||
+      (a.collectionOrder ?? 0) - (b.collectionOrder ?? 0) ||
+      a.id.localeCompare(b.id),
   );
 }
 

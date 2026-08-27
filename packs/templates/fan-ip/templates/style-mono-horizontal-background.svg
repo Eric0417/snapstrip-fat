@@ -1,9 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 508">
-  <defs><pattern id="pattern" width="38" height="38" patternUnits="userSpaceOnUse">
-    <rect width="38" height="38" fill="none"/>
-    <circle cx="19" cy="19" r="3.42" fill="#e7e7ed" opacity="0.28"/>
+  <defs><pattern id="pattern" width="43" height="43" patternUnits="userSpaceOnUse">
+    <circle cx="21.5" cy="21.5" r="3.87" fill="#e7e7ed" opacity="0.2"/>
   </pattern></defs>
   <rect width="1440" height="508" fill="#1a1a1f"/>
   <rect width="1440" height="508" fill="url(#pattern)"/>
-  <g fill="#f4f4f7" opacity="0.1"><polygon points="141.3,35.56 151.02,66.34 181.8,76.06 151.02,85.78 141.3,116.56 131.58,85.78 100.8,76.06 131.58,66.34" /></g><g fill="#f4f4f7" opacity="0.08"><polygon points="1152.36,50.8 1159.36,72.96 1181.52,79.96 1159.36,86.96 1152.36,109.12 1145.36,86.96 1123.2,79.96 1145.36,72.96" /></g><g fill="#f4f4f7" opacity="0.08"><polygon points="1154.79,355.6 1162.37,379.61 1186.38,387.19 1162.37,394.77 1154.79,418.78 1147.21,394.77 1123.2,387.19 1147.21,379.61" /></g><g fill="#f4f4f7" opacity="0.08"><polygon points="158.76,375.92 165.76,398.08 187.92,405.08 165.76,412.08 158.76,434.24 151.76,412.08 129.6,405.08 151.76,398.08" /></g>
+  <rect width="1440" height="508" fill="#ffffff" opacity="0.18"/>
 </svg>

@@ -40,12 +40,15 @@ export interface FrameTemplate {
   id: string;
   layoutId: LayoutId;
   name: Record<string, string>;
+  collectionName?: Record<string, string>;
+  styleName?: Record<string, string>;
   background?: string;
   frame?: string;
   decorations: readonly TemplateDecoration[];
   pack: 'core' | 'fan';
   kind: FrameTemplateKind;
   collection?: string;
+  collectionOrder?: number;
   styleId?: string;
   order?: number;
   collections?: readonly string[];

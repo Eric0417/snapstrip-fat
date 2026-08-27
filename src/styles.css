@@ -523,6 +523,49 @@ img {
   box-shadow: 0 0 0 1px rgba(43, 36, 42, 0.15);
 }
 
+.frame-ip-strip {
+  display: grid;
+  min-width: 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.45rem;
+}
+
+.frame-ip-button {
+  display: inline-flex;
+  min-width: 0;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.45rem;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid rgba(43, 36, 42, 0.18);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+  font-size: 0.82rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.frame-ip-button.is-selected {
+  border: 2px solid var(--ink);
+  background: var(--rose);
+}
+
+@media (max-width: 819px) {
+  .frame-ip-strip {
+    display: flex;
+    overflow-x: auto;
+    padding: 0.25rem 0 0.6rem;
+    scrollbar-width: thin;
+  }
+
+  .frame-ip-button {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+}
+
 .pill-button {
   display: inline-flex;
   min-height: 3rem;

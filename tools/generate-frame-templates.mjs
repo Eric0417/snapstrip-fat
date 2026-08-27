@@ -17,6 +17,87 @@ const layoutHeights = {
 
 const layoutIds = Object.keys(layoutHeights);
 
+const ipCollections = [
+  {
+    id: 'hello-kitty',
+    order: 1,
+    names: { 'zh-Hant': 'Hello Kitty', en: 'Hello Kitty' },
+    poses: [1, 5, 9],
+  },
+  {
+    id: 'cinnamoroll',
+    order: 2,
+    names: { 'zh-Hant': '玉桂狗', en: 'Cinnamoroll' },
+    poses: [1, 4, 7],
+  },
+  {
+    id: 'my-melody',
+    order: 3,
+    names: { 'zh-Hant': '美樂蒂', en: 'My Melody' },
+    poses: [1, 4, 9],
+  },
+  {
+    id: 'kuromi',
+    order: 4,
+    names: { 'zh-Hant': '酷洛米', en: 'Kuromi' },
+    poses: [1, 5, 9],
+  },
+  {
+    id: 'pompompurin',
+    order: 5,
+    names: { 'zh-Hant': '布丁狗', en: 'Pompompurin' },
+    poses: [1, 3, 7],
+  },
+  {
+    id: 'little-twin-stars',
+    order: 6,
+    names: { 'zh-Hant': '雙星仙子', en: 'Little Twin Stars' },
+    poses: [1, 3, 6],
+  },
+  {
+    id: 'miffy',
+    order: 7,
+    names: { 'zh-Hant': '米飛兔', en: 'Miffy' },
+    poses: [1, 5, 10],
+  },
+  {
+    id: 'rilakkuma',
+    order: 8,
+    names: { 'zh-Hant': '拉拉熊', en: 'Rilakkuma' },
+    poses: [1, 3, 4],
+  },
+  {
+    id: 'sumikko-gurashi',
+    order: 9,
+    names: { 'zh-Hant': '角落生物', en: 'Sumikko Gurashi' },
+    poses: [1, 4, 10],
+  },
+  {
+    id: 'pusheen',
+    order: 10,
+    names: { 'zh-Hant': '胖吉貓', en: 'Pusheen' },
+    poses: [1, 5, 7],
+  },
+  {
+    id: 'kirby',
+    order: 11,
+    names: { 'zh-Hant': '星之卡比', en: 'Kirby' },
+    poses: [1, 3, 7],
+  },
+  {
+    id: 'snoopy',
+    order: 12,
+    names: { 'zh-Hant': '史努比', en: 'Snoopy' },
+    poses: [1, 5, 9],
+  },
+  {
+    id: 'mickey-mouse',
+    order: 13,
+    names: { 'zh-Hant': '米奇與米妮', en: 'Mickey and Minnie' },
+    poses: [1, 3, 6],
+  },
+];
+
 const styles = [
   {
     id: 'sweet',
@@ -95,100 +176,46 @@ const styles = [
   },
 ];
 
-const styleStickerSets = {
-  sweet: [
-    ['hello-kitty', [1, 3, 6, 9, 12, 16]],
-    ['cinnamoroll', [1, 3, 5, 7, 9, 16]],
-    ['my-melody', [1, 4, 9, 12, 14, 16]],
-    ['pompompurin', [1, 2, 3, 4, 6, 8]],
-    ['little-twin-stars', [1, 2, 4, 6, 8, 10]],
-  ],
-  diary: [
-    ['kirby', [1, 3, 4, 6, 9, 12]],
-    ['sumikko-gurashi', [1, 2, 3, 4, 8, 14]],
-    ['pusheen', [1, 2, 4, 6, 10, 12]],
-    ['miffy', [1, 3, 5, 9, 11, 16]],
-    ['rilakkuma', [1, 3, 4, 7, 9, 14]],
-  ],
-  film: [
-    ['hello-kitty', [1, 3, 6, 9, 12, 16]],
-    ['cinnamoroll', [1, 3, 5, 7, 9, 16]],
-    ['kirby', [1, 3, 4, 6, 9, 12]],
-    ['snoopy', [1, 2, 3, 4, 8, 11]],
-    ['mickey-mouse', [1, 2, 3, 5, 9, 12]],
-  ],
-  plaid: [
-    ['mickey-mouse', [1, 2, 3, 5, 9, 12]],
-    ['miffy', [1, 3, 5, 9, 11, 16]],
-    ['little-twin-stars', [1, 2, 4, 6, 8, 10]],
-    ['rilakkuma', [1, 3, 4, 7, 9, 14]],
-    ['sumikko-gurashi', [1, 2, 3, 4, 8, 14]],
-  ],
-  mono: [
-    ['kuromi', [1, 3, 6, 8, 10, 14]],
-    ['snoopy', [1, 2, 3, 4, 8, 11]],
-    ['pusheen', [1, 2, 4, 6, 10, 12]],
-    ['mickey-mouse', [1, 2, 3, 5, 9, 12]],
-    ['my-melody', [1, 4, 9, 12, 14, 16]],
-  ],
-};
-
 const layoutPositions = {
   grid: [
-    { x: 0.1, y: 0.08, scale: 0.46, rotation: -8, flipX: false },
-    { x: 0.9, y: 0.1, scale: 0.32, rotation: 8, flipX: true },
-    { x: 0.88, y: 0.89, scale: 0.3, rotation: -6, flipX: true },
-    { x: 0.13, y: 0.87, scale: 0.32, rotation: 7, flipX: false },
-    { x: 0.5, y: 0.055, scale: 0.18, rotation: -4, flipX: false },
+    { x: 0.13, y: 0.075, scale: 0.52, rotation: -8, flipX: false },
+    { x: 0.88, y: 0.08, scale: 0.34, rotation: 8, flipX: true },
+    { x: 0.88, y: 0.91, scale: 0.36, rotation: -6, flipX: true },
   ],
   square: [
-    { x: 0.1, y: 0.07, scale: 0.46, rotation: -7, flipX: false },
-    { x: 0.9, y: 0.09, scale: 0.32, rotation: 7, flipX: true },
-    { x: 0.88, y: 0.9, scale: 0.3, rotation: -6, flipX: true },
-    { x: 0.13, y: 0.88, scale: 0.32, rotation: 7, flipX: false },
-    { x: 0.5, y: 0.05, scale: 0.18, rotation: -3, flipX: false },
+    { x: 0.13, y: 0.075, scale: 0.52, rotation: -7, flipX: false },
+    { x: 0.88, y: 0.08, scale: 0.34, rotation: 7, flipX: true },
+    { x: 0.88, y: 0.91, scale: 0.36, rotation: -6, flipX: true },
   ],
   bento: [
-    { x: 0.07, y: 0.07, scale: 0.44, rotation: -7, flipX: false },
-    { x: 0.91, y: 0.08, scale: 0.3, rotation: 7, flipX: true },
-    { x: 0.93, y: 0.34, scale: 0.24, rotation: -5, flipX: true },
-    { x: 0.93, y: 0.67, scale: 0.24, rotation: 5, flipX: true },
-    { x: 0.11, y: 0.92, scale: 0.28, rotation: 7, flipX: false },
+    { x: 0.12, y: 0.07, scale: 0.5, rotation: -7, flipX: false },
+    { x: 0.88, y: 0.08, scale: 0.31, rotation: 7, flipX: true },
+    { x: 0.88, y: 0.91, scale: 0.33, rotation: -6, flipX: true },
   ],
   'portrait-grid': [
-    { x: 0.1, y: 0.07, scale: 0.46, rotation: -8, flipX: false },
-    { x: 0.9, y: 0.09, scale: 0.32, rotation: 8, flipX: true },
-    { x: 0.88, y: 0.91, scale: 0.3, rotation: -6, flipX: true },
-    { x: 0.13, y: 0.91, scale: 0.32, rotation: 7, flipX: false },
-    { x: 0.5, y: 0.045, scale: 0.18, rotation: -4, flipX: false },
+    { x: 0.13, y: 0.075, scale: 0.5, rotation: -8, flipX: false },
+    { x: 0.88, y: 0.075, scale: 0.34, rotation: 8, flipX: true },
+    { x: 0.5, y: 0.92, scale: 0.34, rotation: 7, flipX: false },
   ],
   vertical: [
-    { x: 0.08, y: 0.065, scale: 0.4, rotation: -5, flipX: false },
-    { x: 0.94, y: 0.08, scale: 0.32, rotation: 7, flipX: true },
-    { x: 0.07, y: 0.26, scale: 0.28, rotation: -4, flipX: false },
-    { x: 0.95, y: 0.73, scale: 0.29, rotation: 6, flipX: true },
-    { x: 0.07, y: 0.93, scale: 0.32, rotation: -5, flipX: false },
+    { x: 0.12, y: 0.065, scale: 0.42, rotation: -5, flipX: false },
+    { x: 0.89, y: 0.075, scale: 0.3, rotation: 7, flipX: true },
+    { x: 0.12, y: 0.93, scale: 0.38, rotation: -5, flipX: false },
   ],
   classic: [
-    { x: 0.08, y: 0.055, scale: 0.36, rotation: -5, flipX: false },
-    { x: 0.94, y: 0.145, scale: 0.3, rotation: 7, flipX: true },
-    { x: 0.07, y: 0.37, scale: 0.28, rotation: -4, flipX: false },
-    { x: 0.95, y: 0.64, scale: 0.29, rotation: 6, flipX: true },
-    { x: 0.07, y: 0.91, scale: 0.33, rotation: -5, flipX: false },
+    { x: 0.12, y: 0.05, scale: 0.34, rotation: -5, flipX: false },
+    { x: 0.89, y: 0.12, scale: 0.28, rotation: 7, flipX: true },
+    { x: 0.5, y: 0.94, scale: 0.32, rotation: -4, flipX: false },
   ],
   horizontal: [
-    { x: 0.08, y: 0.1, scale: 0.33, rotation: -7, flipX: false },
-    { x: 0.28, y: 0.9, scale: 0.27, rotation: 6, flipX: true },
-    { x: 0.5, y: 0.1, scale: 0.27, rotation: -5, flipX: false },
-    { x: 0.72, y: 0.9, scale: 0.27, rotation: 6, flipX: true },
-    { x: 0.9, y: 0.1, scale: 0.33, rotation: -6, flipX: false },
+    { x: 0.1, y: 0.09, scale: 0.32, rotation: -7, flipX: false },
+    { x: 0.9, y: 0.1, scale: 0.25, rotation: 7, flipX: true },
+    { x: 0.5, y: 0.89, scale: 0.28, rotation: 5, flipX: false },
   ],
   wide: [
-    { x: 0.07, y: 0.08, scale: 0.22, rotation: -7, flipX: false },
-    { x: 0.28, y: 0.91, scale: 0.2, rotation: 6, flipX: true },
-    { x: 0.5, y: 0.08, scale: 0.2, rotation: -5, flipX: false },
-    { x: 0.72, y: 0.91, scale: 0.2, rotation: 6, flipX: true },
-    { x: 0.9, y: 0.08, scale: 0.22, rotation: -6, flipX: false },
+    { x: 0.08, y: 0.055, scale: 0.24, rotation: -7, flipX: false },
+    { x: 0.92, y: 0.065, scale: 0.2, rotation: 7, flipX: true },
+    { x: 0.5, y: 0.92, scale: 0.22, rotation: 5, flipX: false },
   ],
 };
 
@@ -225,55 +252,43 @@ function motifPath(motif, x, y, size, fill, opacity = 1) {
       .join('');
     return `${open}${petals}<circle cx="${round(x + size / 2)}" cy="${round(y + size / 2)}" r="${round(size * 0.13)}" fill="#ffffff" opacity="0.9" />${`</g>`}`;
   }
-  if (motif === 'cloud') {
-    return `${open}<path d="M ${x} ${y + size * 0.75} Q ${x} ${y + size * 0.25} ${x + size * 0.42} ${y + size * 0.28} Q ${x + size * 0.45} ${y} ${x + size * 0.78} ${y + size * 0.14} Q ${x + size} ${y + size * 0.38} ${x + size} ${y + size * 0.75} Z" />${`</g>`}`;
-  }
-  if (motif === 'paw') {
-    return `${open}<ellipse cx="${round(x + size / 2)}" cy="${round(y + size * 0.6)}" rx="${round(size * 0.34)}" ry="${round(size * 0.25)}" /><circle cx="${round(x + size * 0.2)}" cy="${round(y + size * 0.24)}" r="${round(size * 0.11)}" /><circle cx="${round(x + size * 0.42)}" cy="${round(y + size * 0.14)}" r="${round(size * 0.13)}" /><circle cx="${round(x + size * 0.65)}" cy="${round(y + size * 0.14)}" r="${round(size * 0.13)}" /><circle cx="${round(x + size * 0.84)}" cy="${round(y + size * 0.24)}" r="${round(size * 0.11)}" />${`</g>`}`;
-  }
-  if (motif === 'squiggle') {
-    return `${open}<path d="M ${x} ${y + size * 0.55} Q ${x + size * 0.2} ${y} ${x + size * 0.4} ${y + size * 0.55} T ${x + size * 0.8} ${y + size * 0.55} T ${x + size} ${y + size * 0.55}" fill="none" stroke="${fill}" stroke-width="${Math.max(3, size * 0.12)}" stroke-linecap="round" />${`</g>`}`;
-  }
   return `${open}<circle cx="${round(x + size / 2)}" cy="${round(y + size / 2)}" r="${round(size * 0.42)}" />${`</g>`}`;
 }
 
 function patternDefs(style, width, height) {
   const { soft, accent, ink } = style.palette;
-  const unit = Math.max(38, Math.round(Math.min(width, height) * 0.035));
+  const unit = Math.max(42, Math.round(width * 0.03));
 
   if (style.pattern === 'stripes') {
     return `<defs><pattern id="pattern" width="${unit * 2}" height="${unit * 2}" patternUnits="userSpaceOnUse" patternTransform="rotate(-8)">
-      <rect width="${unit * 2}" height="${unit * 2}" fill="${soft}" opacity="0.2"/>
-      <rect width="${unit}" height="${unit * 2}" fill="#ffffff" opacity="0.26"/>
-      ${motifPath(style.motif, unit * 0.26, unit * 0.18, unit * 0.46, accent, 0.2)}
+      <rect width="${unit * 2}" height="${unit * 2}" fill="${soft}" opacity="0.12"/>
+      <rect width="${unit}" height="${unit * 2}" fill="#ffffff" opacity="0.16"/>
     </pattern></defs>`;
   }
 
   if (style.pattern === 'grid') {
     return `<defs><pattern id="pattern" width="${unit}" height="${unit}" patternUnits="userSpaceOnUse">
-      <rect width="${unit}" height="${unit}" fill="none"/>
-      <path d="M ${unit} 0 L 0 0 L 0 ${unit}" fill="none" stroke="${ink}" stroke-width="2" opacity="0.13"/>
+      <path d="M ${unit} 0 L 0 0 L 0 ${unit}" fill="none" stroke="${ink}" stroke-width="2" opacity="0.08"/>
     </pattern></defs>`;
   }
 
   if (style.pattern === 'film') {
     return `<defs><pattern id="pattern" width="${unit}" height="${unit}" patternUnits="userSpaceOnUse">
-      <rect width="${unit}" height="${unit}" fill="${soft}" opacity="0.16"/>
-      <rect x="${round(unit * 0.3)}" y="${round(unit * 0.3)}" width="${round(unit * 0.16)}" height="${round(unit * 0.42)}" rx="4" fill="${accent}" opacity="0.24"/>
+      <rect width="${unit}" height="${unit}" fill="${soft}" opacity="0.12"/>
+      <rect x="${round(unit * 0.3)}" y="${round(unit * 0.3)}" width="${round(unit * 0.16)}" height="${round(unit * 0.42)}" rx="4" fill="${accent}" opacity="0.12"/>
     </pattern></defs>`;
   }
 
   if (style.pattern === 'plaid') {
     return `<defs><pattern id="pattern" width="${unit * 2}" height="${unit * 2}" patternUnits="userSpaceOnUse">
-      <rect width="${unit * 2}" height="${unit * 2}" fill="${soft}" opacity="0.18"/>
-      <path d="M ${unit} 0 L ${unit} ${unit * 2} M 0 ${unit} L ${unit * 2} ${unit}" stroke="${accent}" stroke-width="5" opacity="0.18"/>
-      <rect x="0" y="0" width="${unit}" height="${unit}" fill="${accent}" opacity="0.08"/>
+      <rect width="${unit * 2}" height="${unit * 2}" fill="${soft}" opacity="0.12"/>
+      <path d="M ${unit} 0 L ${unit} ${unit * 2} M 0 ${unit} L ${unit * 2} ${unit}" stroke="${accent}" stroke-width="5" opacity="0.12"/>
+      <rect x="0" y="0" width="${unit}" height="${unit}" fill="${accent}" opacity="0.06"/>
     </pattern></defs>`;
   }
 
   return `<defs><pattern id="pattern" width="${unit}" height="${unit}" patternUnits="userSpaceOnUse">
-    <rect width="${unit}" height="${unit}" fill="none"/>
-    <circle cx="${round(unit * 0.5)}" cy="${round(unit * 0.5)}" r="${round(unit * 0.09)}" fill="${soft}" opacity="0.28"/>
+    <circle cx="${round(unit * 0.5)}" cy="${round(unit * 0.5)}" r="${round(unit * 0.09)}" fill="${soft}" opacity="0.2"/>
   </pattern></defs>`;
 }
 
@@ -281,20 +296,11 @@ function backgroundSvg(style, layoutId) {
   const width = targetWidth;
   const height = layoutHeights[layoutId];
   const { base } = style.palette;
-  const accent = style.palette.accent;
-  const motifSize = Math.max(62, Math.round(Math.min(width, height) * 0.16));
-  const decorations = [
-    motifPath(style.motif, width * 0.07, height * 0.07, motifSize, accent, 0.1),
-    motifPath(style.motif, width * 0.78, height * 0.1, motifSize * 0.72, accent, 0.08),
-    motifPath(style.motif, width * 0.78, height * 0.7, motifSize * 0.78, accent, 0.08),
-    motifPath(style.motif, width * 0.09, height * 0.74, motifSize * 0.72, accent, 0.08),
-  ].join('');
-
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}">
   ${patternDefs(style, width, height)}
   <rect width="${width}" height="${height}" fill="${base}"/>
   <rect width="${width}" height="${height}" fill="url(#pattern)"/>
-  ${decorations}
+  <rect width="${width}" height="${height}" fill="#ffffff" opacity="0.18"/>
 </svg>`;
 }
 
@@ -323,7 +329,6 @@ function bentoLayout() {
   const rightWidth = 1 - gap - leftWidth;
   const rightHeight = (1 - gap * 2) / 3;
   return {
-    id: 'bento',
     slots: [
       { x: 0, y: 0, width: leftWidth, height: 1 },
       { x: leftWidth + gap, y: 0, width: rightWidth, height: rightHeight },
@@ -364,42 +369,43 @@ function frameDecorations(style, layoutId) {
   const width = targetWidth;
   const height = layoutHeights[layoutId];
   const { accent, soft, ink } = style.palette;
-  const unit = Math.max(18, Math.round(Math.min(width, height) * 0.02));
+  const unit = Math.max(12, Math.round(Math.min(width, height) * 0.02));
+  const motifSize = Math.max(18, unit * 1.25);
   const decorations = [];
 
   if (style.id === 'sweet') {
-    for (let x = unit * 1.2; x < width - unit; x += unit * 1.25) {
-      decorations.push(`<circle cx="${round(x)}" cy="${round(unit * 0.72)}" r="${round(unit * 0.34)}" fill="none" stroke="${accent}" stroke-width="2" opacity="0.72"/>`);
-      decorations.push(`<circle cx="${round(x)}" cy="${round(height - unit * 0.72)}" r="${round(unit * 0.34)}" fill="none" stroke="${accent}" stroke-width="2" opacity="0.72"/>`);
+    for (const x of [width * 0.08, width * 0.18, width * 0.82, width * 0.92]) {
+      decorations.push(motifPath('heart', x, Math.max(14, unit * 0.35), motifSize, accent, 0.36));
+      decorations.push(motifPath('heart', x, height - Math.max(30, unit * 1.25), motifSize, accent, 0.3));
     }
-    decorations.push(`<path d="M ${width * 0.5 - 54} ${unit * 0.84} Q ${width * 0.5 - 32} ${unit * 0.5} ${width * 0.5 - 12} ${unit * 0.84} Q ${width * 0.5 + 8} ${unit * 0.5} ${width * 0.5 + 31} ${unit * 0.84}" fill="none" stroke="${accent}" stroke-width="4" stroke-linecap="round" opacity="0.85"/>`);
   } else if (style.id === 'diary') {
-    decorations.push(`<rect x="${round(unit * 0.65)}" y="${round(unit * 0.5)}" width="${round(unit * 3.8)}" height="${round(unit * 1.1)}" rx="6" fill="${soft}" opacity="0.7" transform="rotate(-4 ${round(unit * 2.5)} ${round(unit)})"/>`);
-    decorations.push(`<rect x="${round(width - unit * 4.35)}" y="${round(height - unit * 1.7)}" width="${round(unit * 3.8)}" height="${round(unit * 1.1)}" rx="6" fill="${soft}" opacity="0.7" transform="rotate(4 ${round(width - unit * 2.4)} ${round(height - unit)})"/>`);
-    for (let index = 0; index < 4; index += 1) {
-      decorations.push(motifPath('flower', width * 0.08 + index * 28, height * 0.055 + index * 9, 20, accent, 0.18));
-    }
+    decorations.push(`<rect x="${round(unit * 0.6)}" y="${round(unit * 0.18)}" width="${round(unit * 3.6)}" height="${round(unit)}" rx="5" fill="${soft}" opacity="0.72" transform="rotate(-5 ${round(unit * 2.2)} ${round(unit * 0.7)})"/>`);
+    decorations.push(`<rect x="${round(width - unit * 4.2)}" y="${round(height - unit * 1.25)}" width="${round(unit * 3.6)}" height="${round(unit)}" rx="5" fill="${soft}" opacity="0.72" transform="rotate(5 ${round(width - unit * 2.4)} ${round(height - unit * 0.7)})"/>`);
+    decorations.push(`<path d="M ${round(width * 0.56)} ${round(height * 0.055)} q ${round(unit * 0.8)} ${round(unit * 0.25)} ${round(unit * 1.6)} 0 M ${round(width * 0.56)} ${round(height * 0.1)} q ${round(unit * 0.8)} ${round(unit * 0.25)} ${round(unit * 1.6)} 0" fill="none" stroke="${ink}" stroke-width="${Math.max(2, unit * 0.09)}" stroke-linecap="round" opacity="0.28"/>`);
   } else if (style.id === 'film') {
-    const perforationCount = Math.max(8, Math.round(width / (unit * 1.25)));
+    const perforationCount = Math.max(8, Math.round(width / (unit * 1.35)));
     const spacing = (width - unit * 2) / perforationCount;
     for (let index = 0; index < perforationCount; index += 1) {
       const x = unit + spacing * index + spacing / 2;
-      decorations.push(`<rect x="${round(x - unit * 0.16)}" y="${round(unit * 0.18)}" width="${round(unit * 0.32)}" height="${round(unit * 0.45)}" rx="4" fill="${accent}" opacity="0.72"/>`);
-      decorations.push(`<rect x="${round(x - unit * 0.16)}" y="${round(height - unit * 0.62)}" width="${round(unit * 0.32)}" height="${round(unit * 0.45)}" rx="4" fill="${accent}" opacity="0.72"/>`);
+      decorations.push(`<rect x="${round(x - unit * 0.2)}" y="${round(unit * 0.16)}" width="${round(unit * 0.4)}" height="${round(unit * 0.55)}" rx="4" fill="${accent}" opacity="0.62"/>`);
+      decorations.push(`<rect x="${round(x - unit * 0.2)}" y="${round(height - unit * 0.8)}" width="${round(unit * 0.4)}" height="${round(unit * 0.55)}" rx="4" fill="${accent}" opacity="0.62"/>`);
     }
-    decorations.push(`<text x="${round(width * 0.5)}" y="${round(unit * 1.7)}" text-anchor="middle" font-family="Arial, sans-serif" font-size="${unit * 0.6}" font-weight="800" fill="${accent}" opacity="0.72">REC · ${style.label}</text>`);
+    for (let y = unit * 3; y < height - unit * 2; y += unit * 2.4) {
+      decorations.push(`<rect x="${round(unit * 0.28)}" y="${round(y)}" width="${round(unit * 0.38)}" height="${round(unit * 0.48)}" rx="4" fill="${accent}" opacity="0.35"/>`);
+      decorations.push(`<rect x="${round(width - unit * 0.72)}" y="${round(y)}" width="${round(unit * 0.38)}" height="${round(unit * 0.48)}" rx="4" fill="${accent}" opacity="0.35"/>`);
+    }
+    decorations.push(`<text x="${round(width * 0.5)}" y="${round(unit * 2.1)}" text-anchor="middle" font-family="Arial, sans-serif" font-size="${round(unit * 0.58)}" font-weight="800" fill="${accent}" opacity="0.55">${style.label}</text>`);
   } else if (style.id === 'plaid') {
-    decorations.push(`<rect x="${round(unit)}" y="${round(unit)}" width="${round(unit * 3.3)}" height="${round(unit * 1.2)}" rx="6" fill="${accent}" opacity="0.7" transform="rotate(-6 ${round(unit * 2.45)} ${round(unit * 1.6)})"/>`);
-    decorations.push(`<rect x="${round(width - unit * 4.25)}" y="${round(height - unit * 2.15)}" width="${round(unit * 3.3)}" height="${round(unit * 1.2)}" rx="6" fill="${accent}" opacity="0.7" transform="rotate(6 ${round(width - unit * 2.6)} ${round(height - unit * 1.5)})"/>`);
-    decorations.push(motifPath('flower', width * 0.08, height * 0.87, unit * 1.7, accent, 0.28));
-    decorations.push(motifPath('flower', width * 0.8, height * 0.07, unit * 1.7, accent, 0.28));
+    decorations.push(`<rect x="${round(unit * 0.55)}" y="${round(unit * 0.45)}" width="${round(unit * 3.2)}" height="${round(unit * 0.95)}" rx="4" fill="${accent}" opacity="0.55" transform="rotate(-6 ${round(unit * 2.1)} ${round(unit)})"/>`);
+    decorations.push(`<rect x="${round(width - unit * 3.85)}" y="${round(height - unit * 1.55)}" width="${round(unit * 3.2)}" height="${round(unit * 0.95)}" rx="4" fill="${accent}" opacity="0.55" transform="rotate(6 ${round(width - unit * 2.2)} ${round(height - unit * 1.1)})"/>`);
+    decorations.push(motifPath('flower', width * 0.08, height * 0.88, motifSize, accent, 0.32));
+    decorations.push(motifPath('flower', width * 0.82, height * 0.05, motifSize, accent, 0.32));
   } else {
-    for (let index = 0; index < 7; index += 1) {
-      const x = width * (index / 6 + 0.06);
-      decorations.push(motifPath('star', x, height * 0.055, unit * 0.8, ink, 0.22));
-      decorations.push(motifPath('heart', x, height * 0.9, unit * 0.8, ink, 0.16));
+    for (const x of [width * 0.08, width * 0.5, width * 0.92]) {
+      decorations.push(motifPath('star', x, Math.max(13, unit * 0.2), motifSize, ink, 0.34));
+      decorations.push(motifPath('star', x, height - Math.max(30, unit * 0.9), motifSize * 0.78, ink, 0.28));
     }
-    decorations.push(`<path d="M ${width * 0.12} ${height * 0.12} q ${unit * 0.8} ${unit * 0.4} ${unit * 1.6} 0" fill="none" stroke="${ink}" stroke-width="${Math.max(2, unit * 0.12)}" stroke-linecap="round" opacity="0.22"/>`);
+    decorations.push(`<path d="M ${round(width * 0.12)} ${round(height * 0.12)} q ${round(unit * 0.8)} ${round(unit * 0.4)} ${round(unit * 1.6)} 0" fill="none" stroke="${ink}" stroke-width="${Math.max(2, unit * 0.08)}" stroke-linecap="round" opacity="0.28"/>`);
   }
 
   return decorations.join('');
@@ -410,13 +416,11 @@ function frameSvg(style, layoutId) {
   const height = layoutHeights[layoutId];
   const { accent, ink, paper } = style.palette;
   const rects = slotRectsForSvg(layoutId);
-  const outer = `<rect x="18" y="18" width="${width - 36}" height="${height - 36}" rx="28" fill="none" stroke="${paper}" stroke-width="14" opacity="0.96"/>
-  <rect x="31" y="31" width="${width - 62}" height="${height - 62}" rx="21" fill="none" stroke="${accent}" stroke-width="3" opacity="0.55"/>`;
+  const stroke = style.id === 'mono' ? ink : paper;
+  const outer = `<rect x="18" y="18" width="${width - 36}" height="${height - 36}" rx="26" fill="none" stroke="${stroke}" stroke-width="16" opacity="0.98"/>
+  <rect x="31" y="31" width="${width - 62}" height="${height - 62}" rx="20" fill="none" stroke="${accent}" stroke-width="3" opacity="0.48"/>`;
   const slotStrokes = rects
-    .map((rect, index) => {
-      const stroke = style.id === 'mono' ? ink : '#ffffff';
-      return `<rect x="${round(rect.x + 5)}" y="${round(rect.y + 5)}" width="${round(rect.width - 10)}" height="${round(rect.height - 10)}" rx="18" fill="none" stroke="${stroke}" stroke-width="${index % 2 === 0 ? 9 : 6}" opacity="0.88"/>`;
-    })
+    .map((rect, index) => `<rect x="${round(rect.x + 5)}" y="${round(rect.y + 5)}" width="${round(rect.width - 10)}" height="${round(rect.height - 10)}" rx="20" fill="none" stroke="${stroke}" stroke-width="${index % 2 === 0 ? 10 : 7}" opacity="0.94"/>`)
     .join('');
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}">
   ${outer}
@@ -442,11 +446,10 @@ function stickerId(collection, suffix) {
   return `${collection}-sticker-${String(suffix).padStart(2, '0')}`;
 }
 
-function decoration(style, layoutId, index) {
-  const [collection, poses] = styleStickerSets[style.id][index];
+function decoration(ip, layoutId, index) {
   const position = layoutPositions[layoutId][index];
   return {
-    itemId: stickerId(collection, poses[index]),
+    itemId: stickerId(ip.id, ip.poses[index % ip.poses.length]),
     x: position.x,
     y: position.y,
     scale: position.scale,
@@ -469,6 +472,7 @@ for (const layoutId of layoutIds) {
     name: { 'zh-Hant': '空白自訂', en: 'Blank custom' },
     kind: 'blank',
     collection: 'blank',
+    collectionOrder: 0,
     order: 0,
     frame: `packs/templates/fan-ip/templates/frame-${layoutId}.svg`,
     decorations: [],
@@ -476,24 +480,33 @@ for (const layoutId of layoutIds) {
   });
 
   for (const style of styles) {
-    const templateId = `style-${style.id}-${layoutId}`;
-    manifest.push({
-      id: templateId,
-      layoutId,
-      name: style.names,
-      kind: 'style',
-      collection: style.id,
-      styleId: style.id,
-      order: style.order,
-      background: `packs/templates/fan-ip/templates/${templateId}-background.svg`,
-      frame: `packs/templates/fan-ip/templates/${templateId}-frame.svg`,
-      accentColor: style.palette.accent,
-      collections: styleStickerSets[style.id].map(([collection]) => collection),
-      decorations: layoutPositions[layoutId].map((_, index) =>
-        decoration(style, layoutId, index),
-      ),
-      license: 'private-personal-use',
-    });
+    const templateBaseId = `style-${style.id}-${layoutId}`;
+    for (const ip of ipCollections) {
+      const templateId = `${templateBaseId}-${ip.id}`;
+      manifest.push({
+        id: templateId,
+        layoutId,
+        name: {
+          'zh-Hant': `${style.names['zh-Hant']} · ${ip.names['zh-Hant']}`,
+          en: `${style.names.en} · ${ip.names.en}`,
+        },
+        kind: 'style',
+        collection: ip.id,
+        collectionOrder: ip.order,
+        styleId: style.id,
+        styleName: style.names,
+        order: style.order,
+        background: `packs/templates/fan-ip/templates/${templateBaseId}-background.svg`,
+        frame: `packs/templates/fan-ip/templates/${templateBaseId}-frame.svg`,
+        accentColor: style.palette.accent,
+        collections: [ip.id],
+        collectionName: ip.names,
+        decorations: layoutPositions[layoutId].map((_, index) =>
+          decoration(ip, layoutId, index),
+        ),
+        license: 'private-personal-use',
+      });
+    }
   }
 }
 
@@ -506,13 +519,13 @@ for (const layoutId of layoutIds) {
 
 for (const style of styles) {
   for (const layoutId of layoutIds) {
-    const templateId = `style-${style.id}-${layoutId}`;
+    const templateBaseId = `style-${style.id}-${layoutId}`;
     writeFileSync(
-      resolve(outputDir, `${templateId}-background.svg`),
+      resolve(outputDir, `${templateBaseId}-background.svg`),
       backgroundSvg(style, layoutId),
     );
     writeFileSync(
-      resolve(outputDir, `${templateId}-frame.svg`),
+      resolve(outputDir, `${templateBaseId}-frame.svg`),
       frameSvg(style, layoutId),
     );
   }
@@ -530,8 +543,8 @@ writeFileSync(
       id: 'fan-ip-frames',
       kind: 'frame-template',
       displayName: {
-        'zh-Hant': '人生四格風格相框',
-        en: 'Life four-cut style frames',
+        'zh-Hant': 'IP 主題風格相框',
+        en: 'IP themed style frames',
       },
       license: 'private-personal-use',
     },

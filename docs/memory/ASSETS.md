@@ -35,10 +35,11 @@
   分別對應 5 styles × 8 layouts 的 background/frame。
 - 8 個 `frame-<layout>.svg` 供 blank 可選色模板使用。
 - `decorations.itemId` 只引用既有 `packs/fan-ip` 貼圖，不複製角色 asset。
-- 每個 `layoutId` 提供 5 個 style template 與 1 個 blank 可選色 template，
-  合計 48 筆 manifest entries。
-- 每個 style template 使用 5 張較大貼圖；五種風格合起來在每個 layout
-  覆蓋全部 13 個 fan-ip collection。
+- 每個 `layoutId` 提供 5 styles × 13 IP 的 style template，以及 1 個 blank
+  可選色 template；合計 528 筆 manifest entries。
+- 每張 style template 使用 3 張同一 IP 的較大貼圖，不能混搭不同 IP。
+- 每個 layout 可透過「風格 + 角色系列」選到全部 13 個 fan-ip collection。
+- `mono` style 的 template decorations 使用 grayscale render。
 - normal/Render fat build 包含；`build:public` 排除整個 template pack。
 - 生成參考工具：`tools/generate-frame-templates.mjs`。
 

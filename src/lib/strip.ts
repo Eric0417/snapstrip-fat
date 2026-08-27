@@ -36,6 +36,7 @@ export interface LoadedFrameTemplate {
   backgroundImage?: HTMLImageElement;
   frameImage?: HTMLImageElement;
   decorations: readonly TemplateStickerRenderData[];
+  monochrome?: boolean;
 }
 
 export function stripSize(layoutId: string, targetWidth = 1200): StripSize {
@@ -158,8 +159,15 @@ export function drawStripBase(
     context.drawImage(template.frameImage, 0, 0, size.width, size.height);
   }
 
+  const monochrome = template?.monochrome;
   for (const decoration of template?.decorations ?? []) {
-    drawSticker(context, size, decoration, decoration.image);
+    drawSticker(
+      context,
+      size,
+      decoration,
+      decoration.image,
+      monochrome ? 'grayscale(1) contrast(1.15)' : undefined,
+    );
   }
 }
 
@@ -219,6 +227,7 @@ export async function loadFrameTemplate(
     backgroundImage: backgroundImage ?? undefined,
     frameImage: frameImage ?? undefined,
     decorations,
+    monochrome: template.styleId === 'mono',
   };
 }
 
@@ -288,6 +297,7 @@ export function drawSticker(
   size: StripSize,
   data: StickerRenderData,
   image: HTMLImageElement,
+  filter?: string,
 ) {
   const { placement } = data;
   if (!placement.visible || placement.opacity <= 0) return;
@@ -302,6 +312,7 @@ export function drawSticker(
   context.rotate((placement.rotation * Math.PI) / 180);
   context.scale(placement.flipX ? -1 : 1, placement.flipY ? -1 : 1);
   context.globalAlpha = placement.opacity;
+  context.filter = filter ?? 'none';
   context.drawImage(image, -width / 2, -height / 2, width, height);
   context.restore();
 }

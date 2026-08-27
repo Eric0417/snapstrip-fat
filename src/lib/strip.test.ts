@@ -18,9 +18,11 @@ function fakeImage(id: string) {
 function fakeContext() {
   const calls: Array<{ image: HTMLImageElement; args: unknown[] }> = [];
   const fills: string[] = [];
+  const filters: string[] = [];
   const context = {
     fillStyle: '',
     globalAlpha: 1,
+    filter: 'none',
     fillRect: () => {
       fills.push(context.fillStyle);
     },
@@ -33,11 +35,17 @@ function fakeContext() {
     scale: () => undefined,
     rotate: () => undefined,
     drawImage: (image: HTMLImageElement, ...args: unknown[]) => {
+      filters.push(context.filter);
       calls.push({ image, args });
     },
   };
 
-  return { context: context as unknown as CanvasRenderingContext2D, calls, fills };
+  return {
+    context: context as unknown as CanvasRenderingContext2D,
+    calls,
+    fills,
+    filters,
+  };
 }
 
 describe('strip geometry', () => {
@@ -112,8 +120,9 @@ describe('strip geometry', () => {
           image: sticker,
         },
       ],
+      monochrome: true,
     };
-    const { context, calls, fills } = fakeContext();
+    const { context, calls, fills, filters } = fakeContext();
 
     drawStripBase(context, 'grid', stripSize('grid'), [], [], [], loadedTemplate);
 
@@ -123,5 +132,6 @@ describe('strip geometry', () => {
       'sticker',
     ]);
     expect(fills[0]).toBe('#eaf7ff');
+    expect(filters[filters.length - 1]).toBe('grayscale(1) contrast(1.15)');
   });
 });
