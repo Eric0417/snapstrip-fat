@@ -1,0 +1,277 @@
+# SnapStrip v2 Frame Template Format
+
+更新時間：2026-08-28
+
+## 用途
+
+這份文件是新增相框模板的唯一格式規範。只要符合這裡的 pack、manifest、
+SVG 尺寸與 decorations 座標規則，`src/data/templates.ts` 會自動載入模板，
+不需要修改 TypeScript registry 或 UI 程式碼。
+
+## Pack 目錄
+
+```text
+packs/templates/
+  <pack-kind>/
+    pack.json
+    templates/
+      manifest.json
+      <template-id>-background.svg
+      <template-id>-frame.svg
+```
+
+現有範例：
+
+- `packs/templates/fan-ip/`：私人 IP 聯名風格模板。
+- 未來原創模板可放在 `packs/templates/core/`。
+
+`pack.json`：
+
+```json
+{
+  "id": "fan-ip-frames",
+  "kind": "frame-template",
+  "displayName": {
+    "zh-Hant": "人生四格風格相框",
+    "en": "Life four-cut style frames"
+  },
+  "license": "private-personal-use"
+}
+```
+
+## Manifest Schema
+
+`templates/manifest.json` 必須是 JSON array，每個 entry 範例：
+
+```json
+{
+  "id": "style-sweet-grid",
+  "layoutId": "grid",
+  "name": {
+    "zh-Hant": "甜點蕾絲",
+    "en": "Sweet ribbon"
+  },
+  "kind": "style",
+  "collection": "sweet",
+  "styleId": "sweet",
+  "order": 1,
+  "background": "packs/templates/fan-ip/templates/style-sweet-grid-background.svg",
+  "frame": "packs/templates/fan-ip/templates/style-sweet-grid-frame.svg",
+  "accentColor": "#d76b91",
+  "collections": [
+    "hello-kitty",
+    "cinnamoroll",
+    "my-melody",
+    "pompompurin",
+    "little-twin-stars"
+  ],
+  "decorations": [
+    {
+      "itemId": "hello-kitty-sticker-01",
+      "x": 0.1,
+      "y": 0.08,
+      "scale": 0.46,
+      "rotation": -8,
+      "flipX": false,
+      "flipY": false,
+      "opacity": 1
+    }
+  ],
+  "license": "private-personal-use"
+}
+```
+
+Blank 可換色模板範例：
+
+```json
+{
+  "id": "blank-grid",
+  "layoutId": "grid",
+  "name": {
+    "zh-Hant": "空白自訂",
+    "en": "Blank custom"
+  },
+  "kind": "blank",
+  "collection": "blank",
+  "order": 0,
+  "frame": "packs/templates/fan-ip/templates/frame-grid.svg",
+  "decorations": [],
+  "license": "original"
+}
+```
+
+欄位規則：
+
+- `id`：全域唯一 kebab-case，例如 `style-<styleId>-<layoutId>`。
+- `layoutId`：必須是 `grid`、`square`、`bento`、`portrait-grid`、
+  `vertical`、`classic`、`horizontal`、`wide` 其中之一。
+- `kind`：`style` 或 `blank`。
+- `collection`：blank 使用 `blank`；style 使用風格 id。
+- `styleId`：五種風格之一：`sweet`、`diary`、`film`、`plaid`、`mono`。
+- `order`：數值越小越先顯示；blank 為 `0`，五種風格為 `1–5`。
+- `collections`：此模板使用的 fan-ip collection 陣列，供載入器與測試追蹤。
+- `background`：full-canvas SVG，照片底下的完整背景。
+- `frame`：full-canvas SVG，照片上方、template decorations 下方的邊框層。
+- `accentColor`：選項 UI 的主題色，非強制，但 style 模板建議提供。
+- `decorations`：只引用既有 sticker id，不複製角色 asset。
+- `license`：原創為 `original`；第三方 IP 為 `private-personal-use`。
+
+目前的五種風格對應主流人生四格拍貼手法：
+
+| `styleId` | 中文 | 英文 | 視覺特徵 |
+| --- | --- | --- | --- |
+| `sweet` | 甜點蕾絲 | Sweet ribbon | 粉彩條紋、蕾絲/扇貝邊、愛心與甜點感 |
+| `diary` | 手繪日記 | Hand-drawn diary | 米白紙、細格線、手繪花/膠帶/塗鴉 |
+| `film` | 膠卷回憶 | Film memories | 膠卷齒孔、REC/PHOTO 標籤、復古紙感 |
+| `plaid` | 復古格紋 | Vintage plaid | 格紋底、奶油白框、花與緞帶 |
+| `mono` | 黑白韓系 | Korean monochrome | 黑底、白線星/心/音符塗鴉、極簡對比 |
+
+每個 style/layout 模板使用 5 張既有 fan-ip 貼圖；五種風格合起來在每個
+layout 下覆蓋全部 13 個 fan-ip collection，但不再以「一個 layout =
+一個角色」的方式註冊模板。
+
+## Decorations 座標
+
+```ts
+interface TemplateDecoration {
+  itemId: string;
+  x: number;
+  y: number;
+  scale: number;
+  rotation: number;
+  flipX: boolean;
+  flipY: boolean;
+  opacity: number;
+}
+```
+
+- `x/y`：完整 export canvas 的 0–1 正規化座標，不是 slot 座標。
+- `scale`：角色貼圖 display width 除以 canvas `innerWidth`。
+  export 時 `innerWidth` 為 `1310`，preview target 640 時為 `582`。
+- `rotation`：角度，順時針為正。
+- `flipX/flipY`：布林。
+- `opacity`：0–1。
+
+例如 grid 的主角色 `scale=0.46`，在 export 1440 中約等於
+`1310 × 0.46 ≈ 603px` 的貼圖顯示寬度。
+
+## 各 Layout 標準 Canvas
+
+背景與相框 SVG 必須使用以下 `viewBox`，否則長直/橫幅模板會被拉扯：
+
+| `layoutId` | SVG viewBox | Export width × height | Aspect ratio |
+| --- | --- | --- | --- |
+| `grid` | `0 0 1440 1131` | 1440 × 1131 | 1.273 |
+| `square` | `0 0 1440 1440` | 1440 × 1440 | 1.000 |
+| `bento` | `0 0 1440 1440` | 1440 × 1440 | 1.000 |
+| `portrait-grid` | `0 0 1440 1853` | 1440 × 1853 | 0.777 |
+| `vertical` | `0 0 1440 4237` | 1440 × 4237 | 0.340 |
+| `classic` | `0 0 1440 7294` | 1440 × 7294 | 0.197 |
+| `horizontal` | `0 0 1440 508` | 1440 × 508 | 2.835 |
+| `wide` | `0 0 1440 289` | 1440 × 289 | 4.983 |
+
+通用常數：
+
+- export target width：`1440`
+- padding：`65`
+- innerWidth：`1310`
+- slot geometry 由 `src/app/layouts.ts` 定義，模板 manifest 不重複宣告 slots。
+
+### `grid`
+
+- 2×2 橫向方格。
+- Slot aspect ratio：4:3。
+- 適合把主角色放在左上方，另一角色放右下方。
+- 建議主角色 `scale` 約 `0.44–0.48`，輔助角色約 `0.28–0.34`。
+
+### `square`
+
+- 2×2 正方形方格。
+- 適合角落對角構圖。
+- 主角色建議 `scale` 約 `0.44–0.48`。
+
+### `bento`
+
+- 左邊 1 個大照片，右邊 3 個小照片。
+- 主角色適合放在左上方大照片邊緣。
+- 主角色建議 `scale` 約 `0.42–0.46`。
+
+### `portrait-grid`
+
+- 2×2 直式方格。
+- 適合上下對角放角色，中間保持留白。
+- 主角色建議 `scale` 約 `0.44–0.48`。
+
+### `vertical`
+
+- 1×4 長條。
+- 長條上下留白區窄，角色貼圖應放在側邊或照片之間的接縫附近。
+- 主角色建議 `scale` 約 `0.36–0.42`，輔助角色約 `0.26–0.32`。
+
+### `classic`
+
+- 1×4 極長拍立得。
+- 與 vertical 相同邏輯，角色放在兩側與照片接縫處。
+- 主角色建議 `scale` 約 `0.32–0.38`，輔助角色約 `0.26–0.32`。
+
+### `horizontal`
+
+- 4×1 橫幅。
+- 可把角色放在左右外側，避免放在照片中心。
+- 主角色建議 `scale` 約 `0.30–0.36`，輔助角色約 `0.24–0.30`。
+
+### `wide`
+
+- 4×1 極寬電影條。
+- 高度最少，角色只能放在上下邊緣或照片間隔。
+- 主角色建議 `scale` 約 `0.20–0.24`，輔助角色約 `0.17–0.21`。
+
+## SVG Asset Rules
+
+- `background.svg` 是完整畫布背景。
+- `frame.svg` 是完整畫布透明前景。
+- 不要使用外連圖片或 external SVG asset。
+- 角色公仔不能直接畫成精確受版權角色 SVG；只能由 manifest 的
+  `decorations.itemId` 引用既有貼圖。
+- 建議 border inset 至少 `28px`，避免相框壓到照片主體。
+- 主角色貼圖位置應避開四格照片的中央人臉區域。
+
+## 新增模板流程
+
+1. 建立或使用一個 `packs/templates/<pack-kind>/templates/manifest.json`。
+2. 為每個 `layoutId` 產生符合上方 `viewBox` 的 background/frame SVG。
+3. 在 manifest 中填寫 `layoutId`、資產路徑與 decorations。
+4. 確認所有 `itemId` 都存在於 `packs/fan-ip/**/stickers/manifest.json`。
+5. 本機執行：
+
+```bash
+pnpm typecheck
+pnpm test
+pnpm dev
+```
+
+6. 執行 build 驗證：
+
+```bash
+pnpm build
+pnpm build:public
+```
+
+7. 在 `/layout → /capture → /frame` 手動檢查 preview。
+
+現有 8 個 style/layout 模板可由 generator 重新生成：
+
+```bash
+node tools/generate-frame-templates.mjs
+```
+
+generator 會先清空 `packs/templates/fan-ip/templates/`，再重新寫入
+`manifest.json`、8 個 blank frame SVG、40 個 background SVG 與 40 個
+style frame SVG。
+
+## Build 行為
+
+- `pnpm build` 會複製 `packs/templates`，供本機與 `snapstrip-fat` 使用。
+- `pnpm build:public` 不會複製 `packs/templates`，也不會打包模板 manifest。
+- 若公開 build 沒有任何 template，Capture 會直接跳過 `/frame` 並使用原有
+  素色版型輸出。
