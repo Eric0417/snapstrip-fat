@@ -132,8 +132,8 @@
 - 相框模板系統已完成；528 個 template entries（8 blank + 520 style）與新選擇頁在
   桌面/手機均已做非空白畫布、顏色切換與 overflow 檢查。
 - 尚未在真實手機上測試相機權限；fake camera 已通過。
-- 本次 528 個單一 IP template entries（8 blank + 520 style）已完成本機驗證，
-  準備推送至 `fat/deploy` 觸發 Render 重建。
+- `fat/deploy` 已推送並完成 Render 建置；live manifest 為 528 個單一 IP
+  template entries（8 blank + 520 style），SVG 與新版 JS 已確認可正常回傳。
 - `snapstrip-fat.onrender.com` 仍可公開存取，且 fan-ip 檔案可直接下載。
 - 網站前端已加入審查密碼，但靜態 fan-ip 檔案仍可直接下載，不是完整的存取控制。
 - 版權申請文件已備妥，但尚未對任何權利人送出，也尚未獲得任何書面授權。
