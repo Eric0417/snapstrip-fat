@@ -31,4 +31,15 @@ describe('viewportSpawnPosition', () => {
     expect(position.x).toBe(0.5);
     expect(position.y).toBeCloseTo(0.05);
   });
+
+  it('uses the visible bottom when a drawer covers the lower stage', () => {
+    const position = viewportSpawnPosition(
+      { left: 0, right: 390, top: 0, bottom: 1000, width: 390, height: 1000 },
+      390,
+      844,
+      250,
+    );
+    expect(position.x).toBe(0.5);
+    expect(position.y).toBeCloseTo(0.125);
+  });
 });

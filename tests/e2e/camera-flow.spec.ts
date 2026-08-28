@@ -20,6 +20,9 @@ test('captures four camera shots and opens the editor', async ({ page }) => {
   await page.getByRole('button', { name: '繼續' }).click();
   await expect(page).toHaveURL(/\/editor$/, { timeout: 35_000 });
   await expect(page.getByRole('heading', { name: '裝飾你的拍貼' })).toBeVisible();
+  if (await page.locator('.mobile-editor-tabs').isVisible()) {
+    await page.locator('.mobile-editor-tabs').getByRole('button', { name: '貼圖' }).click();
+  }
   await expect(page.locator('.sticker-thumb')).toHaveCount(96);
   expect(errors).toEqual([]);
 });

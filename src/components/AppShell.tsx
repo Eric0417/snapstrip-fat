@@ -1,13 +1,15 @@
 import { Languages, Sparkles } from 'lucide-react';
 import type { ReactNode } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import { useLanguage } from '../i18n/LanguageContext';
 
 export function AppShell({ children }: { children: ReactNode }) {
   const { locale, setLocale, t } = useLanguage();
+  const location = useLocation();
+  const isEditor = location.pathname === '/editor';
 
   return (
-    <div className="app-shell">
+    <div className={`app-shell${isEditor ? ' is-editor-page' : ''}`}>
       <header className="app-nav" aria-label="Site navigation">
         <Link className="brand" to="/" aria-label={t('brand')}>
           <Sparkles size={14} aria-hidden="true" />

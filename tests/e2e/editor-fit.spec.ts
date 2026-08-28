@@ -45,6 +45,9 @@ test('fits a vertical strip into the visible editor stage', async ({ page }) => 
   expect(dimensions.stageHeight).toBeLessThan(dimensions.viewportHeight);
   expect(dimensions.stageWidth).toBeLessThan(dimensions.viewportHeight);
 
+  if (await page.locator('.mobile-editor-tabs').isVisible()) {
+    await page.locator('.mobile-editor-tabs').getByRole('button', { name: '貼圖' }).click();
+  }
   await page.getByRole('button', { name: '特效' }).click();
   await page.locator('.sticker-thumb').first().click();
   await expect(page.locator('.sticker-selection')).toHaveCount(1);

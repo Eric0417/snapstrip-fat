@@ -62,14 +62,23 @@ test('completes the upload, sticker editor, and export flow', async ({ page }) =
   await page.getByRole('button', { name: '繼續' }).click();
   await expect(page).toHaveURL(/\/editor$/, { timeout: 15_000 });
   await expect(page.getByRole('heading', { name: '裝飾你的拍貼' })).toBeVisible();
+  if (await page.locator('.mobile-editor-tabs').isVisible()) {
+    await page.locator('.mobile-editor-tabs').getByRole('button', { name: '貼圖' }).click();
+  }
   await expect(page.locator('.sticker-thumb')).toHaveCount(96);
 
+  if (await page.locator('.mobile-editor-tabs').isVisible()) {
+    await page.locator('.mobile-editor-tabs').getByRole('button', { name: '風格' }).click();
+  }
   await page.getByRole('button', { name: '暖色' }).click();
   await expect(page.locator('.strip-canvas')).toHaveCSS(
     'filter',
     /sepia/,
   );
 
+  if (await page.locator('.mobile-editor-tabs').isVisible()) {
+    await page.locator('.mobile-editor-tabs').getByRole('button', { name: '貼圖' }).click();
+  }
   await page.locator('.sticker-thumb').first().click();
   await expect(page.locator('.sticker-selection')).toHaveCount(1);
   await expect(page.locator('.sticker-selection.is-selected')).toHaveCount(1);
