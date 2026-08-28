@@ -172,6 +172,18 @@ interface TemplateDecoration {
 `1310 × 0.5616 ≈ 735px` 的貼圖顯示寬度。角色貼圖本身常有透明留白，
 因此實際可見角色會比顯示尺寸略小，建議主角色維持在 0.5 以上。
 
+## Runtime Safe Area
+
+模板作者仍需維持合理構圖，但不需要為了避免裁切而手動反算每張 PNG 的透明邊界。
+renderer 會讀取貼圖實際 alpha 內容，再依下列規則自動避讓：
+
+- 非 film：安全區距離完整畫布四邊各 `42px`。
+- `vertical`/`classic` film：左右各 `84px`、上下各 `44px`。
+- `horizontal`/`wide` film：左右各 `44px`、上下各 `74px`。
+- 計算包含 rotation，並正確套用 `flipX`/`flipY`。
+- 超出安全區時最多自動縮放/移動 4 次；限制只作用於 template render，不改寫 manifest。
+- 批次驗證標準：936 個 style decorations 與 156 張角色素材，所有可見像素必須位於安全區內。
+
 ## 各 Layout 標準 Canvas
 
 背景與相框 SVG 必須使用以下 `viewBox`，否則長直/橫幅模板會被拉扯：
@@ -259,6 +271,7 @@ interface TemplateDecoration {
 2. 為每個 `layoutId` 產生符合上方 `viewBox` 的 background/frame SVG。
 3. 在 manifest 中填寫 `layoutId`、資產路徑與 decorations。
 4. 確認所有 `itemId` 都存在於 `packs/fan-ip/**/stickers/manifest.json`。
+   decorations 不需要手動預先避讓，但角色位置仍應避免壓到人臉或預期留白區域。
 5. 本機執行：
 
 ```bash

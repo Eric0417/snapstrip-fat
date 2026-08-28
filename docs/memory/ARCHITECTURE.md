@@ -166,6 +166,18 @@ template background
   → user stickers
 ```
 
+Template decoration 的邊界保護：
+
+- `getImageContentBounds()` 掃描 PNG/WebP 的 alpha channel，只測量實際可見角色範圍，
+  不把透明留白當成角色邊界。
+- `constrainTemplateDecoration()` 在每次畫 template decorations 前計算旋轉後的外接框，
+  並正確套用 `flipX`/`flipY` 與 rotation；角色超出 `frameSafeRect()` 時會自動縮小或往內移動。
+- 一般模板左右/上下保留 `42px`；`vertical`/`classic` film 使用左右 `84px`、上下 `44px`；
+  `horizontal`/`wide` film 使用左右 `44px`、上下 `74px`。
+- content bounds 在 `loadFrameTemplate()` 載入並以 asset URL cache；限制只套用在 render，
+  不修改 manifest，也不寫入 user sticker state。
+- 批次檢查 936 個當前模板 decorations、156 張不同角色素材，0 個越過安全邊界。
+
 `loadFrameTemplate()` 會把 template 的預設 `backgroundColor` 或使用者選擇的
 blank color 寫入 `LoadedFrameTemplate`，再交給同一 `drawStripBase()` pipeline。
 

@@ -1,9 +1,11 @@
 import { describe, expect, it } from 'vitest';
 import type { StickerAsset } from '../data/stickers';
 import {
+  constrainTemplateDecoration,
   drawStripBase,
-  slotRects,
+  frameSafeRect,
   stripSize,
+  slotRects,
   type LoadedFrameTemplate,
   loadFrameTemplate,
 } from './strip';
@@ -137,6 +139,108 @@ describe('strip geometry', () => {
     expect(filters[filters.length - 1]).toBe('grayscale(1) contrast(1.15)');
   });
 
+  it('keeps visible template stickers away from the frame border', () => {
+    const size = stripSize('grid', 1440);
+    const placement = {
+      id: 'decoration',
+      itemId: 'sticker',
+      x: 0.05,
+      y: 0.05,
+      scale: 0.5,
+      rotation: 12,
+      flipX: false,
+      flipY: false,
+      z: 0,
+      opacity: 1,
+      visible: true,
+    };
+    const constrained = constrainTemplateDecoration(
+      size,
+      placement,
+      { x: 0.25, y: 0.25, width: 0.5, height: 0.5 },
+      frameSafeRect('grid', 'sweet'),
+    );
+
+    expect(constrained.x).toBeGreaterThan(placement.x);
+    expect(constrained.y).toBeGreaterThan(placement.y);
+  });
+
+  it('moves template stickers away from the right and bottom frame edges', () => {
+    const size = stripSize('grid', 1440);
+    const placement = {
+      id: 'decoration',
+      itemId: 'sticker',
+      x: 0.95,
+      y: 0.95,
+      scale: 0.4,
+      rotation: -9,
+      flipX: true,
+      flipY: false,
+      z: 0,
+      opacity: 1,
+      visible: true,
+    };
+    const constrained = constrainTemplateDecoration(
+      size,
+      placement,
+      { x: 0.25, y: 0.3, width: 0.5, height: 0.4 },
+      frameSafeRect('grid', 'sweet'),
+    );
+
+    expect(constrained.x).toBeLessThan(placement.x);
+    expect(constrained.y).toBeLessThan(placement.y);
+  });
+
+  it('accounts for horizontal flips when measuring the visible sticker edge', () => {
+    const size = stripSize('grid', 1440);
+    const placement = {
+      id: 'decoration',
+      itemId: 'sticker',
+      x: 0.8,
+      y: 0.5,
+      scale: 0.5,
+      rotation: 0,
+      flipX: true,
+      flipY: false,
+      z: 0,
+      opacity: 1,
+      visible: true,
+    };
+    const constrained = constrainTemplateDecoration(
+      size,
+      placement,
+      { x: 0.05, y: 0.25, width: 0.2, height: 0.5 },
+      frameSafeRect('grid', 'sweet'),
+    );
+
+    expect(constrained.x).toBeLessThan(0.77);
+  });
+
+  it('shrinks tall film decorations when the safe area is too small', () => {
+    const size = stripSize('wide', 1440);
+    const placement = {
+      id: 'decoration',
+      itemId: 'sticker',
+      x: 0.5,
+      y: 0.08,
+      scale: 0.24,
+      rotation: 4,
+      flipX: false,
+      flipY: false,
+      z: 0,
+      opacity: 1,
+      visible: true,
+    };
+    const constrained = constrainTemplateDecoration(
+      size,
+      placement,
+      { x: 0.3, y: 0.3, width: 0.55, height: 0.6 },
+      frameSafeRect('wide', 'film'),
+    );
+
+    expect(constrained.scale).toBeLessThan(placement.scale);
+  });
+
   it('keeps styleFamily mono templates monochrome during loading', async () => {
     const template: FrameTemplate = {
       id: 'grid-mono-hello-kitty',
@@ -153,6 +257,7 @@ describe('strip geometry', () => {
 
     await expect(loadFrameTemplate(template, new Map())).resolves.toMatchObject({
       monochrome: true,
+      styleFamily: 'mono',
     });
   });
 });

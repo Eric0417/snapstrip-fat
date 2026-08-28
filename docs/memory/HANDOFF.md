@@ -89,13 +89,19 @@
   - 模板 pack 放在 `packs/templates/fan-ip`，本機/Render fat build 包含；
     `build:public` 排除並回退到原有素色版型。
   - 提供 `tools/generate-frame-templates.mjs` 作為首批資產生成參考。
+- 完成模板貼圖裁切保護：
+  - 讀取每張 PNG/WebP 的實際 alpha visible bounds，不用整張方形貼圖估算。
+  - 計算 rotation + `flipX`/`flipY` 後的外接框，超出安全區時自動縮小或往內移動。
+  - 非 film 四邊 `42px`；直式 film 左右 `84px`、上下 `44px`；橫式 film 左右 `44px`、上下 `74px`。
+  - 硬檢查 936 個 style decorations、156 張不同角色素材，0 個越界。
+  - 修正只套用在 render，不修改 manifest 或 user sticker history。
 - 完成 local/public build 分離並驗證：
   - 本機 build 包含 `packs/fan-ip`，206 張主圖。
   - `pnpm build:public` 不包含 fan-ip 檔案，也不包含 fan-ip 字串。
 - 依使用者後續要求，`snapstrip-fat` Render 公開站已改為包含 fan-ip，
   build command 使用 `pnpm build`；此設定會公開第三方 IP 素材。
 - 完成單元測試與 Playwright：
-  - 31 個 Vitest tests。
+  - 35 個 Vitest tests。
   - 6 個 E2E tests，包含桌面/手機上傳流程、fake camera 四連拍與直式 stage fit。
 - 已建立：
   - `src/app/types.ts`
@@ -132,6 +138,7 @@
 - 核心功能已完成，尚未發現已知 bug。
 - 相框模板系統已完成；320 個 template entries（8 blank + 312 style）與新選擇頁在
   桌面/手機均已做非空白畫布、顏色切換與 overflow 檢查。
+- 所有模板 decorations 已完成實際 alpha 邊界硬檢查；936/936 個透過，0 個被畫布或相框裁切。
 - 尚未在真實手機上測試相機權限；fake camera 已通過。
 - `fat/deploy` 已推送並完成 Render 建置；live manifest 已確認是 320 個單一 IP
   template entries（8 blank + 312 style），新版 SVG 回傳 `image/svg+xml`。
@@ -144,8 +151,8 @@
 ## 下一步優先順序
 
 1. 在真實手機與桌面上手動走一次相機流程。
-2. 在真機上人工審核 3 種版型專屬風格 × 13 種 IP 模板在各版型中的貼圖位置、
-   角色比例與留白。
+2. 自動裁切檢查已完成；仍保留在真機上人工審核 3 種版型專屬風格 × 13 種 IP
+   模板的貼圖位置、角色比例與整體留白。
 3. 已確認 Render live manifest 為 320 筆；若需要純原創公開版，再依
    `docs/DEPLOYMENT.md` 建立不含 fan-ip 的 branch。
 4. 若首包效能重要，可把 Editor/Capture 改成 lazy route 或拆 manifest chunk。

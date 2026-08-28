@@ -20,6 +20,7 @@
 - [x] 頁尾 Privacy 簡短說明
 - [x] fan-ip 貼圖搜集
 - [x] manifest-driven 相框模板系統，每版型 3 種版型專屬風格 × 13 種 IP + 1 空白可選色模板
+- [x] 依實際角色 alpha 自動避讓模板貼圖，全部 936 個 decorations 無裁切
 - [x] 桌面/手機 E2E
 - [x] local build 與 public build 分離驗證
 - [x] Render `snapstrip-fat` deploy branch 更新與 live asset 驗證
@@ -63,6 +64,7 @@
 8. 每個版型、每種風格都可選到全部 13 個 IP collection，且模板內不混搭 IP。
 9. `film` 只出現在 `vertical`、`classic`、`horizontal`、`wide`。
 10. `build:public` 排除 templates/fan-ip，並回退到素色輸出。
+11. 模板貼圖的實際 alpha 可見範圍加入 flip/rotation 後仍完整位於版型安全區內。
 
 ## 完成定義
 

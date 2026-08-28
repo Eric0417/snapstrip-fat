@@ -27,8 +27,16 @@ export interface StickerRenderData {
   asset: StickerAsset;
 }
 
+export interface StickerContentBounds {
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+}
+
 export interface TemplateStickerRenderData extends StickerRenderData {
   image: HTMLImageElement;
+  contentBounds?: StickerContentBounds;
 }
 
 export interface LoadedFrameTemplate {
@@ -37,6 +45,14 @@ export interface LoadedFrameTemplate {
   frameImage?: HTMLImageElement;
   decorations: readonly TemplateStickerRenderData[];
   monochrome?: boolean;
+  styleFamily?: string;
+}
+
+export interface SafeFrameRect {
+  left: number;
+  right: number;
+  top: number;
+  bottom: number;
 }
 
 export function stripSize(layoutId: string, targetWidth = 1200): StripSize {
@@ -80,6 +96,7 @@ export function createStripCanvas(layoutId: string, targetWidth = 1200) {
 }
 
 const imageCache = new Map<string, Promise<HTMLImageElement>>();
+const contentBoundsCache = new Map<string, Promise<StickerContentBounds>>();
 
 export function loadImageCached(src: string): Promise<HTMLImageElement> {
   const cached = imageCache.get(src);
@@ -104,6 +121,156 @@ export function loadImageCached(src: string): Promise<HTMLImageElement> {
 }
 
 export const loadImage = loadImageCached;
+
+export function getImageContentBounds(
+  image: HTMLImageElement,
+): Promise<StickerContentBounds> {
+  const key = image.src || image.id;
+  const cached = contentBoundsCache.get(key);
+  if (cached) return cached;
+
+  const loading = new Promise<StickerContentBounds>((resolve) => {
+    const width = image.naturalWidth || image.width;
+    const height = image.naturalHeight || image.height;
+    if (!width || !height || typeof document === 'undefined') {
+      resolve({ x: 0, y: 0, width: 1, height: 1 });
+      return;
+    }
+
+    const canvas = document.createElement('canvas');
+    canvas.width = width;
+    canvas.height = height;
+    const context = canvas.getContext('2d', { willReadFrequently: true });
+    if (!context) {
+      resolve({ x: 0, y: 0, width: 1, height: 1 });
+      return;
+    }
+
+    context.drawImage(image, 0, 0, width, height);
+    const pixels = context.getImageData(0, 0, width, height).data;
+    let minX = width;
+    let minY = height;
+    let maxX = -1;
+    let maxY = -1;
+
+    for (let y = 0; y < height; y += 1) {
+      const row = y * width * 4;
+      for (let x = 0; x < width; x += 1) {
+        if (pixels[row + x * 4 + 3] <= 0) continue;
+        if (x < minX) minX = x;
+        if (x > maxX) maxX = x;
+        if (y < minY) minY = y;
+        if (y > maxY) maxY = y;
+      }
+    }
+
+    const hasContent = maxX >= minX && maxY >= minY;
+    resolve(
+      hasContent
+        ? {
+            x: minX / width,
+            y: minY / height,
+            width: (maxX - minX + 1) / width,
+            height: (maxY - minY + 1) / height,
+          }
+        : { x: 0, y: 0, width: 1, height: 1 },
+    );
+  });
+  contentBoundsCache.set(key, loading);
+  return loading;
+}
+
+export function frameSafeRect(
+  layoutId: string,
+  styleFamily?: string,
+  targetSize?: StripSize,
+): SafeFrameRect {
+  const { width, height } = targetSize ?? stripSize(layoutId, 1440);
+  if (styleFamily === 'film') {
+    if (layoutId === 'vertical' || layoutId === 'classic') {
+      return { left: 84, right: width - 84, top: 44, bottom: height - 44 };
+    }
+    return { left: 44, right: width - 44, top: 74, bottom: height - 74 };
+  }
+  return { left: 42, right: width - 42, top: 42, bottom: height - 42 };
+}
+
+export function constrainTemplateDecoration(
+  size: StripSize,
+  placement: StickerPlacement,
+  contentBounds: StickerContentBounds,
+  safe: SafeFrameRect,
+  imageWidth = 1,
+  imageHeight = 1,
+): StickerPlacement {
+  let next = { ...placement };
+
+  function visibleBox(current: StickerPlacement) {
+    const width = stickerWidth(size, current);
+    const height = width * (imageHeight / Math.max(1, imageWidth));
+    const contentWidth = contentBounds.width * width;
+    const contentHeight = contentBounds.height * height;
+    const centerX = (contentBounds.x + contentBounds.width / 2 - 0.5) * width;
+    const centerY = (contentBounds.y + contentBounds.height / 2 - 0.5) * height;
+    const mirrorX = current.flipX ? -1 : 1;
+    const mirrorY = current.flipY ? -1 : 1;
+    const radians = (current.rotation * Math.PI) / 180;
+    const cos = Math.cos(radians);
+    const sin = Math.sin(radians);
+    const halfWidth = contentWidth / 2;
+    const halfHeight = contentHeight / 2;
+    const corners = [
+      [-halfWidth, -halfHeight],
+      [halfWidth, -halfHeight],
+      [-halfWidth, halfHeight],
+      [halfWidth, halfHeight],
+    ].map(([x, y]) => ({
+      x: mirrorX * (centerX + x) * cos - mirrorY * (centerY + y) * sin,
+      y: mirrorX * (centerX + x) * sin + mirrorY * (centerY + y) * cos,
+    }));
+    const xs = corners.map((corner) => corner.x + current.x * size.width);
+    const ys = corners.map((corner) => corner.y + current.y * size.height);
+    return {
+      left: Math.min(...xs),
+      right: Math.max(...xs),
+      top: Math.min(...ys),
+      bottom: Math.max(...ys),
+    };
+  }
+
+  for (let attempt = 0; attempt < 4; attempt += 1) {
+    const box = visibleBox(next);
+    const boxWidth = box.right - box.left;
+    const boxHeight = box.bottom - box.top;
+    const safeWidth = safe.right - safe.left;
+    const safeHeight = safe.bottom - safe.top;
+    const scaleX = safeWidth / Math.max(1, boxWidth);
+    const scaleY = safeHeight / Math.max(1, boxHeight);
+
+    if (scaleX < 0.999999 || scaleY < 0.999999) {
+      next.scale *= Math.min(scaleX, scaleY);
+      continue;
+    }
+
+    const dx = box.left < safe.left
+      ? safe.left - box.left
+      : box.right > safe.right
+        ? safe.right - box.right
+        : 0;
+    const dy = box.top < safe.top
+      ? safe.top - box.top
+      : box.bottom > safe.bottom
+        ? safe.bottom - box.bottom
+        : 0;
+    return {
+      ...next,
+      x: next.x + dx / size.width,
+      y: next.y + dy / size.height,
+    };
+  }
+
+  return next;
+}
 
 export function drawStripBase(
   context: CanvasRenderingContext2D,
@@ -160,11 +327,24 @@ export function drawStripBase(
   }
 
   const monochrome = template?.monochrome;
+  const safeRect = template?.styleFamily
+    ? frameSafeRect(layoutId, template.styleFamily, size)
+    : undefined;
   for (const decoration of template?.decorations ?? []) {
+    const placement = decoration.contentBounds && safeRect
+      ? constrainTemplateDecoration(
+          size,
+          decoration.placement,
+          decoration.contentBounds,
+          safeRect,
+          decoration.image.naturalWidth,
+          decoration.image.naturalHeight,
+        )
+      : decoration.placement;
     drawSticker(
       context,
       size,
-      decoration,
+      { ...decoration, placement },
       decoration.image,
       monochrome ? 'grayscale(1) contrast(1.15)' : undefined,
     );
@@ -213,10 +393,11 @@ export async function loadFrameTemplate(
     template.frame ? loadImageCached(template.frame) : null,
   ]);
   const decorations = await Promise.all(
-    resolveTemplateDecorations(template, stickerAssets).map(async (decoration) => ({
-      ...decoration,
-      image: await loadImageCached(decoration.asset.src),
-    })),
+    resolveTemplateDecorations(template, stickerAssets).map(async (decoration) => {
+      const image = await loadImageCached(decoration.asset.src);
+      const contentBounds = await getImageContentBounds(image).catch(() => undefined);
+      return { ...decoration, image, contentBounds };
+    }),
   );
 
   return {
@@ -229,6 +410,7 @@ export async function loadFrameTemplate(
     decorations,
     monochrome:
       template.monochrome ?? template.styleFamily === 'mono',
+    styleFamily: template.styleFamily,
   };
 }
 
