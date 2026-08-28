@@ -9,6 +9,7 @@ import {
 import { useSession } from '../../app/session';
 import type { StickerPlacement } from '../../app/types';
 import { STICKERS, stickerName, type StickerAsset } from '../../data/stickers';
+import { toneCss } from '../../data/tones';
 import { getFrameTemplate } from '../../data/templates';
 import { useLanguage } from '../../i18n/LanguageContext';
 import { assetUrl } from '../../lib/assetUrl';
@@ -51,7 +52,8 @@ export function EditorStage({
   const { locale } = useLanguage();
   const layoutId = useSession((state) => state.layoutId);
   const templateId = useSession((state) => state.templateId);
-  const templateColor = useSession((state) => state.templateColor);
+  const toneId = useSession((state) => state.toneId);
+  const toneIntensity = useSession((state) => state.toneIntensity);
   const shots = useSession((state) => state.shots);
   const photoTransforms = useSession((state) => state.photoTransforms);
   const stickers = useSession((state) => state.stickers);
@@ -64,6 +66,7 @@ export function EditorStage({
   const animationFrameRef = useRef<number | null>(null);
   const [stageSize, setStageSize] = useState({ width: 0, height: 0 });
   const template = getFrameTemplate(templateId);
+  const toneFilter = toneCss(toneId, toneIntensity);
   const assetMap = useMemo(() => {
     const map = new Map<string, StickerAsset>();
     for (const sticker of STICKERS) map.set(sticker.id, sticker);
@@ -100,10 +103,8 @@ export function EditorStage({
       shots,
       photoTransforms,
       template,
-      assetMap,
-      templateColor,
     ).catch(() => undefined);
-  }, [assetMap, layoutId, photoTransforms, shots, template, templateColor]);
+  }, [layoutId, photoTransforms, shots, template]);
 
   useEffect(() => () => {
     if (animationFrameRef.current !== null) {
@@ -346,6 +347,7 @@ export function EditorStage({
         ref={canvasRef}
         className="strip-canvas"
         aria-label="Photo strip preview"
+        style={{ filter: toneFilter }}
       />
 
       {stageSize.width > 0
@@ -409,6 +411,7 @@ export function EditorStage({
                       src={assetUrl(asset.src)}
                       alt={stickerName(asset, locale)}
                       draggable={false}
+                      style={{ filter: toneFilter }}
                     />
                   </button>
 

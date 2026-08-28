@@ -6,6 +6,9 @@ test-results
 .vite
 .DS_Store
 dummy-non-existing-folder
+doc/
+template_refrence/
+tools/export-template-previews.mjs
 packs/*
 !packs/core-kawaii/
 !packs/core-effects/

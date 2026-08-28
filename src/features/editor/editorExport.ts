@@ -5,6 +5,7 @@ import type {
   PhotoShot,
   PhotoTransform,
   StickerPlacement,
+  ToneId,
 } from '../../app/types';
 
 interface ExportStripOptions {
@@ -14,7 +15,8 @@ interface ExportStripOptions {
   stickerAssets: Map<string, StickerAsset>;
   photoTransforms: PhotoTransform[];
   template?: FrameTemplate;
-  templateColor?: string | null;
+  toneId?: ToneId;
+  toneIntensity?: number;
 }
 
 export async function exportStripPng(options: ExportStripOptions) {
@@ -35,8 +37,8 @@ export async function exportStripPng(options: ExportStripOptions) {
     stickerData,
     photoTransforms: options.photoTransforms,
     template: options.template,
-    templateStickerAssets: options.stickerAssets,
-    templateColor: options.templateColor,
+    toneId: options.toneId,
+    toneIntensity: options.toneIntensity,
     targetWidth: 1440,
   });
   const blob = await new Promise<Blob>((resolve, reject) => {

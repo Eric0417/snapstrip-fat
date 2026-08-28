@@ -1,9 +1,0 @@
-{
-  "id": "fan-ip-frames",
-  "kind": "frame-template",
-  "displayName": {
-    "zh-Hant": "IP 主題風格相框",
-    "en": "IP themed style frames"
-  },
-  "license": "private-personal-use"
-}

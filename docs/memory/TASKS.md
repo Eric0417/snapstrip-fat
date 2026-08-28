@@ -7,38 +7,58 @@
 - [x] 專案 scaffold
 - [x] 安裝依賴
 - [x] TypeScript typecheck
-- [x] core 1024 貼圖搬入
-- [x] 貼圖 manifest 載入器
 - [x] 繁中/英文 i18n
-- [x] Welcome page
-- [x] Layout selection page
-- [x] About page
-- [x] NotFound page
-- [x] 作者頭像放入 public/author
-- [x] CapturePage 完整流程
-- [x] EditorPage 完整流程
-- [x] 頁尾 Privacy 簡短說明
-- [x] fan-ip 貼圖搜集
-- [x] manifest-driven 相框模板系統，每版型 3 種版型專屬風格 × 13 種 IP + 1 空白可選色模板
-- [x] 依實際角色 alpha 自動避讓模板貼圖，全部 936 個 decorations 無裁切
-- [x] 桌面/手機 E2E
-- [x] local build 與 public build 分離驗證
-- [x] Render `snapstrip-fat` deploy branch 更新與 live asset 驗證
+- [x] Welcome / About / NotFound
+- [x] Layout selection
+- [x] Capture page with camera and upload fallback
+- [x] Editor with stickers, photo adjustment, undo/redo
+- [x] PNG export
+- [x] 8 layout slot geometry
+- [x] auto-discovery frame-template PNG loader
+- [x] 8 original demo templates, one per layout
+- [x] 8 blank design templates in `docs/memory/blank_for_design`
+- [x] detailed 1440px photo-slot coordinates in `TEMPLATE_FORMAT.md`
+- [x] 6 tone presets and intensity slider
+- [x] shared render pipeline for preview, editor and export
+- [x] desktop and mobile E2E
+- [x] local and public build verification
+- [x] remove old 320-template manifest system
 
 ## 尚未開始
 
 - [ ] 真實手機相機測試
+- [ ] 使用者最終視覺審核 8 張示範模板
+- [ ] 部署本次四步模板/色調版本到 Render
 - [ ] 若需要，Editor/Capture lazy route 與 manifest 拆 chunk
 
-## Capture Acceptance
+## Flow Acceptance
 
-1. 進入 `/capture` 後要求相機。
-2. 顯示 live preview 與 3 秒倒數。
-3. 每次倒數結束自動拍一張。
-4. 拍滿 4 張自動進 `/frame` 選擇相框模板。
-5. 拒絕相機權限時提供四張上傳 fallback。
-6. 離開頁面時停止所有 media tracks。
-7. 照片按所選版型 slot 比例裁切。
+1. `Layout → Capture → Frame → Editor`。
+2. Capture 完成後進入 `/frame`。
+3. `/frame` 選「不套模板」或一張模板後進入 Editor。
+4. Editor 不再有獨立 `/style` route；畫面風格在 Editor 側欄。
+5. 切換版型時重置 template、tone、照片、貼圖與 history。
+6. 切換模板不重置 tone。
+
+## Template Acceptance
+
+1. 每種版型至少有一張可用模板，首批 8 張。
+2. 模板是完整畫布 RGBA PNG，照片 slot 區域全透明。
+3. 模板名稱由 `template-<layoutId>-<slug>.png` 自動產生。
+4. 無效 layoutId、非 PNG、重複 id 會被 loader 過濾。
+5. 加入新 PNG 不需要 manifest、註冊表或 UI 修改。
+6. 模板固定畫在照片之上、使用者貼圖之下。
+7. 模板不寫入 user sticker history，也不可被選取或編輯。
+8. 留空 `templateId` 代表「不套模板」。
+
+## Tone Acceptance
+
+1. 有 `original / pastel / warm / cool / cream / mono` 六種預設。
+2. `original` 不套任何 filter。
+3. 強度值為 0–100%，預設 80%。
+4. 色調只改變最終顏色，不改變照片 slot、模板或貼圖座標。
+5. Editor canvas、貼圖與 PNG export 使用同一組 toneCss 規則。
+6. 色調切換後 export 與畫面一致。
 
 ## Editor Acceptance
 
@@ -48,30 +68,17 @@
 4. 貼圖可新增、拖曳、縮放、旋轉、翻轉、刪除。
 5. 可調整 z-order。
 6. undo/redo 不重複記錄拖曳中間狀態。
-7. 匯出 PNG 與預覽一致。
+7. 匯出 PNG 與預覽共用 render pipeline。
 8. 貼圖面板在 1024+ 筆資產下不能一次全載入。
-
-## Frame Template Acceptance
-
-1. 每個現有版型有 1 個 blank template、3 個版型專屬風格與 13 種 IP 的模板。
-2. 拍照/上傳完成後進入 `/frame`。
-3. 模板卡使用實際四張照片合成 preview。
-4. 選擇模板後進入 Editor，模板不寫入 user sticker history。
-5. 編輯、undo/redo、照片調整與 PNG export 共用 template-aware pipeline。
-6. 每張 style template 有主題背景、風格邊框與 3 個同一 IP 的較大角色貼圖；
-   decorations 位於 user stickers 之下。
-7. blank template 可從 8 個色票或自訂 color picker 換色，並同步 export。
-8. 每個版型、每種風格都可選到全部 13 個 IP collection，且模板內不混搭 IP。
-9. `film` 只出現在 `vertical`、`classic`、`horizontal`、`wide`。
-10. `build:public` 排除 templates/fan-ip，並回退到素色輸出。
-11. 模板貼圖的實際 alpha 可見範圍加入 flip/rotation 後仍完整位於版型安全區內。
 
 ## 完成定義
 
 - `pnpm typecheck` 通過。
 - `pnpm test` 通過。
+- `pnpm test:e2e` 桌面與手機通過。
 - `pnpm build` 通過。
 - `pnpm build:public` 通過，且 `dist/packs/fan-ip` 不存在。
-- 桌面 1440px 與手機 390px 可走完 Welcome → Layout → Capture/Upload → Frame → Editor → Export。
+- 桌面 1440px 與手機 390px 可走完
+  `Layout → Capture/Upload → Frame → Editor → tone → sticker → Export`。
 - 無已知 console error 或 pageerror。
-- dev server 正在本機執行，並提供 URL。
+- `tools/generate-demo-template-pngs.mjs` 可重新生成並通過 slot 透明檢查。

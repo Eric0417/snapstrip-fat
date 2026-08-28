@@ -15,8 +15,12 @@ function copyPackAssets() {
       outDir = config.build.outDir;
     },
     closeBundle() {
-      const packs = ['packs/core-kawaii', 'packs/core-effects'];
-      if (!isPublicBuild) packs.push('packs/fan-ip', 'packs/templates');
+      const packs = [
+        'packs/core-kawaii',
+        'packs/core-effects',
+        'packs/templates',
+      ];
+      if (!isPublicBuild) packs.push('packs/fan-ip');
 
       for (const pack of packs) {
         const source = resolve(process.cwd(), pack);

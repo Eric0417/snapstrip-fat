@@ -1,53 +1,46 @@
-import { useEffect, useMemo, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import type {
   FrameTemplate,
+  LayoutId,
   PhotoShot,
   PhotoTransform,
 } from '../../app/types';
-import { STICKERS, type StickerAsset } from '../../data/stickers';
 import { frameTemplateName } from '../../data/templates';
 import { renderStrip, stripSize } from '../../lib/strip';
 import { useLanguage } from '../../i18n/LanguageContext';
 
 interface FrameTemplatePreviewProps {
-  template: FrameTemplate;
+  layoutId: LayoutId;
+  template?: FrameTemplate;
   shots: readonly PhotoShot[];
   photoTransforms: readonly PhotoTransform[];
-  templateColor?: string | null;
   className?: string;
 }
 
 export function FrameTemplatePreview({
+  layoutId,
   template,
   shots,
   photoTransforms,
-  templateColor,
   className,
 }: FrameTemplatePreviewProps) {
   const { locale } = useLanguage();
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const stickerAssets = useMemo(() => {
-    const map = new Map<string, StickerAsset>();
-    for (const sticker of STICKERS) map.set(sticker.id, sticker);
-    return map;
-  }, []);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
     let active = true;
-    const size = stripSize(template.layoutId, 640);
+    const size = stripSize(layoutId, 640);
     canvas.width = size.width;
     canvas.height = size.height;
 
     void renderStrip({
-      layoutId: template.layoutId,
+      layoutId,
       shots,
       stickerData: [],
       photoTransforms,
       template,
-      templateStickerAssets: stickerAssets,
-      templateColor,
       targetWidth: 640,
     })
       .then((rendered) => {
@@ -62,14 +55,14 @@ export function FrameTemplatePreview({
     return () => {
       active = false;
     };
-  }, [photoTransforms, shots, stickerAssets, template, templateColor]);
+  }, [layoutId, photoTransforms, shots, template]);
 
   return (
     <canvas
       ref={canvasRef}
       className={className}
       role="img"
-      aria-label={frameTemplateName(template, locale)}
+      aria-label={template ? frameTemplateName(template, locale) : 'No frame'}
     />
   );
 }

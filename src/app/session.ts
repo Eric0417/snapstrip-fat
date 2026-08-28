@@ -1,5 +1,12 @@
 import { create } from 'zustand';
-import type { LayoutId, PhotoShot, PhotoTransform, StickerPlacement } from './types';
+import type {
+  LayoutId,
+  PhotoShot,
+  PhotoTransform,
+  StickerPlacement,
+  ToneId,
+} from './types';
+import { DEFAULT_TONE_INTENSITY } from '../data/tones';
 
 const DEFAULT_PHOTO_TRANSFORM: PhotoTransform = {
   scale: 1,
@@ -10,14 +17,17 @@ const DEFAULT_PHOTO_TRANSFORM: PhotoTransform = {
 interface SessionState {
   layoutId: LayoutId;
   templateId: string | null;
-  templateColor: string | null;
+  toneId: ToneId;
+  toneIntensity: number;
   shots: PhotoShot[];
   photoTransforms: PhotoTransform[];
   stickers: StickerPlacement[];
   past: StickerPlacement[][];
   future: StickerPlacement[][];
   setLayout: (layoutId: LayoutId) => void;
-  setFrameTemplate: (templateId: string | null, templateColor?: string | null) => void;
+  setFrameTemplate: (templateId: string | null) => void;
+  setTone: (toneId: ToneId) => void;
+  setToneIntensity: (intensity: number) => void;
   setShots: (shots: PhotoShot[]) => void;
   setPhotoTransform: (index: number, patch: Partial<PhotoTransform>) => void;
   resetPhotoTransform: (index: number) => void;
@@ -39,7 +49,8 @@ function makeId(prefix: string) {
 export const useSession = create<SessionState>((set, get) => ({
   layoutId: 'grid',
   templateId: null,
-  templateColor: null,
+  toneId: 'original',
+  toneIntensity: DEFAULT_TONE_INTENSITY,
   shots: [],
   photoTransforms: [],
   stickers: [],
@@ -50,7 +61,8 @@ export const useSession = create<SessionState>((set, get) => ({
     set({
       layoutId,
       templateId: null,
-      templateColor: null,
+      toneId: 'original',
+      toneIntensity: DEFAULT_TONE_INTENSITY,
       shots: [],
       photoTransforms: [],
       stickers: [],
@@ -58,8 +70,14 @@ export const useSession = create<SessionState>((set, get) => ({
       future: [],
     }),
 
-  setFrameTemplate: (templateId, templateColor = null) =>
-    set({ templateId, templateColor }),
+  setFrameTemplate: (templateId) => set({ templateId }),
+
+  setTone: (toneId) => set({ toneId }),
+
+  setToneIntensity: (intensity) =>
+    set({
+      toneIntensity: Math.min(1, Math.max(0, intensity)),
+    }),
 
   setShots: (shots) =>
     set({

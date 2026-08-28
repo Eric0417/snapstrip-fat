@@ -1,14 +1,12 @@
 import { Download, LoaderCircle, Sparkles } from 'lucide-react';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useSession } from '../app/session';
 import { STICKERS, type StickerAsset } from '../data/stickers';
-import {
-  getFrameTemplate,
-  getFrameTemplatesForLayout,
-} from '../data/templates';
+import { getFrameTemplate } from '../data/templates';
 import { EditorStage } from '../features/editor/EditorStage';
 import { EditorToolbar } from '../features/editor/EditorToolbar';
+import { TonePanel } from '../features/editor/TonePanel';
 import { exportStripPng } from '../features/editor/editorExport';
 import { PhotoAdjustPanel } from '../features/editor/PhotoAdjustPanel';
 import { viewportSpawnPosition } from '../features/editor/spawn';
@@ -17,10 +15,10 @@ import { useLanguage } from '../i18n/LanguageContext';
 
 export function EditorPage() {
   const { t } = useLanguage();
-  const navigate = useNavigate();
   const layoutId = useSession((state) => state.layoutId);
   const templateId = useSession((state) => state.templateId);
-  const templateColor = useSession((state) => state.templateColor);
+  const toneId = useSession((state) => state.toneId);
+  const toneIntensity = useSession((state) => state.toneIntensity);
   const shots = useSession((state) => state.shots);
   const photoTransforms = useSession((state) => state.photoTransforms);
   const stickers = useSession((state) => state.stickers);
@@ -41,16 +39,6 @@ export function EditorPage() {
     return map;
   }, []);
   const template = getFrameTemplate(templateId);
-
-  useEffect(() => {
-    if (
-      shots.length === 4 &&
-      !template &&
-      getFrameTemplatesForLayout(layoutId).length > 0
-    ) {
-      void navigate('/frame', { replace: true });
-    }
-  }, [layoutId, navigate, shots.length, template]);
 
   useEffect(() => {
     if (selectedId && !stickers.some((sticker) => sticker.id === selectedId)) {
@@ -154,7 +142,8 @@ export function EditorPage() {
               stickerAssets,
               photoTransforms,
               template,
-              templateColor,
+              toneId,
+              toneIntensity,
             })
               .catch((error: unknown) => {
                 setExportError(error instanceof Error ? error.message : 'Export failed');
@@ -189,6 +178,7 @@ export function EditorPage() {
           />
         </section>
         <aside className="editor-sidebar">
+          <TonePanel />
           <PhotoAdjustPanel
             selectedPhotoIndex={selectedPhotoIndex}
             onSelectPhoto={setSelectedPhotoIndex}

@@ -1,15 +1,14 @@
 import { describe, expect, it } from 'vitest';
+import type { PhotoShot, StickerPlacement } from '../app/types';
 import type { StickerAsset } from '../data/stickers';
+import { toneCss } from '../data/tones';
 import {
-  constrainTemplateDecoration,
   drawStripBase,
-  frameSafeRect,
-  stripSize,
+  drawSticker,
   slotRects,
+  stripSize,
   type LoadedFrameTemplate,
-  loadFrameTemplate,
 } from './strip';
-import type { FrameTemplate } from '../app/types';
 
 function fakeImage(id: string) {
   return {
@@ -22,7 +21,6 @@ function fakeImage(id: string) {
 function fakeContext() {
   const calls: Array<{ image: HTMLImageElement; args: unknown[] }> = [];
   const fills: string[] = [];
-  const filters: string[] = [];
   const context = {
     fillStyle: '',
     globalAlpha: 1,
@@ -39,7 +37,6 @@ function fakeContext() {
     scale: () => undefined,
     rotate: () => undefined,
     drawImage: (image: HTMLImageElement, ...args: unknown[]) => {
-      filters.push(context.filter);
       calls.push({ image, args });
     },
   };
@@ -48,9 +45,39 @@ function fakeContext() {
     context: context as unknown as CanvasRenderingContext2D,
     calls,
     fills,
-    filters,
   };
 }
+
+function shot(id: string): PhotoShot {
+  return { id, dataUrl: '', width: 100, height: 100, source: 'upload' };
+}
+
+function placement(): StickerPlacement {
+  return {
+    id: 's1',
+    itemId: 'rabbit-rose-front',
+    x: 0.5,
+    y: 0.5,
+    scale: 0.2,
+    rotation: 0,
+    flipX: false,
+    flipY: false,
+    z: 0,
+    opacity: 1,
+    visible: true,
+  };
+}
+
+const asset: StickerAsset = {
+  id: 'rabbit-rose-front',
+  name: { en: 'Rabbit' },
+  category: 'animal',
+  src: 'packs/rabbit.png',
+  thumb: 'packs/rabbit.png',
+  displaySize: { w: 100, h: 100 },
+  tags: [],
+  pack: 'core',
+};
 
 describe('strip geometry', () => {
   it('keeps the grid layout landscape because its slots are 4:3', () => {
@@ -86,178 +113,57 @@ describe('strip geometry', () => {
     expect(rects).toHaveLength(4);
     expect(rects[0].height).toBeGreaterThan(rects[1].height);
   });
+});
 
-  it('draws template background, frame, and decorations in that order', () => {
-    const background = fakeImage('background');
-    const frame = fakeImage('frame');
+describe('strip rendering', () => {
+  it('draws photos, the template overlay, then user stickers', () => {
+    const photo = fakeImage('photo');
+    const overlay = fakeImage('overlay');
     const sticker = fakeImage('sticker');
-    const asset = {
-      id: 'template-sticker',
-      name: { en: 'Template sticker' },
-      category: 'effect',
-      src: 'packs/template-sticker.png',
-      thumb: 'packs/template-sticker.png',
-      displaySize: { w: 100, h: 100 },
-      tags: [],
-      pack: 'core',
-    } satisfies StickerAsset;
-    const loadedTemplate: LoadedFrameTemplate = {
-      backgroundColor: '#eaf7ff',
-      backgroundImage: background,
-      frameImage: frame,
-      decorations: [
-        {
-          placement: {
-            id: 'decoration',
-            itemId: 'template-sticker',
-            x: 0.2,
-            y: 0.3,
-            scale: 0.1,
-            rotation: 12,
-            flipX: false,
-            flipY: false,
-            z: 0,
-            opacity: 1,
-            visible: true,
-          },
-          asset,
-          image: sticker,
-        },
-      ],
-      monochrome: true,
-    };
-    const { context, calls, fills, filters } = fakeContext();
+    const size = stripSize('grid');
+    const loadedTemplate: LoadedFrameTemplate = { image: overlay };
+    const { context, calls } = fakeContext();
 
-    drawStripBase(context, 'grid', stripSize('grid'), [], [], [], loadedTemplate);
+    drawStripBase(
+      context,
+      'grid',
+      size,
+      [shot('1')],
+      [photo],
+      [],
+      loadedTemplate,
+    );
+    drawSticker(
+      context,
+      size,
+      { placement: placement(), asset },
+      sticker,
+    );
 
     expect(calls.map((call) => call.image.id)).toEqual([
-      'background',
-      'frame',
+      'photo',
+      'overlay',
       'sticker',
     ]);
-    expect(fills[0]).toBe('#eaf7ff');
-    expect(filters[filters.length - 1]).toBe('grayscale(1) contrast(1.15)');
   });
 
-  it('keeps visible template stickers away from the frame border', () => {
-    const size = stripSize('grid', 1440);
-    const placement = {
-      id: 'decoration',
-      itemId: 'sticker',
-      x: 0.05,
-      y: 0.05,
-      scale: 0.5,
-      rotation: 12,
-      flipX: false,
-      flipY: false,
-      z: 0,
-      opacity: 1,
-      visible: true,
-    };
-    const constrained = constrainTemplateDecoration(
-      size,
-      placement,
-      { x: 0.25, y: 0.25, width: 0.5, height: 0.5 },
-      frameSafeRect('grid', 'sweet'),
+  it('keeps the base canvas white when no template is selected', () => {
+    const { context, fills } = fakeContext();
+    drawStripBase(
+      context,
+      'grid',
+      stripSize('grid'),
+      [],
+      [],
+      [],
     );
-
-    expect(constrained.x).toBeGreaterThan(placement.x);
-    expect(constrained.y).toBeGreaterThan(placement.y);
+    expect(fills[0]).toBe('#ffffff');
   });
 
-  it('moves template stickers away from the right and bottom frame edges', () => {
-    const size = stripSize('grid', 1440);
-    const placement = {
-      id: 'decoration',
-      itemId: 'sticker',
-      x: 0.95,
-      y: 0.95,
-      scale: 0.4,
-      rotation: -9,
-      flipX: true,
-      flipY: false,
-      z: 0,
-      opacity: 1,
-      visible: true,
-    };
-    const constrained = constrainTemplateDecoration(
-      size,
-      placement,
-      { x: 0.25, y: 0.3, width: 0.5, height: 0.4 },
-      frameSafeRect('grid', 'sweet'),
-    );
-
-    expect(constrained.x).toBeLessThan(placement.x);
-    expect(constrained.y).toBeLessThan(placement.y);
+  it('uses the shared tone filter for final export styling', () => {
+    expect(toneCss('original', 1)).toBe('none');
+    expect(toneCss('mono', 0.5)).toContain('grayscale(0.5)');
+    expect(toneCss('warm', 1)).toContain('sepia');
   });
 
-  it('accounts for horizontal flips when measuring the visible sticker edge', () => {
-    const size = stripSize('grid', 1440);
-    const placement = {
-      id: 'decoration',
-      itemId: 'sticker',
-      x: 0.8,
-      y: 0.5,
-      scale: 0.5,
-      rotation: 0,
-      flipX: true,
-      flipY: false,
-      z: 0,
-      opacity: 1,
-      visible: true,
-    };
-    const constrained = constrainTemplateDecoration(
-      size,
-      placement,
-      { x: 0.05, y: 0.25, width: 0.2, height: 0.5 },
-      frameSafeRect('grid', 'sweet'),
-    );
-
-    expect(constrained.x).toBeLessThan(0.77);
-  });
-
-  it('shrinks tall film decorations when the safe area is too small', () => {
-    const size = stripSize('wide', 1440);
-    const placement = {
-      id: 'decoration',
-      itemId: 'sticker',
-      x: 0.5,
-      y: 0.08,
-      scale: 0.24,
-      rotation: 4,
-      flipX: false,
-      flipY: false,
-      z: 0,
-      opacity: 1,
-      visible: true,
-    };
-    const constrained = constrainTemplateDecoration(
-      size,
-      placement,
-      { x: 0.3, y: 0.3, width: 0.55, height: 0.6 },
-      frameSafeRect('wide', 'film'),
-    );
-
-    expect(constrained.scale).toBeLessThan(placement.scale);
-  });
-
-  it('keeps styleFamily mono templates monochrome during loading', async () => {
-    const template: FrameTemplate = {
-      id: 'grid-mono-hello-kitty',
-      layoutId: 'grid',
-      name: { 'zh-Hant': '黑白方塊', en: 'Monochrome grid' },
-      decorations: [],
-      pack: 'fan',
-      kind: 'style',
-      collection: 'hello-kitty',
-      styleId: 'grid-mono',
-      styleFamily: 'mono',
-      monochrome: true,
-    };
-
-    await expect(loadFrameTemplate(template, new Map())).resolves.toMatchObject({
-      monochrome: true,
-      styleFamily: 'mono',
-    });
-  });
 });

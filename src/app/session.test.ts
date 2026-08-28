@@ -1,5 +1,6 @@
 import { beforeEach, describe, expect, it } from 'vitest';
 import { useSession } from './session';
+import { DEFAULT_TONE_INTENSITY } from '../data/tones';
 import type { StickerPlacement } from './types';
 
 function placement(overrides: Partial<StickerPlacement> = {}): StickerPlacement {
@@ -24,7 +25,8 @@ describe('session store', () => {
     useSession.setState({
       layoutId: 'grid',
       templateId: null,
-      templateColor: null,
+      toneId: 'original',
+      toneIntensity: DEFAULT_TONE_INTENSITY,
       shots: [],
       photoTransforms: [],
       stickers: [],
@@ -94,13 +96,21 @@ describe('session store', () => {
     });
   });
 
-  it('stores and resets the selected frame template with the layout', () => {
-    useSession.getState().setFrameTemplate('blank-grid', '#eaf7ff');
-    expect(useSession.getState().templateId).toBe('blank-grid');
-    expect(useSession.getState().templateColor).toBe('#eaf7ff');
+  it('stores template and tone selections and resets them with the layout', () => {
+    useSession.getState().setFrameTemplate('template-grid-demo');
+    useSession.getState().setTone('pastel');
+    useSession.getState().setToneIntensity(0.35);
+    expect(useSession.getState().templateId).toBe('template-grid-demo');
+    expect(useSession.getState().toneId).toBe('pastel');
+    expect(useSession.getState().toneIntensity).toBe(0.35);
+
+    useSession.getState().setFrameTemplate(null);
+    expect(useSession.getState().toneId).toBe('pastel');
+    expect(useSession.getState().toneIntensity).toBe(0.35);
 
     useSession.getState().setLayout('square');
     expect(useSession.getState().templateId).toBeNull();
-    expect(useSession.getState().templateColor).toBeNull();
+    expect(useSession.getState().toneId).toBe('original');
+    expect(useSession.getState().toneIntensity).toBe(DEFAULT_TONE_INTENSITY);
   });
 });

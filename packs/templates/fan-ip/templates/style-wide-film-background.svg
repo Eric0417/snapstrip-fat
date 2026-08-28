@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 289">
-  <defs><pattern id="pattern" width="43" height="43" patternUnits="userSpaceOnUse">
-      <rect width="43" height="43" fill="#c8c3bb" opacity="0.12"/>
-      <rect x="12.9" y="12.9" width="6.88" height="18.06" rx="4" fill="#242329" opacity="0.12"/>
-    </pattern></defs>
-  <rect width="1440" height="289" fill="#e9e6df"/>
-  <rect width="1440" height="289" fill="url(#pattern)"/>
-  <rect width="1440" height="289" fill="#ffffff" opacity="0.18"/>
-</svg>

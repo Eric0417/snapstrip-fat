@@ -4,305 +4,238 @@
 
 ## 用途
 
-這份文件是新增相框模板的唯一格式規範。只要符合這裡的 pack、manifest、
-SVG 尺寸與 decorations 座標規則，`src/data/templates.ts` 會自動載入模板，
-不需要修改 TypeScript registry 或 UI 程式碼。
+這份文件是「加入/替換相框模板」的唯一格式規範。模板現在不是 manifest 組合，
+也不包含角色貼圖、背景 SVG、背景色或可編輯 decoration。它只是一張完整畫布、
+透明照片槽位的 RGBA PNG，疊在照片上方。
 
-## Pack 目錄
+只要檔名與尺寸正確，重新 build 後 `src/data/templates.ts` 會自動讀取，不需要
+修改 TypeScript registry、UI、manifest 或 routes。
+
+## 資料夾與檔名
 
 ```text
 packs/templates/
-  <pack-kind>/
-    pack.json
+  <pack>/
     templates/
-      manifest.json
-      <template-id>-background.svg
-      <template-id>-frame.svg
+      template-<layoutId>-<slug>.png
 ```
 
 現有範例：
 
-- `packs/templates/fan-ip/`：私人 IP 聯名風格模板。
-- 未來原創模板可放在 `packs/templates/core/`。
-
-`pack.json`：
-
-```json
-{
-  "id": "fan-ip-frames",
-  "kind": "frame-template",
-  "displayName": {
-    "zh-Hant": "IP 主題風格相框",
-    "en": "IP themed style frames"
-  },
-  "license": "private-personal-use"
-}
+```text
+packs/templates/demo/templates/template-grid-demo.png
+packs/templates/demo/templates/template-square-demo.png
+packs/templates/demo/templates/template-bento-demo.png
+packs/templates/demo/templates/template-portrait-grid-demo.png
+packs/templates/demo/templates/template-vertical-demo.png
+packs/templates/demo/templates/template-classic-demo.png
+packs/templates/demo/templates/template-horizontal-demo.png
+packs/templates/demo/templates/template-wide-demo.png
 ```
 
-## Manifest Schema
+規則：
 
-`templates/manifest.json` 必須是 JSON array，每個 entry 範例：
+- `layoutId` 必須是：`grid`、`square`、`bento`、`portrait-grid`、
+  `vertical`、`classic`、`horizontal`、`wide`。
+- `slug` 只能是 `[a-z0-9][a-z0-9-]*`。
+- 檔名必須是 `template-<layoutId>-<slug>.png`。
+- 大小寫不合法，例如 `template-Demo.png` 會被忽略。
+- 同一個 template id 若出現多次，先掃描到的由 loader 去重保留。
+- `slug === 'demo'` 顯示為「示範相框 / Demo frame」；其他 slug 會自動轉為
+  以空格分開的 Title Case。
 
-```json
-{
-  "id": "style-grid-pastel-hello-kitty",
-  "layoutId": "grid",
-  "name": {
-    "zh-Hant": "粉彩方框 · Hello Kitty",
-    "en": "Pastel grid · Hello Kitty"
-  },
-  "kind": "style",
-  "collection": "hello-kitty",
-  "collectionOrder": 1,
-  "styleId": "grid-pastel",
-  "styleFamily": "sweet",
-  "monochrome": false,
-  "styleName": {
-    "zh-Hant": "粉彩方框",
-    "en": "Pastel grid"
-  },
-  "order": 1,
-  "background": "packs/templates/fan-ip/templates/style-grid-pastel-background.svg",
-  "frame": "packs/templates/fan-ip/templates/style-grid-pastel-frame.svg",
-  "accentColor": "#d46d92",
-  "collections": ["hello-kitty"],
-  "collectionName": {
-    "zh-Hant": "Hello Kitty",
-    "en": "Hello Kitty"
-  },
-  "decorations": [
-    {
-      "itemId": "hello-kitty-sticker-01",
-      "x": 0.112,
-      "y": 0.053,
-      "scale": 0.5616,
-      "rotation": -11,
-      "flipX": false,
-      "flipY": false,
-      "opacity": 1
-    }
-  ],
-  "license": "private-personal-use"
-}
-```
+## 完整畫布尺寸
 
-Blank 可換色模板範例：
+模板寬度固定為 `1440px`，高度必須與該版型的 export canvas 完全一致：
 
-```json
-{
-  "id": "blank-grid",
-  "layoutId": "grid",
-  "name": {
-    "zh-Hant": "空白自訂",
-    "en": "Blank custom"
-  },
-  "kind": "blank",
-  "collection": "blank",
-  "order": 0,
-  "frame": "packs/templates/fan-ip/templates/frame-grid.svg",
-  "decorations": [],
-  "license": "original"
-}
-```
-
-欄位規則：
-
-- `id`：全域唯一 kebab-case，例如 `style-<styleId>-<collection>`。
-- `layoutId`：必須是 `grid`、`square`、`bento`、`portrait-grid`、
-  `vertical`、`classic`、`horizontal`、`wide` 其中之一。
-- `kind`：`style` 或 `blank`。
-- `collection`：blank 使用 `blank`；style 使用唯一 IP id。
-- `collectionOrder`：IP 在選擇器中的順序，1–13。
-- `styleId`：全域唯一的版型專屬 id，例如 `grid-pastel`、`vertical-film`。
-- `styleFamily`：視覺 family：`sweet`、`diary`、`film`、`plaid`、`mono`。
-- `monochrome`：`true` 時角色 decorations 在 canvas render 套用 grayscale。
-- `styleName`：風格的繁中/英文顯示名稱。
-- `collectionName`：IP 的繁中/英文顯示名稱。
-- `order`：數值越小越先顯示；blank 為 `0`，每個 layout 的三個風格為 `1–3`。
-- `collections`：只包含此模板的單一 fan-ip collection。
-- `background`：full-canvas SVG，照片底下的完整背景。
-- `frame`：full-canvas SVG，照片上方、template decorations 下方的邊框層。
-- `accentColor`：選項 UI 的主題色，非強制，但 style 模板建議提供。
-- `decorations`：只引用既有 sticker id，不複製角色 asset。
-- `license`：原創為 `original`；第三方 IP 為 `private-personal-use`。
-
-目前的 24 個 style/layout 組合都是版型專屬設計，不在 8 個 layout 之間重複：
-
-| Layout | Style IDs |
-| --- | --- |
-| `grid` | `grid-pastel`、`grid-diary`、`grid-mono` |
-| `square` | `square-sky`、`square-plaid`、`square-doodle` |
-| `bento` | `bento-story`、`bento-cream`、`bento-mono` |
-| `portrait-grid` | `portrait-vintage`、`portrait-pastel`、`portrait-mono` |
-| `vertical` | `vertical-film`、`vertical-diary`、`vertical-sweet` |
-| `classic` | `classic-film`、`classic-plaid`、`classic-mono` |
-| `horizontal` | `horizontal-film`、`horizontal-sky`、`horizontal-doodle` |
-| `wide` | `wide-film`、`wide-ticket`、`wide-mono` |
-
-`film` 只屬於 `vertical`、`classic`、`horizontal`、`wide` 四種長條版型；
-其他版型的 manifest 不得包含 `styleFamily: film`。
-
-每個 style/layout 模板使用 3 張同一 IP 的既有 fan-ip 貼圖；不得把不同 IP
-混在同一張模板中。每個 style/layout 都有全部 13 個 collection 的 entry，
-所以每個版型可選到所有 IP，同時每張模板都保持單一主題。
-
-## Decorations 座標
-
-```ts
-interface TemplateDecoration {
-  itemId: string;
-  x: number;
-  y: number;
-  scale: number;
-  rotation: number;
-  flipX: boolean;
-  flipY: boolean;
-  opacity: number;
-}
-```
-
-- `x/y`：完整 export canvas 的 0–1 正規化座標，不是 slot 座標。
-- `scale`：角色貼圖 display width 除以 canvas `innerWidth`。
-  export 時 `innerWidth` 為 `1310`，preview target 640 時為 `582`。
-- `rotation`：角度，順時針為正。
-- `flipX/flipY`：布林。
-- `opacity`：0–1。
-
-例如 grid `grid-pastel` 的主角色 `scale=0.5616`，在 export 1440 中約等於
-`1310 × 0.5616 ≈ 735px` 的貼圖顯示寬度。角色貼圖本身常有透明留白，
-因此實際可見角色會比顯示尺寸略小，建議主角色維持在 0.5 以上。
-
-## Runtime Safe Area
-
-模板作者仍需維持合理構圖，但不需要為了避免裁切而手動反算每張 PNG 的透明邊界。
-renderer 會讀取貼圖實際 alpha 內容，再依下列規則自動避讓：
-
-- 非 film：安全區距離完整畫布四邊各 `42px`。
-- `vertical`/`classic` film：左右各 `84px`、上下各 `44px`。
-- `horizontal`/`wide` film：左右各 `44px`、上下各 `74px`。
-- 計算包含 rotation，並正確套用 `flipX`/`flipY`。
-- 超出安全區時最多自動縮放/移動 4 次；限制只作用於 template render，不改寫 manifest。
-- 批次驗證標準：936 個 style decorations 與 156 張角色素材，所有可見像素必須位於安全區內。
-
-## 各 Layout 標準 Canvas
-
-背景與相框 SVG 必須使用以下 `viewBox`，否則長直/橫幅模板會被拉扯：
-
-| `layoutId` | SVG viewBox | Export width × height | Aspect ratio |
+| `layoutId` | PNG width | PNG height | Aspect ratio |
 | --- | --- | --- | --- |
-| `grid` | `0 0 1440 1131` | 1440 × 1131 | 1.273 |
-| `square` | `0 0 1440 1440` | 1440 × 1440 | 1.000 |
-| `bento` | `0 0 1440 1440` | 1440 × 1440 | 1.000 |
-| `portrait-grid` | `0 0 1440 1853` | 1440 × 1853 | 0.777 |
-| `vertical` | `0 0 1440 4237` | 1440 × 4237 | 0.340 |
-| `classic` | `0 0 1440 7294` | 1440 × 7294 | 0.197 |
-| `horizontal` | `0 0 1440 508` | 1440 × 508 | 2.835 |
-| `wide` | `0 0 1440 289` | 1440 × 289 | 4.983 |
+| `grid` | 1440 | 1131 | 1.273 |
+| `square` | 1440 | 1440 | 1.000 |
+| `bento` | 1440 | 1440 | 1.000 |
+| `portrait-grid` | 1440 | 1853 | 0.777 |
+| `vertical` | 1440 | 4237 | 0.340 |
+| `classic` | 1440 | 7294 | 0.197 |
+| `horizontal` | 1440 | 508 | 2.835 |
+| `wide` | 1440 | 289 | 4.983 |
+
+不要使用 `viewBox` 或比例近似尺寸；錯誤尺寸會被直接拉伸到畫面，造成模板與
+照片錯位。
+
+## 鏤空位置與照片槽位像素座標
+
+模板 PNG 的「鏤空」就是照片槽位：這些矩形內的所有像素 alpha 必須等於 `0`。
+以下座標是 `src/lib/strip.ts` 在 `targetWidth = 1440` 時的實際輸出，設計時
+直接照抄即可，不要依賴自己的版型草圖估算。
 
 通用常數：
 
-- export target width：`1440`
+```text
+canvas width  = 1440
+canvas padding = 65
+inner width    = 1310
+```
+
+座標公式：
+
+```text
+x      = 65 + normalized.x * 1310
+y      = 65 + normalized.y * 1310
+width  = normalized.width * 1310
+height = normalized.height * 1310
+```
+
+全部使用 `Math.round()` 後的四個角落：
+
+| Layout | Slot | x | y | width | height | right | bottom |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| `grid` | 1 | 65 | 65 | 619 | 464 | 684 | 529 |
+| `grid` | 2 | 756 | 65 | 619 | 464 | 1375 | 529 |
+| `grid` | 3 | 65 | 601 | 619 | 464 | 684 | 1065 |
+| `grid` | 4 | 756 | 601 | 619 | 464 | 1375 | 1065 |
+| `square` | 1 | 65 | 65 | 619 | 619 | 684 | 684 |
+| `square` | 2 | 756 | 65 | 619 | 619 | 1375 | 684 |
+| `square` | 3 | 65 | 756 | 619 | 619 | 684 | 1375 |
+| `square` | 4 | 756 | 756 | 619 | 619 | 1375 | 1375 |
+| `bento` | 1 | 65 | 65 | 760 | 1310 | 825 | 1375 |
+| `bento` | 2 | 858 | 65 | 517 | 415 | 1375 | 480 |
+| `bento` | 3 | 858 | 513 | 517 | 415 | 1375 | 928 |
+| `bento` | 4 | 858 | 960 | 517 | 415 | 1375 | 1375 |
+| `portrait-grid` | 1 | 65 | 65 | 619 | 825 | 684 | 890 |
+| `portrait-grid` | 2 | 756 | 65 | 619 | 825 | 1375 | 890 |
+| `portrait-grid` | 3 | 65 | 962 | 619 | 825 | 684 | 1787 |
+| `portrait-grid` | 4 | 756 | 962 | 619 | 825 | 1375 | 1787 |
+| `vertical` | 1 | 65 | 65 | 1310 | 983 | 1375 | 1048 |
+| `vertical` | 2 | 65 | 1106 | 1310 | 983 | 1375 | 2089 |
+| `vertical` | 3 | 65 | 2148 | 1310 | 983 | 1375 | 3131 |
+| `vertical` | 4 | 65 | 3189 | 1310 | 983 | 1375 | 4172 |
+| `classic` | 1 | 65 | 65 | 1310 | 1747 | 1375 | 1812 |
+| `classic` | 2 | 65 | 1871 | 1310 | 1747 | 1375 | 3618 |
+| `classic` | 3 | 65 | 3676 | 1310 | 1747 | 1375 | 5423 |
+| `classic` | 4 | 65 | 5482 | 1310 | 1747 | 1375 | 7229 |
+| `horizontal` | 1 | 65 | 65 | 283 | 378 | 348 | 443 |
+| `horizontal` | 2 | 407 | 65 | 283 | 378 | 690 | 443 |
+| `horizontal` | 3 | 749 | 65 | 283 | 378 | 1032 | 443 |
+| `horizontal` | 4 | 1092 | 65 | 283 | 378 | 1375 | 443 |
+| `wide` | 1 | 65 | 65 | 283 | 159 | 348 | 224 |
+| `wide` | 2 | 407 | 65 | 283 | 159 | 690 | 224 |
+| `wide` | 3 | 749 | 65 | 283 | 159 | 1032 | 224 |
+| `wide` | 4 | 1092 | 65 | 283 | 159 | 1375 | 224 |
+
+必須遵守：
+
+- 每個矩形內每一個像素的 alpha 都必須是 `0`，包括邊緣和反鋸齒像素。
+- 不要用半透明的底色、白色邊框或陰影蓋住槽位。
+- 若要繪製 slot 外框，線條中心必須在槽位外側。
+  建議使用 `(x - 22, y - 22, width + 44, height + 44)` 的圓角路徑，線寬約 `9px`。
+- 最外層相框建議使用 `(24, 24, 1440 - 48, height - 48)` 的圓角路徑，線寬約 `18px`；
+  它會完整落在畫布內，不會被裁切。
+- 角落裝飾建議放在外框與照片槽位之間的 `65px` 留白帶，不要進入上面任何槽位。
+- 長條版型的膠卷打孔可用 `18 × 30` 的小圓角矩形，放在左右或上下留白帶。
+
+## 圖層語意
+
+固定渲染順序：
+
+```text
+白色底
+  → 照片 slot
+  → 照片
+  → 模板 PNG
+  → 使用者貼圖
+  → 最終色調
+```
+
+模板 PNG 的透明區域不會遮住照片；有內容的區域會蓋在照片上方。使用者後續加入的
+貼圖永遠在模板之上。
+
+## 透明與安全區
+
+PNG 必須：
+
+- RGBA color type，不是 RGB JPEG。
+- 照片 slot 區域所有 alpha 都是 0。
+- 全身完整畫布，外框與裝飾都在 `0,0,1440,height` 的邊界內。
+- 不要裁切外框、膠卷孔、星點、日期或其他裝飾。
+- 不要在 slot 內烘焙人物、文字、大面積底色或照片預覽。
+
+建議：
+
+- 外框與 slot 外框使用約 `20–28px` 的內縮。
+- slot 外框線條的中心應在 slot 外側，避免線條壓到照片邊緣。
+- 角位裝飾保留在外框與 slot 之間的留白帶。
+- 長條版型的膠卷孔放在左右或上下側邊。
+- 小裝飾可以增加辨識度，但不要遮住人物臉部。
+
+## 版型槽位
+
+槽位由 `src/app/layouts.ts` 和 `src/lib/strip.ts` 共同決定，模板 PNG 不重複
+宣告 slot。標準畫布常數：
+
+- target width：`1440`
 - padding：`65`
 - innerWidth：`1310`
-- slot geometry 由 `src/app/layouts.ts` 定義，模板 manifest 不重複宣告 slots。
 
-### `grid`
+slot geometry 由版型定義決定：
 
-- 2×2 橫向方格。
-- Slot aspect ratio：4:3。
-- 適合把主角色放在左上方，另兩個同位角色放右側邊緣。
-- 建議主角色 `scale` 約 `0.50–0.54`，輔助角色約 `0.32–0.38`。
+- `grid`：2×2 橫向方格。
+- `square`：2×2 正方形方格。
+- `bento`：左大右三。
+- `portrait-grid`：2×2 直式方格。
+- `vertical`：1×4 長條。
+- `classic`：1×4 極長拍立得。
+- `horizontal`：4×1 橫條。
+- `wide`：4×1 極寬電影條。
 
-### `square`
+## 新增或替換模板
 
-- 2×2 正方形方格。
-- 適合角落對角構圖。
-- 主角色建議 `scale` 約 `0.50–0.54`。
-
-### `bento`
-
-- 左邊 1 個大照片，右邊 3 個小照片。
-- 主角色適合放在左上方大照片邊緣。
-- 主角色建議 `scale` 約 `0.48–0.52`。
-
-### `portrait-grid`
-
-- 2×2 直式方格。
-- 適合上下對角放角色，中間保持留白。
-- 主角色建議 `scale` 約 `0.48–0.52`。
-
-### `vertical`
-
-- 1×4 長條。
-- 長條上下留白區窄，角色貼圖應放在側邊或照片之間的接縫附近。
-- 主角色建議 `scale` 約 `0.40–0.44`，輔助角色約 `0.28–0.32`。
-
-### `classic`
-
-- 1×4 極長拍立得。
-- 與 vertical 相同邏輯，角色放在兩側與照片接縫處。
-- 主角色建議 `scale` 約 `0.32–0.36`，輔助角色約 `0.26–0.30`。
-
-### `horizontal`
-
-- 4×1 橫幅。
-- 可把角色放在左右外側，避免放在照片中心。
-- 主角色建議 `scale` 約 `0.30–0.34`，輔助角色約 `0.24–0.28`。
-
-### `wide`
-
-- 4×1 極寬電影條。
-- 高度最少，角色只能放在上下邊緣或照片間隔。
-- 主角色建議 `scale` 約 `0.22–0.26`，輔助角色約 `0.18–0.22`。
-
-## SVG Asset Rules
-
-- `background.svg` 是完整畫布背景。
-- `frame.svg` 是完整畫布透明前景。
-- 不要使用外連圖片或 external SVG asset。
-- 角色公仔不能直接畫成精確受版權角色 SVG；只能由 manifest 的
-  `decorations.itemId` 引用既有貼圖。
-- 建議 border inset 至少 `28px`，避免相框壓到照片主體。
-- 主角色貼圖位置應避開四格照片的中央人臉區域。
-
-## 新增模板流程
-
-1. 建立或使用一個 `packs/templates/<pack-kind>/templates/manifest.json`。
-2. 為每個 `layoutId` 產生符合上方 `viewBox` 的 background/frame SVG。
-3. 在 manifest 中填寫 `layoutId`、資產路徑與 decorations。
-4. 確認所有 `itemId` 都存在於 `packs/fan-ip/**/stickers/manifest.json`。
-   decorations 不需要手動預先避讓，但角色位置仍應避免壓到人臉或預期留白區域。
-5. 本機執行：
+1. 選擇或建立 `packs/templates/<pack>/templates/`。
+2. 建立完整畫布 RGBA PNG。
+3. 依照版型表設定 1440px 寬與正確高度。
+4. 把照片 slot 全部保持透明。
+5. 使用合法檔名 `template-<layoutId>-<slug>.png`。
+6. 執行：
 
 ```bash
 pnpm typecheck
 pnpm test
-pnpm dev
-```
-
-6. 執行 build 驗證：
-
-```bash
 pnpm build
-pnpm build:public
 ```
 
-7. 在 `/layout → /capture → /frame` 手動檢查 preview。
+7. 開發時到 `/layout → /capture → /frame` 檢查模板卡片。
+8. 確認使用者在 Editor 新增的貼圖仍然位於模板之上。
 
-現有 24 個版型專屬 style/layout × 13 IP 的模板可由 generator 重新生成：
+## 產生與驗證
+
+示範模板可重新生成：
 
 ```bash
-node tools/generate-frame-templates.mjs
+node tools/generate-demo-template-pngs.mjs
 ```
 
-generator 會先清空 `packs/templates/fan-ip/templates/`，再重新寫入
-`manifest.json`（8 blank + 312 style）、8 個 blank frame SVG、48 個
-background SVG 與 48 個 style frame SVG。312 個 style entries 共享
-這 24 組 style/layout 資產，只透過 `decorations` 與 `collectionName` 區分 IP。
+生成器會：
+
+- 使用 canvas 繪製 8 種版型專屬原創外框。
+- 輸出 RGBA PNG 到 `packs/templates/demo/templates/`。
+- 驗證 width、height、RGBA、每個 slot 全透明與邊框內容存在。
+- 驗證失敗時直接以非零 exit code 停止。
 
 ## Build 行為
 
-- `pnpm build` 會複製 `packs/templates`，供本機與 `snapstrip-fat` 使用。
-- `pnpm build:public` 不會複製 `packs/templates`，也不會打包模板 manifest。
-- 若公開 build 沒有任何 template，Capture 會直接跳過 `/frame` 並使用原有
-  素色版型輸出。
+- `pnpm build`：複製 `packs/templates`，並由 `import.meta.glob` 打包模板 URL。
+- `pnpm build:public`：也複製 `packs/templates`，因為全新模板都是原創資產。
+- `packs/fan-ip` 只隨一般 build 複製，public build 不包含。
+
+## 不支援的舊格式
+
+下列格式已移除，不要再建立：
+
+- `manifest.json`
+- `pack.json`
+- `background.svg`
+- `frame.svg`
+- `decorations`
+- `collection`
+- `styleId`
+- `templateColor`
+- `TemplateDecoration`
