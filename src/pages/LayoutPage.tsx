@@ -1,4 +1,4 @@
-import { ArrowRight, Check } from 'lucide-react';
+import { ArrowRight, Check, Printer } from 'lucide-react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { LAYOUTS, layoutBounds } from '../app/layouts';
@@ -16,6 +16,8 @@ const LAYOUT_LABEL_KEYS = {
   horizontal: 'horizontal',
   wide: 'wide',
 } as const;
+
+const PRINTER_LAYOUT_IDS = new Set<LayoutId>(['square', 'bento']);
 
 export function LayoutPage() {
   const { t } = useLanguage();
@@ -66,6 +68,16 @@ export function LayoutPage() {
                 ))}
               </svg>
               <span className="layout-label">{t(LAYOUT_LABEL_KEYS[layout.id])}</span>
+              {PRINTER_LAYOUT_IDS.has(layout.id) ? (
+                <span
+                  className="layout-printer-badge"
+                  role="img"
+                  aria-label={t('printerCompatible')}
+                  title={t('printerCompatible')}
+                >
+                  <Printer size={14} aria-hidden="true" />
+                </span>
+              ) : null}
               {active ? <Check size={18} aria-hidden="true" /> : null}
             </button>
           );

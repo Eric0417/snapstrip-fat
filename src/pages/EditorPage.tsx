@@ -1,4 +1,4 @@
-import { Download, LoaderCircle, Sparkles } from 'lucide-react';
+import { Download, LoaderCircle, Share2, Sparkles } from 'lucide-react';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useSession } from '../app/session';
@@ -7,7 +7,11 @@ import { getFrameTemplate } from '../data/templates';
 import { EditorStage } from '../features/editor/EditorStage';
 import { EditorToolbar } from '../features/editor/EditorToolbar';
 import { TonePanel } from '../features/editor/TonePanel';
-import { exportStripPng } from '../features/editor/editorExport';
+import {
+  canShareStripPng,
+  exportStripPng,
+  shareStripPng,
+} from '../features/editor/editorExport';
 import { PhotoAdjustPanel } from '../features/editor/PhotoAdjustPanel';
 import { viewportSpawnPosition } from '../features/editor/spawn';
 import { StickerPickerPanel } from '../features/editor/StickerPickerPanel';
@@ -29,8 +33,9 @@ export function EditorPage() {
   const redoStickers = useSession((state) => state.redoStickers);
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
-  const [exporting, setExporting] = useState(false);
-  const [exportError, setExportError] = useState<string | null>(null);
+  const [outputAction, setOutputAction] = useState<'download' | 'share' | null>(null);
+  const [outputError, setOutputError] = useState<string | null>(null);
+  const [shareSupported] = useState(() => canShareStripPng());
   const editorStageRef = useRef<HTMLDivElement>(null);
 
   const stickerAssets = useMemo(() => {
@@ -107,6 +112,30 @@ export function EditorPage() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [redoStickers, removeStickers, selectedId, stickers, undoStickers, updateSticker]);
 
+  function runOutput(action: 'download' | 'share') {
+    setOutputAction(action);
+    setOutputError(null);
+
+    const output = {
+      layoutId,
+      shots,
+      stickers,
+      stickerAssets,
+      photoTransforms,
+      template,
+      toneId,
+      toneIntensity,
+    };
+    const operation = action === 'share' ? shareStripPng(output) : exportStripPng(output);
+
+    void operation
+      .catch((error: unknown) => {
+        if (error instanceof DOMException && error.name === 'AbortError') return;
+        setOutputError(action === 'share' ? t('shareFailed') : t('exportFailed'));
+      })
+      .finally(() => setOutputAction(null));
+  }
+
   if (shots.length !== 4) {
     return (
       <main className="content-page">
@@ -129,41 +158,41 @@ export function EditorPage() {
           <h1>{t('editorTitle')}</h1>
           <p>{t('editorHint')}</p>
         </div>
-        <button
-          className="pill-button pill-button-primary export-button"
-          type="button"
-          onClick={() => {
-            setExporting(true);
-            setExportError(null);
-            void exportStripPng({
-              layoutId,
-              shots,
-              stickers,
-              stickerAssets,
-              photoTransforms,
-              template,
-              toneId,
-              toneIntensity,
-            })
-              .catch((error: unknown) => {
-                setExportError(error instanceof Error ? error.message : 'Export failed');
-              })
-              .finally(() => setExporting(false));
-          }}
-          disabled={exporting}
-        >
-          {exporting ? (
-            <LoaderCircle className="spin" size={18} aria-hidden="true" />
-          ) : (
-            <Download size={18} aria-hidden="true" />
-          )}
-          {t('export')}
-        </button>
+        <div className="editor-output-actions">
+          <button
+            className="pill-button pill-button-primary"
+            type="button"
+            onClick={() => runOutput('download')}
+            disabled={outputAction !== null}
+          >
+            {outputAction === 'download' ? (
+              <LoaderCircle className="spin" size={18} aria-hidden="true" />
+            ) : (
+              <Download size={18} aria-hidden="true" />
+            )}
+            {t('export')}
+          </button>
+          {shareSupported ? (
+            <button
+              className="pill-button"
+              type="button"
+              onClick={() => runOutput('share')}
+              disabled={outputAction !== null}
+            >
+              {outputAction === 'share' ? (
+                <LoaderCircle className="spin" size={18} aria-hidden="true" />
+              ) : (
+                <Share2 size={18} aria-hidden="true" />
+              )}
+              {t('share')}
+            </button>
+          ) : null}
+        </div>
       </section>
 
-      {exportError ? (
+      {outputError ? (
         <p className="capture-error" role="alert">
-          {exportError}
+          {outputError}
         </p>
       ) : null}
 

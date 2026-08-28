@@ -359,6 +359,21 @@ img {
   font-weight: 800;
 }
 
+.layout-printer-badge {
+  position: absolute;
+  right: 0.65rem;
+  bottom: 0.65rem;
+  display: grid;
+  width: 1.75rem;
+  height: 1.75rem;
+  place-items: center;
+  border: 1px solid rgba(43, 36, 42, 0.18);
+  border-radius: 50%;
+  background: var(--cream);
+  color: var(--ink);
+  box-shadow: 0 3px 10px rgba(43, 36, 42, 0.12);
+}
+
 .template-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -804,6 +819,13 @@ img {
   margin: 0.6rem 0 0;
   color: var(--muted);
   line-height: 1.5;
+}
+
+.editor-output-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: flex-end;
 }
 
 .editor-workspace {
@@ -1374,8 +1396,12 @@ img {
     flex-direction: column;
   }
 
-  .export-button {
+  .editor-output-actions {
     width: 100%;
+  }
+
+  .editor-output-actions .pill-button {
+    flex: 1 1 auto;
   }
 
   .sticker-grid {

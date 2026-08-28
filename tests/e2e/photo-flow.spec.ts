@@ -21,6 +21,21 @@ test('completes the upload, sticker editor, and export flow', async ({ page }) =
 
   await page.addInitScript(() => {
     window.sessionStorage.setItem('snapstrip-authorized', '1');
+    Object.defineProperty(navigator, 'canShare', {
+      configurable: true,
+      value: () => true,
+    });
+    Object.defineProperty(navigator, 'share', {
+      configurable: true,
+      value: async (data: ShareData) => {
+        (window as unknown as { __sharedData?: ShareData }).__sharedData = data;
+      },
+    });
+    Object.defineProperty(window, '__sharedData', {
+      configurable: true,
+      writable: true,
+      value: undefined,
+    });
   });
   await page.goto('/layout');
   await expect(page.getByRole('heading', { name: '選擇你的版型' })).toBeVisible();
@@ -58,6 +73,26 @@ test('completes the upload, sticker editor, and export flow', async ({ page }) =
   await page.locator('.sticker-thumb').first().click();
   await expect(page.locator('.sticker-selection')).toHaveCount(1);
   await expect(page.locator('.sticker-selection.is-selected')).toHaveCount(1);
+
+  await page.getByRole('button', { name: '分享' }).click();
+  await expect
+    .poll(() =>
+      page.evaluate(
+        () => (window as unknown as { __sharedData?: ShareData }).__sharedData,
+      ),
+    )
+    .toBeTruthy();
+  const sharedData = await page.evaluate(
+    () => (window as unknown as { __sharedData?: ShareData }).__sharedData,
+  );
+  expect(sharedData?.files).toHaveLength(1);
+  const sharedFile = await page.evaluate(() => {
+    const file = (window as unknown as { __sharedData?: ShareData }).__sharedData
+      ?.files?.[0];
+    return file ? { name: file.name, type: file.type } : null;
+  });
+  expect(sharedFile?.type).toBe('image/png');
+  expect(sharedFile?.name).toMatch(/^snapstrip-.*\.png$/);
 
   const downloadPromise = page.waitForEvent('download');
   await page.getByRole('button', { name: /下載 PNG/ }).click();
