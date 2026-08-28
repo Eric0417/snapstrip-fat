@@ -142,6 +142,9 @@
 - 尚未在真實手機上測試相機權限；fake camera 已通過。
 - `fat/deploy` 已推送並完成 Render 建置；live manifest 已確認是 320 個單一 IP
   template entries（8 blank + 312 style），新版 SVG 回傳 `image/svg+xml`。
+- 本次裁切修正已部署：remote `fat/deploy` 為 `7c99b30`，線上首頁 asset 為
+  `index-gMMLb79c.js`；桌面 1440×900 與手機流程均已重跑，無 console/page error
+  或水平 overflow，/frame 與 /editor 畫面抽查通過。
 - `snapstrip-fat.onrender.com` 仍可公開存取，且 fan-ip 檔案可直接下載。
 - 網站前端已加入審查密碼，但靜態 fan-ip 檔案仍可直接下載，不是完整的存取控制。
 - 版權申請文件已備妥，但尚未對任何權利人送出，也尚未獲得任何書面授權。
