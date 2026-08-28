@@ -77,22 +77,30 @@
 - 本地功能已完成；沒有已知的模板或色調 product bug。
 - 拍照頁「Back」仍會讓使用者誤以為是返回導航，實際是切換鏡頭，且拍照中會
   disabled；這項問題與本次模板/色調變更無關。
-- 本次四步流程、8 張模板與色調功能尚未部署到 Render；目前工作區在
-  `deploy...fat/deploy` branch，線上站點仍是舊版模板系統。
+- 本次四步流程、8 張模板與色調功能已部署到 Render：
+  - 分支：`fat/deploy`，提交：`419d489`。
+  - Service：`snapstrip-fat`（`srv-da7ftl6k1f9s73d9qgb0`）。
+  - URL：`https://snapstrip-fat.onrender.com`。
+  - Render deploy：`dep-da8p97gu01pc73cara00`，狀態 `live`。
+  - 線上驗證：桌面與手機登入後首頁正常、無 pageerror，新版 template 與 tone
+    presets 已出現在 production JS。
 - `template_refrence/`、`template_preview/` 與
   `tools/export-template-previews.mjs` 屬於使用者本地資料，未納入本次提交，
   後續不要刪除或改寫。
 - 舊 `packs/templates/fan-ip` 與 `tools/generate-frame-templates.mjs` 已刪除。
+- 工作區仍有一個未提交的
+  `packs/fan-ip/sumikko-gurashi/stickers/sticker-16.thumb.webp` 本機修改；
+  原始 256×256 縮圖被一張 1378×1696 圖片覆蓋，未納入本次部署，提交前先確認來源。
 
 ## 下一步優先順序
 
 1. 確認拍照頁「Back」按鈕的預期行為。
 2. 在真實手機與桌面上手動走一次相機流程。
 3. 在真機上人工審核 8 張版型專屬示範模板的比例、留白與外框細節。
-4. 使用者確認新流程及模板視覺後，再將目前 branch 部署到 Render。
+4. 確認 Render static fat build 是否能接受 fan-ip 直接 URL 暴露；若要真正保護，
+   需改為 server-side auth 或切換到不含 fan-ip 的 public build。
 5. 若首包效能重要，可把 Editor/Capture 改成 lazy route 或拆 manifest chunk。
-6. 寄出版權申請前，先把線上舊版 `snapstrip-fat` 下線或改為密碼保護。
-7. 依各權利人回覆，取得正式素材與使用規範後再重新整理 fan-ip。
+6. 依各權利人回覆，取得正式素材與使用規範後再重新整理 fan-ip。
 
 ## 已知風險
 
@@ -104,7 +112,9 @@
 - Fan IP 素材來源不是官方授權檔案；`private-personal-use` 只是內部分類，不具法律
   授權效力。模板系統本身已不再依賴 fan-ip 角色。
 - `snapstrip2026` 是前端審查密碼，不等於伺服器端保護；若直接 URL 仍可取得
-  fan-ip，就不應宣稱素材已完整鎖住。
+  fan-ip，就不應宣稱素材已完整鎖住。目前 Render 上已確認
+  `https://snapstrip-fat.onrender.com/packs/fan-ip/.../manifest.json`
+  可直接取得，static hosting 不能用前端密碼阻擋。
 - 相機權限只能由使用者實機測試，headless 測試只證明非相機流程。
 - 新增模板 PNG 必須符合 `docs/memory/TEMPLATE_FORMAT.md` 的畫布尺寸，且照片
   slot 區域保持透明；否則會遮住人物或在使用者調整照片後歪斜。

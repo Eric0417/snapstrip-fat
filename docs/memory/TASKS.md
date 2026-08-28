@@ -23,12 +23,13 @@
 - [x] desktop and mobile E2E
 - [x] local and public build verification
 - [x] remove old 320-template manifest system
+- [x] deploy four-step template/tone version to Render (`fat/deploy`,
+  `snapstrip-fat`, commit `419d489`)
 
 ## 尚未開始
 
 - [ ] 真實手機相機測試
 - [ ] 使用者最終視覺審核 8 張示範模板
-- [ ] 部署本次四步模板/色調版本到 Render
 - [ ] 若需要，Editor/Capture lazy route 與 manifest 拆 chunk
 
 ## Flow Acceptance
