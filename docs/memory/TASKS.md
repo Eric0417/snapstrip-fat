@@ -22,7 +22,7 @@
 - [x] manifest-driven 相框模板系統，每版型 3 種版型專屬風格 × 13 種 IP + 1 空白可選色模板
 - [x] 桌面/手機 E2E
 - [x] local build 與 public build 分離驗證
-- [ ] Render `snapstrip-fat` deploy branch 更新與 live asset 驗證
+- [x] Render `snapstrip-fat` deploy branch 更新與 live asset 驗證
 
 ## 尚未開始
 

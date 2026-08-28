@@ -24,6 +24,9 @@ pnpm dev
 - 8 個 layout 的首個版型專屬風格均以實際四張照片渲染並檢查非空白。
 - 13 個 IP 在 grid `grid-pastel` 模板逐一渲染，確認角色可載入且每張只含單一 IP。
 - mobile 390×844 檢查 13 個角色系列按鈕與 page 無水平 overflow。
+- `snapstrip-fat.onrender.com` 桌面 1440×900 與手機 390×844 已走完
+  8 個 layout → 3 styles × 13 IP → Editor → PNG export，無 console error、
+  pageerror 或水平 overflow；live manifest 為 320 筆。
 
 ## Fake camera
 

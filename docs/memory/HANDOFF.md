@@ -133,9 +133,8 @@
 - 相框模板系統已完成；320 個 template entries（8 blank + 312 style）與新選擇頁在
   桌面/手機均已做非空白畫布、顏色切換與 overflow 檢查。
 - 尚未在真實手機上測試相機權限；fake camera 已通過。
-- `fat/deploy` 尚未推送新版；目前線上仍為舊版 528 個 template entries。本機已
-  建置並驗證新版為 320 個單一 IP template entries（8 blank + 312 style），
-  推送後需再確認 Render live manifest、SVG 與新版 JS。
+- `fat/deploy` 已推送並完成 Render 建置；live manifest 已確認是 320 個單一 IP
+  template entries（8 blank + 312 style），新版 SVG 回傳 `image/svg+xml`。
 - `snapstrip-fat.onrender.com` 仍可公開存取，且 fan-ip 檔案可直接下載。
 - 網站前端已加入審查密碼，但靜態 fan-ip 檔案仍可直接下載，不是完整的存取控制。
 - 版權申請文件已備妥，但尚未對任何權利人送出，也尚未獲得任何書面授權。
@@ -147,7 +146,7 @@
 1. 在真實手機與桌面上手動走一次相機流程。
 2. 在真機上人工審核 3 種版型專屬風格 × 13 種 IP 模板在各版型中的貼圖位置、
    角色比例與留白。
-3. push 後確認 Render live manifest 為 320 筆；若需要純原創公開版，再依
+3. 已確認 Render live manifest 為 320 筆；若需要純原創公開版，再依
    `docs/DEPLOYMENT.md` 建立不含 fan-ip 的 branch。
 4. 若首包效能重要，可把 Editor/Capture 改成 lazy route 或拆 manifest chunk。
 5. 寄出版權申請前，先把 `snapstrip-fat` 下線或改為密碼保護。
