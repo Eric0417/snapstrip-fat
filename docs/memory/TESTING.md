@@ -16,13 +16,13 @@ pnpm dev
 ## 目前結果
 
 - `pnpm typecheck`：通過。
-- `pnpm test`：7 files / 30 tests 通過。
+- `pnpm test`：7 files / 31 tests 通過。
 - `pnpm test:e2e`：6 tests 通過，包含桌面/手機 upload flow、fake camera flow、
-  直式 stage fit，以及切換五種風格後仍保留玉桂狗。
-- `pnpm build`：通過，本機 dist 包含 core + fan-ip，且 template manifest 為 528 筆。
+  直式 stage fit，以及切換三種版型專屬風格後仍保留玉桂狗。
+- `pnpm build`：通過，本機 dist 包含 core + fan-ip，且 template manifest 為 320 筆。
 - `pnpm build:public`：通過，public dist 排除 fan-ip 與 templates。
-- 8 個 layout 的 `sweet · 玉桂狗` 均以實際四張照片渲染並檢查非空白。
-- 13 個 IP 在 grid `sweet` 模板逐一渲染，確認角色可載入且每張只含單一 IP。
+- 8 個 layout 的首個版型專屬風格均以實際四張照片渲染並檢查非空白。
+- 13 個 IP 在 grid `grid-pastel` 模板逐一渲染，確認角色可載入且每張只含單一 IP。
 - mobile 390×844 檢查 13 個角色系列按鈕與 page 無水平 overflow。
 
 ## Fake camera
@@ -42,8 +42,8 @@ Playwright 使用 `tests/fixtures/face.y4m` 與 Chromium fake device flags。
 - `src/app/session.ts`
 - `src/data/templates.ts`
 - sticker manifest 篩選/分類
-- frame-template loader、每個 layout 的 5 styles × 13 IP + 1 blank、單一 IP
-  decorations、sticker reference
+- frame-template loader、每個 layout 的 3 styles × 13 IP + 1 blank、單一 IP
+  decorations、sticker reference、film 只侷限在長條 layout
   與 id 唯一性
 - capture 倒數狀態
 - camera track cleanup
@@ -72,9 +72,11 @@ if rg -q 'hello-kitty|cinnamoroll|kuromi' dist/assets/*.js; then exit 1; fi
 
 - `/frame` 使用實際 shots 產生非空白 large preview，render target 為 640px。
 - 空白模板在 8 個色票切換後 canvas 底色同步改變。
-- 5 styles × 13 IP 的 style/layout 組合逐一檢查非空白 canvas、單一 IP、
+- 3 styles × 13 IP 的 style/layout 組合逐一檢查非空白 canvas、單一 IP、
   page overflow 與 console error。
-- 每個 layout 在 1440×900 與 390×844 檢查 5 個 style 選項、色票與 page 不水平溢出。
+- 每個 layout 在 1440×900 與 390×844 檢查 3 個 style 選項、色票與 page 不水平溢出。
+- `grid`/`square`/`bento`/`portrait-grid` 不得出現 film style；
+  `vertical`/`classic`/`horizontal`/`wide` 必須出現 film style。
 - `/frame` 切換風格時保留目前 IP；`mono` 模板的 3 張角色貼圖為灰階。
 - E2E 流程必須經過 `/frame` 後才進入 `/editor`。
 - `pnpm build` 包含 `dist/packs/templates`；`pnpm build:public` 不包含。

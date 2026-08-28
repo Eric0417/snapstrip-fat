@@ -227,7 +227,8 @@ export async function loadFrameTemplate(
     backgroundImage: backgroundImage ?? undefined,
     frameImage: frameImage ?? undefined,
     decorations,
-    monochrome: template.styleId === 'mono',
+    monochrome:
+      template.monochrome ?? template.styleFamily === 'mono',
   };
 }
 

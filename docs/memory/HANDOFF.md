@@ -68,18 +68,19 @@
 - 特效只作為編輯器「特效」分類中的普通貼圖，使用者可新增、拖曳、縮放、
   旋轉、翻轉或刪除，不參與相機即時預覽或自動套用。
 - 完成 manifest-driven 相框模板系統：
-  - 每個版型提供 5 個風格模板（甜點蕾絲、手繪日記、膠卷回憶、復古格紋、
-    黑白韓系），每個風格再提供全部 13 個 IP，另加 1 個可自訂顏色的空白模板，
-    合計 528 個 template entries。
+  - 每個版型提供 3 個版型專屬風格模板，每個風格再提供全部 13 個 IP，另加 1 個
+    可自訂顏色的空白模板，合計 320 個 template entries。
+  - `film` 只存在於 `vertical`、`classic`、`horizontal`、`wide`；其餘版型不會
+    顯示膠卷模板。
   - 拍照/上傳完成後進入 `/frame`，使用剛拍好的四張照片即時合成預覽。
-  - 模板版型改為每版型 5 種主流人生四格風格，每個風格 × IP 使用 3 張較大的
-    同一 IP 貼圖；不同 IP 不混搭，且每個版型都可選到所有 13 個 collection。
-  - SVG 背景、風格邊框與角色構圖參考 `template_refrence/` 的主流甜點、
-    手繪、膠卷、格紋與黑白塗鴉手法，角色放在照片邊角，保持單一主題。
+  - 每個版型使用獨立的 style id、background/frame、邊框細節與角色位置；不再用
+    同一組通用風格套到 8 個版型。
+  - 角色構圖參考 `template_refrence/` 的主流甜點、手繪、膠卷、格紋與黑白塗鴉
+    手法，角色放在照片邊角，保持單一主題。
   - `/frame` 先選風格、再選角色系列；切換風格時保留目前 IP。
-  - `mono` 模板的角色貼圖在 canvas render 時套用 grayscale filter。
+  - `styleFamily: mono` 模板的角色貼圖在 canvas render 時套用 grayscale filter。
   - `/frame` 預覽 render 解析度由 320px 提高到 640px，並保持各版型長寬比。
-  - 5 styles × 13 IP 的模板組合在 8 個版型下逐一通過非空白 canvas、overflow 與
+  - 3 styles × 13 IP 的模板組合在 8 個版型下逐一通過非空白 canvas、overflow 與
     console error 檢查。
   - 空白模板提供 8 個預設色與自訂 color picker，顏色會進入 Editor 與 export。
   - 模板固定渲染在照片與使用者貼圖之間，不寫入可編輯貼圖狀態。
@@ -94,7 +95,7 @@
 - 依使用者後續要求，`snapstrip-fat` Render 公開站已改為包含 fan-ip，
   build command 使用 `pnpm build`；此設定會公開第三方 IP 素材。
 - 完成單元測試與 Playwright：
-  - 30 個 Vitest tests。
+  - 31 個 Vitest tests。
   - 6 個 E2E tests，包含桌面/手機上傳流程、fake camera 四連拍與直式 stage fit。
 - 已建立：
   - `src/app/types.ts`
@@ -129,11 +130,12 @@
 ### 目前狀態
 
 - 核心功能已完成，尚未發現已知 bug。
-- 相框模板系統已完成；528 個 template entries（8 blank + 520 style）與新選擇頁在
+- 相框模板系統已完成；320 個 template entries（8 blank + 312 style）與新選擇頁在
   桌面/手機均已做非空白畫布、顏色切換與 overflow 檢查。
 - 尚未在真實手機上測試相機權限；fake camera 已通過。
-- `fat/deploy` 已推送並完成 Render 建置；live manifest 為 528 個單一 IP
-  template entries（8 blank + 520 style），SVG 與新版 JS 已確認可正常回傳。
+- `fat/deploy` 尚未推送新版；目前線上仍為舊版 528 個 template entries。本機已
+  建置並驗證新版為 320 個單一 IP template entries（8 blank + 312 style），
+  推送後需再確認 Render live manifest、SVG 與新版 JS。
 - `snapstrip-fat.onrender.com` 仍可公開存取，且 fan-ip 檔案可直接下載。
 - 網站前端已加入審查密碼，但靜態 fan-ip 檔案仍可直接下載，不是完整的存取控制。
 - 版權申請文件已備妥，但尚未對任何權利人送出，也尚未獲得任何書面授權。
@@ -143,9 +145,9 @@
 ## 下一步優先順序
 
 1. 在真實手機與桌面上手動走一次相機流程。
-2. 在真機上人工審核 5 種風格 × 13 種 IP 模板在各版型中的貼圖位置、
+2. 在真機上人工審核 3 種版型專屬風格 × 13 種 IP 模板在各版型中的貼圖位置、
    角色比例與留白。
-3. push 後確認 Render live manifest 為 528 筆；若需要純原創公開版，再依
+3. push 後確認 Render live manifest 為 320 筆；若需要純原創公開版，再依
    `docs/DEPLOYMENT.md` 建立不含 fan-ip 的 branch。
 4. 若首包效能重要，可把 Editor/Capture 改成 lazy route 或拆 manifest chunk。
 5. 寄出版權申請前，先把 `snapstrip-fat` 下線或改為密碼保護。

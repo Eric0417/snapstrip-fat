@@ -45,24 +45,26 @@ packs/templates/
 
 ```json
 {
-  "id": "style-sweet-grid-hello-kitty",
+  "id": "style-grid-pastel-hello-kitty",
   "layoutId": "grid",
   "name": {
-    "zh-Hant": "甜點蕾絲 · Hello Kitty",
-    "en": "Sweet ribbon · Hello Kitty"
+    "zh-Hant": "粉彩方框 · Hello Kitty",
+    "en": "Pastel grid · Hello Kitty"
   },
   "kind": "style",
   "collection": "hello-kitty",
   "collectionOrder": 1,
-  "styleId": "sweet",
+  "styleId": "grid-pastel",
+  "styleFamily": "sweet",
+  "monochrome": false,
   "styleName": {
-    "zh-Hant": "甜點蕾絲",
-    "en": "Sweet ribbon"
+    "zh-Hant": "粉彩方框",
+    "en": "Pastel grid"
   },
   "order": 1,
-  "background": "packs/templates/fan-ip/templates/style-sweet-grid-background.svg",
-  "frame": "packs/templates/fan-ip/templates/style-sweet-grid-frame.svg",
-  "accentColor": "#d76b91",
+  "background": "packs/templates/fan-ip/templates/style-grid-pastel-background.svg",
+  "frame": "packs/templates/fan-ip/templates/style-grid-pastel-frame.svg",
+  "accentColor": "#d46d92",
   "collections": ["hello-kitty"],
   "collectionName": {
     "zh-Hant": "Hello Kitty",
@@ -71,10 +73,10 @@ packs/templates/
   "decorations": [
     {
       "itemId": "hello-kitty-sticker-01",
-      "x": 0.13,
-      "y": 0.075,
-      "scale": 0.52,
-      "rotation": -8,
+      "x": 0.112,
+      "y": 0.053,
+      "scale": 0.5616,
+      "rotation": -11,
       "flipX": false,
       "flipY": false,
       "opacity": 1
@@ -105,16 +107,18 @@ Blank 可換色模板範例：
 
 欄位規則：
 
-- `id`：全域唯一 kebab-case，例如 `style-<styleId>-<layoutId>-<collection>`。
+- `id`：全域唯一 kebab-case，例如 `style-<styleId>-<collection>`。
 - `layoutId`：必須是 `grid`、`square`、`bento`、`portrait-grid`、
   `vertical`、`classic`、`horizontal`、`wide` 其中之一。
 - `kind`：`style` 或 `blank`。
 - `collection`：blank 使用 `blank`；style 使用唯一 IP id。
 - `collectionOrder`：IP 在選擇器中的順序，1–13。
-- `styleId`：五種風格之一：`sweet`、`diary`、`film`、`plaid`、`mono`。
+- `styleId`：全域唯一的版型專屬 id，例如 `grid-pastel`、`vertical-film`。
+- `styleFamily`：視覺 family：`sweet`、`diary`、`film`、`plaid`、`mono`。
+- `monochrome`：`true` 時角色 decorations 在 canvas render 套用 grayscale。
 - `styleName`：風格的繁中/英文顯示名稱。
 - `collectionName`：IP 的繁中/英文顯示名稱。
-- `order`：數值越小越先顯示；blank 為 `0`，五種風格為 `1–5`。
+- `order`：數值越小越先顯示；blank 為 `0`，每個 layout 的三個風格為 `1–3`。
 - `collections`：只包含此模板的單一 fan-ip collection。
 - `background`：full-canvas SVG，照片底下的完整背景。
 - `frame`：full-canvas SVG，照片上方、template decorations 下方的邊框層。
@@ -122,15 +126,21 @@ Blank 可換色模板範例：
 - `decorations`：只引用既有 sticker id，不複製角色 asset。
 - `license`：原創為 `original`；第三方 IP 為 `private-personal-use`。
 
-目前的五種風格對應主流人生四格拍貼手法：
+目前的 24 個 style/layout 組合都是版型專屬設計，不在 8 個 layout 之間重複：
 
-| `styleId` | 中文 | 英文 | 視覺特徵 |
-| --- | --- | --- | --- |
-| `sweet` | 甜點蕾絲 | Sweet ribbon | 粉彩條紋、蕾絲/扇貝邊、愛心與甜點感 |
-| `diary` | 手繪日記 | Hand-drawn diary | 米白紙、細格線、手繪花/膠帶/塗鴉 |
-| `film` | 膠卷回憶 | Film memories | 膠卷齒孔、REC/PHOTO 標籤、復古紙感 |
-| `plaid` | 復古格紋 | Vintage plaid | 格紋底、奶油白框、花與緞帶 |
-| `mono` | 黑白韓系 | Korean monochrome | 黑底、白線星/心/音符塗鴉、極簡對比 |
+| Layout | Style IDs |
+| --- | --- |
+| `grid` | `grid-pastel`、`grid-diary`、`grid-mono` |
+| `square` | `square-sky`、`square-plaid`、`square-doodle` |
+| `bento` | `bento-story`、`bento-cream`、`bento-mono` |
+| `portrait-grid` | `portrait-vintage`、`portrait-pastel`、`portrait-mono` |
+| `vertical` | `vertical-film`、`vertical-diary`、`vertical-sweet` |
+| `classic` | `classic-film`、`classic-plaid`、`classic-mono` |
+| `horizontal` | `horizontal-film`、`horizontal-sky`、`horizontal-doodle` |
+| `wide` | `wide-film`、`wide-ticket`、`wide-mono` |
+
+`film` 只屬於 `vertical`、`classic`、`horizontal`、`wide` 四種長條版型；
+其他版型的 manifest 不得包含 `styleFamily: film`。
 
 每個 style/layout 模板使用 3 張同一 IP 的既有 fan-ip 貼圖；不得把不同 IP
 混在同一張模板中。每個 style/layout 都有全部 13 個 collection 的 entry，
@@ -158,8 +168,8 @@ interface TemplateDecoration {
 - `flipX/flipY`：布林。
 - `opacity`：0–1。
 
-例如 grid 的主角色 `scale=0.52`，在 export 1440 中約等於
-`1310 × 0.52 ≈ 681px` 的貼圖顯示寬度。角色貼圖本身常有透明留白，
+例如 grid `grid-pastel` 的主角色 `scale=0.5616`，在 export 1440 中約等於
+`1310 × 0.5616 ≈ 735px` 的貼圖顯示寬度。角色貼圖本身常有透明留白，
 因此實際可見角色會比顯示尺寸略小，建議主角色維持在 0.5 以上。
 
 ## 各 Layout 標準 Canvas
@@ -266,16 +276,16 @@ pnpm build:public
 
 7. 在 `/layout → /capture → /frame` 手動檢查 preview。
 
-現有 5 styles × 8 layouts × 13 IP 的模板可由 generator 重新生成：
+現有 24 個版型專屬 style/layout × 13 IP 的模板可由 generator 重新生成：
 
 ```bash
 node tools/generate-frame-templates.mjs
 ```
 
 generator 會先清空 `packs/templates/fan-ip/templates/`，再重新寫入
-`manifest.json`（8 blank + 520 style）、8 個 blank frame SVG、40 個
-background SVG 與 40 個 style frame SVG。520 個 style entries 共享
-這 40 組 style/layout 資產，只透過 `decorations` 與 `collectionName` 區分 IP。
+`manifest.json`（8 blank + 312 style）、8 個 blank frame SVG、48 個
+background SVG 與 48 個 style frame SVG。312 個 style entries 共享
+這 24 組 style/layout 資產，只透過 `decorations` 與 `collectionName` 區分 IP。
 
 ## Build 行為
 

@@ -141,17 +141,18 @@ fan-ip manifest 要求：
 模板 manifest：
 
 - `id` 全域唯一，`layoutId` 必須對應現有 8 個版型。
-- 每個 layout 有一個 `kind: blank` 與 `5 styles × 13 IP = 65` 個
-  `kind: style` 模板；全專案為 8 blank + 520 style。
+- 每個 layout 有一個 `kind: blank` 與 `3 styles × 13 IP = 39` 個
+  `kind: style` 模板；全專案為 8 blank + 312 style。
 - `background` / `frame` 是 full-canvas SVG；每個 style/layout 組合有獨立主題背景
-  與風格邊框，8 個 blank layout 共用細白框。
+ 與風格邊框。每種 layout 的 style asset 是版型專屬設計，`film` 只寫入四種長條
+  layout，8 個 blank layout 共用細白框。
 - 每個 style/layout 組合的 background/frame asset 給該組合下的 13 個 IP
   template 共用，模板只改變 `decorations`。
 - `decorations.itemId` 引用既有貼圖，不複製角色 asset。
 - `x/y` 使用完整 export canvas 的 0–1 座標；`scale` 相對 `innerWidth`。
 - blank 模板的實際底色由 session `templateColor` 覆寫，可即時切換。
 - 每張 style template 的 3 個 decorations 必須全部屬於同一 collection。
-- `styleId === 'mono'` 的 template decorations 在 render 時套用 canvas
+- `styleFamily === 'mono'` 的 template decorations 在 render 時套用 canvas
   `grayscale` filter；使用者自行新增的貼圖維持原色。
 
 Canvas render order：

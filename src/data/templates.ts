@@ -18,6 +18,8 @@ interface FrameTemplateManifestEntry {
   collection?: unknown;
   collectionOrder?: unknown;
   styleId?: unknown;
+  styleFamily?: unknown;
+  monochrome?: unknown;
   order?: unknown;
   collections?: unknown;
   backgroundColor?: unknown;
@@ -128,6 +130,12 @@ function toTemplates(manifests: Record<string, unknown>): FrameTemplate[] {
           typeof value.styleId === 'string' && value.styleId
             ? value.styleId
             : undefined,
+        styleFamily:
+          typeof value.styleFamily === 'string' && value.styleFamily
+            ? value.styleFamily
+            : undefined,
+        monochrome:
+          typeof value.monochrome === 'boolean' ? value.monochrome : undefined,
         order: toNumber(value.order, 0),
         collections: Array.isArray(value.collections)
           ? value.collections.filter(

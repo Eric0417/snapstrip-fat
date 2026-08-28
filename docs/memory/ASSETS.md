@@ -31,14 +31,16 @@
 ### Frame template pack
 
 - 路徑：`packs/templates/fan-ip`
-- 80 個 style background/frame SVG 是本專案原創的主題背景與風格邊框，
-  分別對應 5 styles × 8 layouts 的 background/frame。
+- 48 個 style background/frame SVG 是本專案原創的版型限定主题背景與風格邊框，
+  每個 layout 提供 3 個自己的 style，不再讓 8 個 layout 共用同一組通用風格。
 - 8 個 `frame-<layout>.svg` 供 blank 可選色模板使用。
 - `decorations.itemId` 只引用既有 `packs/fan-ip` 貼圖，不複製角色 asset。
-- 每個 `layoutId` 提供 5 styles × 13 IP 的 style template，以及 1 個 blank
-  可選色 template；合計 528 筆 manifest entries。
+- 每個 `layoutId` 提供 3 styles × 13 IP 的 style template，以及 1 個 blank
+  可選色 template；合計 320 筆 manifest entries。
+- `film` 只存在於 `vertical`、`classic`、`horizontal`、`wide` 四種長條版型；
+  grid/square/bento/portrait-grid 不會出現 film。
 - 每張 style template 使用 3 張同一 IP 的較大貼圖，不能混搭不同 IP。
-- 每個 layout 可透過「風格 + 角色系列」選到全部 13 個 fan-ip collection。
+- 每個 layout 可透過「版型專屬風格 + 角色系列」選到全部 13 個 fan-ip collection。
 - `mono` style 的 template decorations 使用 grayscale render。
 - normal/Render fat build 包含；`build:public` 排除整個 template pack。
 - 生成參考工具：`tools/generate-frame-templates.mjs`。

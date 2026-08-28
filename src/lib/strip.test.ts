@@ -5,7 +5,9 @@ import {
   slotRects,
   stripSize,
   type LoadedFrameTemplate,
+  loadFrameTemplate,
 } from './strip';
+import type { FrameTemplate } from '../app/types';
 
 function fakeImage(id: string) {
   return {
@@ -133,5 +135,24 @@ describe('strip geometry', () => {
     ]);
     expect(fills[0]).toBe('#eaf7ff');
     expect(filters[filters.length - 1]).toBe('grayscale(1) contrast(1.15)');
+  });
+
+  it('keeps styleFamily mono templates monochrome during loading', async () => {
+    const template: FrameTemplate = {
+      id: 'grid-mono-hello-kitty',
+      layoutId: 'grid',
+      name: { 'zh-Hant': '黑白方塊', en: 'Monochrome grid' },
+      decorations: [],
+      pack: 'fan',
+      kind: 'style',
+      collection: 'hello-kitty',
+      styleId: 'grid-mono',
+      styleFamily: 'mono',
+      monochrome: true,
+    };
+
+    await expect(loadFrameTemplate(template, new Map())).resolves.toMatchObject({
+      monochrome: true,
+    });
   });
 });

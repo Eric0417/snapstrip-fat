@@ -50,6 +50,8 @@ export interface FrameTemplate {
   collection?: string;
   collectionOrder?: number;
   styleId?: string;
+  styleFamily?: string;
+  monochrome?: boolean;
   order?: number;
   collections?: readonly string[];
   backgroundColor?: string;

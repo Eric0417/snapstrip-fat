@@ -23,13 +23,24 @@ const IP_COLLECTIONS = [
   'mickey-mouse',
 ];
 
-const STYLE_TEMPLATES = ['sweet', 'diary', 'film', 'plaid', 'mono'];
+const LAYOUT_STYLES = {
+  grid: ['grid-pastel', 'grid-diary', 'grid-mono'],
+  square: ['square-sky', 'square-plaid', 'square-doodle'],
+  bento: ['bento-story', 'bento-cream', 'bento-mono'],
+  'portrait-grid': ['portrait-vintage', 'portrait-pastel', 'portrait-mono'],
+  vertical: ['vertical-film', 'vertical-diary', 'vertical-sweet'],
+  classic: ['classic-film', 'classic-plaid', 'classic-mono'],
+  horizontal: ['horizontal-film', 'horizontal-sky', 'horizontal-doodle'],
+  wide: ['wide-film', 'wide-ticket', 'wide-mono'],
+} as const;
+
+const LONG_LAYOUTS = new Set(['vertical', 'classic', 'horizontal', 'wide']);
 
 describe('frame template loader', () => {
-  it('loads a blank template, five styles, and every IP for each layout', () => {
+  it('loads a blank template, three layout-specific styles, and every IP for each layout', () => {
     expect(FRAME_TEMPLATES).toHaveLength(
       LAYOUTS.length +
-        LAYOUTS.length * STYLE_TEMPLATES.length * IP_COLLECTIONS.length,
+        LAYOUTS.length * 3 * IP_COLLECTIONS.length,
     );
 
     for (const layout of LAYOUTS) {
@@ -37,14 +48,14 @@ describe('frame template loader', () => {
       expect(templates.filter((template) => template.kind === 'blank')).toHaveLength(1);
       expect(
         templates.filter((template) => template.kind === 'style'),
-      ).toHaveLength(STYLE_TEMPLATES.length * IP_COLLECTIONS.length);
+      ).toHaveLength(3 * IP_COLLECTIONS.length);
       expect(
         new Set(
           templates
             .filter((template) => template.kind === 'style')
             .map((template) => template.styleId),
         ),
-      ).toEqual(new Set(STYLE_TEMPLATES));
+      ).toEqual(new Set(LAYOUT_STYLES[layout.id]));
 
       const collections = new Set(
         templates
@@ -53,7 +64,7 @@ describe('frame template loader', () => {
       );
       expect([...collections].sort()).toEqual([...IP_COLLECTIONS].sort());
 
-      for (const style of STYLE_TEMPLATES) {
+      for (const style of LAYOUT_STYLES[layout.id]) {
         const ipTemplates = templates.filter(
           (template) =>
             template.kind === 'style' && template.styleId === style,
@@ -63,6 +74,11 @@ describe('frame template loader', () => {
           new Set(ipTemplates.map((template) => template.collection)),
         ).toEqual(new Set(IP_COLLECTIONS));
       }
+
+      const filmTemplates = templates.filter(
+        (template) => template.styleFamily === 'film',
+      );
+      expect(filmTemplates.length > 0).toBe(LONG_LAYOUTS.has(layout.id));
     }
   });
 
@@ -83,10 +99,12 @@ describe('frame template loader', () => {
         expect(template.accentColor).toBeTruthy();
         expect(template.decorations).toHaveLength(3);
         expect(template.styleId).toBeTruthy();
+        expect(template.styleFamily).toBeTruthy();
         expect(template.styleName).toBeTruthy();
         expect(template.collection).toBeTruthy();
         expect(template.collectionName).toBeTruthy();
         expect(template.collections).toEqual([template.collection]);
+        expect(template.monochrome).toBe(template.styleFamily === 'mono');
         expect(
           template.decorations.every((decoration) =>
             decoration.itemId.startsWith(`${template.collection}-sticker-`),
@@ -108,11 +126,11 @@ describe('frame template loader', () => {
 
   it('returns the requested template or undefined', () => {
     expect(getFrameTemplate('blank-grid')?.kind).toBe('blank');
-    expect(getFrameTemplate('style-sweet-grid-hello-kitty')?.kind).toBe('style');
-    expect(getFrameTemplate('style-sweet-grid-hello-kitty')?.collection).toBe(
+    expect(getFrameTemplate('style-grid-pastel-hello-kitty')?.kind).toBe('style');
+    expect(getFrameTemplate('style-grid-pastel-hello-kitty')?.collection).toBe(
       'hello-kitty',
     );
-    expect(getFrameTemplate('style-sweet-grid')).toBeUndefined();
+    expect(getFrameTemplate('style-grid-pastel')).toBeUndefined();
     expect(getFrameTemplate('missing')).toBeUndefined();
     expect(getFrameTemplate(null)).toBeUndefined();
   });
