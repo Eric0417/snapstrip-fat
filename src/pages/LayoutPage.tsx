@@ -84,7 +84,11 @@ export function LayoutPage() {
         })}
       </section>
 
-      <button className="pill-button pill-button-primary" type="button" onClick={continueToCapture}>
+      <button
+        className="pill-button pill-button-primary flow-next-button"
+        type="button"
+        onClick={continueToCapture}
+      >
         {t('continue')}
         <ArrowRight size={18} aria-hidden="true" />
       </button>

@@ -49,6 +49,17 @@ describe('session store', () => {
     expect(useSession.getState().stickers[0]).toMatchObject({ x: 0.25, y: 0.75 });
   });
 
+  it('uses and clamps the requested initial sticker scale', () => {
+    useSession.getState().addSticker('rabbit-rose-front', undefined, 0.34);
+    expect(useSession.getState().stickers[0].scale).toBe(0.34);
+
+    useSession.getState().addSticker('rabbit-rose-front', undefined, 2);
+    expect(useSession.getState().stickers[1].scale).toBe(0.9);
+
+    useSession.getState().addSticker('rabbit-rose-front', undefined, 0.01);
+    expect(useSession.getState().stickers[2].scale).toBe(0.06);
+  });
+
   it('undoes the previous high-level sticker change', () => {
     useSession.setState({ stickers: [placement()] });
     useSession.getState().removeStickers(['s1']);

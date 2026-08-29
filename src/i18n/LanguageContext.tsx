@@ -28,8 +28,11 @@ const messages = {
     horizontal: '橫式四連拍',
     wide: '寬版電影條',
     captureTitle: '準備好了嗎？',
-    captureHint: '相機與麥克風只會在本地使用。',
+    captureHint: '相機畫面只會在本機使用。',
     startSession: '開始拍照',
+    stopSession: '停止拍照',
+    captureStarting: '正在準備相機…',
+    captureProgress: '第 {current} / {total} 張',
     nextShot: '下一張',
     retake: '重新開始',
     permissionError: '無法開啟相機，請允許相機權限，或改用上傳照片。',
@@ -37,6 +40,8 @@ const messages = {
     uploadHint: '若無法使用相機，可上傳四張照片繼續編輯。',
     uploadCountError: '請選擇四張照片。',
     uploadReadError: '有照片無法讀取，請重試。',
+    switchFrontCamera: '切換至前置鏡頭',
+    switchBackCamera: '切換至後置鏡頭',
     editorTitle: '裝飾你的拍貼',
     editorHint: '拖曳移動、選取後調整大小或旋轉。',
     toneTitle: '畫面風格',
@@ -54,12 +59,18 @@ const messages = {
     editorStickers: '貼圖',
     editorBack: '返回',
     closeEditorPanel: '關閉面板',
+    back: '返回',
+    flowStep: '步驟 {current} / {total}',
     zoom: '縮放',
     photoHorizontal: '水平位置',
     photoVertical: '垂直位置',
     resetPhoto: '重設照片',
     selectPhotoHint: '點擊畫布中的照片，或選擇下方編號。',
+    photoLabel: '照片 {number}',
     searchStickers: '搜尋貼圖',
+    stickerLibrary: '貼圖',
+    stickerEmpty: '沒有符合搜尋的貼圖。',
+    clearSearch: '清除搜尋',
     allStickers: '全部',
     export: '下載 PNG',
     exportFailed: '無法建立 PNG，請再試一次。',
@@ -74,6 +85,18 @@ const messages = {
     sendBackward: '下移一層',
     flipHorizontal: '水平翻轉',
     flipVertical: '垂直翻轉',
+    duplicateSticker: '複製貼圖',
+    rotateLeft: '向左旋轉',
+    rotateRight: '向右旋轉',
+    zoomIn: '放大貼圖',
+    zoomOut: '縮小貼圖',
+    moveUp: '向上移動',
+    moveDown: '向下移動',
+    moveLeft: '向左移動',
+    moveRight: '向右移動',
+    selectedStickerControls: '選取貼圖控制',
+    rotateSticker: '旋轉貼圖',
+    resizeSticker: '調整貼圖大小',
     deselect: '取消選取',
     aboutTitle: '關於作者',
     aboutName: 'Eric',
@@ -114,8 +137,11 @@ const messages = {
     horizontal: 'Horizontal strip',
     wide: 'Wide strip',
     captureTitle: 'Ready?',
-    captureHint: 'Your camera is used only on this device.',
+    captureHint: 'Your camera feed is used only on this device.',
     startSession: 'Start shooting',
+    stopSession: 'Stop shooting',
+    captureStarting: 'Preparing camera…',
+    captureProgress: 'Shot {current} of {total}',
     nextShot: 'Next shot',
     retake: 'Start over',
     permissionError: 'Camera access is unavailable. Allow camera permission or upload photos instead.',
@@ -123,6 +149,8 @@ const messages = {
     uploadHint: 'If the camera is unavailable, upload four photos to continue editing.',
     uploadCountError: 'Please select four photos.',
     uploadReadError: 'One photo could not be read.',
+    switchFrontCamera: 'Switch to front camera',
+    switchBackCamera: 'Switch to back camera',
     editorTitle: 'Decorate your strip',
     editorHint: 'Drag to move. Select a sticker to resize or rotate it.',
     toneTitle: 'Picture style',
@@ -140,12 +168,18 @@ const messages = {
     editorStickers: 'Stickers',
     editorBack: 'Back',
     closeEditorPanel: 'Close panel',
+    back: 'Back',
+    flowStep: 'Step {current} of {total}',
     zoom: 'Zoom',
     photoHorizontal: 'Horizontal',
     photoVertical: 'Vertical',
     resetPhoto: 'Reset photo',
     selectPhotoHint: 'Click a photo on the canvas or choose a number below.',
+    photoLabel: 'Photo {number}',
     searchStickers: 'Search stickers',
+    stickerLibrary: 'Stickers',
+    stickerEmpty: 'No stickers match your search.',
+    clearSearch: 'Clear search',
     allStickers: 'All',
     export: 'Download PNG',
     exportFailed: 'Could not create the PNG. Please try again.',
@@ -160,6 +194,18 @@ const messages = {
     sendBackward: 'Send backward',
     flipHorizontal: 'Flip horizontal',
     flipVertical: 'Flip vertical',
+    duplicateSticker: 'Duplicate sticker',
+    rotateLeft: 'Rotate left',
+    rotateRight: 'Rotate right',
+    zoomIn: 'Enlarge sticker',
+    zoomOut: 'Shrink sticker',
+    moveUp: 'Move up',
+    moveDown: 'Move down',
+    moveLeft: 'Move left',
+    moveRight: 'Move right',
+    selectedStickerControls: 'Selected sticker controls',
+    rotateSticker: 'Rotate sticker',
+    resizeSticker: 'Resize sticker',
     deselect: 'Deselect',
     aboutTitle: 'About the creator',
     aboutName: 'Eric',
@@ -182,7 +228,7 @@ type MessageKey = keyof (typeof messages)['zh-Hant'];
 interface LanguageContextValue {
   locale: Locale;
   setLocale: (locale: Locale) => void;
-  t: (key: MessageKey) => string;
+  t: (key: MessageKey, params?: Record<string, string | number>) => string;
 }
 
 const LanguageContext = createContext<LanguageContextValue | null>(null);
@@ -190,7 +236,17 @@ const LanguageContext = createContext<LanguageContextValue | null>(null);
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [locale, setLocale] = useState<Locale>('zh-Hant');
   const value = useMemo<LanguageContextValue>(
-    () => ({ locale, setLocale, t: (key) => messages[locale][key] }),
+    () => ({
+      locale,
+      setLocale,
+      t: (key, params) => {
+        const message = messages[locale][key];
+        if (!params) return message;
+        return message.replace(/\{(\w+)\}/g, (match, name: string) =>
+          params[name] === undefined ? match : String(params[name]),
+        );
+      },
+    }),
     [locale],
   );
   return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;

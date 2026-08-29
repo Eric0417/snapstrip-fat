@@ -31,7 +31,11 @@ interface SessionState {
   setShots: (shots: PhotoShot[]) => void;
   setPhotoTransform: (index: number, patch: Partial<PhotoTransform>) => void;
   resetPhotoTransform: (index: number) => void;
-  addSticker: (itemId: string, position?: { x: number; y: number }) => string;
+  addSticker: (
+    itemId: string,
+    position?: { x: number; y: number },
+    initialScale?: number,
+  ) => string;
   updateSticker: (id: string, patch: Partial<StickerPlacement>) => void;
   duplicateSticker: (id: string) => void;
   removeStickers: (ids: string[]) => void;
@@ -99,7 +103,7 @@ export const useSession = create<SessionState>((set, get) => ({
       ),
     })),
 
-  addSticker: (itemId, position) => {
+  addSticker: (itemId, position, initialScale) => {
     const id = makeId('sticker');
     const { stickers, past } = get();
     const z = stickers.reduce((max, sticker) => Math.max(max, sticker.z), -1) + 1;
@@ -108,7 +112,7 @@ export const useSession = create<SessionState>((set, get) => ({
       itemId,
       x: Math.min(0.98, Math.max(0.02, position?.x ?? 0.5)),
       y: Math.min(0.98, Math.max(0.02, position?.y ?? 0.5)),
-      scale: 0.24,
+      scale: Math.min(0.9, Math.max(0.06, initialScale ?? 0.24)),
       rotation: 0,
       flipX: false,
       flipY: false,

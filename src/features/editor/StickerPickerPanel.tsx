@@ -64,9 +64,9 @@ export function StickerPickerPanel({ onAdd }: StickerPickerPanelProps) {
   }
 
   return (
-    <section className="sticker-picker" aria-label="Sticker library">
+    <section className="sticker-picker" aria-label={t('stickerLibrary')}>
       <div className="sticker-picker-heading">
-        <h2>Stickers</h2>
+        <h2>{t('stickerLibrary')}</h2>
         <span>{filtered.length}</span>
       </div>
 
@@ -84,7 +84,7 @@ export function StickerPickerPanel({ onAdd }: StickerPickerPanelProps) {
             className="clear-search"
             type="button"
             onClick={() => updateFilter('', category)}
-            aria-label="Clear search"
+            aria-label={t('clearSearch')}
           >
             <X size={15} aria-hidden="true" />
           </button>
@@ -114,7 +114,7 @@ export function StickerPickerPanel({ onAdd }: StickerPickerPanelProps) {
       </div>
 
       {visible.length === 0 ? (
-        <p className="sticker-empty">No stickers match your search.</p>
+        <p className="sticker-empty">{t('stickerEmpty')}</p>
       ) : (
         <div className="sticker-grid">
           {visible.map((sticker) => (

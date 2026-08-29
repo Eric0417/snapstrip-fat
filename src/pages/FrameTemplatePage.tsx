@@ -92,7 +92,7 @@ export function FrameTemplatePage() {
       </section>
 
       <button
-        className="pill-button pill-button-primary"
+        className="pill-button pill-button-primary flow-next-button"
         type="button"
         onClick={continueToEditor}
       >

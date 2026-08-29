@@ -30,7 +30,7 @@ export function PhotoAdjustPanel({
               className={selectedPhotoIndex === index ? 'is-active' : ''}
               onClick={() => onSelectPhoto(index)}
               aria-pressed={selectedPhotoIndex === index}
-              aria-label={`Photo ${index + 1}`}
+              aria-label={t('photoLabel', { number: index + 1 })}
               key={shot.id}
             >
               <img src={shot.dataUrl} alt="" />

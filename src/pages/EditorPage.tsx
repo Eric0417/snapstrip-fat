@@ -93,15 +93,20 @@ export function EditorPage() {
       const stage = editorStageRef.current;
       const drawer = document.querySelector<HTMLElement>('.mobile-editor-drawer');
       const visibleBottom = drawer ? drawer.getBoundingClientRect().top : window.innerHeight;
-      const position = stage
+      const stageRect = stage?.getBoundingClientRect();
+      const position = stageRect
         ? viewportSpawnPosition(
-            stage.getBoundingClientRect(),
+            stageRect,
             window.innerWidth,
             window.innerHeight,
             visibleBottom,
           )
         : undefined;
-      setSelectedId(addSticker(asset.id, position));
+      const initialScale =
+        isMobile && stageRect && stageRect.width > 0
+          ? Math.max(0.16, Math.min(0.5, 48 / stageRect.width))
+          : undefined;
+      setSelectedId(addSticker(asset.id, position, initialScale));
       if (isMobile) setActivePanel('stickers');
     },
     [addSticker, isMobile],
@@ -214,7 +219,7 @@ export function EditorPage() {
         selectedPhotoIndex={selectedPhotoIndex}
         onSelectPhoto={selectPhoto}
       />
-      <EditorToolbar selectedId={selectedId} />
+      <EditorToolbar selectedId={selectedId} showMobileControls={false} />
       <StickerPickerPanel onAdd={handleAdd} />
     </>
   );
@@ -241,7 +246,12 @@ export function EditorPage() {
           >
             <ArrowLeft size={20} aria-hidden="true" />
           </button>
-          <h1 className="mobile-editor-topbar-title">{t('editorTitle')}</h1>
+          <div className="mobile-editor-topbar-title">
+            <span className="mobile-editor-step">
+              {t('flowStep', { current: 4, total: 4 })}
+            </span>
+            <h1>{t('editorTitle')}</h1>
+          </div>
           <div className="mobile-editor-topbar-actions">
             <button
               className="mobile-editor-action"
@@ -334,6 +344,7 @@ export function EditorPage() {
             stageRef={editorStageRef}
             selectedPhotoIndex={selectedPhotoIndex}
             onSelectPhoto={selectPhoto}
+            isMobile={isMobile}
           />
         </section>
         {!isMobile ? <aside className="editor-sidebar">{editorControls}</aside> : null}
@@ -357,9 +368,13 @@ export function EditorPage() {
                   aria-controls="mobile-editor-drawer"
                   aria-expanded={activePanel === panel}
                   key={panel}
-                  onClick={() =>
-                    setActivePanel((current) => (current === panel ? null : panel))
-                  }
+                  onClick={() => {
+                    const next = activePanel === panel ? null : panel;
+                    setActivePanel(next);
+                    if (next === 'photos' && selectedPhotoIndex === null) {
+                      setSelectedPhotoIndex(0);
+                    }
+                  }}
                 >
                   {panel === 'tone' ? (
                     <Palette size={18} aria-hidden="true" />
@@ -401,7 +416,7 @@ export function EditorPage() {
                 ) : null}
                 {activePanel === 'stickers' ? (
                   <>
-                    <EditorToolbar selectedId={selectedId} />
+                    <EditorToolbar selectedId={selectedId} showMobileControls />
                     <StickerPickerPanel onAdd={handleAdd} />
                   </>
                 ) : null}

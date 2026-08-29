@@ -40,6 +40,7 @@ interface EditorStageProps {
   stageRef: RefObject<HTMLDivElement | null>;
   selectedPhotoIndex: number | null;
   onSelectPhoto: (index: number | null) => void;
+  isMobile: boolean;
 }
 
 export function EditorStage({
@@ -48,8 +49,9 @@ export function EditorStage({
   stageRef,
   selectedPhotoIndex,
   onSelectPhoto,
+  isMobile,
 }: EditorStageProps) {
-  const { locale } = useLanguage();
+  const { locale, t } = useLanguage();
   const layoutId = useSession((state) => state.layoutId);
   const templateId = useSession((state) => state.templateId);
   const toneId = useSession((state) => state.toneId);
@@ -115,6 +117,7 @@ export function EditorStage({
   const stripSizeData = stripSize(layoutId, 1440);
   const previewInnerWidth =
     stageSize.width * (stripSizeData.innerWidth / stripSizeData.width);
+  const photoHitboxPadding = isMobile ? 5.5 : 0;
 
   function beginGesture(
     event: React.PointerEvent,
@@ -359,17 +362,25 @@ export function EditorStage({
                 type="button"
                 key={index}
                 style={{
-                  left: (rect.x / stripSizeData.width) * stageSize.width,
-                  top: (rect.y / stripSizeData.height) * stageSize.height,
-                  width: (rect.width / stripSizeData.width) * stageSize.width,
-                  height: (rect.height / stripSizeData.height) * stageSize.height,
+                  left:
+                    (rect.x / stripSizeData.width) * stageSize.width -
+                    photoHitboxPadding,
+                  top:
+                    (rect.y / stripSizeData.height) * stageSize.height -
+                    photoHitboxPadding,
+                  width:
+                    (rect.width / stripSizeData.width) * stageSize.width +
+                    photoHitboxPadding * 2,
+                  height:
+                    (rect.height / stripSizeData.height) * stageSize.height +
+                    photoHitboxPadding * 2,
                 }}
                 onPointerDown={(event) => {
                   event.stopPropagation();
                   onSelect(null);
                   onSelectPhoto(index);
                 }}
-                aria-label={`Photo ${index + 1}`}
+                aria-label={t('photoLabel', { number: index + 1 })}
               />
             );
           })
@@ -421,15 +432,15 @@ export function EditorStage({
                         className="sticker-handle rotate-handle"
                         type="button"
                         onPointerDown={(event) => beginGesture(event, placement, 'rotate')}
-                        aria-label="Rotate sticker"
-                        title="Rotate"
+                        aria-label={t('rotateSticker')}
+                        title={t('rotateSticker')}
                       />
                       <button
                         className="sticker-handle scale-handle"
                         type="button"
                         onPointerDown={(event) => beginGesture(event, placement, 'scale')}
-                        aria-label="Resize sticker"
-                        title="Resize"
+                        aria-label={t('resizeSticker')}
+                        title={t('resizeSticker')}
                       />
                     </>
                   ) : null}

@@ -1,4 +1,4 @@
-import { Camera, RefreshCw, SwitchCamera, Upload } from 'lucide-react';
+import { Camera, RefreshCw, Square, SwitchCamera, Upload } from 'lucide-react';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getLayout } from '../app/layouts';
@@ -86,6 +86,7 @@ export function CapturePage() {
       await wait(500);
       void navigate(hasFrameTemplates ? '/frame' : '/editor');
     } catch (cause) {
+      if (cancelledRef.current) return;
       setPhase('error');
       setUploadError(cause instanceof Error ? cause.message : 'Capture failed');
     }
@@ -99,7 +100,7 @@ export function CapturePage() {
     start,
   ]);
 
-  const resetSession = useCallback(() => {
+  const cancelSession = useCallback(() => {
     cancelledRef.current = true;
     stop();
     setLocalShots([]);
@@ -142,6 +143,15 @@ export function CapturePage() {
   const busy =
     phase === 'starting' || phase === 'counting' || phase === 'capturing' || phase === 'processing-upload';
   const showVideo = cameraStatus === 'ready' && (busy || phase === 'idle' || phase === 'done');
+  const progressText =
+    phase === 'starting'
+      ? t('captureStarting')
+      : phase === 'counting' || phase === 'capturing'
+        ? t('captureProgress', {
+            current: Math.min(4, shots.length + 1),
+            total: 4,
+          })
+        : null;
 
   return (
     <main className="capture-page">
@@ -179,10 +189,19 @@ export function CapturePage() {
         <div className="shot-track" aria-label="Captured photos">
           {Array.from({ length: 4 }).map((_, index) => (
             <div className={`shot-thumb${shots[index] ? ' is-filled' : ''}`} key={index}>
-              {shots[index] ? <img src={shots[index].dataUrl} alt={`Shot ${index + 1}`} /> : index + 1}
+              {shots[index] ? (
+                <img src={shots[index].dataUrl} alt={t('photoLabel', { number: index + 1 })} />
+              ) : (
+                index + 1
+              )}
             </div>
           ))}
         </div>
+        {progressText ? (
+          <p className="capture-progress" role="status" aria-live="polite">
+            {progressText}
+          </p>
+        ) : null}
       </section>
 
       <section className="capture-controls">
@@ -192,16 +211,22 @@ export function CapturePage() {
             {t('startSession')}
           </button>
         ) : phase === 'error' ? (
-          <button className="pill-button" type="button" onClick={resetSession}>
+          <button className="pill-button" type="button" onClick={cancelSession}>
             <RefreshCw size={18} aria-hidden="true" />
             {t('retake')}
+          </button>
+        ) : null}
+        {busy && phase !== 'processing-upload' ? (
+          <button className="pill-button pill-button-danger" type="button" onClick={cancelSession}>
+            <Square size={16} aria-hidden="true" />
+            {t('stopSession')}
           </button>
         ) : null}
 
         {showVideo ? (
           <button className="pill-button" type="button" onClick={switchCamera} disabled={busy}>
             <SwitchCamera size={18} aria-hidden="true" />
-            {facingMode === 'user' ? 'Back' : 'Front'}
+            {facingMode === 'user' ? t('switchFrontCamera') : t('switchBackCamera')}
           </button>
         ) : null}
 

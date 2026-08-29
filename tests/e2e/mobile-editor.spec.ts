@@ -11,12 +11,17 @@ const files = [1, 2, 3, 4].map((index) => ({
   buffer: png,
 }));
 
-async function enterEditor(page: Page, viewport: { width: number; height: number }) {
+async function enterEditor(
+  page: Page,
+  viewport: { width: number; height: number },
+  layoutName = '四格方格',
+) {
   await page.setViewportSize(viewport);
   await page.addInitScript(() => {
     window.sessionStorage.setItem('snapstrip-authorized', '1');
   });
   await page.goto('/layout');
+  await page.getByRole('button', { name: layoutName }).click();
   await page.getByRole('button', { name: '繼續' }).click();
   await page.setInputFiles('input[type="file"]', files);
   await page.waitForURL(/\/frame$/);
@@ -101,6 +106,8 @@ test('mobile editor keeps the canvas and sticker visible in small phone viewport
         '.load-more-button',
         '.sticker-thumb',
         '.sticker-handle',
+        '.photo-slot-hitbox',
+        '.selected-sticker-controls button',
       ];
       const sizes: Array<{ selector: string; width: number; height: number }> = [];
       for (const selector of selectors) {
@@ -176,4 +183,56 @@ test('desktop editor keeps the two-column sidebar', async ({ page }) => {
   await expect(page.locator('.editor-sidebar')).toBeVisible();
   await expect(page.locator('.mobile-editor-tabs')).toHaveCount(0);
   await expect(page.locator('.sticker-thumb')).toHaveCount(96);
+});
+
+test('mobile sticker controls stay usable on extreme layouts', async ({ page }) => {
+  for (const layoutName of ['直式拍立得', '經典長條', '橫式四連拍', '寬版電影條']) {
+    await enterEditor(page, { width: 320, height: 568 }, layoutName);
+    await expect(page.locator('.photo-slot-hitbox')).toHaveCount(4);
+    const clearance = await page.evaluate(() => {
+      const tabs = document.querySelector('.mobile-editor-tabs');
+      const slots = [...document.querySelectorAll('.photo-slot-hitbox')];
+      if (!tabs || slots.length === 0) return null;
+      const tabsTop = tabs.getBoundingClientRect().top;
+      const lastSlotBottom = Math.max(
+        ...slots.map((slot) => slot.getBoundingClientRect().bottom),
+      );
+      return { tabsTop, lastSlotBottom };
+    });
+    expect(clearance).not.toBeNull();
+    expect(clearance!.lastSlotBottom).toBeLessThanOrEqual(clearance!.tabsTop + 1);
+
+    await page.locator('.mobile-editor-tabs').getByRole('button', { name: '貼圖' }).click();
+    await page.locator('.mobile-editor-drawer .sticker-grid').scrollIntoViewIfNeeded();
+    await page.locator('.sticker-thumb').first().click();
+    await expect(page.locator('.selected-sticker-controls')).toBeVisible();
+    const before = await page.locator('.sticker-selection.is-selected').evaluate((element) => {
+      const rect = element.getBoundingClientRect();
+      return { width: rect.width, left: rect.left };
+    });
+
+    await page.getByRole('button', { name: '向右移動' }).click();
+    await expect
+      .poll(() =>
+        page.locator('.sticker-selection.is-selected').evaluate((element) => {
+          return element.getBoundingClientRect().left;
+        }),
+      )
+      .toBeGreaterThan(before.left);
+
+    await page.getByRole('button', { name: '放大貼圖' }).click();
+    await expect
+      .poll(() =>
+        page.locator('.sticker-selection.is-selected').evaluate((element) => {
+          return element.getBoundingClientRect().width;
+        }),
+      )
+      .toBeGreaterThan(before.width);
+
+    await page.getByRole('button', { name: '向左旋轉' }).click();
+    await expect(page.locator('.sticker-transform')).toHaveAttribute(
+      'style',
+      /rotate\(/,
+    );
+  }
 });
