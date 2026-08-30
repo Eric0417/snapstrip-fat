@@ -13,7 +13,7 @@
   --mint: #d4f0c0;
   --peach: #ffe0b2;
   --line: #2b242a;
-  font-family: Arial, "PingFang TC", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+  font-family: ui-rounded, "PingFang TC", "Hiragino Maru Gothic ProN", "Noto Sans TC", sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
 }
@@ -52,8 +52,8 @@ button {
 
 button:focus-visible,
 a:focus-visible {
-  outline: 3px solid rgba(255, 155, 179, 0.7);
-  outline-offset: 3px;
+  outline: 3px solid rgba(43, 36, 42, 0.9);
+  outline-offset: 2px;
 }
 
 img {
@@ -101,12 +101,16 @@ img {
 }
 
 .nav-links a {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
   padding: 0.45rem 0.8rem;
   border-radius: 999px;
   color: #574d55;
   font-size: 0.86rem;
   font-weight: 700;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .nav-links a:hover {
@@ -190,6 +194,7 @@ img {
 }
 
 .mobile-flow-copy strong {
+  display: none;
   overflow: hidden;
   max-width: 100%;
   font-size: 0.94rem;
@@ -596,6 +601,10 @@ img {
 }
 
 @media (max-width: 520px) {
+  .app-shell.is-home-page .nav-links {
+    display: none;
+  }
+
   .app-nav {
     gap: 0.4rem;
   }
@@ -828,7 +837,7 @@ img {
   border: 1px solid rgba(43, 36, 42, 0.16);
   border-radius: 6px;
   background: rgba(255, 255, 255, 0.72);
-  color: #a89da5;
+  color: #756a72;
   font-size: 0.75rem;
   font-weight: 800;
 }
@@ -1550,6 +1559,34 @@ img {
   }
 }
 
+@media (max-width: 360px) {
+  .capture-page {
+    padding-bottom: calc(8rem + env(safe-area-inset-bottom));
+  }
+
+  .capture-controls {
+    position: fixed;
+    right: 0.5rem;
+    bottom: calc(0.5rem + env(safe-area-inset-bottom));
+    left: 0.5rem;
+    z-index: 45;
+    flex-direction: column;
+    width: auto;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid rgba(43, 36, 42, 0.14);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 10px 24px rgba(43, 36, 42, 0.12);
+  }
+
+  .capture-controls .pill-button {
+    width: 100%;
+    flex: none;
+    padding: 0.55rem 1rem;
+  }
+}
+
 @media (max-width: 900px) {
   .app-shell.is-editor-page .app-nav {
     display: none;
@@ -1878,6 +1915,22 @@ img {
     border: 2px solid var(--line);
     background: #fff;
     box-shadow: 0 2px 6px rgba(43, 36, 42, 0.18);
+  }
+}
+
+@media (min-width: 901px) {
+  .editor-sidebar {
+    max-height: calc(100vh - 8rem);
+    scrollbar-gutter: stable;
+  }
+
+  .sticker-picker {
+    min-height: 0;
+  }
+
+  .sticker-grid {
+    max-height: none;
+    overflow: visible;
   }
 }
 

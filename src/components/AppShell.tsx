@@ -28,7 +28,7 @@ function MobileFlowHeader({ path }: { path: string }) {
       </button>
       <div className="mobile-flow-copy">
         <span>{t('flowStep', { current: flow.step, total: 4 })}</span>
-        <strong>{t(flow.title)}</strong>
+        <strong className="mobile-flow-title">{t(flow.title)}</strong>
       </div>
       <button
         className="mobile-flow-language"
@@ -48,6 +48,7 @@ export function AppShell({ children }: { children: ReactNode }) {
   const location = useLocation();
   const isEditor = location.pathname === '/editor';
   const isFlowPage = location.pathname in MOBILE_FLOW;
+  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -55,7 +56,7 @@ export function AppShell({ children }: { children: ReactNode }) {
 
   return (
     <div
-      className={`app-shell${isEditor ? ' is-editor-page' : ''}${isFlowPage ? ' is-flow-page' : ''}`}
+      className={`app-shell${isEditor ? ' is-editor-page' : ''}${isFlowPage ? ' is-flow-page' : ''}${isHomePage ? ' is-home-page' : ''}`}
     >
       {isFlowPage ? <MobileFlowHeader path={location.pathname} /> : null}
       <header className="app-nav" aria-label="Site navigation">

@@ -12,11 +12,11 @@ export function HomePage() {
         <p className="eyebrow">SnapStrip · 4 cuts</p>
         <h1 id="welcome-title">{t('welcomeTitle')}</h1>
         <p className="welcome-copy">{t('welcomeBody')}</p>
-        <DemoStrip />
         <Link className="pill-button pill-button-primary" to="/layout">
           {t('start')}
           <ArrowRight size={18} aria-hidden="true" />
         </Link>
+        <DemoStrip />
       </section>
 
       <footer className="welcome-footer">

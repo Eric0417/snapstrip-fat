@@ -73,6 +73,7 @@ export function EditorPage() {
   const [outputError, setOutputError] = useState<string | null>(null);
   const [shareSupported] = useState(() => canShareStripPng());
   const editorStageRef = useRef<HTMLDivElement>(null);
+  const mobileDrawerRef = useRef<HTMLElement>(null);
 
   const stickerAssets = useMemo(() => {
     const map = new Map<string, StickerAsset>();
@@ -86,6 +87,12 @@ export function EditorPage() {
       setSelectedId(null);
     }
   }, [selectedId, stickers]);
+
+  useEffect(() => {
+    if (isMobile && activePanel && mobileDrawerRef.current) {
+      mobileDrawerRef.current.scrollTop = 0;
+    }
+  }, [activePanel, isMobile, selectedId]);
 
   const handleAdd = useCallback(
     (asset: StickerAsset) => {
@@ -392,6 +399,7 @@ export function EditorPage() {
           {activePanel && mobilePanelLabel ? (
             <section
               id="mobile-editor-drawer"
+              ref={mobileDrawerRef}
               className="mobile-editor-drawer"
               aria-label={mobilePanelLabel}
             >

@@ -76,6 +76,11 @@ test('mobile editor keeps the canvas and sticker visible in small phone viewport
     await page.locator('.mobile-editor-drawer .sticker-grid').scrollIntoViewIfNeeded();
     await page.locator('.sticker-thumb').first().click();
     await expect(page.locator('.sticker-selection.is-selected')).toHaveCount(1);
+    await expect
+      .poll(() =>
+        page.locator('.mobile-editor-drawer').evaluate((element) => element.scrollTop),
+      )
+      .toBeLessThanOrEqual(1);
 
     const placed = await page.evaluate(() => {
       const sticker = document.querySelector('.sticker-selection.is-selected');
@@ -183,6 +188,11 @@ test('desktop editor keeps the two-column sidebar', async ({ page }) => {
   await expect(page.locator('.editor-sidebar')).toBeVisible();
   await expect(page.locator('.mobile-editor-tabs')).toHaveCount(0);
   await expect(page.locator('.sticker-thumb')).toHaveCount(96);
+  const grid = await page.locator('.sticker-grid').evaluate((element) => ({
+    clientHeight: element.clientHeight,
+    scrollHeight: element.scrollHeight,
+  }));
+  expect(grid.scrollHeight).toBeLessThanOrEqual(grid.clientHeight + 1);
 });
 
 test('mobile sticker controls stay usable on extreme layouts', async ({ page }) => {

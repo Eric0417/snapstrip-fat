@@ -174,7 +174,7 @@ export function CapturePage() {
           ) : (
             <div className="camera-placeholder">
               <Camera size={34} aria-hidden="true" />
-              <span>{phase === 'starting' ? t('startSession') : t('captureHint')}</span>
+              {phase === 'starting' ? <span>{t('startSession')}</span> : null}
             </div>
           )}
 

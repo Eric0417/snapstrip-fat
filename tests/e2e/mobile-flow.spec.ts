@@ -1,5 +1,34 @@
 import { expect, test } from '@playwright/test';
 
+test('mobile home keeps the primary entry in the first viewport', async ({ page }) => {
+  await page.setViewportSize({ width: 320, height: 568 });
+  await page.addInitScript(() => {
+    window.sessionStorage.setItem('snapstrip-authorized', '1');
+  });
+
+  await page.goto('/');
+  await page.getByRole('button', { name: /English/ }).click();
+
+  const entry = await page.evaluate(() => {
+    const start = document.querySelector<HTMLAnchorElement>(
+      '.welcome-content a[href="/layout"]',
+    )?.getBoundingClientRect();
+    const navLinks = document.querySelector('.nav-links');
+    return {
+      startBottom: start?.bottom ?? 0,
+      startHeight: start?.height ?? 0,
+      navLinksDisplay: navLinks ? getComputedStyle(navLinks).display : null,
+      scrollWidth: document.documentElement.scrollWidth,
+      innerWidth: window.innerWidth,
+    };
+  });
+
+  expect(entry.startBottom).toBeLessThanOrEqual(568);
+  expect(entry.startHeight).toBeGreaterThanOrEqual(44);
+  expect(entry.navLinksDisplay).toBe('none');
+  expect(entry.scrollWidth).toBeLessThanOrEqual(entry.innerWidth);
+});
+
 test('mobile flow shell keeps the next action reachable and resets scroll', async ({ page }) => {
   await page.setViewportSize({ width: 320, height: 568 });
   await page.addInitScript(() => {
@@ -44,6 +73,12 @@ test('mobile flow shell keeps the next action reachable and resets scroll', asyn
   await expect(page.locator('.mobile-flow-copy span')).toHaveText('Step 1 of 4');
   await page.getByRole('button', { name: /繁體中文/ }).click();
   await expect(page.locator('.mobile-flow-copy strong')).toHaveText('選擇你的版型');
+  const visibleHeadings = await page.evaluate(() =>
+    [...document.querySelectorAll('h1')]
+      .filter((element) => getComputedStyle(element).display !== 'none')
+      .map((element) => element.textContent?.trim()),
+  );
+  expect(visibleHeadings).toEqual(['選擇你的版型']);
 
   const flowTargets = await page.evaluate(() => {
     const targets = [
@@ -105,4 +140,38 @@ test('camera capture can be cancelled before it navigates', async ({ page }) => 
   await expect(page).toHaveURL(/\/capture$/);
   await expect(page.getByRole('button', { name: '開始拍照' })).toBeVisible();
   expect(errors).toEqual([]);
+});
+
+test('capture controls stay reachable on a 320px viewport', async ({ page }) => {
+  await page.setViewportSize({ width: 320, height: 568 });
+  await page.addInitScript(() => {
+    window.sessionStorage.setItem('snapstrip-authorized', '1');
+  });
+  await page.goto('/layout');
+  await page.locator('.flow-next-button').click();
+  await expect(page).toHaveURL(/\/capture$/);
+  await page.getByRole('button', { name: /English/ }).click();
+
+  const controls = await page.evaluate(() => {
+    const buttons = [...document.querySelectorAll('.capture-controls .pill-button')];
+    return {
+      buttons: buttons.map((button) => {
+        const rect = button.getBoundingClientRect();
+        return {
+          top: rect.top,
+          bottom: rect.bottom,
+          height: rect.height,
+        };
+      }),
+      placeholderText: document.querySelector('.camera-placeholder')?.textContent ?? '',
+    };
+  });
+
+  expect(controls.buttons.length).toBe(2);
+  expect(
+    controls.buttons.every(
+      (button) => button.top >= 0 && button.bottom <= 568 && button.height >= 44,
+    ),
+  ).toBe(true);
+  expect(controls.placeholderText).not.toContain('camera feed');
 });

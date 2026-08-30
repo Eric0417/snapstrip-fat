@@ -66,100 +66,6 @@ export function EditorToolbar({ selectedId, showMobileControls = false }: Editor
 
   return (
     <section className="editor-toolbar" aria-label={t('editorStickers')}>
-      <div className="toolbar-actions">
-        <button
-          className="tool-icon"
-          type="button"
-          onClick={undoStickers}
-          disabled={past.length === 0}
-          aria-label={t('undo')}
-          title={t('undo')}
-        >
-          <Undo2 size={18} aria-hidden="true" />
-        </button>
-        <button
-          className="tool-icon"
-          type="button"
-          onClick={redoStickers}
-          disabled={future.length === 0}
-          aria-label={t('redo')}
-          title={t('redo')}
-        >
-          <Redo2 size={18} aria-hidden="true" />
-        </button>
-        <button
-          className="tool-icon"
-          type="button"
-          onClick={() => selectedId && duplicateSticker(selectedId)}
-          disabled={!selectedId}
-          aria-label={t('duplicateSticker')}
-          title={t('duplicateSticker')}
-        >
-          <Copy size={18} aria-hidden="true" />
-        </button>
-        <button
-          className="tool-icon danger"
-          type="button"
-          onClick={() => selectedId && removeStickers([selectedId])}
-          disabled={!selectedId}
-          aria-label={t('delete')}
-          title={t('delete')}
-        >
-          <Trash2 size={18} aria-hidden="true" />
-        </button>
-      </div>
-
-      <div className="toolbar-actions">
-        <button
-          className="tool-icon"
-          type="button"
-          onClick={() => selectedId && moveStickerLayer(selectedId, 'forward')}
-          disabled={!selectedId}
-          aria-label={t('bringForward')}
-          title={t('bringForward')}
-        >
-          <ArrowUp size={18} aria-hidden="true" />
-        </button>
-        <button
-          className="tool-icon"
-          type="button"
-          onClick={() => selectedId && moveStickerLayer(selectedId, 'backward')}
-          disabled={!selectedId}
-          aria-label={t('sendBackward')}
-          title={t('sendBackward')}
-        >
-          <ArrowDown size={18} aria-hidden="true" />
-        </button>
-        <button
-          className="tool-icon"
-          type="button"
-          onClick={() =>
-            selected &&
-            selectedId &&
-            commitBeforeUpdate(() => updateSticker(selectedId, { flipX: !selected.flipX }))
-          }
-          disabled={!selectedId}
-          aria-label={t('flipHorizontal')}
-          title={t('flipHorizontal')}
-        >
-          <FlipHorizontal2 size={18} aria-hidden="true" />
-        </button>
-        <button
-          className="tool-icon"
-          type="button"
-          onClick={() =>
-            selected &&
-            selectedId &&
-            commitBeforeUpdate(() => updateSticker(selectedId, { flipY: !selected.flipY }))
-          }
-          disabled={!selectedId}
-          aria-label={t('flipVertical')}
-          title={t('flipVertical')}
-        >
-          <FlipVertical2 size={18} aria-hidden="true" />
-        </button>
-      </div>
-
       {showMobileControls && selected ? (
         <div
           className="selected-sticker-controls"
@@ -261,6 +167,100 @@ export function EditorToolbar({ selectedId, showMobileControls = false }: Editor
           </div>
         </div>
       ) : null}
+
+      <div className="toolbar-actions">
+        <button
+          className="tool-icon"
+          type="button"
+          onClick={undoStickers}
+          disabled={past.length === 0}
+          aria-label={t('undo')}
+          title={t('undo')}
+        >
+          <Undo2 size={18} aria-hidden="true" />
+        </button>
+        <button
+          className="tool-icon"
+          type="button"
+          onClick={redoStickers}
+          disabled={future.length === 0}
+          aria-label={t('redo')}
+          title={t('redo')}
+        >
+          <Redo2 size={18} aria-hidden="true" />
+        </button>
+        <button
+          className="tool-icon"
+          type="button"
+          onClick={() => selectedId && duplicateSticker(selectedId)}
+          disabled={!selectedId}
+          aria-label={t('duplicateSticker')}
+          title={t('duplicateSticker')}
+        >
+          <Copy size={18} aria-hidden="true" />
+        </button>
+        <button
+          className="tool-icon danger"
+          type="button"
+          onClick={() => selectedId && removeStickers([selectedId])}
+          disabled={!selectedId}
+          aria-label={t('delete')}
+          title={t('delete')}
+        >
+          <Trash2 size={18} aria-hidden="true" />
+        </button>
+      </div>
+
+      <div className="toolbar-actions">
+        <button
+          className="tool-icon"
+          type="button"
+          onClick={() => selectedId && moveStickerLayer(selectedId, 'forward')}
+          disabled={!selectedId}
+          aria-label={t('bringForward')}
+          title={t('bringForward')}
+        >
+          <ArrowUp size={18} aria-hidden="true" />
+        </button>
+        <button
+          className="tool-icon"
+          type="button"
+          onClick={() => selectedId && moveStickerLayer(selectedId, 'backward')}
+          disabled={!selectedId}
+          aria-label={t('sendBackward')}
+          title={t('sendBackward')}
+        >
+          <ArrowDown size={18} aria-hidden="true" />
+        </button>
+        <button
+          className="tool-icon"
+          type="button"
+          onClick={() =>
+            selected &&
+            selectedId &&
+            commitBeforeUpdate(() => updateSticker(selectedId, { flipX: !selected.flipX }))
+          }
+          disabled={!selectedId}
+          aria-label={t('flipHorizontal')}
+          title={t('flipHorizontal')}
+        >
+          <FlipHorizontal2 size={18} aria-hidden="true" />
+        </button>
+        <button
+          className="tool-icon"
+          type="button"
+          onClick={() =>
+            selected &&
+            selectedId &&
+            commitBeforeUpdate(() => updateSticker(selectedId, { flipY: !selected.flipY }))
+          }
+          disabled={!selectedId}
+          aria-label={t('flipVertical')}
+          title={t('flipVertical')}
+        >
+          <FlipVertical2 size={18} aria-hidden="true" />
+        </button>
+      </div>
 
     </section>
   );
