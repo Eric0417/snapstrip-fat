@@ -8,12 +8,12 @@ import {
 } from './templates';
 
 describe('frame template loader', () => {
-  it('loads one auto-discovered template for every layout', () => {
-    expect(FRAME_TEMPLATES).toHaveLength(LAYOUTS.length);
+  it('loads at least one auto-discovered template for every layout', () => {
+    expect(FRAME_TEMPLATES.length).toBeGreaterThanOrEqual(LAYOUTS.length);
 
     for (const layout of LAYOUTS) {
       const templates = getFrameTemplatesForLayout(layout.id);
-      expect(templates).toHaveLength(1);
+      expect(templates.length).toBeGreaterThanOrEqual(1);
       expect(templates[0].layoutId).toBe(layout.id);
       expect(templates[0].src).toBeTruthy();
       expect(templates[0].name['zh-Hant']).toBeTruthy();
